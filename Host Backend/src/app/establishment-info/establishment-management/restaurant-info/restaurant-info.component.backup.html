@@ -1,0 +1,735 @@
+<form [formGroup]="propertyManagementForm">
+   <div class="edit-listing-page">
+      <div class="edit-property-details">
+         <div class="property-basic-info">
+            <div class="property-name">
+               <h2>The French Door Cafe & Restaurant</h2>
+               <a href="javascript:void(0);" class="edit">Edit</a>
+            </div>
+            <div class="property-location">
+               <div class="sub-heading">
+                  <h5>Location</h5>
+                  <a href="javascript:void(0);" class="edit">Edit</a>
+               </div>
+               <div class="address">
+                  <input type="text" value="Honda, Tolima, Colombia" id="address" name="address" readonly>
+               </div>
+            </div>
+            <div class="property-brief-info">
+               <div class="sub-heading">
+                  <h5>Description</h5>
+                  <a href="javascript:void(0);" (click)="enableEdit('desc')" class="edit">Edit</a>
+               </div>
+               <textarea
+                  [readonly]="disbale.desc">The French Door Cafe & Restaurant is one of the classiest vegan restaurants that serve food with style. The food here includes delicious pizzas and appetizers….</textarea>
+            </div>
+         </div>
+         <hr>
+         <div class="open-timings">
+            <div class="heading">
+               <h2>Open timings</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="service-hrs">
+               <span class="operating-hrs">
+                  Operating Hours
+               </span>
+               <span class="open-hrs">
+                  <ul>
+                     <li><strong>Monday</strong> - 8am to 9pm</li>
+                     <li><strong>Tuesday</strong> - 8am to 9pm</li>
+                     <li><strong>Wednesday</strong> - 8am to 9pm</li>
+                     <li><strong>Thursday</strong> - 8am to 9pm</li>
+                     <li><strong>Friday</strong> - 8am to 9pm</li>
+                     <li><strong>Saturday</strong> - 8am to 9pm</li>
+                     <li><strong>Sunday</strong> - 8am to 9pm</li>
+                  </ul>
+               </span>
+            </div>
+         </div>
+         <hr>
+
+         <div class="booking-hours">
+            <div class="heading">
+               <h2>Booking Hours</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="booking-timing">
+               <div class="timing-list">
+                  <h5>Monday to Friday</h5>
+                  <div class="timings">
+                     <span>07:00 AM</span>
+                     <span>08:00 AM</span>
+                     <span>09:00 AM</span>
+                     <span>10:00 AM</span>
+                     <span>11:00 AM</span>
+                     <span>12:00 PM</span>
+                     <span>01:00 PM</span>
+                     <span>02:00 PM</span>
+                     <span>03:00 PM</span>
+                     <span>04:00 PM</span>
+                     <span>05:00 PM</span>
+                     <span>06:00 PM</span>
+                     <span>07:00 PM</span>
+                     <span>08:00 PM</span>
+                     <span>09:00 PM</span>
+                     <span>10:00 PM</span>
+                     <span>11:00 PM</span>
+                  </div>
+               </div>
+
+               <div class="timing-list">
+                  <h5>Saturday</h5>
+                  <div class="timings">
+                     <span>07:00 AM</span>
+                     <span>08:00 AM</span>
+                     <span>09:00 AM</span>
+                     <span>10:00 AM</span>
+                     <span>11:00 AM</span>
+                     <span>12:00 PM</span>
+                     <span>01:00 PM</span>
+                     <span>02:00 PM</span>
+                     <span>03:00 PM</span>
+                     <span>04:00 PM</span>
+                     <span>05:00 PM</span>
+                     <span>06:00 PM</span>
+                     <span>07:00 PM</span>
+                     <span>08:00 PM</span>
+                     <span>09:00 PM</span>
+                     <span>10:00 PM</span>
+                     <span>11:00 PM</span>
+                  </div>
+               </div>
+                      
+            </div>
+         </div>
+         <hr>
+
+         <div class="property-contact-info">
+            <div class="contact-details">
+               <div class="heading">
+                  <h2>Contact info</h2>
+                  <a href="javascript:void(0);" (click)="enableEdit('contact')" class="edit">Edit</a>
+               </div>
+               <div class="contact-num">
+                  <div class="sub-heading">
+                     <h5>Mobile Number</h5>
+                  </div>
+                  <div class="verify-phone" [ngClass]="disbale.contact  ? 'disabled' : ''">
+                     <div class="intl-tel-input">
+                        <input type="text" class="form-control" class="{{isInvalid ? 'text-danger': ''}}"
+                           (focus)="onFocus()" (blur)="onBlur()" [ngModelOptions]="{standalone: true}"
+                           (keypress)="onInputKeyPress($event)" [(ngModel)]="phoneNumber"
+                           (ngModelChange)="onPhoneNumberChange()" #telInput [readonly]="disbale.contact" />
+                     </div>
+                     <div class="verified-message"><img src="assets/img/host-backend/verified.svg"
+                           alt="Verified"><span>Verified</span></div>
+                  </div>
+               </div>
+               <div class="contact-email">
+                  <div class="sub-heading">
+                     <h5>Email</h5>
+                  </div>
+                  <div class="verify-email">
+                     <input type="email" value="lacasa@email.com" [readonly]="disbale.contact">
+                     <button type="button">Verify</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-room-info">
+            <div class="heading">
+               <h2>Tables info</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="room-type">
+               <div class="room-details">
+                  <span class="room-name">1. Family Dining Table</span>
+                  <span class="room-brief-details">
+                     <span class="about-room">
+                        <span class="title">No of tables</span>
+                        <span class="content">31</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of guests</span>
+                        <span class="content">2</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Price per night</span>
+                        <span class="content">200$</span>
+                     </span>
+                  </span>
+               </div>
+            </div>
+            <hr style="border-color: #fff;">
+            <div class="room-type">
+               <div class="room-details">
+                  <span class="room-name">2. Family Dining Table</span>
+                  <span class="room-brief-details">
+                     <span class="about-room">
+                        <span class="title">No of tables</span>
+                        <span class="content">31</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of guests</span>
+                        <span class="content">2</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Price per night</span>
+                        <span class="content">200$</span>
+                     </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-amenities">
+            <div class="heading">
+               <h2>Amenities</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="amenities-list">
+               <span>Wake-up Call</span>
+               <span>Valet Parking</span>
+               <span>Cribs/Infant Beds</span>
+               <span>Spa</span>
+               <span>Fitness Center/Gym</span>
+            </div>
+         </div>
+         <hr>
+
+         <div class="property-info">
+            <div class="heading">
+               <h2>Basic Information</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="info-list">
+               <div class="information">
+                  <label class="title">Type of establishment</label>
+                  <input class="form-control" type="text" value="Restaurants, Bar" readonly>
+               </div>
+               <div class="information">
+                  <label class="title">Type of cuisines</label>
+                  <input class="form-control" type="text" value="Indian, Chinese" readonly>
+               </div>
+               <div class="information">
+                  <label class="title">Type of meals</label>
+                  <input class="form-control" type="text" value="Breakfast, Lunch, Brunch, Dinner" readonly>
+               </div>
+               <div class="information">
+                  <label class="title">Are pets/ service animals allowed?</label>
+                  <input class="form-control" type="text" value="No" readonly>
+               </div>
+            </div>
+         </div>
+
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Establishment Photos</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item"><span
+                        class="media-name">Video 360</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item"><span
+                        class="media-name">Exterior</span></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Menu of your restaurant</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li><img src="assets/img/dashboard/restaurant-menu1.svg" alt="Menu Item"></li>
+                  <li><img src="assets/img/dashboard/restaurant-menu2.svg" alt="Menu Item"></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Popular dishes</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item"><span
+                        class="media-name">Spaghetti</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item"><span
+                        class="media-name">Pizza</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish3.svg" alt="Menu Item"><span
+                        class="media-name">Lasagna</span></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Posts by guests</h2>
+               <a href="#" class="edit">Edit</a>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item">
+                     <span class="pin"><img src="assets/img/host-backend/pin.svg" alt="pin"></span>
+                  </li>
+                  <li><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item">
+                  </li>
+                  <li><img src="assets/img/dashboard/restaurant-dish3.svg" alt="Menu Item">
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <hr>      
+        
+         <div class="property-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+            <div class="heading">
+               <h2>Policies</h2>
+               <a href="javascript:void(0);" (click)="enableEdit('policies')" class="edit">Edit</a>
+            </div>
+            <div class="policy-list">
+               <div class="policy-details">
+                  <span class="policy-title">1. Cancelation Policy</span>
+                  <textarea class="policy-content"
+                     [readonly]="disbale.policies"> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</textarea>
+               </div>
+            </div>
+            <div class="policy-list">
+               <div class="policy-details">
+                  <span class="policy-title">2. Important Information</span>
+                  <textarea class="policy-content"
+                     [readonly]="disbale.policies"> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</textarea>
+               </div>
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">How many days prior can guest book the Tables</label>
+               <ng-select [items]="priorBookingDays" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>           
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">Free cancellation</label>
+               <ng-select [items]="freeCancellation" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+            <div class="extra-policies">
+               <label class="policy-title">Average price <span>(in $-CAD)</span></label>
+               <input type="number" value="236" class="form-control" id="averagePrice" [readonly]="disbale.policies">
+            </div>
+         </div>
+
+         <hr>
+         <div class="manage-listing">
+            <div class="heading">
+               <h2>Manage listing</h2>
+            </div>
+            <div class="manage-action">
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input" (change)="onItemChange($event)" type="radio" value="listed"
+                     name="manageListing" id="listed" checked>
+                  <label class="form-check-label" for="listed">
+                     Listed
+                  </label>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input" (change)="onItemChange($event)" type="radio" value="maintanance"
+                     name="manageListing" id="underMaintanance">
+                  <label class="form-check-label" for="underMaintanance">
+                     Under maintanance
+                  </label>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input" (change)="onItemChange($event)" type="radio" value="snooze"
+                     name="manageListing" id="snooze">
+                  <label class="form-check-label" for="snooze">
+                     Snooze
+                  </label>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input" (change)="onItemChange($event)" type="radio" value="deactivate"
+                     name="manageListing" id="deactivate">
+                  <label class="form-check-label" for="deactivate">
+                     Deactivate
+                  </label>
+               </div>
+            </div>
+         </div>
+         <!-- <button data-bs-toggle="modal" class="btn btn-secondary" data-bs-target="#reasonToDeleteListingModal">Reason to
+            Delete Listing</button> &nbsp;
+            <button data-bs-toggle="modal" class="btn btn-secondary" data-bs-target="#feedbackModal">Feedback</button>
+            &nbsp;
+            <button data-bs-toggle="modal" class="btn btn-secondary" data-bs-target="#deleteModal">Delete
+            Successfully</button> &nbsp;
+            <button data-bs-toggle="modal" class="btn btn-secondary"
+            data-bs-target="#snoozedDateRangeModal">Snoozed</button>
+            &nbsp;
+            <button data-bs-toggle="modal" class="btn btn-secondary" data-bs-target="#snoozedModal">Snoozed
+            Successfully</button>
+            <br> -->
+         <hr>
+         <button class="save-next-btn" [disabled]="!checkIfactive()">Save Changes</button>
+      </div>
+
+   </div>
+</form>
+
+
+
+<!-- Reason to Delete Listing Modal -->
+<div class="modal fade modal-lg" id="reasonToDeleteListingModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Tell us the reason to delete your listing</h5>
+            <p class="modal-subtitle">We understand that deactivating an account can be a difficult decision. If
+               you don't mind sharing, could you please let us know why you've decided to deactivate your
+               account?
+            </p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="form-field">
+                  <textarea name="" class="form-control" placeholder="Type your reason"></textarea>
+               </div>
+               <div class="action-btn">
+                  <button type="button" class="btn go-back" data-bs-dismiss="modal">No, Go back</button>
+                  <button type="button" class="btn delete" data-bs-dismiss="modal">Delete my listing</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade modal-lg" id="deleteModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-body">
+            <div class="thankyou-content">
+               <div class="sucess-icon">
+                  <img src="assets/img/dashboard/tick.svg" alt="Sucess Icon">
+               </div>
+               <div class="message-container">
+                  <h2>Your have deleted your listing</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pret.</p>
+                  <button class="continueButton" data-bs-dismiss="modal">Go back</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<!-- Feedback Modal -->
+<div class="modal fade modal-lg" id="feedbackModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">We value your feedback</h5>
+            <p class="modal-subtitle">Your feedback is important to us. Could you please share the reason for
+               deactivating your account so we can continue to improve our platform?
+            </p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="form-field">
+                  <textarea name="" class="form-control" placeholder="Type your feedback"></textarea>
+               </div>
+               <div class="action-btn">
+                  <button type="button" class="btn go-back" data-bs-dismiss="modal">No, Go back</button>
+                  <button type="button" class="btn delete" data-bs-dismiss="modal">Submit feedback</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Snoozed Date range Modal -->
+<div class="modal fade modal-lg" id="snoozedDateRangeModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Snooze your listing instead</h5>
+            <p class="modal-subtitle">Snooze your listing temporarily to prevent new bookings for a certain period.
+               You'll need to continue hosting guests who have already made reservations during this time.
+            </p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form [ngClass]="ShowCalendar == true ? 'hide-me' : ''">
+               <div class="form-field">
+                  <label for="snoozeStartDate" class="form-label">Snooze your listing from</label>
+                  <input type="text" id="snoozeStartDate" (click)="openDatepicker()" name="snoozeStartDate"
+                     placeholder="Select date" class="form-control ngx-daterangepicker-action">
+               </div>
+               <div class="form-field">
+                  <label for="snoozeEndDate" class="form-label">Snooze your listing to</label>
+                  <input type="text" id="snoozeEndDate" (click)="openDatepicker()" name="snoozeEndDate"
+                     placeholder="Select date" class="form-control ngx-daterangepicker-action">
+               </div>
+               <div class="action-btn">
+                  <button type="button" class="btn go-back" data-bs-dismiss="modal">No, delete my listing</button>
+                  <button type="button" class="btn delete" data-bs-dismiss="modal">Snooze my listing</button>
+               </div>
+            </form>
+            <div class="fx-date-range-container" [ngClass]="ShowCalendar == false ? 'hide-me' : ''">
+               <ngx-daterangepicker-material (choosedDate)="choosedDate($event)" [(ngModel)]="selectedDates"
+                  [linkedCalendars]="true">
+               </ngx-daterangepicker-material>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Snoozed Modal -->
+<div class="modal fade modal-lg" id="snoozedModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-body">
+            <div class="thankyou-content">
+               <div class="sucess-icon">
+                  <img src="assets/img/dashboard/tick.svg" alt="Sucess Icon">
+               </div>
+               <div class="message-container">
+                  <h2>Your have snoozed your listing</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pret.</p>
+                  <button class="continueButton" data-bs-dismiss="modal">Go back</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<button data-bs-toggle="modal" id="OpneCommonModal" style="display:none" #OpenModalButton class="btn btn-secondary"
+   data-bs-target="#commonModal">Open Common Modal</button>
+<div class="modal fade modal-lg" id="commonModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content" [ngSwitch]="modalProperties.action">
+
+
+         <ng-template [ngSwitchCase]="'snooze'">
+
+            <div class="modal-header" *ngIf="modalProperties.snooze.step == 'form'">
+               <h5 class="modal-title">Snooze your listing instead</h5>
+               <p class="modal-subtitle">Snooze your listing temporarily to prevent new bookings for a certain period.
+                  You'll need to continue hosting guests who have already made reservations during this time.
+               </p>
+               <button type="button" class="btn-close" (click)="ReinitalizeModal()" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngIf="modalProperties.snooze.step == 'form'">
+               <div class="snooze-form">
+                  <form [ngClass]="modalProperties.snooze.showCalendar == true ? 'hide-me' : ''">
+                     <div class="form-field">
+                        <label for="snoozeStartDate" class="form-label">Snooze your listing from</label>
+                        <input type="text" id="snoozeStartDate" (click)="openDatepicker('snooze')"
+                           value="{{modalProperties.snooze.startDate}}" name="snoozeStartDate" placeholder="Select date"
+                           class="form-control ngx-daterangepicker-action">
+                     </div>
+
+                     <div class="form-field">
+                        <label for="snoozeEndDate" class="form-label">Snooze your listing to</label>
+                        <input type="text" value="{{modalProperties.snooze.endDate}}" id="snoozeEndDate"
+                           (click)="openDatepicker('snooze')" name="snoozeEndDate" placeholder="Select date"
+                           class="form-control ngx-daterangepicker-action">
+                     </div>
+                     <div class="action-btn">
+                        <button type="button" class="btn go-back" (click)="ShowDeleteModal()">
+                           No, delete my listing
+                        </button>
+                        <button type="button" class="btn delete"
+                           [disabled]="modalProperties.snooze.startDate == '' || modalProperties.snooze.endDate == '' "
+                           (click)="SubmitSnooze('snooze')">
+                           Snooze my listing
+                        </button>
+                     </div>
+                  </form>
+                  <div class="fx-date-range-container"
+                     [ngClass]="modalProperties.snooze.showCalendar == false ? 'hide-me' : ''">
+                     <ngx-daterangepicker-material  [locale]="{applyLabel: 'Next', format: 'DD-MM-YYYY'}" (choosedDate)="choosedDate($event,'snooze')" [(ngModel)]="selectedDates"
+                        [linkedCalendars]="true">
+                     </ngx-daterangepicker-material>
+                     <a href="javascript:void(0);" (click)="ShowPreviousStep('snooze')" class="go-back-button">
+                        Go Back
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="thankyou-content" *ngIf="modalProperties.snooze.step == 'thankyou'">
+               <div class="sucess-icon">
+                  <img src="assets/img/dashboard/tick.svg" alt="Sucess Icon">
+               </div>
+               <div class="message-container">
+                  <h2>Your have snoozed your listing</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pret.</p>
+                  <button class="continueButton" data-bs-dismiss="modal" (click)="ReinitalizeModal()">Go back</button>
+               </div>
+            </div>
+
+
+
+
+         </ng-template>
+
+
+         <ng-template [ngSwitchCase]="'maintanance'">
+            <div class="modal-header" *ngIf="modalProperties.maintanance.step == 'form'">
+               <h5 class="modal-title">Pick maintenance dates </h5>
+               <p class="modal-subtitle">Temporarily pause your listing to prevent new bookings for a specific period while you are conducting maintenance. Please note that you will still need to accommodate guests who have already made reservations during this time.</p>
+               <button type="button" class="btn-close" (click)="ReinitalizeModal()" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngIf="modalProperties.maintanance.step == 'form'">
+               <div class="snooze-form">
+                  <form [ngClass]="modalProperties.maintanance.showCalendar == true ? 'hide-me' : ''">
+                     <div class="form-field">
+                        <label for="snoozeStartDate" class="form-label">Snooze your listing from</label>
+                        <input type="text" id="snoozeStartDate" (click)="openDatepicker('maintanance')"
+                           value="{{modalProperties.maintanance.startDate}}" name="snoozeStartDate" placeholder="Select date"
+                           class="form-control ngx-daterangepicker-action">
+                     </div>
+
+                     <div class="form-field">
+                        <label for="snoozeEndDate" class="form-label">Snooze your listing to</label>
+                        <input type="text" value="{{modalProperties.maintanance.endDate}}" id="snoozeEndDate"
+                           (click)="openDatepicker('maintanance')" name="snoozeEndDate" placeholder="Select date"
+                           class="form-control ngx-daterangepicker-action">
+                     </div>
+                     <div class="action-btn">
+                        <button type="button" class="btn go-back" data-bs-dismiss="modal" aria-label="Close"  (click)="ReinitalizeModal()">
+                           Cancel
+                        </button>
+                        <button type="button" class="btn delete"
+                           [disabled]="modalProperties.maintanance.startDate == '' || modalProperties.maintanance.endDate == '' "
+                           (click)="SubmitSnooze('maintanance')">
+                           Snooze my listing
+                        </button>
+                     </div>
+                  </form>
+                  <div class="fx-date-range-container"
+                     [ngClass]="modalProperties.maintanance.showCalendar == false ? 'hide-me' : ''">
+                     <ngx-daterangepicker-material  [locale]="{applyLabel: 'Next', format: 'DD-MM-YYYY'}" (choosedDate)="choosedDate($event,'maintanance')" [(ngModel)]="selectedDates"
+                        [linkedCalendars]="true">
+                     </ngx-daterangepicker-material>
+                     <a href="javascript:void(0);" (click)="ShowPreviousStep('maintanance')" class="go-back-button">
+                        Go Back
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="thankyou-content" *ngIf="modalProperties.maintanance.step == 'thankyou'">
+               <div class="sucess-icon">
+                  <img src="assets/img/dashboard/tick.svg" alt="Sucess Icon">
+               </div>
+               <div class="message-container">
+                  <h2>Your have snoozed your listing</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pret.</p>
+                  <button class="continueButton" data-bs-dismiss="modal" (click)="ReinitalizeModal()">Go back</button>
+               </div>
+            </div>
+
+
+
+
+         </ng-template>
+
+
+
+
+         <ng-template [ngSwitchCase]="'delete'">
+
+            <div class="modal-header" *ngIf="modalProperties.delete.step == 'predefined'">
+               <h5 class="modal-title">Tell us why do you want to deactivate your listing</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="ReinitalizeModal()"
+                  aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" *ngIf="modalProperties.delete.step == 'predefined'">
+                <div class="delete-reason-list">
+                  <div class="delete-reasons" *ngFor="let reason of deactivateReasons;let i = index;let last = last">
+                   <div class="form-field">
+
+                  <input type="radio" id="reason{{i}}" (change)="ReasonChange($event,last)" name="deleteReason"
+                  value="{{i}}">
+                   </div>
+                  <label for="reason{{i}}">{{reason.value}}</label>
+                  </div>
+               </div>
+               <div class="action-btn">
+                  <button type="button" class="btn delete" (click)="DeleteListing()">Next</button>
+               </div>
+            </div>
+
+
+
+            <div class="modal-header" *ngIf="modalProperties.delete.step == 'other'">
+               <h5 class="modal-title">Tell us the reason to delete your listing</h5>
+               <p class="modal-subtitle">We understand that deactivating an account can be a difficult decision. If
+                  you don't mind sharing, could you please let us know why you've decided to deactivate your
+                  account?
+               </p>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="ReinitalizeModal()"
+                  aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngIf="modalProperties.delete.step == 'other'">
+               <form>
+                  <div class="form-field">
+                     <textarea name="" class="form-control" (onkeyup)="ReasonField($event,'delete')"
+                        (keypress)="ReasonField($event,'delete')" placeholder="Type your reason"></textarea>
+                  </div>
+                  <div class="action-btn">
+                     <button type="button" class="btn go-back" (click)="goBack()" >
+                        No,Go back
+                     </button>
+                     <button type="button" class="btn delete" (click)="DeleteListing()">
+                        Delete my listing
+                     </button>
+                  </div>
+               </form>
+            </div>
+
+
+
+
+            <div class="thankyou-content" *ngIf="modalProperties.delete.step == 'thankyou'">
+               <div class="sucess-icon">
+                  <img src="assets/img/dashboard/tick.svg" alt="Sucess Icon">
+               </div>
+               <div class="message-container">
+                  <h2>Your have deleted your listing</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pret.</p>
+                  <button class="continueButton" data-bs-dismiss="modal" (click)="ReinitalizeModal()">Go back</button>
+               </div>
+            </div>
+
+
+         </ng-template>
+
+
+
+
+
+
+      </div>
+   </div>
+</div>

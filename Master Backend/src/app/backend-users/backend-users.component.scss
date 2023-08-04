@@ -1,0 +1,239 @@
+.dataTable {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header .module-title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.add-user-button {
+    border-radius: 5px;
+    border: 2px solid rgb(30, 187, 186);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 187, 186) !important;
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile {
+    width: 45px;
+}
+
+.modal {
+    padding-top: 0;
+}
+
+.modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 937px;
+    // padding: 40px;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body {
+    padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+    padding: 25px;
+}
+
+.modal-dialog .modal-content .modal-footer {
+    height: 86px;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
+.modal-dialog .modal-content .modal-header .modal-title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-header .modal-subtitle {
+    color: rgba(113, 113, 113, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 18px;
+    max-width: 510px;
+    margin: 8px auto 0;
+}
+
+.modal-dialog .modal-content .modal-body form {
+    max-width: 712px;
+    margin: 0 auto;
+}
+
+.modal-dialog .modal-content .modal-body form .form-group label {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.modal-dialog .modal-content .modal-body form .form-group input[type='text'] {
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+}
+
+.modal-dialog .modal-content .modal-body form .form-group input[type='text'],
+.modal-dialog .modal-content .modal-body form .form-group input[type='email'] {
+    border-radius: 5px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal-dialog .modal-content .modal-body form .form-group {
+    margin-bottom: 25px;
+}
+
+.modal-dialog .modal-content .modal-body form .form-group label {
+    cursor: pointer;
+}
+
+.edit-permission {
+    color: rgba(30, 187, 186, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.form-check-input[type=checkbox] {
+    background: url(/assets/img/master-backend/check-empty.svg) 0 2px no-repeat;
+    border: none;
+    width: 14px;
+    height: 18px;
+    box-shadow: none;
+}
+
+.form-check-input[type=checkbox]:checked {
+    background: url('/assets/img/master-backend/check-checked.svg') 0 2px no-repeat;
+}
+
+.permission-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0 !important;
+    margin-top: 24px;
+}
+
+.permission-all h6 {
+    color: rgba(117, 117, 117, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.permissions-list {
+    border-radius: 5px;
+    border: 1px solid rgba(204, 204, 204, 1);
+    box-shadow: 5px 5px 21px rgba(211, 211, 211, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 30px 25px;
+    margin-bottom: 60px;
+}
+
+.permissions-list .single-permission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 12px 0;
+}
+
+.permissions-list .single-permission:last-child
+{
+    border-bottom: none;
+}
+
+.permissions-list .single-permission .permission-name {
+    color: rgba(102, 102, 102, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.permissions-list .single-permission .permission-actions {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.permissions-list .single-permission .permission-actions .form-check-label {
+    color: rgba(25, 26, 31, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    cursor: pointer;
+}

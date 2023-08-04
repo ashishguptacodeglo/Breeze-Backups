@@ -1,0 +1,319 @@
+<form [formGroup]="propertyManagementForm">
+   <div class="edit-listing-page">
+      <div class="edit-property-details">
+         <div class="property-basic-info">
+            <div class="property-name">
+               <h2>The French Door Cafe & Restaurant</h2>
+            </div>
+            <div class="property-location">
+               <div class="sub-heading">
+                  <h5>Location</h5>
+               </div>
+               <div class="address">
+                  <input type="text" value="Honda, Tolima, Colombia" id="address" name="address" readonly>
+               </div>
+            </div>
+            <div class="property-brief-info">
+               <div class="sub-heading">
+                  <h5>Description</h5>
+               </div>
+               <textarea
+                  [readonly]="disbale.desc">The French Door Cafe & Restaurant is one of the classiest vegan restaurants that serve food with style. The food here includes delicious pizzas and appetizers….</textarea>
+            </div>
+         </div>
+         <hr>
+         <div class="open-timings">
+            <div class="heading">
+               <h2>Open timings</h2>
+            </div>
+            <div class="service-hrs">
+               <span class="operating-hrs">
+                  Operating Hours
+               </span>
+               <span class="open-hrs">
+                  <ul>
+                     <li><strong>Monday</strong> - 8am to 9pm</li>
+                     <li><strong>Tuesday</strong> - 8am to 9pm</li>
+                     <li><strong>Wednesday</strong> - 8am to 9pm</li>
+                     <li><strong>Thursday</strong> - 8am to 9pm</li>
+                     <li><strong>Friday</strong> - 8am to 9pm</li>
+                     <li><strong>Saturday</strong> - 8am to 9pm</li>
+                     <li><strong>Sunday</strong> - 8am to 9pm</li>
+                  </ul>
+               </span>
+            </div>
+         </div>
+         <hr>
+
+         <div class="booking-hours">
+            <div class="heading">
+               <h2>Booking Hours</h2>
+            </div>
+            <div class="booking-timing">
+               <div class="timing-list">
+                  <h5>Monday to Friday</h5>
+                  <div class="timings">
+                     <span>07:00 AM</span>
+                     <span>08:00 AM</span>
+                     <span>09:00 AM</span>
+                     <span>10:00 AM</span>
+                     <span>11:00 AM</span>
+                     <span>12:00 PM</span>
+                     <span>01:00 PM</span>
+                     <span>02:00 PM</span>
+                     <span>03:00 PM</span>
+                     <span>04:00 PM</span>
+                     <span>05:00 PM</span>
+                     <span>06:00 PM</span>
+                     <span>07:00 PM</span>
+                     <span>08:00 PM</span>
+                     <span>09:00 PM</span>
+                     <span>10:00 PM</span>
+                     <span>11:00 PM</span>
+                  </div>
+               </div>
+
+               <div class="timing-list">
+                  <h5>Saturday</h5>
+                  <div class="timings">
+                     <span>07:00 AM</span>
+                     <span>08:00 AM</span>
+                     <span>09:00 AM</span>
+                     <span>10:00 AM</span>
+                     <span>11:00 AM</span>
+                     <span>12:00 PM</span>
+                     <span>01:00 PM</span>
+                     <span>02:00 PM</span>
+                     <span>03:00 PM</span>
+                     <span>04:00 PM</span>
+                     <span>05:00 PM</span>
+                     <span>06:00 PM</span>
+                     <span>07:00 PM</span>
+                     <span>08:00 PM</span>
+                     <span>09:00 PM</span>
+                     <span>10:00 PM</span>
+                     <span>11:00 PM</span>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <hr>
+
+         <div class="property-contact-info">
+            <div class="contact-details">
+               <div class="heading">
+                  <h2>Contact info</h2>
+               </div>
+               <div class="contact-num">
+                  <div class="sub-heading">
+                     <h5>Mobile Number</h5>
+                  </div>
+                  <div class="verify-phone" [ngClass]="disbale.contact  ? 'disabled' : ''">
+                     <div class="intl-tel-input">
+                        <input type="text" class="form-control" class="{{isInvalid ? 'text-danger': ''}}"
+                           (focus)="onFocus()" (blur)="onBlur()" [ngModelOptions]="{standalone: true}"
+                           (keypress)="onInputKeyPress($event)" [(ngModel)]="phoneNumber"
+                           (ngModelChange)="onPhoneNumberChange()" #telInput [readonly]="disbale.contact" />
+                     </div>
+                     <div class="verified-message"><img src="assets/img/host-backend/verified.svg"
+                           alt="Verified"><span>Verified</span></div>
+                  </div>
+               </div>
+               <div class="contact-email">
+                  <div class="sub-heading">
+                     <h5>Email</h5>
+                  </div>
+                  <div class="verify-email">
+                     <input type="email" value="john@doe.com" [readonly]="disbale.contact">
+                     <div class="verified-message"><img src="assets/img/host-backend/verified.svg"
+                           alt="Verified"><span>Verified</span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-room-info">
+            <div class="heading">
+               <h2>Tables info</h2>
+            </div>
+            <div class="room-type">
+               <div class="room-details">
+                  <span class="room-name">1. Family Dining Table</span>
+                  <span class="room-brief-details">
+                     <span class="about-room">
+                        <span class="title">No of tables</span>
+                        <span class="content">31</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of guests</span>
+                        <span class="content">2</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Price per night</span>
+                        <span class="content">200$</span>
+                     </span>
+                  </span>
+               </div>
+            </div>
+            <hr style="border-color: #fff;">
+            <div class="room-type">
+               <div class="room-details">
+                  <span class="room-name">2. Family Dining Table</span>
+                  <span class="room-brief-details">
+                     <span class="about-room">
+                        <span class="title">No of tables</span>
+                        <span class="content">31</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of guests</span>
+                        <span class="content">2</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Price per night</span>
+                        <span class="content">200$</span>
+                     </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-amenities">
+            <div class="heading">
+               <h2>Amenities</h2>
+            </div>
+            <div class="amenities-list">
+               <span>Wake-up Call</span>
+               <span>Valet Parking</span>
+               <span>Cribs/Infant Beds</span>
+               <span>Spa</span>
+               <span>Fitness Center/Gym</span>
+            </div>
+         </div>
+         <hr>
+
+         <div class="property-info">
+            <div class="heading">
+               <h2>Basic Information</h2>
+            </div>
+            <div class="info-list">
+               <div class="information">
+                  <label class="title">Type of establishment</label>
+                  <input class="form-control" type="text" value="Restaurants, Bar" readonly>
+               </div>
+               <div class="information">
+                  <label class="title">Type of cuisines</label>
+                  <input class="form-control" type="text" value="Indian, Chinese" readonly>
+               </div>
+               <div class="information">
+                  <label class="title">Type of meals</label>
+                  <input class="form-control" type="text" value="Breakfast, Lunch, Brunch, Dinner" readonly>
+               </div>
+               <div class="information">
+                  <label class="title">Are pets/ service animals allowed?</label>
+                  <input class="form-control" type="text" value="No" readonly>
+               </div>
+            </div>
+         </div>
+
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Establishment Photos</h2>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item"><span
+                        class="media-name">Video 360</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item"><span
+                        class="media-name">Exterior</span></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Menu of your restaurant</h2>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li><img src="assets/img/dashboard/restaurant-menu1.svg" alt="Menu Item"></li>
+                  <li><img src="assets/img/dashboard/restaurant-menu2.svg" alt="Menu Item"></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Popular dishes</h2>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item"><span
+                        class="media-name">Spaghetti</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item"><span
+                        class="media-name">Pizza</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish3.svg" alt="Menu Item"><span
+                        class="media-name">Lasagna</span></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Posts by guests</h2>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item">
+                     <span class="pin"><img src="assets/img/host-backend/pin.svg" alt="pin"></span>
+                  </li>
+                  <li><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item">
+                  </li>
+                  <li><img src="assets/img/dashboard/restaurant-dish3.svg" alt="Menu Item">
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+
+         <div class="property-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+            <div class="heading">
+               <h2>Policies</h2>
+            </div>
+            <div class="policy-list">
+               <div class="policy-details">
+                  <span class="policy-title">1. Cancelation Policy</span>
+                  <textarea class="policy-content"
+                     [readonly]="disbale.policies"> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</textarea>
+               </div>
+            </div>
+            <div class="policy-list">
+               <div class="policy-details">
+                  <span class="policy-title">2. Important Information</span>
+                  <textarea class="policy-content"
+                     [readonly]="disbale.policies"> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</textarea>
+               </div>
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">How many days prior can guest book the Tables</label>
+               <ng-select [items]="priorBookingDays" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">Free cancellation</label>
+               <ng-select [items]="freeCancellation" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+            <div class="extra-policies">
+               <label class="policy-title">Average price <span>(in $-CAD)</span></label>
+               <input type="number" value="236" class="form-control" id="averagePrice" [readonly]="disbale.policies">
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+</form>

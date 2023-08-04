@@ -1,0 +1,40 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="establishment-info">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('posts')" [class]="{'active': page=='posts'}">
+						Post Requests <span class="post-count">(12)</span>
+					</span>
+					<span class="links" (click)="tabChange('approved')" [class]="{'active': page=='approved'}">
+						Approved Posts
+					</span>
+					<span class="links" (click)="tabChange('creator')" [class]="{'active': page=='creator'}">
+						Creator
+					</span>
+					<span class="links" (click)="tabChange('invites')" [class]="{'active': page=='invites'}">
+						Invites
+					</span>
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'posts'">
+					<app-post-requests></app-post-requests>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'approved'">
+					<app-approved-posts></app-approved-posts>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'creator'">
+					<app-post-creators></app-post-creators>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'invites'">
+					<app-invite-influencer></app-invite-influencer>
+				</ng-template>
+				
+			</div>
+		</section>
+	</div>
+</div>

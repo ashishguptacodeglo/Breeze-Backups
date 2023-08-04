@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="565px" height="536px" viewBox="0 0 565 536" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9@3x</title>
+    <g id="Host-prop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tutorial" transform="translate(-785, -126)">
+            <g id="Group-3" transform="translate(695, 0)">
+                <g id="Group-9" transform="translate(90, 126)">
+                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="565" height="536" rx="23.4086629"></rect>
+                    <g id="Play" opacity="0.484111968" transform="translate(229, 214)">
+                        <polygon id="Path" points="0 0 106 0 106 106 0 106"></polygon>
+                        <path d="M53,8.83333333 C28.5979167,8.83333333 8.83333333,28.5979167 8.83333333,53 C8.83333333,77.4020833 28.5979167,97.1666667 53,97.1666667 C77.4020833,97.1666667 97.1666667,77.4020833 97.1666667,53 C97.1666667,28.5979167 77.4020833,8.83333333 53,8.83333333 Z M44.1666667,72.875 L44.1666667,33.125 L70.6666667,53 L44.1666667,72.875 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

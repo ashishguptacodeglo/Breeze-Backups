@@ -1,0 +1,162 @@
+<app-menus [isfixed]="false"></app-menus>
+
+<main>
+
+    <div class="banner">
+        <img src="assets/img/host-backend/banner.svg" alt="Banner">
+    </div>
+
+    <div class="listing-section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="listing-wrapper">
+                        <a class="listing-item" [routerLink]="['/host-property/personal-information']">
+                            <div class="add-establishment">
+                                <img src="assets/img/host-backend/add-icon.svg" alt="Add Icon">
+                                <p>Add Establishment</p>
+                            </div>
+                        </a>
+                        <div class="listing-item">
+                            <div class="listing-details">
+                                <a [routerLink]="['/establishment-info/establishment-management']">
+                                    <div class="establishment-info">
+                                        <h5>The French Door Cafe & Restaurant</h5>
+                                        <p class="establishment-type">Restaurant</p>
+                                        <p class="establishment-location"><img
+                                                src="assets/img/host-backend/location.svg"
+                                                alt="Location"><span>Banglore, Karnataka</span></p>
+                                    </div>
+                                </a>
+
+                                <div class="establishment-status">
+                                    <div class="rejected-status">
+                                        <img src="assets/img/host-backend/ion-information.svg" alt="icon">
+                                        <div class="status-info">
+                                            <p>Your approval is currently on hold due to some issues we identified with
+                                                the documents you uploaded.</p>
+                                            <a href="#!">Click here to reupload </a>
+                                        </div>
+                                    </div>
+                                    <div class="current-status declined">
+                                        <p>Declined</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing-item">
+                            <div class="listing-details">
+                                <a [routerLink]="['/establishment-info/establishment-management']">
+                                    <div class="establishment-info">
+                                        <h5>Hights mankulam with pool</h5>
+                                        <p class="establishment-type">Property</p>
+                                        <p class="establishment-location"><img
+                                                src="assets/img/host-backend/location.svg"
+                                                alt="Location"><span>Banglore, Karnataka</span></p>
+                                    </div>
+                                </a>
+                                <div class="establishment-status">
+                                    <div class="rejected-status">
+                                        <img src="assets/img/host-backend/ion-information.svg" alt="icon">
+                                        <div class="status-info">
+                                            <p>Your approval is currently on hold due to some issues we identified with
+                                                the documents you uploaded.</p>
+                                            <a href="#!">Click here to reupload </a>
+                                        </div>
+                                    </div>
+                                    <div class="current-status snoozed">
+                                        <p>Snoozed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-item">
+                            <div class="listing-details">
+                                <a [routerLink]="['/establishment-info/establishment-management']">
+                                    <div class="establishment-info">
+                                        <h5>Camper by the bay</h5>
+                                        <p class="establishment-type">Property</p>
+                                        <p class="establishment-location"><img
+                                                src="assets/img/host-backend/location.svg" alt="Location"><span>Varkala,
+                                                Kerala</span></p>
+                                    </div>
+                                </a>
+                                <div class="establishment-status">
+                                    <div class="rejected-status active">
+                                        <img src="assets/img/host-backend/ion-information.svg" alt="icon">
+                                        <div class="status-info">
+                                            <p>Your approval is currently on hold due to some issues we identified
+                                                with
+                                                the documents you uploaded.</p>
+                                            <a href="#!">Click here to reupload </a>
+                                        </div>
+                                    </div>
+                                    <div class="current-status active">
+                                        <p>Active</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing-item">
+                            <div class="listing-details">
+                                <a [routerLink]="['/establishment-info/establishment-management']">
+                                    <div class="establishment-info">
+                                        <h5>The French Door Cafe & Restaurant</h5>
+                                        <p class="establishment-type">Restaurant</p>
+                                        <p class="establishment-location"><img
+                                                src="assets/img/host-backend/location.svg"
+                                                alt="Location"><span>Banglore, Karnataka</span></p>
+                                    </div>
+                                </a>
+                                <div class="establishment-status">
+                                    <div class="rejected-status">
+                                        <img src="assets/img/host-backend/ion-information.svg" alt="icon">
+                                        <div class="status-info">
+                                            <p>Your application is currently under review, and we will notify you as
+                                                soon as it is approved.</p>
+                                            <a href="#!">View details</a>
+                                        </div>
+                                    </div>
+                                    <div class="current-status onreview">
+                                        <p>On Review</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing-item">
+                            <div class="listing-details">
+                                <a [routerLink]="['/establishment-info/establishment-management']">
+                                    <div class="establishment-info">
+                                        <h5>Camper by the bay</h5>
+                                        <p class="establishment-type">Restaurant</p>
+                                        <p class="establishment-location"><img
+                                                src="assets/img/host-backend/location.svg"
+                                                alt="Location"><span>Banglore, Karnataka</span></p>
+                                    </div>
+                                </a>
+                                <div class="establishment-status">
+                                    <div class="rejected-status">
+                                        <img src="assets/img/host-backend/ion-information.svg" alt="icon">
+                                        <div class="status-info">
+                                            <p>Your approval is currently on hold due to some issues we identified
+                                                with
+                                                the documents you uploaded.</p>
+                                            <a href="#!">Click here to reupload </a>
+                                        </div>
+                                    </div>
+                                    <div class="current-status inprogress">
+                                        <p>In progress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>

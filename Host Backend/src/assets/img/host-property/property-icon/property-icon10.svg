@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 42</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-42">
+            <g id="Group-7">
+                <rect id="Rectangle" x="0" y="0" width="45" height="45"></rect>
+            </g>
+            <g id="Group-36" transform="translate(6.000000, 7.000000)" stroke="#000000">
+                <path d="M2.7169222,31 C4.31756554,29.5252183 5.62156417,28.7878275 6.6289181,28.7878275 C9.20999939,28.7878275 9.65201807,31 11.2349767,31 C12.8093145,31 13.9106342,28.7878275 16.3278402,28.7878275 C19.0809899,28.7878275 19.0809899,31 21.6525949,31 C23.944383,31 24.7462591,28.9812787 25.919508,28.7878275 C27.4637115,28.5332114 29.1639433,29.2706022 31.0202033,31" id="Line-22" stroke-width="1.1" stroke-linecap="round"></path>
+                <path d="M31.4958978,23.5127924 C26.3092663,27.7573982 21.4385731,29.9061333 16.8685628,29.9061333 C12.2943017,29.9061333 7.20953955,27.7578087 1.60068488,23.5127924 Z" id="Oval" stroke-width="1.1" fill="#FFFFFF"></path>
+                <line x1="26.6658524" y1="3.80701754" x2="26.6658524" y2="23.3859649" id="Line-23" stroke-width="1.1" stroke-linecap="round"></line>
+                <line x1="7.07127314" y1="10.3333333" x2="7.07127314" y2="23.3859649" id="Line-23" stroke-width="1.1" stroke-linecap="round"></line>
+                <line x1="2.7169222" y1="14.6842105" x2="16.8685628" y2="0.543859649" id="Line-24" stroke-width="1.1" stroke-linecap="round"></line>
+                <line x1="16.8685628" y1="14.6842105" x2="31.0202033" y2="0.543859649" id="Line-24" stroke-width="1.1" stroke-linecap="round" transform="translate(23.944383, 7.614035) scale(1, -1) translate(-23.944383, -7.614035) "></line>
+                <line x1="13.6027996" y1="16.8596491" x2="13.6027996" y2="23.3859649" id="Line-25" stroke-width="1.1" stroke-linecap="round"></line>
+                <line x1="16.8685628" y1="13.5938859" x2="16.8685628" y2="20.1254123" id="Line-25" stroke-width="1.1" stroke-linecap="round" transform="translate(16.868563, 16.859649) rotate(90.000000) translate(-16.868563, -16.859649) "></line>
+                <ellipse id="Oval" cx="16.3242689" cy="9.78947368" rx="1.67717547" ry="1.6754386"></ellipse>
+                <line x1="20.134326" y1="16.8596491" x2="20.134326" y2="23.3859649" id="Line-25" stroke-width="1.1" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

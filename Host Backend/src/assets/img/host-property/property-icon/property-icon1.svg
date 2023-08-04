@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9">
+            <rect id="Rectangle" x="0" y="0" width="45" height="45"></rect>
+            <g id="Group-37" transform="translate(6.000000, 7.000000)" stroke="#000000" stroke-width="0.92">
+                <line x1="4.96273292" y1="10.5513701" x2="4.96273292" y2="3.45608108" id="Line-30" stroke-linecap="round"></line>
+                <line x1="8.13043478" y1="3.45608108" x2="8.13043478" y2="7.79189189" id="Line-31" stroke-linecap="round"></line>
+                <line x1="4.96273292" y1="3.45608108" x2="8.13043478" y2="3.45608108" id="Line-32" stroke-linecap="round"></line>
+                <line x1="0.105590062" y1="14.7668919" x2="17" y2="0.10472973" id="Line-26" stroke-linecap="round"></line>
+                <line x1="17" y1="14.7668919" x2="33.8944099" y2="0.10472973" id="Line-26" stroke-linecap="round" transform="translate(25.447205, 7.435811) scale(1, -1) translate(-25.447205, -7.435811) "></line>
+                <line x1="30.7267081" y1="14.7668919" x2="30.7267081" y2="30.8952703" id="Line-27" stroke-linecap="round"></line>
+                <line x1="3.9068323" y1="30.8952703" x2="30.7267081" y2="30.8952703" id="Line-29" stroke-linecap="round"></line>
+                <line x1="3.9068323" y1="14.7668919" x2="17" y2="3.45608108" id="Line-28" stroke-linecap="round"></line>
+                <line x1="17" y1="14.7668919" x2="30.7267081" y2="3.45608108" id="Line-28" stroke-linecap="round" transform="translate(23.863354, 9.111486) scale(1, -1) translate(-23.863354, -9.111486) "></line>
+                <line x1="3.9068323" y1="14.7668919" x2="3.9068323" y2="30.8952703" id="Line-27" stroke-linecap="round"></line>
+                <path d="M20.4644868,20.3839374 L20.8513373,30.54 L13.7643478,30.54 L13.7643478,20.7566296 L20.4644868,20.3839374 Z" id="Rectangle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

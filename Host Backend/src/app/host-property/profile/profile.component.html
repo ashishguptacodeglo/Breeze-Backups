@@ -1,0 +1,49 @@
+<app-menus [isfixed]="true"></app-menus>
+
+
+ <div class="page_onboarding">
+   <div class="banner">
+		<div class="banner_wrapper">
+			<div class="container">
+				<div class="content-container">
+				<div class="banner_content left">
+				</div>
+				<div class="banner_content right">
+					<h2>Hello, Joyce</h2>
+					<div class="boarding_form">
+						<div class="loginBox">
+                     <img class="user" src="assets/img/dashboard/no-profile.svg" />
+                     <p class="text-center upload-photo-link">Upload Photo</p>
+                     <form action="login.php" method="post">
+                        <div class="inputBox">
+                           <div class="form-field">
+                              <label for="email">Email</label>
+                              <input class="form-control" type="email" id="email" placeholder="Email" />
+                           </div>
+                           <div class="form-field">
+                              <label class="phone-label">Phone Number</label>
+                              <div class="intl-tel-input">
+                                 <input
+                                 type="text"
+                                 class="form-control"
+                                 class="{{isInvalid ? 'text-danger': ''}}"
+                                 (focus)="onFocus()"
+                                 (blur)="onBlur()"
+                                 [ngModelOptions]="{standalone: true}"
+                                 (keypress)="onInputKeyPress($event)"
+                                 [(ngModel)]="phoneNumber"
+                                 (ngModelChange)="onPhoneNumberChange()"
+                                 #telInput
+                                 />
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+					</div>
+				</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

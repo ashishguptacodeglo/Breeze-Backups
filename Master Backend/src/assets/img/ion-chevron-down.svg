@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14.0625px" height="8.03125px" viewBox="0 0 14.0625 8.03125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ion-chevron-down - Ionicons@3x</title>
+    <g id="Host-prop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Host-rooms-Add-details" transform="translate(-860.000000, -488.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group-21" transform="translate(336.000000, 168.000000)">
+                <g id="Group-25" transform="translate(0.000000, 262.000000)">
+                    <g id="Group-17" transform="translate(411.000000, 6.000000)">
+                        <g id="Group-9-Copy" transform="translate(0.000000, 31.000000)">
+                            <g id="ion-chevron-down---Ionicons" transform="translate(113.000000, 21.000000)">
+                                <path d="M7.03125,5.34375 L7.03125,5.34375 L12.46875,0.125 C12.6354167,-0.0416666667 12.8020833,-0.0416666667 12.96875,0.125 L13.9375,1.0625 C14.1041667,1.22916667 14.1041667,1.39583333 13.9375,1.5625 L7.28125,7.9375 C7.21875,8 7.13541667,8.03125 7.03125,8.03125 C6.92708333,8.03125 6.84375,8 6.78125,7.9375 L0.125,1.5625 C-0.0416666667,1.39583333 -0.0416666667,1.22916667 0.125,1.0625 L1.09375,0.125 C1.26041667,-0.0416666667 1.42708333,-0.0416666667 1.59375,0.125 L7.03125,5.34375 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

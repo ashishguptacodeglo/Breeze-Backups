@@ -1,0 +1,110 @@
+<header id="main_header" class="header" [ngClass]="isfixed ? 'header_fixed' : '' ">
+   <nav class="navbar navbar-expand-lg">
+      <div class="container">
+         <a class="navbar-brand" [routerLink]="['/host-property/listing']">
+            <img src="assets/img/breeze_brand_logo.svg" alt=""></a>
+         <div class="d-flex menu_wrapper">
+            <div class="collapse navbar-collapse show" id="navbarNavDropdown">
+               <div class="menu-main-header-container">
+                  <ul id="menu-main-header" class="navbar-nav">
+                     <li class="menu-item">
+                        <span href="#">Help</span>
+                     </li>
+                     <li class="menu-item">
+                        <span (click)="ShowNotifiCationMenu()" >Notification</span>
+                     </li>
+                     <li class="menu-item">
+                        <div class="userprofile">
+                           <ul>
+                              <li (click)="toggleDropdown()">
+                                 <img class="user" src="assets/img/dashboard/header-account.svg" />
+                                 <div class="dropdown" *ngIf="showDropdown">
+                                    <ul>
+                                       <li><a [routerLink]="['/host-property/profile']">Profile</a></li>
+                                       <li><a [routerLink]="['/host-property/listing']">View listings</a></li>
+                                       <li class="spacer"></li>
+                                       <li><a [routerLink]="['/']" class="bold">Help</a></li>
+                                       <li><a (click)="logout()" class="bold">Log out</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+         <div class="notif" *ngIf="notificationToggle">
+            <div class="top">
+               <p class="setting">
+                     <a [routerLink]="['/']">Notification Settings</a>
+               </p>
+            </div>
+            <div class="notif-list">
+               <div class="itm unread">
+                  <div class="slice">
+                     <h5 class="title">Establishment On Hold</h5>
+                     <div class="timer">
+                        <p>5 minutes ago</p>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <p>Your approval is currently on hold due to some issues we identified with the documents
+                        you uploaded. </p>
+                  </div>
+               </div>
+               <div class="itm">
+                  <div class="slice">
+                     <h5 class="title">You got a new Booking Today from <span class="highlight">Rose Anny</span></h5>
+                     <div class="timer">
+                        <p>5 minutes ago</p>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <p>Your approval is currently on hold due to some issues we identified with the documents
+                        you uploaded. </p>
+                  </div>
+               </div>
+               <div class="itm">
+                  <div class="slice">
+                     <h5 class="title">You got a new Booking Today from <span class="highlight">Rose Anny</span></h5>
+                     <div class="timer">
+                        <p>5 minutes ago</p>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <p>Your approval is currently on hold due to some issues we identified with the documents
+                        you uploaded. </p>
+                  </div>
+               </div>
+               <div class="itm unread">
+                  <div class="slice">
+                     <h5 class="title">You got a new Booking Today from <span class="highlight">Rose Anny</span></h5>
+                     <div class="timer">
+                        <p>5 minutes ago</p>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. </p>
+                  </div>
+               </div>
+               <div class="itm">
+                  <div class="slice">
+                     <h5 class="title">Jayden Matt is checking out <span class="highlight">Today</span></h5>
+                     <div class="timer">
+                        <p>10 minutes ago</p>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</header>

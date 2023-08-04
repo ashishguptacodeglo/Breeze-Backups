@@ -1,0 +1,131 @@
+#chart {
+  max-width: 1300px;
+}
+
+.tickets-list-container .stats-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.tickets-list-container .stats-list .list-item {
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid rgba(226, 226, 226, 1);
+  box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tickets-list-container .stats-list .list-item .title {
+  color: rgba(55, 55, 55, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.tickets-list-container .stats-list .list-item .num {
+  font-family: "Gilroy-Bold";
+  font-size: 52px;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.tickets-list-container .stats-list .list-item .num.open {
+  color: rgba(224, 32, 32, 1);
+}
+
+.tickets-list-container .stats-list .list-item .num.pending {
+  color: #FFB000;
+}
+
+.tickets-list-container .stats-list .list-item .num.close {
+  color: #1EBBBA;
+}
+
+.tickets-list-container .stats-list .list-item .num.declined {
+  color: #FA6400;
+}
+
+
+
+::ng-deep {
+
+  .apexcharts-tooltip {
+
+    .tooltip-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 34px;
+      border-radius: 6px;
+      border-color: rgba(190, 190, 190, 1);
+      background-color: rgba(255, 255, 255, 1);
+      padding: 10px;
+      width: 150px;
+    }
+
+    .tooltip-box .date {
+      color: rgba(55, 55, 55, 1);
+      font-family: "Gilroy-Bold";
+      font-size: 17px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+
+    .tooltip-box .total-booking {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tooltip-box .total-booking span:first-child {
+      color: rgba(55, 55, 55, 1);
+      font-family: "Gilroy-Bold";
+      font-size: 25px;
+      font-style: normal;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+
+    .tooltip-box .total-booking span:last-child {
+      opacity: 1;
+      color: rgba(55, 55, 55, 1);
+      font-family: "Gilroy-Medium";
+      font-size: 15px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+  }
+}
+
+.chart-container {
+  border-radius: 10px;
+  border: 1px solid rgba(226,226,226, 1);
+  box-shadow: 0px 4px 8px rgba(230,230,230, 0.5);
+  opacity: 1;
+  background-color: rgba(255,255,255, 1);
+}
+
+.donut-chart-and-table {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

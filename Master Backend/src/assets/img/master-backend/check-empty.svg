@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="22 22 24 24">
+    <title>Group 15@3x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24" rx="3"/>
+        <filter x="-166.7%" y="-166.7%" width="491.7%" height="491.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="7" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0.825946003   0 0 0 0 0.825946003   0 0 0 0 0.825946003  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"/>
+        </filter>
+    </defs>
+    <g id="Notification" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-Copy-3" transform="translate(22, 22)">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"/>
+            <rect stroke="#CCCCCC" stroke-width="1.38" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.69" y="0.69" width="22.62" height="22.62" rx="3"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,129 @@
+<div class="approval-history">
+   <h2 class="title">Approval history</h2>
+
+   <div class="progressbar-wrapper">
+      <ul class="progressbar">
+         <li class="active">Online application</li>
+         <li>Application Review</li>
+         <li>Documentation Review</li>
+         <li>Documents <br>Verified Confirmation mail</li>
+         <li>Establishment goes live</li>
+      </ul>
+   </div>
+   <!-- assets/img/host-backend/ion-information.svg -->
+
+   <div class="approval-activity-list">
+      <div class="headings">
+         <div class="log-titles activity-heading">Activity log</div>
+         <div class="log-titles col_2">Approved by</div>
+         <div class="log-titles col_3">Status</div>
+      </div>
+   </div>
+
+   <div class="single-date-log" *ngFor="let history of ApprovalActivityHistory;let h = index">
+      <div class="log-dates">
+         <div class="date">
+            <span class="month-name">{{getMonthName(history.date)}}</span>
+            <span class="date-name">{{history.date | date: 'dd'}}</span>
+         </div>
+         <div class="timelines">
+            <div class="activity-date">{{history.date | date: 'mediumDate'}}</div>
+
+            <div class="activity-log-and-time" *ngFor="let activity of history.activites;let j = index">
+               <div class="activity-log">
+                  <div class="time">{{activity.time}}</div>
+                  <div class="activity">
+                     <span>{{activity.activity}}</span>
+                     <button type="button" *ngIf="checkIfContains(activity.activity)" (click)="OpenActivities()">View
+                        documents</button>
+                  </div>
+               </div>
+               <div class="activity-approved-by">
+                  <div class="approved-by-user">
+                     <img src="assets/img/dashboard/header-account.svg" class="user">
+                     <span class="approver-name">Brandon Fowler</span>
+                  </div>
+               </div>
+               <div class="activity-status {{activity.status}}">
+                  <div class="activity">
+
+                     <div class="activity-action status-dropdown">
+                        <div class="change-status {{activity.status}}">
+                           <ng-select [items]="estfilters" (change)="statusChangeNgSelect($event,h,j)"
+                              [(ngModel)]="activity.status" bindLabel="name" bindValue="value" autocomplete="off"
+                              [searchable]="false" [clearable]="false">
+                           </ng-select>
+                           <img *ngIf="activity.status == 'rejected'" (click)="OpenActionModal(h,j,true)"
+                              src="assets/img/host-backend/ion-information.svg">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="action-content" *ngIf="activity.status == 'rejected' && activity.ismodalopen == true">
+                     <div class="title">
+                        Tell the host why it is rejected.
+                     </div>
+                     <div class="content-message">
+                        <textarea class="reject-content"></textarea>
+                     </div>
+                     <div class="send-button">
+                        <button type="button" (click)="OpenActionModal(h,j,false)">Send</button>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="action-content" *ngIf="activity.status == 'rejected' && activity.ismodalopen == true">
+                  <div class="title">
+                     Tell the host why it is rejected.
+                  </div>
+                  <div class="content-message">
+                     <textarea class="reject-content"></textarea>
+                  </div>
+                  <div class="send-button">
+                     <button type="button" (click)="OpenActionModal(h,j,false)">Send</button>
+                  </div>
+               </div> -->
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--  <div class="single-date-log">
+      <div class="log-dates">
+         <div class="date">
+            <span class="month-name">Sept</span>
+            <span class="date-name">2</span>
+         </div>
+         <div class="timelines">
+            <div class="activity-date">Sept 2, 2020</div>
+
+            <div class="activity-log-and-time">
+               <div class="activity-log">
+                  <div class="time">9:45 AM</div>
+                  <div class="activity">
+                     <span>Document verification</span>
+                     <button>View documents</button>
+                  </div>
+               </div>
+               <div class="activity-approved-by">
+                  <div class="approved-by-user">
+                     <img src="assets/img/dashboard/header-account.svg" class="user">
+                     <span class="approver-name">Brandon Fowler</span>
+                  </div>
+               </div>
+               <div class="activity-status {{StatusArary[2]}}">
+                  <div class="activity">
+                     <div class="activity-action">
+                        <ng-select [items]="estfilters" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false" placeholder="Select">
+                        </ng-select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ -->
+
+</div>

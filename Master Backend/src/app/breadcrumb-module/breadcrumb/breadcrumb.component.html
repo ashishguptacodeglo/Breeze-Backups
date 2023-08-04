@@ -1,0 +1,19 @@
+<div class="breadcrump" *ngIf="breadCrumb">
+    <div class="breadcrump_wrap">
+        <span class="source parent" *ngIf="breadCrumb.level > 1">
+            <a *ngIf="breadCrumb.home == undefined" routerLink="/approval">Home</a>
+            <a *ngIf="breadCrumb.home != undefined" routerLink="{{breadCrumb?.home?.link}}">{{breadCrumb?.home?.name}}</a>
+        </span>
+        <ng-template [ngIf]="breadCrumb.level > 2">
+            <span class="source parent" *ngFor="let parent of breadCrumb.parents">
+                <a *ngIf="parent.queryParams == undefined; else paramsBlock;" routerLink="{{parent.link}}">
+                	{{parent.name}}
+                </a>
+                <ng-template #paramsBlock>
+                    <a [routerLink]="[parent.link]"  [queryParams]="parent.queryParams">{{parent.name}}</a>
+                </ng-template>
+            </span>
+        </ng-template>
+        <span class="source">{{breadCrumb.page}}</span>
+    </div>
+</div>

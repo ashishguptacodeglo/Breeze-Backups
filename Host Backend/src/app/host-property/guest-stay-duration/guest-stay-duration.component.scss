@@ -1,0 +1,20 @@
+.stayDurationDropdown {
+    max-width: 628px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+.stayDurationDropdown select {
+    border: 1px solid rgba(151, 151, 151, 1);
+    height: 50px;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.stayDurationDropdown select.ng-invalid {
+    color: #93A5AE;
+}

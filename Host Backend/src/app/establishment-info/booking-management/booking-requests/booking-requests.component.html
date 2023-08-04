@@ -1,0 +1,80 @@
+<div class="property-reservations">
+   <h2>Property Reservations</h2>
+   <div class="no-result" *ngIf="!fetched">
+      <p>There are no requests from the guest.</p>
+   </div>
+   <div class="property-reservations-list" *ngIf="fetched">
+      <div *ngIf="posts.length > 0">
+         <table datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+               <tr>
+                  <th>ID</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let post of posts;let i=index">
+                  <td class="border-black">
+                     <div class="single-property-reservation">
+                        <div class="user-info">
+                           <div class="user-image">
+                              <img src="assets/img/dashboard/header-account.svg" class="user">
+                           </div>
+                           <div class="booking-user">
+                              <div class="username">
+                                 Request by Dennis Wells - {{i}}
+                              </div>
+                              <div class="room-type">
+                                 <span class="room-type-heading">Room type:</span> <span class="user-room-type">Standard
+                                    room</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="booking-information">
+                           <div class="info">
+                              <div class="information">
+                                 <span class="title">From : </span> <span class="data"> April 23, 2023</span>
+                              </div>
+                              <div class="information">
+                                 <span class="title">To : </span> <span class="data"> April 26, 2023</span>
+                              </div>
+                              <div class="information">
+                                 <span class="title">No of guests: </span> <span class="data">4</span>
+                              </div>
+                              <div class="information">
+                                 <span class="title">Price: </span> <span class="data"> $400 </span>
+                              </div>
+                           </div>
+                           <div class="action-buttons">
+                              <div class="information">
+                                 <div class="buttons">
+                                    <button type="button" class="primaryBtn">Approve</button>
+                                 </div>
+                              </div>
+                              <div class="information">
+                                 <div class="buttons">
+                                    <button type="button" class="secondaryBtn">Decline</button>
+                                 </div>
+                              </div>
+                              <div class="information">
+                                 <div class="buttons">
+                                    <button type="button" class="secondaryBtn">Message</button>
+                                 </div>
+                              </div>
+                              <div class="information">
+                                 <div class="time-left">
+                                    <span class="title">Time left : </span>
+                                    <span class="time"> 23:09:56 </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="no-result" *ngIf="posts.length == 0">
+         <p>There are no requests from the guest</p>
+      </div>
+   </div>

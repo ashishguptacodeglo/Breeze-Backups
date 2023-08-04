@@ -1,0 +1,311 @@
+.ticket-details .issue-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.ticket-details .issue-details .right-sec {
+    width: 100%;
+    max-width: 400px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details {
+    border-radius: 10px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.078323);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment,
+.ticket-details .issue-details .right-sec .establishment-details .establishment-contact-details {
+    padding: 20px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment .name-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment .name-type .name {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment .name-type .type {
+    border-radius: 14px;
+    background-color: rgba(30, 187, 186, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 23px;
+    width: 86px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment .address {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .about-establishment .address p {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .establishment-contact-details ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .establishment-contact-details ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .establishment-contact-details ul li img {
+    width: 100%;
+    max-width: 12px;
+}
+
+.ticket-details .issue-details .right-sec .establishment-details .establishment-contact-details ul li p {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.ticket-details .ticket-details-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid #E2E2E2;
+    margin-bottom: 25px;
+}
+
+.ticket-details .ticket-details-card .card-header,
+.ticket-details .ticket-details-card .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-details .ticket-details-card .card-header {
+    margin-bottom: 15px;
+}
+
+.ticket-details .ticket-details-card .card-header .ticket-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.ticket-details .ticket-details-card .card-header .ticket-id span {
+    color: rgba(14, 126, 202, 1);
+}
+
+.ticket-details .ticket-details-card .card-header .ticket-id {
+    color: #444A4A;
+    font-family: "Gilroy-Medium";
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+::ng-deep {
+
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select,
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select.ng-select-single .ng-select-container {
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-family: "Gilroy-Medium";
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: #fff;
+        width: 105px;
+        height: 30px !important;
+        padding-left: 0;
+        min-height: 30px;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select-container,
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select .ng-dropdown-panel {
+        box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select.ng-select-single .ng-select-container {
+        padding-left: 5px;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select .ng-arrow-wrapper {
+        width: auto;
+        left: -6px;
+        padding-right: 8px;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status .ng-select .ng-arrow-wrapper .ng-arrow {
+        border-color: #fff transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 2.5px;
+        background: none;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status.open .ng-select,
+    .ticket-details .ticket-details-card .card-header .change-status.open .ng-select.ng-select-single .ng-select-container {
+        background-color: #E02020;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status.pending .ng-select,
+    .ticket-details .ticket-details-card .card-header .change-status.pending .ng-select.ng-select-single .ng-select-container {
+        background-color: #F7B500;
+    }
+
+    .ticket-details .ticket-details-card .card-header .change-status.closed .ng-select,
+    .ticket-details .ticket-details-card .card-header .change-status.closed .ng-select.ng-select-single .ng-select-container {
+        background-color: #1EBBBA;
+    }
+}
+
+.ticket-details .ticket-details-card .card-body .task-info .title {
+    color: rgb(68, 74, 74);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.ticket-details .heading {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+.ticket-details .issue-desc p,
+.assigned-on .title,
+.assigned-to .title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.ticket-details .ticket-details-card .card-body .ticket-desc
+{
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    list-style: none;
+}
+
+.ticket-details .ticket-details-card .card-body .ticket-desc p:last-child {
+    margin-bottom: 0;
+}
+
+.assigned-on .assigned-date,
+.assigned-to .assigned-date {
+    color: #444A4A;
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.ticket-details .issue-desc {
+    margin-bottom: 30px;
+}
+
+.ticket-details .attachments-sec .attachments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid #E2E2E2;
+    margin-bottom: 25px;
+}
+
+.ticket-details .attachments-sec .attachments .file-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.ticket-details .attachments-sec .attachments .file-details .file-icon {
+    width: 100%;
+    max-width: 18px;
+    height: 20px;
+}
+
+.ticket-details .attachments-sec .attachments .file-details .file-name {
+    color: rgba(87, 97, 107, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}

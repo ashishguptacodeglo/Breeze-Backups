@@ -1,0 +1,119 @@
+<div class="mobile-app-users-overview">
+	<h2 class="heading">Mobile app users</h2>
+
+  <div class="head-wrap">
+    <div class="head">
+      <p class="p-head">Gender Overview of New Users</p>
+      <div class="list-filters">
+        <div class="sortby">
+           <span class="filter-label">Sort by</span>
+           <div class="filter-dropdown">
+              <ng-select [items]="estfilters" bindLabel="name" bindValue="value" autocomplete="off"
+              [searchable]="false" [clearable]="false" placeholder="This month">
+              </ng-select>
+           </div>
+        </div>
+     </div>
+    </div>
+    <div class=""></div>
+    
+  </div>
+
+
+  <div class="two-col-wrap">
+    <div class="col1">
+      <div class="stat-head">
+        <div class="data-wrap ios">
+          <h2>{{statsData.android.downloads}}</h2>
+          <div class="">
+            <div class="download-heading">iOS</div>
+            <div class="download-title">Total Downloads</div>
+          </div>
+        </div>
+        <div class="data-wrap android">
+          <h2>{{statsData.ios.downloads}}</h2>
+          <div class="">
+            <div class="download-heading">Android</div>
+            <div class="download-title">Total Downloads</div>
+          </div>
+        </div>
+      </div>
+      <p class="month">September</p>
+      <div class="chart-row" *ngIf="showChart">
+        <div class="chart-col">
+          <div class="chart-parent">
+            <apx-chart [series]="MaleChart.series" [chart]="MaleChart.chart" [plotOptions]="MaleChart.plotOptions"
+              [labels]="MaleChart.labels" [fill]="MaleChart.fill"></apx-chart>
+          </div>
+          <div class="chart-info" *ngIf="showChart">
+            <div class="gender">Male</div>
+            <div class="ios-users">
+              <div class="circle"></div>
+              <div class="title">iOS users</div>
+              <div class="value">{{MaleChart.series[0]}}%</div>
+            </div>
+            <div class="android-users">
+              <div class="circle"></div>
+              <div class="title">Android users</div>
+              <div class="value">{{MaleChart.series[1]}}%</div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-col">
+          <div class="chart-parent">
+            <apx-chart [series]="FemaleChart.series" [chart]="FemaleChart.chart" [plotOptions]="FemaleChart.plotOptions"
+              [labels]="FemaleChart.labels" [fill]="FemaleChart.fill"></apx-chart>
+          </div>
+          <div class="chart-info" *ngIf="showChart">
+            <div class="gender">Female</div>
+            <div class="ios-users">
+              <div class="circle"></div>
+              <div class="title">iOS users</div>
+              <div class="value">{{FemaleChart.series[0]}}%</div>
+            </div>
+            <div class="android-users">
+              <div class="circle"></div>
+              <div class="title">Android users</div>
+              <div class="value">{{FemaleChart.series[0]}}%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col2" *ngIf="showChart">
+      <div class="head">
+        <p>Regions Overview</p>
+        <button class="export-btn">Export Report</button>
+      </div>
+      <div class="region-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <td class="border-0">County</td>
+              <td class="border-0">iOS Users</td>
+              <td class="border-0">Android Users</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bar of statsData.cityWiseData; let i = index">
+              <td class="grey-font">{{ bar[0].city }}</td>
+              <td colspan="2">
+                <div class="progress mt-2" style="max-width: 100%">
+                  <div class="progress-bar"
+                    style="width: {{percentage(bar[0].users.ios,bar[0].users.android+bar[0].users.ios)}}%; background-color: #1EBBBA">
+                  </div>
+                  <div class="progress-bar progress-bar-stripped"
+                    style="width:{{percentage(bar[0].users.android,bar[0].users.android+bar[0].users.ios)}}%; background-color: #0E7ECA">
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>

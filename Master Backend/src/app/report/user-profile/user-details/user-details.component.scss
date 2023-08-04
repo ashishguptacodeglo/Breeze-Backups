@@ -1,0 +1,303 @@
+.userdetails-section {
+    max-width: 984px;
+}
+
+.back-link {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.back-link a {
+    color: rgba(60, 124, 255, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-link a img {
+    width: 20px;
+}
+
+.single-approved-post .post-description p {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 22px;
+    margin: 0;
+}
+
+.single-approved-post .post-description p strong {
+    font-family: "Gilroy-Bold";
+}
+
+.single-approved-post .post-image-container::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+.single-approved-post .post-image img {
+    width: 100%;
+    height: 310px;
+}
+
+.single-approved-post {
+    margin-bottom: 10px;
+    max-width: 310px;
+}
+
+.approve-post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.secondaryBtn {
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 3px 22px;
+}
+
+.single-approved-post .post-image-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.single-approved-post .post-image-container .post-author-details {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.single-approved-post .post-image-container .post-author-details .post-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.single-approved-post .post-image-container .post-author-details .post-header-actions .post-actions .dropdown-menu {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.734304);
+    right: 15px;
+    margin-top: 15px;
+}
+
+.single-approved-post .post-image-container .post-author-details .post-header-actions .post-actions .dropdown-menu:hover a {
+    background-color: transparent;
+}
+
+.single-approved-post .post-image-container .post-author-details .post-header-actions .post-actions .dropdown-menu a {
+    color: rgba(255, 255, 255, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.single-approved-post .post-image-container .post-author-details .post-header-actions .post-actions .dropdown-menu a.delete {
+    color: rgba(255, 75, 75, 1) !important;
+}
+
+.single-approved-post .post-image-container .post-author-details .user-info {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+
+.single-approved-post .post-image-container .post-author-details .user-info .profile-img {
+    width: 36px;
+    height: 36px;
+}
+
+.single-approved-post .post-image-container .post-author-details .user-info .author-details h6 {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.single-approved-post .post-image-container .post-author-details .user-info .author-details .location {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.single-approved-post .post-image-container .speaker-image {
+    position: absolute;
+    right: 25px;
+    bottom: 40px;
+}
+
+.influencer-profile-container {
+    max-width: 636px;
+}
+
+.influencer-profile-container .influencer-basic-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.influencer-profile-container .influencer-basic-info img {
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    ;
+}
+
+.influencer-profile-container .influencer-basic-info .profile-stats-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.influencer-profile-container .influencer-basic-info .profile-stats-list .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.influencer-profile-container .influencer-basic-info .profile-stats-list .profile-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.influencer-profile-container .influencer-basic-info .profile-stats-list .profile-stat .count {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 15.829528px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.influencer-profile-container .influencer-basic-info .profile-stats-list .profile-stat .count {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.influencer-profile-container .influencer-basic-info .profile-stats-list .profile-stat .stat {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+#influencer-profile .modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 399px;
+    padding: 30px;
+}
+
+#influencer-profile .modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: -15px;
+    top: -10px;
+}
+
+#influencer-profile .single-approved-post {
+    margin-bottom: 0;
+}
+
+.influencer-profile-container .influencer-name-and-badge {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.influencer-profile-container .influencer-name-and-badge h6 {
+    color: rgb(3, 3, 3);
+    font-family: "Gilroy-Bold";
+    font-size: 14.840183px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.influencer-profile-container .influencer-short-info p {
+    color: rgba(3, 3, 3, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.influencer-profile-container .influencer-social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.influencer-profile-container .influencer-social-media .social-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+}
+
+.influencer-profile-container .influencer-social-media .media-link {
+    color: rgba(14, 126, 202, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}

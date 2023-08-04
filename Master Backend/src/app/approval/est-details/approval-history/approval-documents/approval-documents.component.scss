@@ -1,0 +1,386 @@
+.back-link {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.back-link a {
+    color: rgba(60, 124, 255, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-link a img {
+    width: 20px;
+}
+.common-header p {
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.upload-document {
+    padding-bottom: 50px;
+    min-height: 600px;
+}
+
+.upload-document .document-details .document-heading {
+    background: #F7F7F7;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.upload-document .document-details .document-heading .col_1, .upload-document .document-details .document-list>div:first-child{
+    flex-basis: 50%;
+}
+.upload-document .document-details .document-heading .col_2,.upload-document .document-details .document-heading .col_3, .upload-document .document-details .document-list>div:nth-child(2),.upload-document .document-details .document-list>div:nth-child(3){
+    flex-basis: 25%;
+}
+.upload-document .document-details .document-heading .col_2, .upload-document .document-details .document-list>div:nth-child(2){
+    text-align: center;
+}
+.upload-document .document-details .document-list > div:nth-child(2) {
+    text-align: center;
+    font-family: 'Gilroy-Medium';
+    font-weight: 600;
+    font-size: 15px;
+    color: #717171;
+}
+.upload-document .document-details .document-list > div:nth-child(2) a{
+    color: #0E7ECA !important;
+}
+.upload-document .document-details .status-dropdown {
+    padding-left: 35%;
+    width: 100%;
+    position: relative;
+}
+.upload-document .document-details .change-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-document .document-details .document-heading span {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.upload-document .document-details .document-heading span.status {
+    width: 200px;
+    text-align: center;
+}
+
+.upload-document .document-details .document-list {
+    border-radius: 10px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.upload-document .document-details .document-list.errorborder {
+    border: 1px solid #ff0000;
+}
+
+
+.upload-document .document-details .document-list .document-name {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.upload-document .document-details .document-list .document-name h6 {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.upload-document .document-details .document-list .document-name .format {
+    color: rgba(113, 113, 113, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.upload-document .document-details .document-list .document-name .error-msg {
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.upload-document .document-details .document-list .document-name .error-msg img {
+    cursor: pointer;
+    top: -2px;
+    position: relative;
+    left: 10px;
+}
+
+.upload-document .document-details .document-list .document-name .status-info {
+    border-radius: 5px;
+    border: 1px solid rgba(207, 207, 207, 1);
+    box-shadow: 20px 20px 80px rgba(224, 224, 224, 0.796558);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 16px;
+    position: absolute;
+    right: -210px;
+    bottom: -80px;
+    width: 300px;
+    display: none;
+    transition: all 0.5s;
+}
+
+.upload-document .document-details .document-list .document-name .status-info p {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 19px;
+    margin-bottom: 15px;
+}
+
+.upload-document .document-details .document-list .document-name .error-msg img:hover+.status-info {
+    display: block;
+}
+
+.upload-document .document-details .document-list .document-file input[type=file] {
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #888888;
+}
+
+.upload-document .document-details .document-list .document-file input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid rgba(14, 126, 202, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    text-align: center;
+    background: #fff;
+    font-family: "Gilroy-Bold";
+    color: rgba(14, 126, 202, 1);
+    max-width: 144px;
+    height: 50px;
+}
+
+
+.upload-document .document-details .document-list .document-status {
+    // max-width: 200px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.upload-document .document-details .document-list .document-status .msg {
+    font-family: "Gilroy-Bold";
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: 0px;
+    margin: 0;
+}
+
+.upload-document .document-details .document-list .document-status .msg.pending {
+    color: #F7A300;
+}
+
+.upload-document .document-details .document-list .document-status .msg.declined {
+    color: #FF645B;
+}
+
+.upload-document .document-details .document-list .document-status .msg.verified {
+    color: #1EBBBA;
+}
+
+.addDocumentBtn {
+    border-radius: 8px;
+    border: 1px solid #1ebbba;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: #1ebbba;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 194px;
+    height: 50px;
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.file-label {
+    margin-right: 20px;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid rgb(14, 126, 202);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    text-align: center;
+    background: #fff;
+    font-family: "Gilroy-Bold";
+    color: rgb(14, 126, 202);
+    max-width: 144px;
+    height: 50px;
+}
+.file-name {
+    opacity: 1;
+    color: rgba(136,136,136,1);
+    font-family: "Gilroy-Bold";
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-top: 25px;
+}
+.document-file {
+    min-width: 144px;
+    display: block;
+}
+
+
+::ng-deep {
+
+     .document-status .ng-select,
+     .document-status .ng-select.ng-select-single .ng-select-container {
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-family: "Gilroy-Medium";
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: #fff;
+        width: 105px;
+        height: 30px !important;
+        padding-left: 0;
+        min-height: 30px;
+    }
+
+   .document-status .ng-select-container,
+     .document-status .ng-select .ng-dropdown-panel {
+        box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    }
+
+     .document-status .ng-select.ng-select-single .ng-select-container {
+        padding-left: 5px;
+    }
+
+     .document-status .ng-select .ng-arrow-wrapper {
+        width: auto;
+        left: -6px;
+        padding-right: 8px;
+    }
+
+     .document-status .ng-select .ng-arrow-wrapper .ng-arrow {
+        border-color: #fff transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 2.5px;
+        background: none;
+        height: auto !important;
+        width: auto !important;
+    }
+
+     .document-status.approved  .ng-select,
+    .document-status.approved  .ng-select.ng-select-single .ng-select-container {
+        background-color: #1EBBBA;
+    }  
+    .document-status.rejected   .ng-select,
+    .document-status.rejected   .ng-select.ng-select-single .ng-select-container {
+        background-color: #E02020;
+    }
+
+   
+}
+
+
+.action-content {
+    position: absolute;
+    border-radius: 6px;
+    border: 1px solid #D5D5D5;
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+    right: 0;
+	top: 40px;
+    width: 296px;
+    z-index: 2;
+    padding: 20px;
+}
+.action-content .title {
+    color: #000000;
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.action-content textarea.reject-content {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    background: #EBF2F5;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium';
+    font-weight: 600;
+    color: #373737;
+    padding: 10px;
+    outline: none;
+}
+.action-content .send-button{
+	text-align: right;
+}
+.action-content .send-button button {
+    font-family: 'Gilroy-Medium';
+	font-weight: 600;
+	font-size: 16px;
+    color: #ffffff;
+    background: #0E7ECA;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+}

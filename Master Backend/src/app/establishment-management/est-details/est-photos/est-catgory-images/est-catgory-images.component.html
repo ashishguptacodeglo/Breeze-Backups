@@ -1,0 +1,14 @@
+<div class="est-photos">
+	<h5 class="title" (click)="ShowImage()"> 
+		<img src="assets/img/host-backend/arrow-back.svg" alt="arrow-back">
+			<span>Establishment Images</span>
+	</h5>
+	<div class="category-images">
+		<div class="category-image" *ngFor="let photo of photos" >
+			<div class="image-container">
+				<img src="assets/img/dashboard/restaurant-dish1.svg" class="photos">
+				
+			</div>
+		</div>
+	</div>
+</div>

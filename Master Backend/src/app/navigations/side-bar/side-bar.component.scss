@@ -1,0 +1,166 @@
+/*Sidebar CSS*/
+.sidebar {
+  min-width: 270px;
+  max-width: 270px;
+  background: #fff;
+  color: #373737;
+  transition: all 0.2s;
+  // box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  left: 0;
+  z-index: 99;
+}
+
+.sidebar.collapse-navbar {
+  min-width: 68px;
+  max-width: 68px;
+}
+
+.sidebar .inner-sidebar {
+  overflow-y: scroll;
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar .inner-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .collapse-btn {
+  text-align: center;
+  padding: 0px;
+  position: absolute;
+  top: 13px;
+  right: -11px;
+  line-height: 0;
+}
+
+.sidebar .arrow-btn {
+  background: url(/assets/img/collapse-arrow.svg);
+  outline: none;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  padding: 0;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.sidebar .arrow-btn span {
+  line-height: 0;
+}
+
+.sidebar .arrow-btn .fa.fa-angle-left {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sidebar.collapse-navbar .arrow-btn {
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transition: all 0.3s;
+}
+
+.sidebar .components {
+  padding: 30px 0 0px;
+  border: 1px solid #E7E7E7;
+  border-top: 0;
+}
+
+.sidebar ul li {
+  position: relative;
+  padding: 15px 10px 15px 15px;
+}
+
+.sidebar ul li:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background: #e7e7e7;
+}
+
+.sidebar.collapse-navbar ul li:before {
+  width: 73%;
+}
+
+.sidebar ul li a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+.sidebar ul li a .icon {
+  height: 30px;
+  width: 20px;
+}
+
+.sidebar ul li a .icon img {
+  width: 100%;
+}
+
+.sidebar ul li a .nav-text, .sidebar .submenu li .nav-link {
+  position: relative;
+  color: #373737;
+  font-family: "Gilroy-Medium";
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 100%;
+}
+.sidebar ul.submenu{
+  padding-left: 15px;
+}
+.sidebar .submenu li::before{
+  content: none;
+}
+.showMenu .nav-text:after {
+  transform: rotate(135deg) !important;
+}
+
+.sidebar ul li a .nav-text:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  right: 11px;
+  bottom: 2px;
+  transform: rotate(45deg);
+}
+
+.sidebar ul li.is-active a,
+.sidebar ul li a:hover {
+  color: #0E7ECA !important;
+}
+
+.sidebar ul li.is-active .nav-text,
+.sidebar ul li a:hover .nav-text {
+  color: #0E7ECA !important;
+}
+
+.sidebar.collapse-navbar .nav-text {
+  display: none;
+}
+
+
+li.showMenu .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+}

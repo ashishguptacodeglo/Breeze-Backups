@@ -1,0 +1,37 @@
+.room-safety-hygiene .roomSafetyHygieneDetails {
+    max-width: 690px;
+    margin: 0px auto 120px;
+}
+
+.room-safety-hygiene .roomSafetyHygieneDetails .form-label,
+.room-safety-hygiene .roomSafetyHygieneDetails .form-check-label {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.room-safety-hygiene .roomSafetyHygieneDetails .form-label {
+    margin-bottom: 15px;
+}
+
+.room-safety-hygiene .roomSafetyHygieneDetails .form-check-inline {
+    margin-right: 22px;
+}
+
+.room-safety-hygiene .roomSafetyHygieneDetails .safetyMeasures label {
+    cursor: pointer;
+}
+
+.form-check-input[type=checkbox] {
+    background: url('/assets/img/non-checked.svg') 0 0px no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.form-check-input[type=checkbox]:checked {
+    background: url('/assets/img/checked.svg') 0 0px no-repeat;
+}

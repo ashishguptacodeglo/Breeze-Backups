@@ -1,0 +1,112 @@
+<section class="create-password">
+   <div class="container-fluid ps-md-0">
+      <div class="row g-0">
+         <div class="d-md-flex col-md-4 col-lg-6 ">
+            <div class="bg-container">
+               <div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active" style="background-image: url('assets/img/host-onboarding/create-password/green-bg/banner-2.png')">
+                        <div class="carousel-caption">
+                           <h2>Mauris non tempor quam, et lacinia sapien..</h2>
+                           <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus.</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item" style="background-image: url('assets/img/host-onboarding/create-password/green-bg/banner-2.png')">
+                        <div class="carousel-caption">
+                           <h2>Mauris non tempor quam, et lacinia sapien..</h2>
+                           <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus.</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item" style="background-image: url('assets/img/host-onboarding/create-password/green-bg/banner-2.png')">
+                        <div class="carousel-caption">
+                           <h2>Mauris non tempor quam, et lacinia sapien..</h2>
+                           <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+	                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                  <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+
+          <div class="col-md-8 col-lg-6">
+
+            <div class="login d-flex align-items-center py-5">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12 col-lg-12">
+                        <!-- <form class="login-form"> -->
+                           <form [formGroup]="loginForm"   class="login-form" (ngSubmit)="onSubmit()">
+                           <h3 class="login-heading mb-4">Hello Again!</h3>
+                           <!-- <h4 class="create-new-heading mb-4">Create a new password</h4> -->
+
+
+                           <div class="form-group mb-3 main-parent">
+                              <label for="confirm-password">Enter Email id</label>
+                              <input type="email" formControlName="email" class="form-control" id="confirm-password">
+                              <div *ngIf="(loginForm.get('email')?.touched) && (loginForm.get('email')?.invalid)">
+                                  <p  class="error-msg" *ngIf="loginForm.get('email')?.hasError('required')">Email is required.</p>
+                                  <p  class="error-msg" *ngIf="loginForm.get('email')?.hasError('pattern')">Please Enter valid email.</p>
+                              </div>
+
+                           </div>
+
+                           <div class="form-group mb-3 main-parent">
+                                 <label for="password">Password</label>
+                                  <div class="password-field">
+                                    <input [type]="password"  formControlName="password" class="form-control" id="password" >
+                                     <img *ngIf="!showPassword" src="assets/img/host-onboarding/create-password/eye/ion-eye-disabled-Ionicons.png" class="toggle-icons closed-eye" (click)="toggleShow()">
+                                     <img *ngIf="showPassword" src="assets/img/host-onboarding/create-password/eye/open-eye.png"  (click)="toggleShow()" class="toggle-icons open-eye">
+                                  </div>
+                                   <div *ngIf="(loginForm.get('password')?.touched) && (loginForm.get('password')?.invalid)">
+                            <p  class="error-msg" *ngIf="loginForm.get('password')?.hasError('required')">Password is required.</p>
+                            <p  class="error-msg" *ngIf="loginForm.get('password')?.hasError('pattern')">Password must contain Uppercase, Lowercase, Number, and Special character.</p>
+                        </div>
+                        <p class="error-msg" *ngIf="errorMsg != '' || errorMsg !=  undefined">{{errorMsg}}</p>
+                        
+                           </div>
+                           <div class="d-grid">
+                              <button class="btn btn-lg  btn-login  mb-2" [disabled]="!loginForm.valid"  type="submit">
+                                    <span class="btn-text">Get started</span>
+                                    <img class="btn-image" src="assets/img/host-onboarding/create-password/btn-arrow.png" >  
+                              </button>
+                           </div>
+
+
+                           <div class="forget-password">
+                              <a  routerLink="/reset-password">Forgot Password ?</a>
+                           </div>  
+
+                           <div class="login-errors">
+                              <span class="api-error">No email id found try </span><a href="#">signing in?</a>
+                           </div>
+
+
+                        </form>
+                     </div>
+                     <div class="information">
+                        Donec facilisis tortor ut augue lacinia, at viverra est semper. Donec facilisis tortor ut augue lacinia, at viverra est semper.. Donec facilisis tortor ut augue lacinia, at viverra est semper..
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+        
+      </div>
+   </div>
+</section>

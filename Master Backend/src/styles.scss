@@ -1,0 +1,967 @@
+/*--------------------------------------------------------------
+# Fonts & Global CSS
+--------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('assets/font/Gilroy/Gilroy-Bold.ttf');
+    src: url('assets/font/Gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url("assets/font/Gilroy/Gilroy-ExtraBold.otf");
+    /* chrome, firefox */
+    src: url("assets/font/Gilroy/Gilroy-ExtraBold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url("assets/font/Gilroy/Gilroy-Light.otf");
+    /* chrome,firefox */
+    src: url("assets/font/Gilroy/Gilroy-Light.otf") format("opentype")
+}
+
+@font-face {
+    font-family: 'Charter';
+    src: url('assets/font/Charter/Charter.ttc');
+    src: url('assets/font/Charter/Charter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charterbold_italic';
+    src: url('assets/font/Charter/charter_bold_italic-webfont.eot');
+    src: url('assets/font/Charter/charter_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/Charter/charter_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'charterbold';
+    src: url('assets/font/Charter/charter_bold-webfont.eot');
+    src: url('assets/font/Charter/charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/Charter/charter_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charteritalic';
+    src: url('assets/font/Charter/charter_italic-webfont.eot');
+    src: url('assets/font/Charter/charter_italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/Charter/charter_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charterregular';
+    src: url('assets/font/Charter/charter_regular-webfont.eot');
+    src: url('assets/font/Charter/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/Charter/charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'charterblack';
+    src: url('assets/font/Charter/charterblack.ttf');
+    src: url('assets/font/Charter/charterblack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gilroy-Medium';
+    color: #000000;
+}
+
+body.modal-open {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Gilroy-Bold';
+}
+
+a {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px !important;
+    }
+}
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+// Progress Bar CSS
+
+.progressbar {
+    box-sizing: content-box;
+    height: 2px;
+    position: relative;
+    background: #DBE1E4;
+    border-radius: 25px;
+}
+
+.progressbar>span {
+    display: block;
+    height: 100%;
+    background-color: #1EBBBA;
+    position: relative;
+    overflow: hidden;
+}
+
+// Save Step Section 
+
+.savestep-section {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.342427);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 32px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.savestep-section .left-btn {
+    width: 200px;
+}
+
+.savestep-section .right-btn {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 430px;
+    justify-content: flex-end;
+}
+
+.savestep-section .right-btn .mandatory {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.goback-btn {
+    display: flex;
+    opacity: 1;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 102px;
+    border-radius: 10px;
+    background-color: rgba(219, 225, 228, 1);
+    border: none;
+}
+
+
+.save-next-btn {
+    border-radius: 10px;
+    background-color: rgba(14, 126, 202, 1);
+    color: rgba(255, 255, 255, 1) !important;
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 13px 0px;
+    max-width: 242px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: none;
+}
+
+button:disabled {
+    background-color: #93A5AE !important;
+}
+
+.primaryBtn {
+    border-radius: 10px;
+    background-color: rgba(14, 126, 202, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 8px 35px;
+    border: none;
+}
+
+.secondaryBtn {
+    color: rgba(14, 126, 202, 1);
+    background-color: #FFF;
+    font-family: "Gilroy-Medium";
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(14, 126, 202, 1);
+    padding: 8px 35px;
+}
+
+// Stepbar Section 
+
+.stepbar-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 120px 25px 52px;
+    /* border-bottom: 2px solid #DBE1E4; */
+    align-items: center;
+}
+
+.stepbar-section .step-list ul {
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+    display: flex;
+    gap: 66px;
+}
+
+.stepbar-section .step-list ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stepbar-section .step-list ul li.active .num {
+    background: #1EBBBA;
+    color: #fff;
+}
+
+.stepbar-section .step-list ul li.active p {
+    color: rgba(20, 34, 34, 1);
+}
+
+.stepbar-section .step-list ul li .num {
+    width: 30px;
+    height: 30px;
+    background: #DBE1E4;
+    color: #717171;
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepbar-section .step-list ul li p {
+    color: #717171;
+    font-family: "Gilroy-Bold";
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+}
+
+// Common Header
+
+.common-header {
+    margin: 50px 0;
+}
+
+.common-header h2 {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.common-header p {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.form-field {
+    margin-bottom: 30px;
+}
+
+.form-field label {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-field label span {
+    opacity: 1;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.form-field input[type="text"]::placeholder,
+.form-field input[type="text"]::placeholder,
+.form-field input[type="email"]::placeholder,
+.form-field select::placeholder {
+    color: rgba(147, 165, 174, 1);
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"],
+.form-field input[type="email"],
+.form-field select {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1);
+    padding: 13px 23px;
+    opacity: 1;
+    color: #000;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    box-shadow: none;
+}
+
+.form-field .form-select:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.ng-select {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1);
+    width: 100%;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    box-shadow: none !important;
+    height: 50px !important;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1);
+    width: 100%;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    box-shadow: none !important;
+    height: 48px !important;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.form-check-input[type=checkbox],
+.form-check-input[type=radio] {
+    margin-top: .35em;
+}
+
+.ng-select .ng-arrow-wrapper {
+    width: 15px;
+    left: -20px;
+    padding-right: 0;
+}
+
+.ng-select .ng-arrow-wrapper .ng-arrow {
+    border: none;
+    background: url('/assets/img/ion-chevron-down.svg') 0 0px no-repeat;
+    height: 8px !important;
+    width: 14px !important;
+}
+
+.ng-select.ng-select-opened>.ng-select-container .ng-arrow {
+    border: none;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+// Popup Module
+
+.modal-dialog .btn-close {
+    background: url(/assets/img/host-property/close.svg) no-repeat;
+    height: 21px;
+    width: 21px;
+    opacity: 1;
+    padding: 0px !important;
+    margin: 0 !important;
+}
+
+.modal {
+    padding-top: 100px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-dialog .modal-content {
+    border-radius: 15px;
+}
+
+
+// Others
+
+
+.room-safety-hygiene .roomSafetyHygieneDetails .formField .ng-select,
+.room-safety-hygiene .roomSafetyHygieneDetails .formField .ng-select.ng-select-single .ng-select-container {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1) !important;
+    max-width: 484px;
+    height: 50px !important;
+}
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+// Editor CSS
+
+#addPoliciesModal .editor {
+    border: 1px solid #DBE1E4;
+    border-radius: 3px;
+}
+
+#addPoliciesModal .editor .NgxEditor__MenuBar {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#addPoliciesModal .editor .NgxEditor {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: rgba(235, 242, 245, 1);
+    height: 220px;
+    overflow-y: auto;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    padding: 12px;
+}
+
+#addPoliciesModal .editor .CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+    margin-bottom: 0.7rem;
+}
+
+#addPoliciesModal .editor .CodeMirror pre {
+    white-space: pre !important;
+}
+
+@import 'intl-tel-input/build/css/intlTelInput.css';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    font-family: "Gilroy-Bold";
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/*.header{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+}*/
+
+
+/*Datatable CSS*/
+
+.dataTables_wrapper .dataTables_length {
+    display: none;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    display: none;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    display: none;
+}
+
+.no-pagination .dataTables_wrapper .row:last-child {
+    display: none;
+}
+
+.dataTables_wrapper table.dataTable>thead {
+    background-color: #f7f7f7;
+}
+
+.dataTables_wrapper table.dataTable>thead>tr>th:first-child,
+.dataTables_wrapper table.dataTable>thead>tr>td:first-child,
+.dataTables_wrapper table.dataTable.row-border>tbody>tr>td:first-child {
+    text-align: left;
+}
+
+.dataTables_wrapper table.dataTable.row-border>tbody>tr>td.text-left,
+.dataTables_wrapper table.dataTable.row-border>thead>tr>th.text-left {
+    text-align: left;
+}
+
+.dataTables_wrapper table.dataTable>thead>tr>th,
+.dataTables_wrapper table.dataTable>thead>tr>td {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.dataTables_wrapper table.dataTable.row-border>tbody>tr>td .profile-img {
+    max-width: 45px;
+}
+
+.dataTables_wrapper table.dataTable>thead>tr>th,
+.dataTables_wrapper table.dataTable>thead>tr>td {
+    padding: 15px 20px;
+    border-bottom: none;
+}
+
+.dataTables_wrapper table.dataTable tbody tr {
+    border-radius: 10px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    outline: 1px solid #E2E2E2;
+}
+
+.dataTables_wrapper table.dataTable.row-border>tbody>tr>th,
+.dataTables_wrapper table.dataTable.row-border>tbody>tr>td,
+.dataTables_wrapper table.dataTable.display>tbody>tr>th,
+.dataTables_wrapper table.dataTable.display>tbody>tr>td {
+    border-top: none;
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 20px;
+}
+
+.dataTables_wrapper table.dataTable.no-footer {
+    border-bottom: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 2px !important;
+    border: 1px solid rgba(204, 204, 204, 1) !important;
+    background-color: rgba(241, 241, 241, 1) !important;
+    color: rgba(74, 74, 74, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-transform: lowercase;
+    width: 41px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #fff !important;
+    border: 1px solid #0E7ECA !important;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: none !important;
+    text-align: center !important;
+    padding-top: 20px !important;
+    width: 100% !important;
+}
+
+.dataTables_wrapper .dataTables_paginate,
+.dataTables_wrapper .dataTables_paginate span {
+    gap: 25px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.dataTables_paginate a.paginate_button.next,
+.dataTables_paginate a.paginate_button.last,
+.dataTables_paginate a.paginate_button.first,
+.dataTables_paginate a.paginate_button.previous {
+    font-size: 0 !important;
+    width: 40px;
+}
+
+.dataTables_paginate a.paginate_button.next::before,
+.dataTables_paginate a.paginate_button.last::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #757575;
+    border-right: 2px solid #757575;
+    transform: rotate(42deg);
+    margin-right: 2px;
+    margin-top: 12px;
+}
+
+.dataTables_paginate a.paginate_button.first::before,
+.dataTables_paginate a.paginate_button.previous::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #757575;
+    border-right: 2px solid #757575;
+    transform: rotate(-137deg);
+    margin-left: 2px;
+    margin-top: 12px;
+}
+
+.dataTables_paginate a.paginate_button.last,
+.dataTables_paginate a.paginate_button.first {
+    display: none;
+}
+
+.dataTables_paginate a.paginate_button.disabled:hover::before {
+    border-top: 2px solid #757575 !important;
+    border-right: 2px solid #757575 !important;
+}
+
+.dataTables_paginate a.paginate_button.next:hover::before,
+.dataTables_paginate a.paginate_button.last:hover::before,
+.dataTables_paginate a.paginate_button.first:hover::before,
+.dataTables_paginate a.paginate_button.previous:hover::before {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.dataTables_wrapper table.dataTable.hover>tbody>tr:hover>*,
+.dataTables_wrapper table.dataTable.display>tbody>tr:hover>* {
+    box-shadow: none;
+}
+
+.dataTables_wrapper table.dataTable {
+    margin-bottom: 30px;
+    border: none;
+}
+
+/*Datatable CSS End*/
+
+/* Style the scrollbar track */
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Change it to your desired background color */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #c3c3c3;
+    /* Change it to your desired thumb color */
+    border-radius: 5px;
+    /* Adjust the radius to your preference */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7c7c7c;
+    /* Change it to your desired hover color */
+}
+
+/* Style the scrollbar corner */
+::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+    /* Change it to your desired background color */
+}
+
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Adjust the width to make it thinner */
+    height: 6px;
+    /* Adjust the height to make it thinner */
+}
+
+// Host Backend Common CSS
+
+.page-content {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+}
+
+.page-content .page-data {
+    width: 100%;
+}
+
+.page-content .page-data .module-data {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.page-content .page-data .page_tabs .wraps {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-content .page-data .page_tabs .links {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+.page-content .page-data .page_tabs .links.active {
+    border-color: #1EBBBA;
+    font-weight: 500;
+}
+
+// ========= //
+
+
+.filter-dropdown .ng-select,
+.filter-dropdown .ng-select.ng-select-single .ng-select-container {
+    width: 205px;
+    height: 40px !important;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    background-color: rgba(255, 255, 255, 1);
+    padding-left: 0;
+}
+
+.filter-dropdown .ng-select.ng-select-single .ng-select-container,
+.table-header-buttons .workers-filter .filter-dropdown .ng-select .ng-dropdown-panel {
+    border: 1px solid rgba(226, 226, 226, 1);
+}
+
+
+// Update-notification 
+
+.update-notification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rejected-status {
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+}
+
+.rejected-status.active {
+    visibility: hidden;
+}
+
+.rejected-status .status-info {
+    border-radius: 5px;
+    border: 1px solid rgba(207, 207, 207, 1);
+    box-shadow: 20px 20px 80px rgba(224, 224, 224, 0.796558);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 16px;
+    position: absolute;
+    z-index: 1;
+    left: 25px;
+    top: 6px;
+    width: 230px;
+    display: none;
+    transition: all 0.5s;
+}
+
+.rejected-status .status-info p {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 19px;
+    margin-bottom: 5px;
+}
+
+.rejected-status .status-info a {
+    color: rgba(14, 126, 202, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 19px;
+}
+
+.rejected-status:hover .status-info {
+    display: block;
+}
+
+.update-notification input[type="text"],
+.update-notification input[type="email"],
+.update-notification input[type="number"],
+.update-notification textarea,
+.update-notification .ng-select {
+    border: 1px solid #E02020 !important;
+}
+
+
+::ng-deep {
+      .status-dropdown{
+        
+        .change-status .ng-select,
+     .change-status .ng-select.ng-select-single .ng-select-container {
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-family: "Gilroy-Medium";
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: #fff;
+        width: 105px;
+        height: 30px !important;
+        padding-left: 0;
+        min-height: 30px;
+    }
+
+   .change-status .ng-select-container,
+     .change-status .ng-select .ng-dropdown-panel {
+        box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    }
+
+     .change-status .ng-select.ng-select-single .ng-select-container {
+        padding-left: 5px;
+    }
+
+     .change-status .ng-select .ng-arrow-wrapper {
+        width: auto;
+        left: -6px;
+        padding-right: 8px;
+    }
+
+     .change-status .ng-select .ng-arrow-wrapper .ng-arrow {
+        border-color: #fff transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 2.5px;
+        background: none;
+        height: auto !important;
+        width: auto !important;
+    }
+
+         .change-status.approved .ng-select,
+         .change-status.approved .ng-select.ng-select-single .ng-select-container {
+           background-color: #1EBBBA;
+         }
+
+         .change-status.rejected .ng-select,
+         .change-status.rejected .ng-select.ng-select-single .ng-select-container {
+           background-color: #E02020;
+         }
+
+         .change-status.closed .ng-select,
+         .change-status.closed .ng-select.ng-select-single .ng-select-container {
+           background-color: #1EBBBA;
+         }
+      }
+ }

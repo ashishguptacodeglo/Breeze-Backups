@@ -1,0 +1,123 @@
+<div class="sidebar"  [class]="{'collapse-navbar' : this.collapse}">
+    <div class="inner-sidebar">
+        <ul class="list-unstyled components" id="main-sidebar">
+			<li  routerLinkActive="is-active">
+                <a routerLink="../approval">
+                    <span class="icon">
+                    	<img alt="icon" class="active-img" src="/assets/img/master-backend/approval.svg"></span>
+                    <span class="nav-text">Approval</span>
+                </a>
+            </li>
+
+             <li  routerLinkActive="is-active">
+                <a routerLink="../establishment-update">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/master-backend/est-update.svg"></span>
+                    <span class="nav-text">Establishment Updates</span>
+                </a>
+            </li>  
+              <li  routerLinkActive="is-active">
+                <a routerLink="../establishment-management">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/master-backend/est-management.svg"></span>
+                    <span class="nav-text">Establishment Management</span>
+                </a>
+            </li>  
+
+             <li #itemEl  routerLinkActive="is-active">
+                <a  href="javascript:void(0);" (click)="hasSubmenu(itemEl);">
+                        <span class="icon">
+                           <img alt="icon" class="active-img" src="/assets/img/master-backend/content-management.svg">
+                        </span>
+                    <span class="nav-text">Content Management</span>
+                </a>
+                <ul class="submenu list-unstyled">
+                    <li>
+                        <a class="nav-link" routerLink="../cms/privacy-policy">Privacy Policies</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" routerLink="../cms/terms-and-conditions">Terms and Conditions</a>
+                    </li>
+                </ul>
+
+            </li>  
+             <li  routerLinkActive="is-active">
+                <a routerLink="../support">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/master-backend/support.svg">
+                    </span>
+                    <span class="nav-text">Support</span>
+                </a>
+            </li>
+            <li  routerLinkActive="is-active">
+                <a routerLink="../notifications">
+                    <span class="icon">
+                    	<img alt="icon" class="active-img" src="/assets/img/master-backend/notification.svg"></span>
+                    <span class="nav-text">Notification</span>
+                </a>
+            </li> 
+           
+           
+            <li  routerLinkActive="is-active">
+                <a routerLink="../amenities-management">
+                    <span class="icon">
+                    	<img alt="icon" class="active-img" src="/assets/img/master-backend/amenities.svg"></span>
+                    <span class="nav-text">Amenities Management</span>
+                </a>
+            </li> 
+
+            <li  routerLinkActive="is-active">
+                <a routerLink="../backend-users">
+                    <span class="icon">
+                    	<img alt="icon" class="active-img" src="/assets/img/master-backend/backend-users.svg"></span>
+                    <span class="nav-text">Backend Users</span>
+                </a>
+            </li>  
+             <li  routerLinkActive="is-active">
+                <a routerLink="../mobile-app-management">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/master-backend/mobile-app-management.svg"></span>
+                    <span class="nav-text">Mobile App Management</span>
+                </a>
+            </li>  
+            <li  routerLinkActive="is-active">
+                <a routerLink="../app-user-support">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/master-backend/app-user-support.svg"></span>
+                    <span class="nav-text">App User Support</span>
+                </a>
+            </li>  
+            <li  routerLinkActive="is-active">
+             <a routerLink="../report">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/backend/sidebar/report.svg">
+                    </span>
+                    <span class="nav-text">Report</span>
+                </a>
+            </li> 
+            <li  routerLinkActive="is-active">
+             <a routerLink="../queries">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/backend/sidebar/queries.svg">
+                    </span>
+                    <span class="nav-text">Queries</span>
+                </a>
+            </li> 
+            <li  routerLinkActive="is-active">
+             <a routerLink="../influencers">
+                    <span class="icon">
+                        <img alt="icon" class="active-img" src="/assets/img/backend/sidebar/influencer.svg">
+                    </span>
+                    <span class="nav-text">Influencer</span>
+                </a>
+            </li>
+              
+           
+		  
+        </ul>    
+        <div class="collapse-btn">
+            <button type="button" class="arrow-btn" (click)="collapsenavbar()">
+            </button>
+        </div>
+    </div>
+</div>

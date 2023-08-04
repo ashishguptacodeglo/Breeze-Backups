@@ -1,0 +1,29 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="establishment-info">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('messages')" [class]="{'active': page=='messages'}">
+						Messages
+					</span>
+					<span class="links" (click)="tabChange('influencer-messages')"
+						[class]="{'active': page=='influencer-messages'}">
+						Influencer Messages
+					</span>
+
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'messages'">
+					<app-all-messages></app-all-messages>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'influencer-messages'">
+					<app-influencer-messages></app-influencer-messages>
+				</ng-template>
+			</div>
+		</section>
+	</div>
+</div>

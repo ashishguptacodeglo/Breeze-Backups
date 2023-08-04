@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15.629343px" height="15.629343px" viewBox="0 0 15.629343 15.629343" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 15@3x</title>
+    <g id="Tasks" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="workers" transform="translate(-646.47, -280.47)" stroke="#5C6278" stroke-width="1.06">
+            <g id="Group-31" transform="translate(250, 270)">
+                <g id="Group-15" transform="translate(397, 11)">
+                    <path d="M6,12 C2.69196429,12 0,9.30803571 0,6 C0,2.69196429 2.69196429,0 6,0 C9.30803571,0 12,2.69196429 12,6 C12,9.30803571 9.30803571,12 6,12 Z" id="Path"></path>
+                    <line x1="10.2846715" y1="10.2846715" x2="14.569343" y2="14.569343" id="Path-6"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

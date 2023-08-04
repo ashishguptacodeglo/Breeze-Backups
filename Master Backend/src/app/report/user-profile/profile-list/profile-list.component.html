@@ -1,0 +1,60 @@
+<div class="header">
+   <h4 class="module-title"> Report Profiles</h4>
+</div>
+<div class="header">
+   <div class="filter-sec">
+      <div class="searchbar">
+      </div>
+      <div class="list-filters">
+         <div class="date-filter"></div>
+         <div class="sortby">
+            <span class="filter-label">Sort by</span>
+            <div class="filter-dropdown sml">
+               <ng-select [items]="statusFilters" bindLabel="name" bindValue="value" autocomplete="off"
+                  [searchable]="false" [clearable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="report-tickets-list" *ngIf="fetched">
+   <div *ngIf="ticketlist.length > 0">
+      <table datatable [dtOptions]="dtOptions" class="row-border hover">
+         <thead>
+            <tr>
+               <th>Ticket ID</th>
+               <th>User Name</th>
+               <th>Issue Subject</th>
+               <th>Raised date</th>
+               <th>Reported by</th>
+               <th>Email ID</th>
+               <th>Status</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let ticket of ticketlist;let i=index">
+               <td><a href="javascript:void(0)" (click)="ShowDetailsPage()" class="view-details">ASF10{{i+1}}</a> </td>
+               <td>Nina Rodriquez</td>
+               <td>Lorem ipsum dolor sit amet..</td>
+               <td>Today, 12:20</td>
+               <td>Katherine Oliver</td>
+               <td>katherineoliver@gmail.com</td>
+               <td>
+                  <div class="status-dropdown">
+                     <div class="change-status {{ticket.status}}">
+                        <ng-select [items]="statusFilters" (change)="statusChangeNgSelect($event,i)"
+                           [(ngModel)]="ticket.status" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false">
+                        </ng-select>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+   <div class="no-result" *ngIf="ticketlist.length == 0">
+      <p>There are no task list.</p>
+   </div>
+</div>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="22 22 19 19">
+    <title>Group 26@3x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="19" height="19" rx="9.5"/>
+        <filter x="-210.5%" y="-210.5%" width="594.7%" height="594.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="7" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0.825946003   0 0 0 0 0.825946003   0 0 0 0 0.825946003  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"/>
+        </filter>
+    </defs>
+    <g id="Notification" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Notification---New" transform="translate(-377, -317.5)">
+            <g id="Group-12" transform="translate(245, 245.5)">
+                <g id="Group-31" transform="translate(40, 88)">
+                    <g id="Group-26" transform="translate(114, 6)">
+                        <g id="Rectangle-10-Copy-14">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"/>
+                            <rect stroke="#CCCCCC" stroke-width="1.38" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.69" y="0.69" width="17.62" height="17.62" rx="8.81"/>
+                        </g>
+                        <rect id="Rectangle-10-Copy-16" fill="#0E7ECA" x="4" y="4" width="11" height="11" rx="5.5"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

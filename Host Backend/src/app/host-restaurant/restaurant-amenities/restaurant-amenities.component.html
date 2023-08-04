@@ -1,0 +1,87 @@
+<main>
+<app-steps [width]="90" [active]="4"></app-steps>
+    <form [formGroup]="amenitiesForm">
+        <div class="restaurant-amenities">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Tell us more about your restaurants</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="restaurant-amenities-data">
+
+                            <div class="amenities-list" *ngFor="let amenity of amenitiesArray; let i = index;">
+                                <input type="checkbox" id="restaurantAmenities-{{i}}" class="input-hidden"
+                                    (change)="amenitiesOnChange($event)" [value]="amenity" name="restaurantAmenities" />
+
+                                <label for="restaurantAmenities-{{i}}" class="amenities-card">
+                                    <p> {{amenity}}</p>
+                                </label>
+                            </div>
+
+                            <div class="amenities-list">
+                                <div class="amenities-card" data-bs-toggle="modal" data-bs-target="#addAmenitiesModal">
+                                    <p><img src="assets/img/host-property/plus.svg" alt="Plus Icon"><span>Add new</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button (click)="goBack()" class="goback-btn">
+                    Back
+                </button>
+            </div>
+
+            <div class="right-btn">
+                <button class="save-next-btn" [disabled]="amenitiesForm.invalid" (click)="getAmenitiesInfo()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addAmenitiesModal" tabindex="-1" aria-labelledby="addAmenitiesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAmenitiesModalLabel">Tell us what should be added</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="addNewAmenitiesForm">
+                        <div class="form-field">
+                            <input type="text" class="form-control" placeholder="Add amenities*"
+                                formControlName="addAmenities">
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            [disabled]="addNewAmenitiesForm.invalid" (click)="addNewAmenities()">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

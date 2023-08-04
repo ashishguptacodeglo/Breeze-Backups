@@ -1,0 +1,254 @@
+  .bg-image img {
+      width: 100%;
+  }
+
+  .btn-text {
+      font-size: 16px;
+      color: #fff;
+      font-family: 'Gilroy-Bold';
+  }
+
+  .bg-container {
+      width: 100%;
+  }
+  .bg-container{
+    background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+  .carousel-item {
+      height: 100vh;
+  }
+  .carousel-item img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+      visibility: hidden;
+  }
+
+  .carousel-caption h2 {
+      color: rgba(255, 255, 255, 1);
+      font-family: "Gilroy-Bold";
+      font-size: 28px;
+      font-style: normal;
+      letter-spacing: 0px;
+      text-align: center;
+      line-height: 34px;
+      margin-bottom: 20px;
+  }
+
+  .carousel-caption p {
+      color: rgba(255, 255, 255, 1);
+      font-family: "Gilroy-Medium";
+      font-size: 20px;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0px;
+      text-align: center;
+      line-height: 30px;
+  }
+
+  .toggle-icons {
+      position: absolute;
+      top: 0;
+      right: 2%;
+      top: 50%;
+      text-align: left;
+      transform: translateY(-50%);
+      cursor: pointer;
+  }
+
+  .login-form .form-floating {
+      position: relative;
+  }
+
+  .login-form button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+  }
+
+  .login-form button[disabled] {
+      background-color: #93A5AE;
+      border: none;
+  }
+
+  .login-form {
+      max-width: 330px;
+      width: 100%;
+      height: 100%;
+      margin: 0px auto 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .create-new-heading {
+      text-align: center;
+  }
+
+  .login-heading {
+      font-weight: 300;
+      color: #182525;
+      font-size: 27px;
+      margin-bottom: 150px;
+      font-family: 'Gilroy-Bold';
+      text-align: center;
+  }
+
+  .login-form .main-parent,
+  .login-form .d-grid {
+      width: 100%;
+  }
+
+  .information {
+      color: rgba(24, 37, 37, 1);
+      font-family: "Gilroy-Medium";
+      font-size: 14px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 0px;
+      text-align: center;
+      line-height: 20px;
+      max-width: 506px;
+      margin: 0 auto;
+  }
+
+  .form-warning p,
+  .create-new-heading {
+      font-size: 14px;
+      line-height: 20px;
+      font-family: 'Gilroy-Medium';
+      font-weight: 500;
+  }
+
+  .carousel-caption {
+      bottom: 0;
+  }
+
+  @media only screen and (max-device-width: 767px) {
+      .login-form {
+          padding: 3rem 3rem 0 3rem;
+      }
+
+      .information {
+          padding: 1rem 4rem 0 4rem;
+      }
+
+      .carousel-caption {
+          bottom: 1.25rem;
+      }
+  }
+
+
+  .btn-login {
+      background: #0E7ECA;
+  }
+
+  .create-password .carousel-indicators [data-bs-target] {
+      width: 10px;
+  }
+
+  .create-password .carousel-indicators .active {
+      width: 20px;
+  }
+
+  .form-group input {
+      height: 50px;
+  }
+
+  .password-field {
+      position: relative;
+  }
+
+  .login-form label {
+      color: #019F98;
+      font-size: 14px;
+      font-family: "Gilroy-Bold";
+      margin-bottom: 10px;
+  }
+
+  .forget-password,
+  .login-errors {
+      text-align: center;
+  }
+
+  .login-errors {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: "Gilroy-Bold";
+  }
+
+  .login-errors a {
+      color: #019F98;
+      text-decoration: none;
+  }
+
+  .forget-password a {
+      color: #019F98;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: "Gilroy-Bold";
+      text-decoration: none;
+  }
+
+  .api-error {
+      color: #E02020;
+  }
+
+  .login-form .main-parent {
+      margin-bottom: 25px;
+  }
+
+  ::ng-deep {
+      .otp-section {
+          .wrapper {
+              display: flex;
+              justify-content: space-between;
+          }
+
+          .wrapper .otp-input {
+              border: none;
+              border-radius: 3px;
+              color: rgba(24, 37, 37, 1);
+              font-family: "Gilroy-Medium";
+              font-size: 14px;
+              font-weight: 600;
+              font-style: normal;
+              letter-spacing: 0px;
+              text-align: center;
+              background-color: rgba(235, 242, 245, 1);
+              outline: none;
+          }
+
+          .otp.default,
+          .otp.receive {
+              margin-top: 10px;
+              display: block;
+              opacity: 1;
+              color: rgba(24, 37, 37, 1);
+              font-family: "Gilroy-Medium";
+              font-size: 14px;
+              font-weight: 500;
+              font-style: normal;
+              letter-spacing: 0px;
+              text-align: left;
+              line-height: 20px;
+          }
+
+          .otp-timing {
+              color: #0E7ECA;
+              font-family: "Gilroy-Bold";
+          }
+
+      }
+
+
+  }

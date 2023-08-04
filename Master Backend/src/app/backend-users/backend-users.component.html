@@ -1,0 +1,139 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+   <app-side-bar></app-side-bar>
+   <div class="page-data establishment-form">
+      <app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+      <section class="module-data">
+         <div class="header">
+            <h4 class="module-title"> Backend Users</h4>
+            <button type="button" class="add-user-button" data-bs-toggle="modal"
+               data-bs-target="#add-Backend-User-Modal">Add</button>
+         </div>
+         <div class="est-list-container" *ngIf="fetched">
+            <table datatable [dtOptions]="dtOptions" class="row-border hover">
+               <thead>
+                  <tr>
+                     <th>S.No</th>
+                     <th>Profile</th>
+                     <th>First name</th>
+                     <th>Last Name</th>
+                     <th>Email</th>
+                     <th>Designation</th>
+                     <th>Permissions</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr *ngFor="let user of usersList;let i=index">
+                     <td> {{i+1}} </td>
+                     <td>
+                        <img src="{{user.image}}" class="user-profile" alt="{{user.firstName}}">
+                     </td>
+                     <td> {{user.firstName}} </td>
+                     <td> {{user.lastName}} </td>
+                     <td> {{user.email}} </td>
+                     <td> {{user?.company?.title}} </td>
+                     <td>
+                        <span data-bs-toggle="modal" data-bs-target="#add-Backend-User-Modal"
+                           class="edit-permission">View, Edit</span>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+   </div>
+</div>
+<div class="modal fade modal-xl" id="add-Backend-User-Modal" tabindex="-1" aria-labelledby="add-Backend-User-Modal"
+   aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="addnotificationModalLabel">Create User</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+
+            <form #useradd="ngForm" [formGroup]="phoneForms" (ngSubmit)="bcreateUser(useradd)">
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>First Name</label>
+                        <input required type="text" formControlName="firstName" class="form-control" name="firstName"
+                           placeholder="Enter First Name" [readonly]="isReadonly">
+                     </div>
+                     <div *ngIf="(phoneForms.get('firstName')?.touched) && (phoneForms.get('firstName')?.invalid)"
+                        class="frm-error">
+                        First Name is required.
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Last Name</label>
+                        <input required type="text" formControlName="lastName" class="form-control" name="lastName"
+                           placeholder="Enter Last Name" [readonly]="isReadonly">
+                     </div>
+                     <div *ngIf="(phoneForms.get('lastName')?.touched) && (phoneForms.get('lastName')?.invalid)"
+                        class="frm-error">
+                        Last Name is required.
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Email</label>
+                        <input required type="email" formControlName="emailId" class="form-control" name="emailId"
+                           placeholder="Enter Enter Id" [readonly]="isReadonly">
+                     </div>
+                     <div *ngIf="(phoneForms.get('emailId')?.touched) && (phoneForms.get('emailId')?.invalid)"
+                        class="frm-error">
+                        <span *ngIf="phoneForms.get('emailId')?.hasError('required')">Email is required.</span>
+                        <span *ngIf="phoneForms.get('emailId')?.hasError('pattern')">Please Enter valid email.</span>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Designation</label>
+                        <input required type="text" formControlName="designation" class="form-control"
+                           name="designation" placeholder="Enter Designation" [readonly]="isReadonly">
+                     </div>
+                     <div *ngIf="(phoneForms.get('designation')?.touched) && (phoneForms.get('designation')?.invalid)"
+                        class="frm-error">
+                        Designation is required.
+                     </div>
+                  </div>
+               </div>
+
+               <div class="form-group permission-all">
+                  <h6>Permissions</h6>
+                  <div class="select-all">
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" (click)="SelectAll($event)" id="select-all-field" value="all">
+                        <label class="form-check-label" for="select-all-field">Select All</label>
+                     </div>
+                  </div>
+               </div>
+               <div class="permissions-list">
+                  <div class="single-permission" *ngFor="let permision of permissionList; let i=index;">
+                     <div class="permission-name">{{permision.permissionName}}</div>
+
+                     <div class="permission-actions">
+                        <div class="form-check form-check-inline" *ngFor="let action of actionsList; let ai=index;">
+                           <input class="form-check-input" (click)="updatePermissions($event,action,i)" type="checkbox" [checked]="permision.actions[getLowercaseName(action)]"
+                              id="permission-{{i}}--{{ai}}" value="option1">
+                           <label class="form-check-label" for="permission-{{i}}--{{ai}}">{{action}}</label>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+            </form>
+
+
+         </div>
+         <div class="modal-footer"></div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="header">
+   <h4 class="module-title"> App user support</h4>
+</div>
+<div class="tickets-list-container">
+   <div class="stats-list">
+      <div class="list-item">
+         <span class="title">Open Tickets</span>
+         <span class="num open">412</span>
+      </div>
+      <div class="list-item">
+         <span class="title">Pending Tickets</span>
+         <span class="num pending">412</span>
+      </div>
+      <div class="list-item">
+         <span class="title">Closed Tickets</span>
+         <span class="num close">412</span>
+      </div>
+      <div class="list-item">
+         <span class="title">Declined</span>
+         <span class="num declined">412</span>
+      </div>
+   </div>
+</div>
+<div class="bar-chart-container">
+   <h2>Overview</h2>
+   <div class="graph-header">
+      <div class="title">Tickes Count</div>
+      <div class="graph-fileter">
+      </div>
+   </div>
+   <div id="chart">
+      <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [dataLabels]="chartOptions.dataLabels"
+      [plotOptions]="chartOptions.plotOptions"
+      [yaxis]="chartOptions.yaxis"
+      [legend]="chartOptions.legend"
+      [fill]="chartOptions.fill"
+      [stroke]="chartOptions.stroke"
+      [tooltip]="chartOptions.tooltip"
+      [xaxis]="chartOptions.xaxis"
+      ></apx-chart>
+      <div class="chart-message">Dates</div>
+   </div>
+</div>
+<div class="donut-chart-and-table">
+   <div class="donut-chart">
+      <div class="title">
+         Status Overview
+      </div>
+      <div *ngIf="DonutGraph.totalcount > 0">
+         <apx-chart
+         [series]="DonutGraph.series"
+         [tooltip]="DonutGraph.tooltip"
+         [chart]="DonutGraph.chart"
+         [legend]="DonutGraph.legend"
+         [dataLabels]="DonutGraph.dataLabels"
+         [fill]="DonutGraph.fill"
+         [labels]="DonutGraph.labels"
+         [responsive]="DonutGraph.responsive"
+         [stroke]="DonutGraph.stroke"
+         ></apx-chart>
+      </div>
+      <div *ngIf="DonutGraph.totalcount > 0" class="col-md-6">
+         <div   class="col-md-12 d-flex single-stat mt-2" *ngFor="let s of stats2" >
+            <div  class="circle"   style="border: 6px solid {{ s.color }} ;" ></div>
+            <div class="stat-title">{{ s.count }} {{ s.title }}</div>
+            <div class="stat-percentage">{{ s.per }} %</div>
+         </div>
+      </div>
+   </div>
+   <div class="region-wise-table">
+      <div class="" *ngIf="showChart">
+         <h2>Regions Overview</h2>
+         <table class="table">
+            <thead>
+               <tr>
+                  <td class="border-0">County</td>
+                  <td class="border-0">iOS Users</td>
+                  <td class="border-0">Android Users</td>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let bar of statsData.cityWiseData; let i = index">
+                  <td class="grey-font">{{ bar[0].city }}</td>
+                  <td colspan="2">
+                     <div class="progress mt-2" style="max-width: 100%">
+                        <div   class="progress-bar"  style="width: 
+                           {{percentage(bar[0].users.ios,bar[0].users.android+bar[0].users.ios)}}%; background-color: #1EBBBA" ></div>
+                        <div class="progress-bar progress-bar-stripped" style="width:{{percentage(bar[0].users.android,bar[0].users.android+bar[0].users.ios)}}%; background-color: #0E7ECA"></div>
+                     </div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>

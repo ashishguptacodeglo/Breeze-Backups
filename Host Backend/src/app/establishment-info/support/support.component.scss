@@ -1,0 +1,131 @@
+.support-list-container h2 {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 28px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.support-list-container .no-result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	border-radius: 10px;
+	border: 1px solid #E7E7E7;
+}
+
+.support-list-container .no-result p {
+	color: rgba(147, 147, 149, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 21px;
+}
+
+.dataTable {
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}
+
+
+.support-list-container .table-header-buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 25px;
+}
+
+.support-list-container .table-header-buttons .table-button .add-task-button {
+	border-radius: 5px;
+	border: 2px solid rgb(30, 187, 186);
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	background-color: rgb(255, 255, 255);
+	color: rgb(30, 187, 186) !important;
+	font-family: "Gilroy-Bold";
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	height: 40px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.support-list-container .table-header-buttons .workers-filter {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.support-list-container .table-header-buttons .workers-filter span {
+	color: rgba(55, 55, 55, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 16px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+.support-list-container .task-list .status-btn {
+	border-radius: 15px;
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	height: 25px;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-family: 'Gilroy-Medium';
+	font-size: 14px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.support-list-container .task-list .status-btn.open {
+	background-color: #E02020;
+}
+
+.support-list-container .task-list .status-btn.pending {
+	background-color: #F7B500;
+}
+
+.support-list-container .task-list .status-btn.closed {
+	background-color: #1EBBBA;
+}
+
+.support-list-container .task-list .view-details {
+    color: #007AFF !important;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+::ng-deep {
+	.support-list-container {
+		.dataTables_wrapper table.dataTable>thead>tr>th:first-child {
+			width: 10% !important;
+		}
+
+		.dataTables_wrapper table.dataTable.row-border>tbody>tr>td:last-child {
+			width: 5%;
+		}
+	}
+}

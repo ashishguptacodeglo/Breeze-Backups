@@ -1,0 +1,107 @@
+.invite-details {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.invite-details .invite-main-card {
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid #E2E2E2;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.invite-details .invite-main-card .invitation-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.invite-details .invite-main-card .invitation-details .invite-data .title {
+    color: rgb(68, 74, 74);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.invite-details .invite-main-card .invitation-details .invite-data .value {
+    color: rgb(68, 74, 74);
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.invite-details .invite-main-card .invitation-details .invite-data .value .main-price {
+    font-family: "Gilroy-Medium";
+    color: rgba(68, 74, 74, 0.525176);
+    margin-right: 6px;
+    text-decoration: line-through;
+}
+
+.invite-details .invite-main-card .invitation-details .invite-data .value .discounted-price {
+    color: #1AB001;
+}
+
+.status-btn {
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    height: 25px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-family: 'Gilroy-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.status-btn.declined {
+    background-color: #E02020;
+}
+
+.status-btn.pending {
+    background-color: #F7B500;
+}
+
+.status-btn.accepted {
+    background-color: #1EBBBA;
+}
+
+.invite-details .invite-description-card .heading {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.invite-details .invite-description-card .invite-desc {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+}

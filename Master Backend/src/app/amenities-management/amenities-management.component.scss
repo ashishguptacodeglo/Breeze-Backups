@@ -1,0 +1,335 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header .module-title {
+  color: rgba(68, 74, 74, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 28px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.add-amenity-button {
+  border-radius: 5px;
+  border: 2px solid rgb(30, 187, 186);
+  box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+  background-color: rgb(255, 255, 255);
+  color: rgb(30, 187, 186) !important;
+  font-family: "Gilroy-Bold";
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-amenity {
+  border-radius: 5px;
+  border: 1px solid rgba(226, 226, 226, 1);
+  box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.single-amenity .amenity-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.single-amenity .amenity-details img {
+  max-width: 30px;
+  width: 100%;
+}
+
+.single-amenity .amenity-details .amenity-title {
+  color: rgba(55, 55, 55, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.single-amenity .edit-amenity {
+  color: rgba(14, 126, 202, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+.custom-file-label::after {
+  display: flex;
+  align-items: center;
+}
+
+.custom-file-label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#amenities-pagination {
+  background: #f7f7f7;
+  margin-top: 50px;
+}
+
+#amenities-pagination .pagination .page-link {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+#amenities-pagination .pagination .page-link {
+  background-color: unset;
+  color: #444a4a;
+  border-color: #dee2e6;
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0;
+}
+
+#amenities-pagination .pagination {
+  margin: 10px 0;
+  display: flex;
+  gap: 20px;
+}
+
+#amenities-pagination .pagination .page-item {
+  width: 35px;
+  height: 33px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#amenities-pagination .pagination .page-item.prev.disabled .page-link,
+#amenities-pagination .pagination .page-item.next.disabled .page-link {
+  color: #AFAFAF !important;
+}
+
+#amenities-pagination .pagination .page-item.prev,
+#amenities-pagination .pagination .page-item.next {
+  width: auto;
+}
+
+#amenities-pagination .pagination .page-item.active {
+  border: 1px solid #e2e2e2;
+  background-color: white;
+}
+
+/* Modal CSS */
+
+.modal {
+  padding-top: 0;
+}
+
+.modal-dialog .modal-content {
+  margin: 0 auto;
+  max-width: 950px;
+  padding: 25px 35px 35px;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body,
+.modal-dialog .modal-content .modal-footer {
+  padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+  border: none;
+  position: relative;
+  display: block;
+}
+
+.modal-dialog .modal-content .modal-header {
+  margin-bottom: 30px;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+  position: absolute;
+  right: -16px;
+  top: -6px;
+}
+
+
+.modal-dialog .modal-content .modal-header .modal-title {
+  color: rgba(68, 74, 74, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 28px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.modal-dialog .modal-content .modal-body form label {
+  color: rgba(68, 74, 74, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.modal-dialog .modal-content .modal-body form input[type='text'],
+.modal-dialog .modal-content .modal-body form .custom-file {
+  border-radius: 5px;
+  border: 1px solid rgba(226, 226, 226, 1);
+  box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+  background-color: rgba(255, 255, 255, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-dialog .modal-content .modal-body form input[type='text']::placeholder {
+  color: rgba(158, 161, 162, 1);
+}
+
+.modal-dialog .modal-content .modal-body form .custom-file input[type='file'] {
+  display: none;
+}
+
+.modal-dialog .modal-content .modal-body form .custom-file .custom-file-browse {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+}
+
+.modal-dialog .modal-content .modal-body form .custom-file .custom-file-browse .btn-browse {
+  border-radius: 5px;
+  border: 1px solid rgba(142, 142, 147, 1);
+  box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+  background-color: rgba(239, 239, 244, 1);
+  width: 70px;
+  height: 25px;
+  color: rgba(55, 55, 55, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog .modal-content .modal-body form .custom-file .custom-file-browse .image-name {
+  color: rgba(55, 55, 55, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.cancel {
+  color: rgba(142, 142, 147, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.save {
+  border-radius: 5px;
+  background-color: rgba(14, 126, 202, 1);
+  width: 110px;
+  height: 50px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Gilroy-Bold";
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .amenities-item {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.modal-dialog .modal-content .modal-body .amenities-item .amenity-name,
+.modal-dialog .modal-content .modal-body .amenities-item .amenity-img {
+  min-width: 339px;
+  width: 100%;
+}
+
+.modal-dialog .modal-content .modal-body .amenities-item .remove-amenity button {
+  background: none;
+  border: none;
+  position: relative;
+  left: -10px;
+}
+
+.modal-dialog .modal-content .modal-body .add {
+  border-radius: 5px;
+  border: 1px solid rgb(142 142 147);
+  box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+  background-color: rgba(239, 239, 244, 1);
+  color: rgba(68, 74, 74, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-left: auto;
+  display: flex;
+  margin-right: 26px;
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}

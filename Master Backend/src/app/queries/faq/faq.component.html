@@ -1,0 +1,51 @@
+<section class="faq-info" *ngIf="page=='list'">
+   <div class="faq-list-container">
+      <div class="header">
+         <h4 class="module-title"> Queries</h4>
+      </div>
+  
+      <div class="no-result" *ngIf="!fetched">
+         <p>There are no task list.</p>
+      </div>
+      <div class="task-list" *ngIf="fetched">
+         <div *ngIf="ticketlist.length > 0">
+            <table datatable [dtOptions]="dtOptions" class="row-border hover">
+               <thead>
+                  <tr>
+                     <th>S.No</th>
+                     <th>User Name</th>
+                     <th>Feedback</th>
+                     <th>Raised date</th>
+                     <th>Email ID</th>
+                     <th>Status</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr *ngFor="let ticket of ticketlist;let i=index">
+                     <td><a  href="javascript:void(0)" (click)="ShowDetails()" class="view-details">{{i+1}}</a> </td>
+                     <td>Nina Rodriquez</td>
+                     <td>Lorem ipsum dolor sit amet..</td>
+                     <td>Today, 12:20</td>
+                     <td>katherineoliver@gmail.com</td>
+                     <td>
+                        <div class="status-dropdown">
+                           <div class="change-status {{ticket.status}}">
+                              <ng-select [items]="statusFilters" (change)="statusChangeNgSelect($event,i)"
+                              [(ngModel)]="ticket.status" bindLabel="name" bindValue="value" autocomplete="off"
+                              [searchable]="false" [clearable]="false">
+                              </ng-select>
+                           </div>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="no-result" *ngIf="ticketlist.length == 0">
+            <p>There are no task list.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<app-query-details *ngIf="page =='details'" [type]="page"></app-query-details>

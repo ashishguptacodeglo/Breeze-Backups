@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 45@3x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="14" height="14" rx="7"></rect>
+        <filter x="-100.0%" y="-71.4%" width="300.0%" height="300.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.900673687   0 0 0 0 0.900673687   0 0 0 0 0.900673687  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Property-profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mgmt-property" transform="translate(-726, -741)">
+            <g id="Group-42" transform="translate(254, 221)">
+                <g id="Group-15" transform="translate(14, 435)">
+                    <g id="Group-18" transform="translate(0, 43)">
+                        <g id="Group-23" transform="translate(0, 30)">
+                            <g id="Group-45" transform="translate(466, 16)">
+                                <g id="Rectangle-Copy-14">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <use fill="#019F98" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                </g>
+                                <polyline id="Path-2-Copy-3" stroke="#FDFDFD" stroke-linecap="round" stroke-linejoin="round" points="4 7.83339782 5.76607853 10 10 5"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

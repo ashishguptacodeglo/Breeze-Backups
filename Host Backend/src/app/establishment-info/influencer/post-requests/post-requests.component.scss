@@ -1,0 +1,223 @@
+.post-requests h2 {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 28px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.post-requests .no-result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	border-radius: 10px;
+	border: 1px solid #E7E7E7;
+}
+
+.post-requests .no-result p {
+	color: rgba(147, 147, 149, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 21px;
+}
+
+
+.post-requests thead {
+	display: none;
+}
+
+.post-requests .single-post-request {
+	display: flex;
+	gap: 60px;
+	align-items: center;
+}
+
+.post-requests .single-post-request .user-info {
+	max-width: 84px;
+	width: 100%;
+	display: flex;
+	gap: 40px;
+}
+
+.post-requests .single-post-request .user-info img {
+	width: 100%;
+}
+
+.post-requests .single-post-request .user-info .user-image {
+	max-width: 84px;
+	width: 100%;
+	display: flex;
+}
+
+.post-requests .single-post-request .post-information {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: self-start;
+	gap: 40px;
+}
+
+.post-requests .single-post-request .info {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.post-requests .single-post-request .info h5 {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 18px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	margin: 0;
+}
+
+.post-requests .single-post-request .info a {
+	color: rgba(30, 187, 186, 1) !important;
+	font-family: "Gilroy-Medium";
+	font-size: 16px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	text-decoration: underline;
+}
+
+
+.post-requests .single-post-request .info .information,
+.post-requests .single-post-request .action-buttons .information {
+	max-width: 140px;
+	width: 100%;
+	text-align: center;
+}
+
+.post-requests .single-post-request .action-buttons {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.single-post-request .post-image img
+{
+    max-width: 150px;
+	cursor: pointer;
+}
+
+
+.dataTable {
+	border-collapse: separate;
+	border-spacing: 0 20px;
+	max-width: 900px;
+	margin-left: 0;
+}
+
+.no-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid #E7E7E7;
+}
+
+.no-result p {
+    color: rgba(147, 147, 149, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 21px;
+}
+
+.modal-header {
+    justify-content: flex-end;
+    border: none;
+    padding-bottom: 0;
+}
+.post-review-wrap {
+    position: relative;
+    border-radius: 22px;
+    color: #ffffff;
+    font-family: "Gilroy-Medium";
+    // height: 600px;
+	aspect-ratio: 1/2;
+    display: grid;
+	gap: 10px;
+    align-content: space-between;
+}
+.post-review-wrap .story-media{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+	border-radius: 22px;
+}
+.post-review-wrap>div{
+	position: relative;
+	z-index: 2;
+}
+.post-review-wrap .post-head{
+	padding: 40px 30px;
+	border-radius: 22px 22px 0 0;
+	background: linear-gradient(180deg, RGB(0,0,0), RGBA(0,0,0,0));
+}
+.post-review-wrap .creator-info{
+	display: grid;
+	grid-template-columns: 30px auto;
+	align-items: center;
+	gap: 10px;
+}
+.post-review-wrap .creator-info .dp-wrap{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	object-fit: cover;
+	background-color: #ffffff;
+}
+.post-review-wrap .creator-info span{
+	font-size: 11px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.post-review-wrap .creator-info .name{
+	font-size: 13px;
+	font-weight: 700;
+	font-family: 'Gilroy-Bold';
+	margin-right: 12px;
+}
+.post-review-wrap .post-foot{
+	padding: 35px 17.5px;
+	border-radius: 0 0 22px 22px;
+	background: linear-gradient(180deg, RGBA(0,0,0,0), RGB(0,0,0));
+}
+.post-review-wrap .post-foot .content-area p{
+	font-size: 13px;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.post-review-wrap .post-foot .content-area{
+	padding-top: 30px;
+}
+.post-review-wrap .post-foot .progress-wrap{
+	display: flex;
+	width: 100%;
+	gap: 5px;
+}
+.post-review-wrap .post-foot .progress{
+	width: 100%;
+	height: 1px;
+	border-radius: 1px;
+	background-color: #ffffff;
+}

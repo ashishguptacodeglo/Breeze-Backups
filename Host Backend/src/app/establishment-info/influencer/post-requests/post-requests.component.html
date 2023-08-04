@@ -1,0 +1,106 @@
+<div class="post-requests">
+   <div class="no-result" *ngIf="!fetched">
+      <p>There are no post request from the guest.</p>
+   </div>
+   <div class="post-requests-list" *ngIf="fetched">
+      <div *ngIf="posts.length > 0">
+         <table datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+               <tr>
+                  <th>ID</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let post of posts; let i=index">
+                  <td>
+                     <div class="single-post-request">
+                        <div class="user-info">
+                           <img src="assets/img/dashboard/header-account.svg" class="user">
+                        </div>
+
+                        <div class="post-information">
+                           <div class="info">
+                              <h5>Post Request by Dennis Wells</h5>
+                              <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#view-post-modal">View Post</a>
+                           </div>
+                           <div class="action-buttons">
+                              <div class="information">
+                                 <div class="buttons">
+                                    <button type="button" class="primaryBtn">Approve</button>
+                                 </div>
+                              </div>
+                              <div class="information">
+                                 <div class="buttons">
+                                    <button type="button" class="secondaryBtn">Decline</button>
+                                 </div>
+                              </div>
+                              <div class="information">
+                                 <div class="buttons">
+                                    <button type="button" (click)="redirectToMessage(i)" class="secondaryBtn">Message</button>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <div class="post-image">
+                           <img src="/assets/img/dashboard/restaurant-dish2.svg" data-bs-toggle="modal" data-bs-target="#view-post-modal">
+                        </div>
+
+                     </div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="no-result" *ngIf="posts.length == 0">
+         <p>There are no post request from the guest.</p>
+      </div>
+   </div>
+</div>
+
+
+<div class="modal fade" id="view-post-modal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            
+            <div class="post-review-wrap">
+               <img class="story-media" src="assets/img/host-backend/status.png">
+               <div class="post-head">
+                  <div class="creator-info">
+                     <div class="slice1">
+                        <div class="dp-wrap">
+                           <img src="" alt="">
+                        </div>
+                     </div>
+                     <div class="slice2">
+                        <div class="line1">
+                           <span class="name">Martin Geller</span>
+                           <span class="time">2 minutes ago</span>
+                        </div>
+                        <div class="line2">
+                           <span>San Francisco, United States</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="post-foot">
+                  <div class="progress-wrap">
+                     <div class="progress"></div>
+                     <div class="progress"></div>
+                     <div class="progress"></div>
+                     <div class="progress"></div>
+                  </div>
+                  <div class="content-area">
+                     <p>This dish is an explosion of flavours, leaving my taste buds dancing with delight. From the first bite to the last, each ingredient harmoniously complements the other, creating a symphony of taste. View less</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,141 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+   <app-side-bar></app-side-bar>
+   <div class="page-data">
+      <app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+      <section class="establishment-info">
+
+         <div class="tasks-list-container">
+            <div class="table-header-buttons">
+               <div class="table-button">
+                  <button data-bs-toggle="modal" data-bs-target="#add-task-modal" class="add-task-button">Add
+                     Task</button>
+               </div>
+               <div class="workers-filter">
+                  <span>Sort by</span>
+                  <div class="filter-dropdown">
+                     <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+            </div>
+
+            <div class="no-result" *ngIf="!fetched">
+               <p>There are no task list.</p>
+            </div>
+
+            <div class="task-list" *ngIf="fetched">
+               <div *ngIf="ticketlist.length > 0">
+                  <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                     <thead>
+                        <tr>
+                           <th>Ticket ID</th>
+                           <th>Task</th>
+                           <th>Open Date & Time</th>
+                           <th>Raised to</th>
+                           <th>Department</th>
+                           <th>Room number</th>
+                           <th>Status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr *ngFor="let ticket of ticketlist;let i=index">
+                           <td><a routerLink="/establishment-info/task/ASF1{{i}}" class="view-details">ASF10{{i}}</a></td>
+                           <td>Lorem ipsum dolor </td>
+                           <td>Today, 12:20 </td>
+                           <td>Lettie Watkins </td>
+                           <td>Cleaning</td>
+                           <td>{{i}}</td>
+                           <td><span class="status-btn {{ticket.status}}">{{ticket.status}}</span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="no-result" *ngIf="ticketlist.length == 0">
+                  <p>There are no task list.</p>
+               </div>
+            </div>
+         </div>
+
+        
+      </section>
+   </div>
+</div>
+
+
+ <div class="modal fade modal-lg" id="add-task-modal" tabindex="-1">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title">Add Task</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <form [formGroup]="addtaskForm">
+                        <div class="form-field">
+                           <label>Selected Department</label>
+                           <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                              [searchable]="false" [clearable]="false" placeholder="Select">
+                           </ng-select>
+                        </div>
+                        <div class="form-field">
+                           <label>Selected Worker</label>
+                           <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                              [searchable]="false" [clearable]="false" placeholder="Select">
+                           </ng-select>
+                        </div>
+
+                        <div class="form-field">
+                           <label>What are the tasks that you will assign to them? </label>
+                           <div class="taskType">
+                              <div class="form-check" *ngFor="let taskType of taskTypeArray; let i = index;">
+                                 <input type="checkbox" id="taskType-{{i}}" class="form-check-input"
+                                    (change)="bedTypeOnChange($event)" [value]="taskType" name="taskType" />
+                                 <label for="taskType-{{i}}" class="form-check-label">{{taskType}}</label>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="select-dateNtime">
+                           <div class="select-date">
+                              <div class="form-field">
+                                 <label>Date</label>
+                                 <input type="date" name="comming-date">
+                              </div>
+                           </div>
+
+                           <div class="select-time">
+                              <div class="form-field">
+                                 <label>Start Time</label>
+                                 <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker"
+                                    bindValue="value" autocomplete="off" [clearable]="false" [searchable]="false"
+                                    placeholder="Select">
+                                 </ng-select>
+                              </div>
+
+                              <div class="form-field">
+                                 <label>Completion Time</label>
+                                 <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker"
+                                    bindValue="value" autocomplete="off" [clearable]="false" [searchable]="false"
+                                    placeholder="Select">
+                                 </ng-select>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="form-field">
+                           <label>Do you want to add any comments?</label>
+                           <textarea name="" class="form-control" placeholder="Add commets"></textarea>
+                        </div>
+
+                        <div class="action-btn">
+                           <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
+                           <button type="button" class="btn save">Send</button>
+                        </div>
+
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>

@@ -1,0 +1,73 @@
+<div class="property-reservations-list" *ngIf="fetched">
+   <div  *ngIf="posts.length > 0">
+       <!-- <div class="will-sec review-wrap">
+        <div class="drop-sec">
+          <div class="dropdown">
+            <span>Sort by</span>
+            <a  class="btn btn-secondary dropdown-toggle"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"  >
+              Recent reviews
+            </a>
+            <div class="dropdown-menu" aria-labelledby="collapseExample" id="collapseExample">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+           
+          </div>
+        </div>
+     </div> -->
+      <table datatable   [dtOptions]="dtOptions" class="row-border hover">
+         <thead>
+            <tr>
+               <th>ID</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let review of posts;let i=index">
+               <td>
+                <div class="single-property-reservation">
+                  <div class="input-ecdiv">
+                     <div class="slice1">
+                        <h5>{{ review.username }}</h5>
+                        <ul class="cao-ul">
+                           <li><span class="r-low">{{review.averageRating | number :'1.1-1'}}</span>
+                              <span class="r-high">{{review.averageRating | number :'1.1-1'}}</span>
+                           </li>
+                           <li *ngFor="let n of numSequence(review.averageRating); let i = index;">
+                              <img src="/assets/img/star-enable.png" alt="class-1" />
+                           </li>
+                           <li *ngFor="let n of numSequenceDisable(review.averageRating); let i = index;">
+                              <img src="/assets/img/star-disable.png" alt="class-1" />
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="slice2">
+                        <p>{{review.usersFeedBack}}</p>
+                        <div class="deal-wrap">
+                          <span class="txt">Deal Offered :</span>
+                          <span class="value">50% OFF</span>
+                        </div>
+                     </div>
+                     <div class="slice3">
+                        <ul class="cao-ulnew">
+                           <li *ngFor="let r of review.ratings">
+                              Cat Name
+                              <span class="r-low">{{r.rating | number :'1.1-1'}}</span>
+                              <span class="r-high">{{r.rating | number :'1.1-1'}}</span>
+                           </li>
+                        </ul>
+                        <div class="deal-wrap">
+                          <span class="txt">Deal Status :</span>
+                          <span class="status">Claimed</span>
+                        </div>
+                        <!-- <h6 (click)="reviewResolveIndividual(review)" style="cursor: pointer;" data-toggle="modal"
+                           data-target="#feedbackModal">Resolve</h6> -->
+                     </div>
+                  </div>
+               </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="est-photos">
+	<h5 class="title">Establishment Images</h5>
+	<div class="est-images-list-with-images">
+		<div class="single-est-image" *ngFor="let photo of photos">
+			<div class="establishment-category" (click)="ShowImage()">
+				<img src="assets/img/dashboard/restaurant-dish1.svg">
+				<span>{{photo.category}}</span>				
+			</div>
+		</div>
+	</div>
+</div>

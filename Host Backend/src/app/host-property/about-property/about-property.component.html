@@ -1,0 +1,39 @@
+<main>
+  <app-steps [width]="50" [active]="2"></app-steps>
+   <div class="host-property-location">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="common-header">
+                  <h2>Add a description about your property</h2>
+                  <p>Cras quis nulla commodo, aliquam lectus sed.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-12 col-md-12">
+               <form [formGroup]="descriptionForm"   (ngSubmit)="onSubmit()">
+                     <div class="property-location-form">
+                        <div class="form-field i-am-full-width">
+                        	<textarea  rows="8" formControlName="description"  placeholder="Add description here" class="full-width-text-area"></textarea>
+                        </div>
+                     </div>
+                  </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="savestep-section">
+      <div class="left-btn">
+         <button class="goback-btn" (click)="goBack()">
+            Back
+        </button>
+      </div>
+      <div class="right-btn">
+         <span class="mandatory">* Mandatory fields</span>
+         <button type="button" (click)="onSubmit()" [disabled]="!descriptionForm.valid" class="save-next-btn">
+               Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+         </button>
+      </div>
+   </div>
+</main>

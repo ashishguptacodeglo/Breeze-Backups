@@ -1,0 +1,35 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data establishment-form">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="module-data">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('overview')" [class]="{'active': page=='overview'}">
+						Overview
+					</span>
+					<span class="links" (click)="tabChange('details')" [class]="{'active': page=='details'}">
+						Details
+					</span>
+					<span class="links" (click)="tabChange('new-users')" [class]="{'active': page=='new-users'}">
+						New users
+					</span>
+				
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'overview'">
+					<app-overview></app-overview>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'details'">
+					<app-details></app-details>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'new-users'">
+					<app-new-users></app-new-users>
+				</ng-template>
+
+			</div>
+		</section>
+	</div>
+</div>

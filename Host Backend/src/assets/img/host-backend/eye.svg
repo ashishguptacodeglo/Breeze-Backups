@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77.8px" height="77.8px" viewBox="0 0 77.8 77.8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 29@3x</title>
+    <defs>
+        <circle id="path-1" cx="29.9" cy="29.9" r="29.9"></circle>
+        <filter x="-21.7%" y="-20.1%" width="150.2%" height="150.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.764705882   0 0 0 0 0.756862745   0 0 0 0 0.756862745  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-849, -224)">
+            <g id="Group-5" transform="translate(835, 195)">
+                <g id="Group-29" transform="translate(21, 35)">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#019F98" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="View" transform="translate(14, 21)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M16.5,3.24 C13.2733333,3.24 10.6333333,5.832 10.6333333,9 C10.6333333,12.168 13.2733333,14.76 16.5,14.76 C19.7266667,14.76 22.3666667,12.168 22.3666667,9 C22.3666667,5.832 19.7266667,3.24 16.5,3.24 Z M16.5,13.32 C14.08,13.32 12.1,11.376 12.1,9 C12.1,6.624 14.08,4.68 16.5,4.68 C18.92,4.68 20.9,6.624 20.9,9 C20.9,11.376 18.92,13.32 16.5,13.32 Z M32.78,8.496 L29.6266667,5.364 C26.1433333,1.908 21.4866667,0 16.5,0 C11.5133333,0 6.85666667,1.908 3.37333333,5.364 L0.22,8.496 C-0.0733333333,8.784 -0.0733333333,9.216 0.22,9.504 L3.37333333,12.636 C6.85666667,16.092 11.5133333,18 16.5,18 C21.4866667,18 26.1433333,16.092 29.6266667,12.636 L32.78,9.504 C33.0733333,9.216 33.0733333,8.784 32.78,8.496 Z M28.6,11.628 C25.3733333,14.796 21.0833333,16.56 16.5,16.56 C11.9166667,16.56 7.62666667,14.796 4.4,11.628 L1.76,9 L4.4,6.372 C7.62666667,3.204 11.9166667,1.44 16.5,1.44 C21.0833333,1.44 25.3733333,3.204 28.6,6.372 L31.24,9 L28.6,11.628 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

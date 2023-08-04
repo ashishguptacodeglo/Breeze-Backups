@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 13@2x</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3" transform="translate(-382.000000, -574.000000)">
+            <g id="Group-13" transform="translate(382.000000, 574.000000)">
+                <rect id="Rectangle" x="0" y="0" width="50" height="50"></rect>
+                <g id="Group-37" transform="translate(6.666667, 7.777778)" stroke="#000000" stroke-width="1.012">
+                    <line x1="0.117322291" y1="16.4076577" x2="18.8888889" y2="0.116366366" id="Line-26" stroke-linecap="round"></line>
+                    <line x1="18.8888889" y1="16.4076577" x2="37.6604555" y2="0.116366366" id="Line-26" stroke-linecap="round" transform="translate(28.274672, 8.262012) scale(1, -1) translate(-28.274672, -8.262012) "></line>
+                    <line x1="34.1407867" y1="16.4076577" x2="34.1407867" y2="34.3280781" id="Line-27" stroke-linecap="round"></line>
+                    <line x1="4.34092478" y1="34.3280781" x2="34.1407867" y2="34.3280781" id="Line-29" stroke-linecap="round"></line>
+                    <line x1="4.34092478" y1="16.4076577" x2="18.8888889" y2="3.84009009" id="Line-28" stroke-linecap="round"></line>
+                    <line x1="18.8888889" y1="16.4076577" x2="34.1407867" y2="3.84009009" id="Line-28" stroke-linecap="round" transform="translate(26.514838, 10.123874) scale(1, -1) translate(-26.514838, -10.123874) "></line>
+                    <line x1="4.34092478" y1="16.4076577" x2="4.34092478" y2="34.3280781" id="Line-27" stroke-linecap="round"></line>
+                    <path d="M22.7477195,22.643137 L23.1736621,33.9384444 L15.2886087,33.9384444 L15.2886087,23.0536692 L22.7477195,22.643137 Z" id="Rectangle"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data establishment-form">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="module-data">
+			<div class="page_tabs" *ngIf="!hideMainTabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('profile')" [class]="{'active': page=='profile'}">
+						Profile
+					</span>
+					<span class="links" (click)="tabChange('establishment')" [class]="{'active': page=='establishment'}">
+						Establishment
+					</span>
+				
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'profile'">
+					<app-user-profile (BackEvent)="ShowTab($event)"></app-user-profile>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'establishment'">
+					<app-establishments (BackEvent)="ShowTab($event)"></app-establishments>
+				</ng-template>
+
+			</div>
+		</section>
+	</div>
+</div>

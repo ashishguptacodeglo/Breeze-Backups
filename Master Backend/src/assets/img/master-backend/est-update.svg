@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16.9269296px" height="16.7000416px" viewBox="0 0 16.9269296 16.7000416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Home@3x</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu" transform="translate(-15.6419, -90.65)" stroke="#0E7ECA" stroke-width="0.7">
+            <g id="Home" transform="translate(16, 91)">
+                <path d="M0.657861534,7.77715788 L1.72484561,6.77214384 L1.72484561,15.7312797 C1.72484561,15.8796898 1.84427187,16 1.99159163,16 L14.4352934,16 C14.5826132,16 14.7020395,15.8796898 14.7020395,15.7312797 L14.7020395,6.77214384 L15.7690235,7.77715788 C15.8385919,7.84292098 15.9377022,7.8662996 16.0290205,7.83848723 C16.1203388,7.81067485 16.1899916,7.73589686 16.2117415,7.64232138 C16.2334914,7.54874591 16.204034,7.4505893 16.1344656,7.3848262 L8.3934961,0.0729459969 C8.29081222,-0.0243153323 8.13073794,-0.0243153323 8.02805406,0.0729459969 L1.81020434,5.96060844 L0.303089328,7.3848262 C0.135859674,7.50042224 -0.0746193035,7.80432859 0.0262947294,7.91266799 C0.127208762,8.02100739 0.416169351,8 0.668531375,7.77715788 L0.657861534,7.77715788 Z" id="Path" fill-rule="nonzero"></path>
+                <g id="arrow" transform="translate(8, 5) scale(1, -1) translate(-8, -5)translate(4, 3)" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline id="Path" points="8 0 4 4 0 0"></polyline>
+                </g>
+                <g id="arrow" transform="translate(8, 8) scale(1, -1) translate(-8, -8)translate(4, 6)" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline id="Path" points="8 0 4 4 0 0"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

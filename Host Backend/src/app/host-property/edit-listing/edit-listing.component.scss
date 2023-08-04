@@ -1,0 +1,661 @@
+.edit-listing-page {
+    margin: 74px 0 100px;
+}
+
+.edit-listing-page .heading-sec {
+    margin-bottom: 40px;
+}
+
+.edit-listing-page .heading-sec h2 {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 34px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 64px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.edit-listing-page .heading-sec p {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 36px;
+    margin: 0;
+}
+
+.edit-listing-page .property-img {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    max-width: 350px;
+}
+
+.edit-listing-page .property-img img {
+    border-radius: 11.9px;
+}
+
+.edit {
+    color: rgba(14, 126, 202, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 32px;
+    text-decoration: underline !important;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info,
+.edit-listing-page .edit-property-details .property-kitchen-services,
+.edit-listing-page .edit-property-details .property-room-info,
+.edit-listing-page .edit-property-details .property-contact-info,
+.edit-listing-page .edit-property-details .property-amenities,
+.edit-listing-page .edit-property-details .property-info,
+.edit-listing-page .edit-property-details .property-policies,
+.edit-listing-page .edit-property-details .property-booking-info,
+.edit-listing-page .edit-property-details .property-access-permission,
+.edit-listing-page .edit-property-details .property-safety {
+    margin-bottom: 35px;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info .property-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info .property-name h2 {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 64px;
+    margin: 0;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info .property-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info .property-location span {
+    color: rgba(80, 80, 80, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 13.76px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 25.219512px;
+    margin-right: 15px;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info .property-brief-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.edit-listing-page .edit-property-details .property-basic-info .property-brief-info p {
+    color: #000;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 26px;
+    margin-bottom: 0;
+}
+
+.edit-listing-page .edit-property-details .property-kitchen-services .heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 21px;
+}
+
+.edit-listing-page .edit-property-details .property-kitchen-services .heading h2 {
+    color: rgba(3, 3, 3, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.edit-listing-page .edit-property-details .property-kitchen-services .open-hrs {
+    color: #000;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 26px;
+    margin-bottom: 0;
+}
+
+.edit-listing-page .edit-property-details .heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-listing-page .edit-property-details .heading h2 {
+    color: rgba(3, 3, 3, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .num {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+
+.edit-listing-page .edit-property-details .property-room-info .room-type {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details .room-name {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details .room-brief-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details .room-brief-details .about-room {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details .room-brief-details .about-room .title,
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details .room-brief-details .about-room .content {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Gilroy-Medium";
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    width: 100%;
+}
+
+.edit-listing-page .edit-property-details .property-room-info .room-type .room-details .room-brief-details .about-room .title {
+    color: #8F8F8F;
+}
+
+
+.property-contact-info .contact-details .contact-num input[type="text"],
+.property-contact-info .website-details .website-url input[type="text"],
+.property-contact-info .cancelation-policy-details .policy-day input[type="text"] {
+    border-radius: 3px;
+    opacity: 1;
+    background-color: rgba(235, 242, 245, 1);
+    border: none;
+    width: 595px;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 16px;
+}
+
+.property-contact-info .contact-details,
+.property-contact-info .website-details {
+    margin-bottom: 30px;
+}
+
+.edit-listing-page .edit-property-details .amenities-list {
+    display: flex;
+    gap: 30px;
+    row-gap: 15px;
+    max-width: 590px;
+    flex-wrap: wrap;
+}
+
+.edit-listing-page .edit-property-details .amenities-list span {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 176px;
+    border-radius: 3px;
+    border: 1px solid rgba(151, 151, 151, 1);
+    background-color: rgba(255, 255, 255, 1);
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-listing-page .edit-property-details .property-info input[type="text"] {
+    border-radius: 3px;
+    opacity: 1;
+    background-color: rgba(235, 242, 245, 1);
+    border: none;
+    width: 595px;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 16px;
+}
+
+.edit-listing-page .edit-property-details .property-info input[type="text"]:last-child {
+    margin-bottom: 0px;
+}
+
+.edit-listing-page .edit-property-details .property-policies .policy-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.edit-listing-page .edit-property-details .property-policies .policy-list .policy-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 570px;
+}
+
+.edit-listing-page .edit-property-details .property-policies .policy-list .policy-details .policy-title,
+.edit-listing-page .edit-property-details .property-policies .policy-list .num {
+    color: rgba(3, 3, 3, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.edit-listing-page .edit-property-details .property-policies .policy-list .policy-details textarea {
+    height: 160px;
+    border-radius: 3px;
+    opacity: 1;
+    background-color: rgb(235, 242, 245);
+    border: none;
+    padding: 20px;
+    resize: none;
+    color: rgb(24, 37, 37);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+}
+
+.edit-listing-page .edit-property-details .property-booking-info .advance-booking-days input[type="text"],
+.edit-listing-page .edit-property-details .property-booking-info .cancel-booking-days input[type="text"] {
+    border-radius: 3px;
+    opacity: 1;
+    background-color: rgb(235, 242, 245);
+    border: none;
+    width: 453px;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.edit-listing-page .edit-property-details .property-booking-info .advance-booking-days input[type="text"] {
+    margin-bottom: 25px;
+}
+
+.edit-listing-page .edit-property-details .property-access-permission .property-access-details ul,
+.edit-listing-page .edit-property-details .property-safety .property-safety-details ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+.edit-listing-page .edit-property-details .property-access-permission .property-access-details ul li,
+.edit-listing-page .edit-property-details .property-safety .property-safety-details ul li {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.edit-listing-page .edit-property-details .property-access-permission .property-access-details ul li:last-child,
+.edit-listing-page .edit-property-details .property-safety .property-safety-details ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.edit-listing-page .edit-property-details .property-access-permission .property-access-details ul li span,
+.edit-listing-page .edit-property-details .property-safety .property-safety-details ul li span {
+    font-weight: 500;
+    font-family: "Gilroy-Medium";
+}
+
+.edit-listing-page .edit-property-details .manage-listing {
+    padding-top: 15px;
+}
+
+.edit-listing-page .edit-property-details .manage-listing .form-check-inline {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+
+.edit-listing-page .edit-property-details .manage-listing .form-check-inline label {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+// Add Policies Modal
+
+.modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 40px 25px 56px;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body,
+.modal-dialog .modal-content .modal-footer {
+    padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+    border: none;
+    position: relative;
+    display: block;
+}
+
+.modal-dialog .modal-content .modal-header {
+    margin-bottom: 25px;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: 10px;
+    top: -6px;
+}
+
+
+.modal-dialog .modal-content .modal-header .modal-title {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-header .modal-subtitle {
+    color: rgba(113, 113, 113, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 18px;
+    max-width: 510px;
+    margin: 8px auto 0;
+}
+
+.modal-dialog .modal-content .modal-body form {
+    max-width: 542px;
+    margin: 0 auto;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field {
+    margin-bottom: 35px;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field textarea {
+    height: 216px;
+    border-radius: 3px;
+    opacity: 1;
+    background-color: rgb(235, 242, 245);
+    border: none;
+    padding: 20px;
+    resize: none;
+    color: rgb(24, 37, 37);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.go-back {
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgba(14, 126, 202, 1);
+    color: rgba(14, 126, 202, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.delete {
+    border-radius: 5px;
+    background-color: rgba(14, 126, 202, 1);
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.thankyou-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.thankyou-content .message-container {
+    max-width: 423px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.thankyou-content .message-container h2 {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.thankyou-content .message-container p {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+#deleteModal .modal-dialog .modal-content,
+#snoozedModal .modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 547px;
+    padding: 77px 25px 65px;
+}
+
+.continueButton {
+    border-radius: 10px;
+    background-color: rgba(14, 126, 202, 1);
+    width: 166px;
+    height: 60px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+#snoozedDateRangeModal .modal-dialog .modal-content .modal-body form {
+    max-width: 480px;
+}
+
+#snoozedDateRangeModal .modal-dialog .modal-content .modal-body form .form-field {
+    margin-bottom: 20px;
+}
+
+#snoozedDateRangeModal .modal-dialog .modal-content .modal-body form .form-field label {
+    color: rgb(24, 37, 37);
+    font-family: 'Gilroy-Medium';
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#snoozedDateRangeModal .modal-dialog .modal-content .modal-body form .action-btn {
+    padding-top: 6px;
+}
+
+.hide-me,.date-field{
+    display:none;
+}
+
+.form-check-input[type=radio]
+{
+    background: url('/assets/img/non-checked.svg') 0 0px no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.form-check-input[type=radio]:checked
+{
+    background: url('/assets/img/checked.svg') 0 0px no-repeat;
+}

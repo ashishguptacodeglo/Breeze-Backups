@@ -1,0 +1,171 @@
+<main>
+    <app-steps [width]="94" [active]="4"></app-steps>
+    <form [formGroup]="propertyPolicyForm">
+        <div class="property-policies">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Add policies for your property</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="addPoliciesBtn" data-bs-toggle="modal" data-bs-target="#addPoliciesModal">
+                            <img src="assets/img/host-property/plus-white.svg" alt="Plus Icon"><span>Add new</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="property-policies-data">
+                            <div class="policies-list">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">Important information</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed. Et harum quidem rerum facilis est
+                                        et
+                                        expedita distinctio.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <textarea
+                                        class="form-control">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</textarea>
+                                </div>
+                                <div class="remove">
+                                    <button data-bs-toggle="modal" data-bs-target="#removePoliciesModal">Remove</button>
+                                </div>
+                            </div>
+                            <div class="policies-list">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">Cancelation policy</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed. Et harum quidem rerum facilis est
+                                        et
+                                        expedita distinctio.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <textarea
+                                        class="form-control">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</textarea>
+                                </div>
+                                <div class="remove">
+                                    <button data-bs-toggle="modal" data-bs-target="#removePoliciesModal">Remove</button>
+                                </div>
+                            </div>
+                            <div class="policies-list">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">Add your own rules </label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed. Et harum quidem rerum facilis est
+                                        et
+                                        expedita distinctio.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <textarea
+                                        class="form-control">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</textarea>
+                                </div>
+                                <div class="remove">
+                                    <button data-bs-toggle="modal" data-bs-target="#removePoliciesModal">Remove</button>
+                                </div>
+                            </div>
+                            <div class="policies-list">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">How many days prior can guest book the tables</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <label class="form-label d-block">Select number of days</label>
+                                    <ng-select [items]="bookingDropdown" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select" formControlName="bookingDropdown">
+                                    </ng-select>
+                                </div>
+                            </div>
+                            <div class="policies-list">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">Free cancellation</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <label class="form-label d-block">Select number of days</label>
+                                    <ng-select [items]="cancellationDropdown" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select"
+                                        formControlName="cancellationDropdown">
+                                    </ng-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button class="goback-btn">
+                    Back
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="save-next-btn" [disabled]="propertyPolicyForm.invalid" (click)="getPropertyPolicyInfo()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Add Policies Modal -->
+    <div class="modal fade modal-lg" id="addPoliciesModal" tabindex="-1" aria-labelledby="addPoliciesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPoliciesModalLabel">Add policies for your property</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="addPolicyForm">
+                        <div class="form-field">
+                            <label for="policyName" class="form-label">Policy name<br>
+                                <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                            </label>
+                            <input type="text" class="form-control" id="policyName" name="policyName"
+                                placeholder="Policy name" formControlName="policyName">
+                        </div>
+                        <div class="form-field">
+                            <label for="policyName" class="form-label">Policy description<br>
+                                <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                            </label>
+                            <div class="editor">
+                                <ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
+                                </ngx-editor-menu>
+                                <ngx-editor [editor]="editor" formControlName="policyContent">
+                                </ngx-editor>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            [disabled]="addPolicyForm.invalid" (click)="getPolicyInfo()">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remove Policies Modal -->
+    <div class="modal fade " id="removePoliciesModal" tabindex="-1" aria-labelledby="removePoliciesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="removePoliciesModalLabel">Are you sure?</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <p>Do you want to remove that policy?</p>
+                        <div class="confirm-btn">
+                            <button type="button" class="noBtn" data-bs-dismiss="modal">No</button>
+                            <button type="button" class="yesBtn" data-bs-dismiss="modal">Yes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

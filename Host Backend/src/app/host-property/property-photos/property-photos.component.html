@@ -1,0 +1,100 @@
+<main>
+   <app-steps [width]="94" [active]="4"></app-steps>
+   <div class="property-amenities" *ngIf="tab == 'list'">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="common-header">
+                  <h2>Add some photos of your property</h2>
+                  <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="property-amenities-data">
+                  <div class="row">
+                     <div class="col-md-3 " *ngFor="let amenity of amenitiesArray; let i = index;">
+                        <div class="single-card" [ngClass]="i ==  0  ? 'hide-buttons' : ''">
+                           <div class="card">
+                              <a href="javascript:void(0)" class="remove">
+                                 <img src="assets/img/remove.svg" alt="remove">
+                              </a>
+                              <div class="card-body">
+                                 <h2 class="card-title">{{amenity}}</h2>
+                              </div>
+                           </div>
+
+                           <div class="brief-info">
+                              <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                           </div>
+                           <div class="extra-buttons">
+                              <!-- <button type="button" class="btn">Edit Category</button> -->
+                              <button type="button" class="btn">Add Media</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="single-card last-child">
+                           <div class="card">
+                              <div class="card-body" data-bs-toggle="modal" data-bs-target="#addAmenitiesModal">
+                                 <img src="assets/img/host-property/plus.svg" alt="Plus Icon">
+                                 <h2 class="card-title">Add Category</h2>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <p>&nbsp;</p>
+
+      <div class="savestep-section">
+         <div class="left-btn">
+            <button class="goback-btn" (click)="goBack()">
+               Back
+            </button>
+         </div>
+         <div class="right-btn">
+            <button class="save-next-btn" (click)="moveNext()">
+               Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+            </button>
+         </div>
+      </div>
+   </div>
+
+   
+
+   <div class="app-video-container" *ngIf="tab == 'gallery'">
+      <app-video-images (BackEvent)="ChangeTab($event)"></app-video-images>
+   </div>
+
+
+   <!-- Modal -->
+   <div class="modal fade" id="addAmenitiesModal" tabindex="-1" aria-labelledby="addAmenitiesModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="addAmenitiesModalLabel">Category Name</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <form [formGroup]="addNewAmenitiesForm" (ngSubmit)="addNewAmenities">
+                  <div class="form-field">
+                     <input type="text" class="form-control" placeholder="Video/360*" formControlName="addAmenities">
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                     [disabled]="addNewAmenitiesForm.invalid">Save</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+</main>

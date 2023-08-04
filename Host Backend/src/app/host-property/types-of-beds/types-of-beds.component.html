@@ -1,0 +1,67 @@
+<main>
+   <app-steps [width]="50" [active]="2"></app-steps>
+   <section class="types-of-beds">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="common-header">
+                  <h2>What kind of beds are available</h2>
+                  <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="kind-of-beds">
+         <form [formGroup]="form" class="login-form" (ngSubmit)="onSubmit()">
+            <div class="form-field">
+               <ng-select [items]="bedsList" bindLabel="name" class="bed-selector" bindValue="value"
+                  [(ngModel)]="selectBedsize" [ngModelOptions]="{standalone: true}" autocomplete="off"
+                  (change)="getSelectedValue()">
+               </ng-select>
+            </div>
+            <div class="form-field">
+               <div class="add-button-conatiner">
+                  <button data-bs-toggle="modal" data-bs-target="#addAmenitiesModal" type="button" class="add-button">+
+                     Add</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </section>
+   <div class="savestep-section">
+      <button class="goback-btn">
+         Back
+      </button>
+
+      <div class="right-btn">
+         <span class="mandatory">* Mandatory fields</span>
+         <button type="button" href="#" [disabled]="!isvalid" class="save-next-btn">
+            Save & Continue
+            <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+         </button>
+      </div>
+   </div>
+
+   <div class="modal fade" id="addAmenitiesModal" tabindex="-1" aria-labelledby="addAmenitiesModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="addAmenitiesModalLabel">Add beds</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <form [formGroup]="addNewAmenitiesForm" (ngSubmit)="addNewAmenities">
+                  <div class="form-field">
+                     <input type="text" class="form-control" placeholder="Add amenities*"
+                        formControlName="addAmenities">
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                     [disabled]="addNewAmenitiesForm.invalid">Save</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</main>

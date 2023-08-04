@@ -1,0 +1,158 @@
+.tasks-details .task-details-card {
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid #E2E2E2;
+    margin-bottom: 25px;
+}
+
+.tasks-details .task-details-card .card-header,
+.tasks-details .task-details-card .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasks-details .task-details-card .card-header {
+    margin-bottom: 25px;
+}
+
+.tasks-details .task-details-card .card-header .task-id {
+    color: rgba(14, 126, 202, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+::ng-deep {
+
+    .tasks-details .task-details-card .card-header .change-status .ng-select,
+    .tasks-details .task-details-card .card-header .change-status .ng-select.ng-select-single .ng-select-container {
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-family: "Gilroy-Medium";
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: #fff;
+        width: 105px;
+        height: 30px !important;
+        padding-left: 0;
+        min-height: 30px;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status .ng-select-container,
+    .tasks-details .task-details-card .card-header .change-status .ng-select .ng-dropdown-panel {
+        box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status .ng-select.ng-select-single .ng-select-container {
+        padding-left: 5px;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status .ng-select .ng-arrow-wrapper {
+        width: auto;
+        left: -6px;
+        padding-right: 8px;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status .ng-select .ng-arrow-wrapper .ng-arrow {
+        border-color: #fff transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 2.5px;
+        background: none;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status.open .ng-select,
+    .tasks-details .task-details-card .card-header .change-status.open .ng-select.ng-select-single .ng-select-container {
+        background-color: #E02020;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status.pending .ng-select,
+    .tasks-details .task-details-card .card-header .change-status.pending .ng-select.ng-select-single .ng-select-container {
+        background-color: #F7B500;
+    }
+
+    .tasks-details .task-details-card .card-header .change-status.closed .ng-select,
+    .tasks-details .task-details-card .card-header .change-status.closed .ng-select.ng-select-single .ng-select-container {
+        background-color: #1EBBBA;
+    }
+}
+
+.tasks-details .task-details-card .card-body .task-info .title {
+    color: rgb(68, 74, 74);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.tasks-details .task-details-card .card-body .task-info .value {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.tasks-details .heading {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.tasks-details .tasks {
+    margin-bottom: 40px;
+}
+
+.tasks-details .tasks .task-list {
+    padding: 0;
+}
+
+.tasks-details .tasks .task-list .single-task {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.tasks-details .notes textarea {
+    border-radius: 10px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.078323);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px;
+    width: 100%;
+    height: 125px;
+    resize: none;
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    outline: none;
+}

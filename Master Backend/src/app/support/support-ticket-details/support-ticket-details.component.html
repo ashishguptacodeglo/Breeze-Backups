@@ -1,0 +1,114 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="establishment-info">
+			<div class="ticket-details">
+				<div class="ticket-details-card">
+					<div class="card-header">
+						<div class="ticket-status">
+							<div class="ticket-id">
+								<span>#ASF134</span> Issue with payment
+							</div>
+							<div class="change-status {{status}}">
+								<ng-select [items]="statusList" (change)="onChange($event)" [(ngModel)]="status"
+									bindLabel="name" placeholder="{{status}}" bindLabel="name" bindValue="value"
+									autocomplete="off" [searchable]="false" [clearable]="false">
+								</ng-select>
+							</div>
+						</div>
+						<div class="assigned-to">
+							<div class="title">
+								Assigned on
+							</div>
+							<div class="assigned-date">
+								Ian Leonard
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body">
+						<div class="ticket-desc">
+							<p>Payment</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla massa scelerisque
+								mauris euismod congue.</p>
+						</div>
+						<div class="assigned-on">
+							<div class="title">
+								Assigned on
+							</div>
+							<div class="assigned-date">
+								Sept 9, 2020
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="issue-details">
+					<div class="left-sec">
+						<div class="issue-desc">
+							<h5 class="heading">Issue Description</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla massa scelerisque
+								mauris euismod congue. Ssit amet, consectetur adipiscing elit. Sed fringilla massa
+								scelerisque mauris euismod congue.</p>
+						</div>
+
+						<div class="attachments-sec">
+							<h5 class="heading">Atachment</h5>
+							<div class="attachments" *ngFor="let f of attachments">
+								<div class="file-details">
+									<img src="assets/img/host-backend/{{f.type}}-icon.svg" alt="Download"
+										class="file-icon">
+									<div class="file-name">
+										{{f.name}}
+									</div>
+								</div>
+
+								<div class="remove-uploaded">
+									<a href="{{f}}" rel="noopener noreferrer" target="_blank" download>
+										<img src="assets/img/host-backend/download-icon.svg" alt="Download">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-sec">
+						<div class="establishment-details">
+							<div class="about-establishment">
+								<div class="name-type">
+									<span class="name">La Casa Del Pueblo</span>
+									<span class="type">Property</span>
+								</div>
+								<div class="address">
+									<img src="assets/img/location-black.svg" alt="Icon">
+									<p>1810 S Blue Island Ave, Chicago, IL 60608</p>
+								</div>
+							</div>
+							<div class="establishment-contact-details">
+								<ul>
+									<li>
+										<img src="assets/img/user.svg" alt="Icon">
+										<p>Cole Webster</p>
+									</li>
+									<li>
+										<img src="assets/img/phone.svg" alt="Icon">
+										<p>+1 234 234 3211</p>
+									</li>
+									<li>
+										<img src="assets/img/mail.svg" alt="Icon">
+										<p>Coleebster@email.com</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+</div>

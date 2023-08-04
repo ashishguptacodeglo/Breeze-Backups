@@ -1,0 +1,111 @@
+<main>
+    <app-steps [width]="50" [active]="2"></app-steps>
+   <!-- Personal Information -->
+   <div class="personal-information">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="common-header">
+                  <h2>Provide some basic information about your property.</h2>
+                  <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+
+            <div class="col-lg-12 col-md-12">
+               <form [formGroup]="basicInfoForm" class="login-form" (ngSubmit)="onSubmit()">
+                  <div class="property-basic-info">
+                     <div class="form-field">
+                        <label class="form-label">How many total rooms are available?</label>
+                        <select class="form-select" formControlName="no_rooms_available">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label class="form-label">How many out of that allocate to Breeze?</label>
+                        <select class="form-select" formControlName="no_rooms_allocate_to_breeze">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                     <hr />
+                     <div class="form-field">
+                        <label class="form-label">How many guests can stay at your place?</label>
+                        <select class="form-select" formControlName="no_guests_stay_on_place">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+
+                     <div class="form-field">
+                        <label class="form-label">How many bedrooms are available?</label>
+                        <select class="form-select" formControlName="no_bed_rooms">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label class="form-label">How many beds are available?</label>
+                        <select class="form-select" formControlName="no_beds">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label class="form-label">How many private bathrooms are available?</label>
+                        <select class="form-select" formControlName="no_private_bathrooms">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label class="form-label">How many shared bathrooms are available?</label>
+                        <select class="form-select" formControlName="no_shared_bathrooms">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label class="form-label">Is Kitchen and room service available?</label>
+                        <select class="form-select" formControlName="is_kiteched_service">
+                           <option value="yes">Yes</option>
+                           <option value="no">No</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label for="uhosting" class="form-label">How many guests can stay?</label>
+                        <select class="form-select" formControlName="no_guests_stay">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="savestep-section">
+      <div class="left-btn">
+         <button class="goback-btn">
+            Back
+        </button>
+      </div>
+      <div class="right-btn">
+         <span class="mandatory">* Mandatory fields</span>
+         <button type="button" (click)="onSubmit()" [disabled]="!basicInfoForm.valid" class="save-next-btn">
+            Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+         </button>
+      </div>
+   </div>
+</main>

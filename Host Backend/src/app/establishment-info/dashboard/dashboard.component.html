@@ -1,0 +1,122 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="establishment-info">
+
+			<div class="dashboard-stats-cards">
+
+				<div class="single-stat-data" *ngFor="let stat of statsArray">
+					<div class="stat-data">
+						<div class="stat-icon">
+							<img src="{{stat.icon}}">
+
+						</div>
+						<div class="stat-details">
+							<div class="stat-value">{{stat.stat}}</div>
+							<div class="stat-label">{{stat.label}}</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="export-and-datepicker">
+				<button class="export-button">Export</button>
+				<div class="filter-datepicker">
+					<input class="date-range-picker" type="text" ngxDaterangepickerMd [(ngModel)]="selected"
+						[showCustomRangeLabel]="true" [alwaysShowCalendars]="true" [ranges]="ranges"
+						[linkedCalendars]="true" [isInvalidDate]="isInvalidDate" [showClearButton]="false"
+						(change)="choosedDate($event)" placeholder="This month">
+				</div>
+
+			</div>
+
+			<div class="barchart-section">
+				<div class="barchart-wrapper">
+					<div id="barchart">
+						<apx-chart [series]="BarChartOptions.series" [chart]="BarChartOptions.chart"
+							[plotOptions]="BarChartOptions.plotOptions" [yaxis]="BarChartOptions.yaxis"
+							[xaxis]="BarChartOptions.xaxis" [fill]="BarChartOptions.fill"
+							[dataLabels]="BarChartOptions.dataLabels" [grid]="BarChartOptions.grid"
+							[tooltip]="BarChartOptions.tooltip"></apx-chart>
+						<hr>
+					</div>
+				</div>
+			</div>
+
+			<div class="piechart-section">
+				<h5 class="heading">Top 5 States</h5>
+				<div class="piechart-wrapper">
+					<div class="state-list">
+						<div id="chart1" class="chart">
+							<span class="state-name">California</span>
+							<apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+								[plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels"
+								[fill]="chartOptions.fill"></apx-chart>
+						</div>
+						<div id="chart2" class="chart">
+							<span class="state-name">Texes</span>
+							<apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+								[plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels"
+								[fill]="chartOptions.fill"></apx-chart>
+						</div>
+						<div id="chart3" class="chart">
+							<span class="state-name">Hawaii</span>
+							<apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+								[plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels"
+								[fill]="chartOptions.fill"></apx-chart>
+						</div>
+						<div id="chart4" class="chart">
+							<span class="state-name">Ohio</span>
+							<apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+								[plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels"></apx-chart>
+						</div>
+						<div id="chart4" class="chart">
+							<span class="state-name">Alaska</span>
+							<apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+								[plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels"
+								[fill]="chartOptions.fill"></apx-chart>
+						</div>
+					</div>
+					<div class="chart-label">
+						<span>Male</span>
+						<span>Female</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="dashboard-bookings-list" *ngIf="fetched">
+				<table datatable [dtOptions]="dtOptions" class="row-border hover">
+					<thead>
+						<tr>
+							<th>Room </th>
+							<th>Guest’s name</th>
+							<th>Booked Date</th>
+							<th>Nights</th>
+							<th>Guests</th>
+							<th>Amount</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let booking of bookings;let i=index">
+							<td> Suite Room {{i+1}} </td>
+							<td> Lara Fremont</td>
+							<td> 10/02/2023</td>
+							<td> 2 nights (10-may to 12 May)</td>
+							<td> 2</td>
+							<td> $340</td>
+							<td class="status">
+								<span class="dot {{booking.status}}"></span>
+								<span>{{booking.status}}</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</section>
+	</div>
+</div>

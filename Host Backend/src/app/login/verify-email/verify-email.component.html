@@ -1,0 +1,15 @@
+<div class="verify_email-content" *ngIf="isloading">
+    <div class="loader" >
+        <img src="assets/img/loading.gif" alt="" />
+    </div>
+</div>
+
+
+<div  *ngIf="!isloading">
+    <div class="verification-success" *ngIf="verifyTokenMessage">
+        <app-thank-you [message]="message"></app-thank-you>
+    </div>
+    <div class="verification-error" *ngIf="!verifyTokenMessage" >
+        <app-resend-verification-mail [error]="error"></app-resend-verification-mail>
+    </div>
+</div>

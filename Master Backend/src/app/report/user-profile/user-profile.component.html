@@ -1,0 +1,3 @@
+<app-profile-list *ngIf="page=='list'" (BackEvent)="ShowTab($event)"></app-profile-list>
+<app-profile-details *ngIf="page=='details'" (BackEvent)="ShowTab($event)"></app-profile-details>
+<app-user-details *ngIf="page=='profile'" (BackEvent)="ShowTab($event)"></app-user-details>

@@ -1,0 +1,51 @@
+<main>
+   <app-navigation [width]="94" [active]="4"></app-navigation>
+      <div class="property-policies">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="common-header">
+                     <h2>Add policies for your property</h2>
+                     <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <div class="addPoliciesBtn" data-bs-toggle="modal" data-bs-target="#addPoliciesModal">
+                     <img src="assets/img/host-property/plus-white.svg" alt="Plus Icon"><span>Add new</span>
+                  </div>
+               </div>
+            </div>
+           
+         </div>
+      </div>
+    
+<!-- RGB(1, 159, 152) -->
+   <!-- Add Policies Modal -->
+   <div class="modal fade" id="addPoliciesModal" tabindex="-1" aria-labelledby="addPoliciesModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="addPoliciesModalLabel">Tell us why do you want to deactivate your listing</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            	
+               	<div class="snooze-step-1">
+	            		<div class="reasons-list">
+	            			<div class="single-reason" *ngFor="let reason of regionsToSnooze;let i= index">
+								<input name="radio" id="reason--{{i}}" type="radio" >
+								<label for="reason--{{i}}">
+									{{reason.name}}
+								</label>
+	            				
+	            			</div>
+	            		</div>
+	            	</div>
+                  <button type="button" class="btn btn-secondary"  [disabled]="!stepsDone.step1" (click)="SnoozeStep1()">Next</button>
+                  <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" [disabled]="!stepsDone.step1" (click)="SnoozeStep1()">Save</button> -->
+            </div>
+         </div>
+      </div>
+   </div>
+</main>

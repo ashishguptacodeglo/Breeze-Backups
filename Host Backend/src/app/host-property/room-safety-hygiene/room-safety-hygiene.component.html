@@ -1,0 +1,81 @@
+<main>
+   <app-steps [width]="94" [active]="4"></app-steps>
+   <form [formGroup]="roomSafetyForm">
+      <div class="room-safety-hygiene">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="common-header">
+                     <h2>Tell us about room Safety & Hygiene</h2>
+                     <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row roomSafetyHygieneDetails">
+               <div class="col-md-12 mb-4">
+                  <label class="form-label d-block">How often is the room cleaned/serviced while occupied?</label>
+                  <div class="formField">
+                     <ng-select [items]="roomCleaned" bindLabel="name" bindValue="value" formControlName="cleanWhenOccupied"
+                        autocomplete="off" [searchable]="false" (change)="itemSelected($event)" [clearable]="false"
+                        placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+
+               <div class="col-md-12 mb-4">
+                  <label class="form-label d-block">How often is the room cleaned/serviced when it is not booked
+                     by users</label>
+                  <div class="formField">
+                     <ng-select [items]="roomCleaned" bindLabel="name" bindValue="value"
+                        formControlName="cleanWhenBooked" autocomplete="off" [searchable]="false"
+                        (change)="itemSelected($event)" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+
+               <!-- <div class="col-md-12 mb-4">
+                  <label class="form-label d-block">Do you offer laundry services?</label>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" name="laundryServices" value="1"
+                        id="laundryServicesYes" formControlName="laundryServices">
+                     <label class="form-check-label" for="laundryServicesYes">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" name="laundryServices" value="0"
+                        id="laundryServicesNo" formControlName="laundryServices">
+                     <label class="form-check-label" for="laundryServicesNo">No</label>
+                  </div>
+               </div> -->
+              
+               <div class="col-md-12">
+                  <div class="form-field">
+                      <label class="form-label">What Safety measures does your property have?</label>
+                      <div class="safetyMeasures">
+                          <div class="form-check form-check-inline" *ngFor="let safetyMeasures of safetyMeasuresArray; let i = index;">
+                              <input type="checkbox" id="safetyMeasures-{{i}}" class="form-check-input"
+                                  (change)="safetyMeasuresOnChange($event)" [value]="safetyMeasures" name="safetyMeasures" />
+                              <label for="safetyMeasures-{{i}}" class="form-check-label">{{safetyMeasures}}</label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+               
+
+            </div>
+         </div>
+      </div>
+      <div class="savestep-section">
+         <div class="left-btn">
+            <button class="goback-btn" (click)="goBack()">
+               Back
+            </button>
+         </div>
+         <div class="right-btn">
+            <button class="save-next-btn" [disabled]="roomSafetyForm.invalid" (click)="getRoomSafetyInfo()">
+               Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+            </button>
+         </div>
+      </div>
+   </form>
+</main>

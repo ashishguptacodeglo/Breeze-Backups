@@ -1,0 +1,57 @@
+<div class="approved-post-requests">
+	<div class="no-result" *ngIf="!fetched">
+		<p>There are no approved post.</p>
+	</div>
+	<div class="approved-post-requests-list" *ngIf="fetched">
+		<div class="list-row" *ngIf="posts.length > 0">
+			<div class="row">
+				<div class="col-md-4" *ngFor="let post of posts;let i=index">
+					<div class="single-approved-post">
+
+						<div class="post-image-container">
+							<div class="post-author-details">
+								<div class="user-info">
+									<img src="{{post.image}}" class="rounded-circle profile-img">
+									<div class="author-details">
+										<h6>Grace Mitchell
+											<img src="assets/img/host-backend/influencer-badge.svg" alt="badge"
+												class="badge-icon">
+										</h6>
+										<span class="location">London</span>
+									</div>
+								</div>
+								<div class="post-header-actions">
+									<img src="assets/img/host-backend/pin.svg" alt="pin" class="pin">
+
+									<div class="post-actions">
+										<a class="dropdown-toggle" data-bs-toggle="collapse"
+											href="#action-dropdown-{{i}}">
+											<img src="assets/img/host-backend/post-menu-toggle.svg">
+										</a>
+										<div class="dropdown-menu" id="action-dropdown-{{i}}">
+											<a class="dropdown-item pin" href="#">Unpin the post</a>
+											<a class="dropdown-item delete" href="#">Delete post</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="post-image">
+								<img src="assets/img/host-backend/influencer-post.jpg">
+							</div>
+							<div class="speaker-image">
+								<img src="assets/img/host-backend/speaker.svg">
+							</div>
+						</div>
+
+						<div class="post-description">
+							<p><strong>Grace Mitchell</strong> Lost in Nature's Embrace: A Tranquil Escape at Hights mankulam with Pool in the Enchanting Forest 🌳</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="no-result" *ngIf="posts.length == 0">
+			<p>There are no approved post.</p>
+		</div>
+	</div>

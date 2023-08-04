@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 15</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-15">
+            <rect id="Rectangle" x="0" y="0" width="45" height="45"></rect>
+            <g id="Group-27" transform="translate(10.000000, 7.000000)" stroke="#000000">
+                <g id="Group-26" transform="translate(3.409091, 0.000000)">
+                    <path d="M15.9218182,0.5 C16.4078288,0.5 16.8478288,0.69699471 17.1663261,1.01549207 C17.4848235,1.33398942 17.6818182,1.77398942 17.6818182,2.26 L17.6818182,29.9068618 L1.09932981,30.4827129 L0.500006902,2.25501775 C0.50134816,1.77098281 0.698083402,1.33290073 1.01549207,1.01549207 C1.33398942,0.69699471 1.77398942,0.5 2.26,0.5 Z" id="Rectangle"></path>
+                    <rect id="Rectangle" x="4.74242424" y="6.08" width="1" height="1"></rect>
+                    <rect id="Rectangle" x="8.98484848" y="6.08" width="1" height="1"></rect>
+                    <rect id="Rectangle" x="13.2272727" y="6.08" width="1" height="1"></rect>
+                    <rect id="Rectangle" x="13.2272727" y="10.42" width="1" height="1"></rect>
+                    <rect id="Rectangle" x="8.98484848" y="10.42" width="1" height="1"></rect>
+                    <rect id="Rectangle" x="4.74242424" y="10.42" width="1" height="1"></rect>
+                    <rect id="Rectangle" x="4.74242424" y="14.76" width="1" height="1"></rect>
+                    <path d="M11.5068727,20.96 C11.7058057,20.96 11.8859057,21.0406335 12.0162725,21.1710003 C12.1466392,21.301367 12.2272727,21.481467 12.2272727,21.6804 L12.2272727,30.5 L5.95454545,30.5 L5.95454545,21.6804 C5.95454545,21.481467 6.03517897,21.301367 6.16554573,21.1710003 C6.29591249,21.0406335 6.47601249,20.96 6.67494545,20.96 Z" id="Rectangle"></path>
+                </g>
+                <line x1="0.568181818" y1="30.4259259" x2="24.4318182" y2="30.4259259" id="Line-8" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

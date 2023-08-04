@@ -1,0 +1,35 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data establishment-form">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="module-data">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('dashboard')" [class]="{'active': page=='dashboard'}">
+						Dashboard
+					</span>
+					<span class="links" (click)="tabChange('tickets')" [class]="{'active': page=='tickets'}">
+						Tickets
+					</span>
+					<span class="links" (click)="tabChange('host')" [class]="{'active': page=='host'}">
+						Host
+					</span>
+				
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'dashboard'">
+					<app-dashboard></app-dashboard>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'tickets'">
+					<app-tickets></app-tickets>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'host'">
+					<app-host></app-host>
+				</ng-template>
+
+			</div>
+		</section>
+	</div>
+</div>

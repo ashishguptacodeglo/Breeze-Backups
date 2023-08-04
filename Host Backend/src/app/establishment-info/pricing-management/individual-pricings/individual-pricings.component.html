@@ -1,0 +1,107 @@
+
+<div class="calendar-container">
+   <div class="date-calendar">
+
+      <div class="month-and-year-toggle">
+         <div class="months-list">
+            <button (click)="changeMonth('prev')"  type="button" class="prev-month" 
+                  [ngClass]="checkIfDisabled('month') ? 'disabled' : '' ">
+               <i class="fc-icon fc-icon-chevron-left"></i>
+            </button>
+            <div class="single-month-filter">
+               {{ monthsList[currentMonthIndex].monthName }}
+            </div>
+            <button (click)="changeMonth('next')" type="button" class="next-month">
+               <i class="fc-icon fc-icon-chevron-right"></i>
+            </button>
+         </div>
+
+         <div class="years-list">
+            <button (click)="updateYearCalendar('prev')"  [ngClass]="checkIfDisabled('year') ? 'disabled' : '' "  type="button" class="prev-year">
+               <i class="fc-icon fc-icon-chevron-left"></i>
+            </button>
+            <div class="single-year-filter">
+               {{ yearList[currentYearIndex].yearName }}
+            </div>
+            <button (click)="updateYearCalendar('next')" type="button"  [ngClass]="disableNextYear() ? 'disabled' : '' " class="next-year">
+               <i class="fc-icon fc-icon-chevron-right"></i>
+            </button>
+         </div>
+      </div>
+      
+      <div class="calender-box">
+         <div class="month-names">
+            <div class="single-month" *ngFor="let m of monthsList; let i = index"
+               [ngClass]="{'active': currentMonthIndex === i}">
+               {{ m.monthShortName }}
+            </div>
+         </div>
+
+         <full-calendar #calendar [options]="calendarOptions"></full-calendar>
+      </div>
+
+
+   </div>
+   <div class="price-data">
+      <div class="today">
+         <span class="day">{{SelectedDate.dayName}}</span>
+         <span class="date-with-month">{{SelectedDate.date}} {{SelectedDate.monthName}}</span>
+      </div>
+      <div class="object-list">
+         <div class="single-object" *ngFor="let room of RoomList">
+            <div class="name-and-desc">
+               <div class="name">{{room.name}}</div>
+               <div class="desc">{{room.desc}}</div>
+            </div>
+            <div class="button-and-price">
+               <button data-bs-toggle="modal" data-bs-target="#add-price-modal" class="edit-price">Edit</button>
+               <div class="price">${{room.price}}</div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<div class="modal fade" id="add-price-modal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content" [ngClass]="estType == 'room' ? 'text-center' : '' ">
+         <div class="modal-header">
+            <h5 class="modal-title">Add price per table <span>(in $-USD)</span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="form-field">
+                  <input type="text" class="form-control" value="300" name="room-price">
+               </div>
+
+
+               <div class="table-rates" *ngIf="estType == 'hotel'">
+                     <div class="or-text">or</div>
+                     <div class="form-field free-table">
+                        <label>List this table as free</label>
+                     </div>
+
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                           value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                           value="option2">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                     </div>
+                  </div>
+
+
+
+               <div class="action-btn">
+                  <button type="button" class="btn save">Save</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

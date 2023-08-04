@@ -1,0 +1,35 @@
+.property-reservations h2 {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 28px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.property-reservations .no-result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	border-radius: 10px;
+	border: 1px solid #E7E7E7;
+}
+
+.property-reservations .no-result p {
+	color: rgba(147, 147, 149, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 21px;
+}
+
+.dataTable {
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}

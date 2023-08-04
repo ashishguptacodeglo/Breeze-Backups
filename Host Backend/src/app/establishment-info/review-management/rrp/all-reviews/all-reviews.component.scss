@@ -1,0 +1,332 @@
+
+// Review list below
+.single-property-reservation .slice1, .single-property-reservation .slice2, .single-property-reservation .slice3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.single-property-reservation .slice1 .r-low, .single-property-reservation .slice1 .r-high{
+    margin-right: 20px;
+}
+.single-property-reservation .slice2 p{
+    font-weight: 600;
+    color: black;
+}
+.reviews-stats .rating-list {
+    color: #373737;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium' ;
+    font-weight: 500;
+}
+.single-property-reservation .slice1 h5 {
+    color: #4A4A4A;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Gilroy-Medium';
+    margin-bottom: 10px;
+}
+.single-property-reservation .slice3 h6{
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dropdown a#dropdownMenuLink {
+    color: #444A4A;
+    font-size: 14px;
+    font-weight: 600;
+}
+.btn-secondary {
+    color: #444A4A;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px 0 RGBA(230, 230, 230, 0.5);
+}
+
+.caonew-inner {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #E2E2E2;
+    box-shadow: 0px 4px 8px 0px #e6e6e6;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+ul.cao-ul{
+    margin-bottom: 10px;
+}
+ul.cao-ul li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+ul.cao-ul p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+ul.cao-ulnew li {
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    font-size: 14px;
+    color: #373737;
+    font-weight: 400;
+}
+ul.cao-ulnew {
+    padding: 0;
+}
+ul.cao-ulnew li:after {
+    content: "";
+    background-color: #E2E2E2;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    right: -12px;
+    width: 1px;
+}
+ul.cao-ulnew li:last-child:after{
+    content: none;
+}
+.r-low {
+    color: #C14E48;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.r-high {
+    color: #0E7ECA;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+thead {
+    display: none;
+}
+.dataTable{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.modal {
+    padding-top: 0;
+}
+
+.modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 680px;
+    padding: 40px;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body,
+.modal-dialog .modal-content .modal-footer {
+    padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+    border: none;
+    position: relative;
+    display: block;
+}
+
+.modal-dialog .modal-content .modal-header {
+    margin-bottom: 25px;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+
+
+.modal-dialog .modal-content .modal-header .modal-title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+
+
+.modal-dialog .modal-content .modal-body form .form-field label {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field input[type='text'] {
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+}
+
+.modal-dialog .modal-content .modal-body form .form-field {
+    margin-bottom: 25px;
+}
+
+::ng-deep {
+
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select,
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select.ng-select-single .ng-select-container {
+        border-radius: 5px;
+        background-color: #fff;
+        padding-left: 0px;
+    }
+
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select-container,
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select .ng-dropdown-panel {
+        border: 1px solid #E2E2E2;
+        box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    }
+
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select .ng-select-container .ng-value-container {
+        padding-left: 20px;
+    }
+
+}
+
+.modal-dialog .modal-content .modal-body form .form-field .form-check label {
+    cursor: pointer;
+}
+
+.select-dateNtime {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.select-dateNtime .select-date {
+    width: 100%;
+    max-width: 295px;
+}
+
+.select-dateNtime .select-time {
+    width: 100%;
+    max-width: 295px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-dateNtime .select-time .form-field {
+    width: 100%;
+    max-width: 140px;
+}
+
+.select-dateNtime .select-date input[type='date'] {
+    border-radius: 5px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    color: #444A4A;
+}
+
+.form-check-input[type=checkbox] {
+    background: url('/assets/img/non-checked.svg') 0 0px no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.form-check-input[type=checkbox]:checked {
+    background: url('/assets/img/checked.svg') 0 0px no-repeat;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field textarea {
+    height: 101px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    padding: 10px 15px;
+    resize: none;
+    color: #444A4A;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    max-width: unset;
+}
+.modal-dialog .modal-content .modal-body form .form-field.name textarea{
+    height: 50px;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.go-back {
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgba(14, 126, 202, 1);
+    color: rgba(14, 126, 202, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.cancel {
+    color: rgba(142, 142, 147, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.save {
+    border-radius: 5px;
+    background-color: rgba(14, 126, 202, 1);
+    width: 110px;
+    height: 50px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.hidden-field {
+    display: none;
+}

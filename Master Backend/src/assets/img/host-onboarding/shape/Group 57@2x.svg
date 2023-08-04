@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="440px" height="698px" viewBox="0 0 440 698" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 57@2x</title>
+    <g id="host-onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-100.000000, -2745.000000)" id="Group-54">
+            <g transform="translate(0.000000, 2745.000000)">
+                <g id="Group-57" transform="translate(100.000000, 0.000000)">
+                    <path d="M225,0 L439.390411,0 L439.390411,126 C439.390411,181.228475 394.618886,226 339.390411,226 L225,226 L225,226 L225,0 Z" id="Rectangle" fill="#FFFFFF"></path>
+                    <path d="M225,236 L439.390411,236 L439.390411,362 C439.390411,417.228475 394.618886,462 339.390411,462 L225,462 L225,462 L225,236 Z" id="Rectangle-Copy-35" fill="#FFFFFF" transform="translate(332.195205, 349.000000) scale(1, -1) translate(-332.195205, -349.000000) "></path>
+                    <path d="M0,236 L214.390411,236 L214.390411,362 C214.390411,417.228475 169.618886,462 114.390411,462 L0,462 L0,462 L0,236 Z" id="Rectangle-Copy-36" fill="#FFFFFF" transform="translate(107.195205, 349.000000) scale(-1, -1) translate(-107.195205, -349.000000) "></path>
+                    <path d="M0,472 L214.390411,472 L214.390411,598 C214.390411,653.228475 169.618886,698 114.390411,698 L0,698 L0,698 L0,472 Z" id="Rectangle-Copy-37" fill="#FFFFFF" transform="translate(107.195205, 585.000000) scale(-1, 1) translate(-107.195205, -585.000000) "></path>
+                    <circle id="Oval" stroke="#56A8A2" cx="334.5" cy="521.5" r="104.5"></circle>
+                    <circle id="Oval-Copy-2" stroke="#56A8A2" fill="#FFFFFF" cx="334.5" cy="521.5" r="95.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

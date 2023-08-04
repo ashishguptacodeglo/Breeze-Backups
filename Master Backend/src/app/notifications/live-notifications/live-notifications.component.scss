@@ -1,0 +1,400 @@
+.dataTable {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header .module-title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.cta-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 110px;
+}
+
+.cta-action .separator {
+    background: #D5D5D5;
+    width: 1px;
+    height: 15px;
+}
+
+
+.cta-action button {
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.23px;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.cta-action button.edit {
+    color: rgba(14, 126, 202, 1);
+}
+
+.cta-action button.delete {
+    color: #E02020;
+}
+
+
+/* Modal CSS */
+
+.modal {
+    padding-top: 0;
+}
+
+.modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 40px;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body,
+.modal-dialog .modal-content .modal-footer {
+    padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+    border: none;
+    position: relative;
+    display: block;
+}
+
+.modal-dialog .modal-content .modal-header {
+    margin-bottom: 30px;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+
+
+.modal-dialog .modal-content .modal-header .modal-title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.modal-dialog .modal-content .modal-header .modal-subtitle {
+    color: rgba(113, 113, 113, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 18px;
+    max-width: 510px;
+    margin: 8px auto 0;
+}
+
+.modal-dialog .modal-content .modal-body .form-field label, .modal-body .form-field .label {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.modal-body .form-field .label{
+	color: RGB(51, 51, 51);
+}
+
+.modal-dialog .modal-content .modal-body form .form-field input[type='text'] {
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+}
+
+.modal-dialog .modal-content .modal-body form .form-field {
+    margin-bottom: 25px;
+}
+
+::ng-deep {
+
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select,
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select.ng-select-single .ng-select-container {
+        border-radius: 5px;
+        background-color: #fff;
+        padding-left: 0px;
+    }
+
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select-container,
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select .ng-dropdown-panel {
+        border: 1px solid #E2E2E2;
+        box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+    }
+
+    .modal-dialog .modal-content .modal-body form .form-field .ng-select .ng-select-container .ng-value-container {
+        padding-left: 20px;
+    }
+
+    .est-list-container {
+        .dataTables_wrapper table.dataTable>thead>tr>th:first-child {
+            width: 5% !important;
+        }
+
+        .dataTables_wrapper table.dataTable>thead>tr>th:last-child,
+        .dataTables_wrapper table.dataTable>tbody>tr>td:last-child {
+            width: 14% !important;
+        }
+
+        .dataTables_wrapper table.dataTable.row-border>tbody>tr>td:first-child {
+            text-align: center;
+        }
+
+        .dataTables_wrapper table.dataTable>thead>tr>th,
+        .dataTables_wrapper table.dataTable>thead>tr>td,
+        .dataTables_wrapper table.dataTable.row-border>tbody>tr>td {
+            text-align: left;
+        }
+
+    }
+
+}
+
+.modal-dialog .modal-content .modal-body form .form-field .form-check label {
+    cursor: pointer;
+}
+
+
+.modal-dialog .modal-content .modal-body .action-btn button.cancel {
+    color: rgba(142, 142, 147, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.save {
+    border-radius: 5px;
+    background-color: rgba(14, 126, 202, 1);
+    width: 110px;
+    height: 50px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+#addnotificationModal .select-dateNtime .select-time .form-field {
+    max-width: 100%;
+}
+
+.select-dateNtime {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+	background-color: RGB(243, 243, 243);
+	position: relative;
+}
+.select-dateNtime:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -40px;
+    text-align: center;
+    background-color: RGB(243, 243, 243);
+    width: 40px;
+    height: 100%;
+    margin: auto;
+}
+.select-dateNtime::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -40px;
+    text-align: center;
+    background-color: RGB(243, 243, 243);
+    width: 40px;
+    height: 100%;
+    margin: auto;
+}
+.select-dateNtime .form-field{
+	padding-top: 15px;
+}
+.select-dateNtime .select-date {
+    width: 100%;
+}
+
+.select-dateNtime .select-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-dateNtime .select-time .form-field {
+    width: 100%;
+    max-width: 140px;
+}
+
+.select-dateNtime .select-date input {
+    border-radius: 5px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+.live-time .form-check-input[type=radio]:checked {
+    background: url('/assets/img/master-backend/radio-check.svg') 0 0px no-repeat;
+    border: none;
+    // box-shadow: none;
+}
+
+.form-check-input[type=checkbox] {
+    background: url('/assets/img/master-backend/check-empty.svg') 0 0px no-repeat;
+    border: none;
+    // box-shadow: none;
+	width: 20px;
+    height: 20px;
+}
+
+.form-check-input[type=checkbox]:checked {
+    background: url('/assets/img/master-backend/check-checked.svg') 0 0px no-repeat;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field textarea {
+    height: 164px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    padding: 10px 15px;
+    resize: none;
+    color: #444A4A;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+}
+
+.modal-dialog .modal-content .modal-body form .form-field input[type='text'] {
+    border-radius: 5px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.add-notification-button {
+    border-radius: 5px;
+    border: 2px solid rgb(30, 187, 186);
+    box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 187, 186) !important;
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time-and-platform {
+    display: flex;
+    justify-content: space-between;
+}
+.live-time, .platform-selector {
+    flex-basis: 50%;
+	display: flex;
+    gap: 40px;
+}
+.select-date input, .select-time input{
+position: relative;
+}
+.select-date input{
+	background-image: url('/assets/img/master-backend/Calendar.svg');
+	background-size: 20px;
+	background-position: calc(100% - 18px) center;
+	background-repeat: no-repeat;
+}
+.select-time ::ng-deep .ng-select .ng-arrow-wrapper{
+	display: none;
+}
+.select-time ::ng-deep .ng-select-container{
+	background-image: url('/assets/img/master-backend/Clock.svg');
+	background-size: 20px;
+	background-position: calc(100% - 18px) center;
+	background-repeat: no-repeat;
+}
+.audiance-wrap{
+	max-width: 420px;
+}
+
+.platform-selector .opt-wrap label{
+	margin-top: 6px;
+    padding-left: 12px;
+}
+.modal-body .form-field input::placeholder, .modal-body .form-field textarea::placeholder{
+	color: RGB(158, 161, 162);
+	font-weight: 600;
+}

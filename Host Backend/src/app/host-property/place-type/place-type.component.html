@@ -1,0 +1,59 @@
+<main>
+   <app-steps [width]="50" [active]="2"></app-steps>
+   <!-- What type of place will guests have -->
+   <form [formGroup]="hostType">
+      <div class="place-type">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="common-header">
+                     <h2>How do you want to host your Property?</h2>
+                     <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-12 col-md-12">
+                  <div class="place-type-data">
+                     <div class="place-list">
+                        <input type="radio" id="privateRoom" name="hostName" class="input-hidden"
+                           value="Host Rooms" formControlName="hostName" />
+                        <label for="privateRoom" class="place-card">
+                           <img src="assets/img/host-property/private-room.svg" alt="Icon">
+                           <div>
+                              <h6>Host Rooms</h6>
+                              <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                           </div>
+                        </label>
+                     </div>                    
+                     <div class="place-list">
+                        <input type="radio" id="entireProperty" name="hostName" class="input-hidden"
+                           value="Host Entire property" formControlName="hostName" />
+                        <label for="entireProperty" class="place-card">
+                           <img src="assets/img/host-property/entire-property.svg" alt="Icon">
+                           <div>
+                              <h6>Host Entire property</h6>
+                              <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                           </div>
+                        </label>
+                     </div>
+                     <!-- <span class="quickTips">You can select more than one options</span> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="savestep-section">
+         <div class="left-btn">
+            <button class="goback-btn" (click)="goBack()">
+               Back
+            </button>
+         </div>
+         <div class="right-btn">
+            <button class="save-next-btn" [disabled]="hostType.invalid" (click)="getPlaceType()">
+               Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+            </button>
+         </div>
+      </div>
+   </form>
+</main>

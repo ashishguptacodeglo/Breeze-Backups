@@ -1,0 +1,50 @@
+<div class="header">
+   <h4 class="module-title"> Mobile app users</h4>
+   <div class="filter-sec">
+      <div class="searchbar"></div>
+      <div class="list-filters">
+         <div class="date-filter">
+            <span class="filter-label">User Type</span>
+            <div class="filter-dropdown">
+               <ng-select [items]="estfilters" bindLabel="name" bindValue="value" autocomplete="off"
+               [searchable]="false" [clearable]="false" placeholder="All">
+               </ng-select>
+            </div>
+         </div>
+         <div class="sortby">
+            <span class="filter-label">App OS</span>
+            <div class="filter-dropdown">
+               <ng-select [items]="estfilters" bindLabel="name" bindValue="value" autocomplete="off"
+               [searchable]="false" [clearable]="false" placeholder="All">
+               </ng-select>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="mobile-app-users-list" *ngIf="fetched">
+   <table datatable [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+         <tr>
+            <th>Sr No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>App OS</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let user of usersList;let i=index">
+            <td>{{i+1}}</td>
+            <td> {{user.firstName}} {{user.lastName}}<span class="brz-badge"><img src="/assets/img/master-backend/brz-label.svg" alt="badge"></span></td>
+            <td> {{user.email}} </td>
+            <td> {{user.phone}} </td>
+            <td> {{user.gender}} </td>
+            <td> {{user.address.city}} </td>
+            <td> {{user.device}} </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

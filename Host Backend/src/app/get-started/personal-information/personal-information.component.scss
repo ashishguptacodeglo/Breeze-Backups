@@ -1,0 +1,28 @@
+/* Personal Information */
+
+.personal-information {
+    padding-bottom: 50px;
+}
+
+.personal-information .personal-info-data {
+    max-width: 969px;
+    display: flex;
+    gap: 99px;
+    row-gap: 0;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.personal-information .personal-info-data .form-field {
+    width: 100%;
+    max-width: 435px;
+}
+
+.personal-information .personal-info-data .ng-select,
+.personal-information .personal-info-data .ng-select.ng-select-single .ng-select-container {
+    max-width: 453px;
+}
+
+// .personal-information .personal-info-data .form-field:last-child {
+//     max-width: initial;
+// }

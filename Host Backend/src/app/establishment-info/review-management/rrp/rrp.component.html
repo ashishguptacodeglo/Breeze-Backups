@@ -1,0 +1,57 @@
+<h2 class="top-head">Review Recovery Program</h2>
+<div class="man-div">
+   <div class="task-detail">
+      <div class="task common">
+         <div class="task-inner">
+            <p class="name">Total Low Ratings</p>
+            <h3 class="stat stat-neg">{{totalReviews}}</h3>
+         </div>
+      </div>
+      <div class="task common">
+         <div class="task-inner">
+            <p class="name">Reviews Resolved</p>
+            <h3 class="stat stat-positive">{{resolvedReviewsCounts}}</h3>
+         </div>
+      </div>
+      <div class="task common">
+         <div class="task-inner">
+            <p class="name">Reviews Recovered</p>
+            <h3 class="stat stat-positive">{{revokedReviewsCounts}}</h3>
+         </div>
+      </div>
+      <div class="task common">
+         <div class="task-inner">
+            <p class="name">Least Category</p>
+            <h3 class="stat stat-neg">{{leastCategory}}</h3>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+<div class="page_reviewtabs">
+   <div class="review-wraps">
+      <span class="links" (click)="tabreviewChange('all-reviews')" [class]="{ active: pagereview == 'all-reviews' }">
+         All Reviews
+      </span>
+      <span class="links" (click)="tabreviewChange('resolved-reviews')"
+         [class]="{ active: pagereview == 'resolved-reviews' }"> Resolved Review
+      </span>
+   </div>
+   <div class="filter-dropdown">
+      <label>Sort by</label>
+      <ng-select [items]="reviewSort" bindLabel="name" placeholder="Recent reviews" bindLabel="name" bindValue="value"
+         autocomplete="off" [searchable]="false" [clearable]="false">
+      </ng-select>
+   </div>
+</div>
+
+<div class="tab-content page_reviewtabsmain" [ngSwitch]="pagereview">
+   <ng-template [ngSwitchCase]="'all-reviews'">
+      <app-all-reviews></app-all-reviews>
+   </ng-template>
+   <ng-template [ngSwitchCase]="'resolved-reviews'">
+      <app-resolved-reviews></app-resolved-reviews>
+   </ng-template>
+</div>

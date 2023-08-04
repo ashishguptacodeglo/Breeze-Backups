@@ -1,0 +1,352 @@
+.calendar-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    gap: 40px;
+}
+
+.calendar-container .date-calendar {
+    width: 100%;
+}
+
+.calendar-container .date-calendar .month-and-year-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-top: 7px;
+}
+
+.calendar-container .date-calendar .month-and-year-toggle .months-list,
+.calendar-container .date-calendar .month-and-year-toggle .years-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 205px;
+}
+
+.calendar-container .date-calendar .month-and-year-toggle .months-list button,
+.calendar-container .date-calendar .month-and-year-toggle .years-list button {
+    background-color: rgba(14, 126, 202, 1);
+    border: none;
+    width: 29px;
+    height: 29px;
+    color: #fff;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-container .date-calendar .month-and-year-toggle .months-list button.disabled,
+.calendar-container .date-calendar .month-and-year-toggle .years-list button.disabled {
+    background: #DBE1E4;
+    pointer-events: none;
+}
+
+.calendar-container .date-calendar .month-and-year-toggle .months-list .single-month-filter,
+.calendar-container .date-calendar .month-and-year-toggle .years-list .single-year-filter {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.calendar-container .date-calendar .calender-box {
+    border-radius: 12px;
+    border: 0.9px solid rgba(129, 129, 129, 0.39);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+::ng-deep {
+
+.calender-box{
+    .fc-theme-standard td,
+    .fc-theme-standard th,
+    .fc-theme-standard .fc-scrollgrid {
+        border: none;
+    }
+
+   
+
+    .fc .fc-col-header-cell-cushion {
+        color: rgba(24, 37, 37, 1) !important;
+        font-family: "Gilroy-Bold";
+        font-size: 13.548387px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .fc thead>tr>th .fc-scrollgrid-sync-inner {
+        margin-bottom: 20px;
+    }
+    .fc .fc-cell-shaded, .fc .fc-day-disabled {
+    background: transparent;
+}
+    .fc .fc-daygrid-day-top {
+        justify-content: center;
+        cursor: pointer;
+    }
+    .fc-highlight {
+        background: #1EBBBA !important;
+        color: #fff !important;
+    }
+    .fc .fc-daygrid-day-number, .fc .fc-daygrid-day-top .fc-daygrid-day-number:focus {
+        font-family: "Gilroy-Medium";
+        font-size: 18px;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+
+    .fc .fc-daygrid-day.fc-day-today {
+        background-color: #1EBBBA;
+    }
+    .fc .fc-daygrid-day-top .fc-daygrid-day-number:focus {
+        background-color: RGBA(30, 187, 186, 0.1);
+    }
+
+    .fc .fc-daygrid-day.fc-day-today {
+        border-radius: 5px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 42px;
+        // height: 42px;
+        margin: 0 auto;
+    }
+
+    .fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+        color: #fff !important;
+    }
+    .fc .fc-daygrid-day-events, .fc-daygrid-day-bg {
+        display: none;
+    }
+}
+}
+
+.calendar-container .date-calendar .calender-box .month-names {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 35px;
+    background-color: rgba(242, 249, 249, 1);
+    margin-bottom: 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.calendar-container .date-calendar .calender-box .month-names .single-month {
+    color: #97A2A5;
+    font-family: "Gilroy-Bold";
+    font-size: 13.5px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.calendar-container .date-calendar .calender-box .month-names .single-month.active {
+    color: rgba(0, 0, 0, 1);
+}
+
+.calendar-container .price-data {
+    display: flex;
+    flex-direction: column;
+    gap: 78px;
+    max-width: 380px;
+    width: 100%;
+}
+
+.calendar-container .price-data .today {
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 32px;
+}
+
+.calendar-container .price-data .today .day {
+    font-size: 18px;
+}
+
+.calendar-container .price-data .today .date-with-month {
+    font-size: 24px;
+}
+
+.calendar-container .price-data .object-list {
+    height: 462px;
+    overflow: auto;
+    padding-right: 5px;
+}
+
+.calendar-container .price-data .object-list .single-object {
+    border-radius: 5.419355px;
+    border: 0.903226px solid rgba(151, 151, 151, 1);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-container .price-data .object-list .single-object .name-and-desc .name {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.calendar-container .price-data .object-list .single-object .name-and-desc .desc {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12.6px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.calendar-container .price-data .object-list .single-object .button-and-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.calendar-container .price-data .object-list .single-object .button-and-price .edit-price {
+    color: rgb(14, 126, 202);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: right;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+}
+
+.calendar-container .price-data .object-list .single-object .button-and-price .price {
+    color: rgba(1, 159, 152, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: right;
+}
+
+
+.modal-dialog .modal-content {
+    max-width: 437px;
+    margin: 0 auto;
+    padding: 30px 40px 30px;
+}
+
+.modal-dialog .modal-content.text-center .modal-header .modal-title {
+    text-align: center;
+}
+
+.modal-dialog .modal-content.text-center .modal-body input[type="text"] {
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body {
+    padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+    margin-bottom: 20px;
+    border: none;
+    position: relative;
+    display: block;
+}
+
+.modal-dialog .modal-content .modal-header .modal-title,
+.modal-dialog .modal-content .modal-body .free-table label,
+.modal-dialog .modal-content .modal-body .or-text {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.modal-dialog .modal-content .modal-header .modal-title span {
+    font-family: "Gilroy-Medium";
+    font-weight: 600;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: -15px;
+    top: -5px;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field {
+    margin-bottom: 15px;
+}
+
+.modal-dialog .modal-content .modal-body .free-table label {
+    margin-bottom: 0;
+}
+
+.modal-dialog .modal-content .modal-body .or-text {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .form-check-inline label {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn button.save {
+    border-radius: 5px;
+    background-color: rgba(14, 126, 202, 1);
+    width: 110px;
+    height: 50px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}

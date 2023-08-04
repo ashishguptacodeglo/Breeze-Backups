@@ -1,0 +1,154 @@
+.details-faq .title,
+.feedback-faq .title {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.details-faq .question,
+.feedback-faq .question {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    max-width: 820px;
+}
+
+.details-faq .answer-info {
+    margin-top: 35px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.feedback-faq .answer-info {
+    margin-top: 35px;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.details-faq .answer-info .faq-answer-post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.details-faq .answer-info .faq-answer-post textarea {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1);
+    height: 100px;
+    resize: none;
+    border: none;
+    padding: 10px;
+    color: rgba(55, 55, 55, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 18px;
+    outline: none;
+}
+
+.details-faq .answer-info .faq-answer-post button {
+    margin-left: auto;
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: rgba(14, 126, 202, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    border: none;
+}
+
+.details-faq .answer-info .user-details,
+.feedback-faq .answer-info .user-details {
+    max-width: 430px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.078323);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px;
+    height: 100px;
+}
+
+.details-faq .answer-info .user-details .email-assigned,
+.feedback-faq .answer-info .user-details .email-assigned {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.details-faq .answer-info .user-details .email-assigned .user-name,
+.details-faq .answer-info .user-details .user-email,
+.feedback-faq .answer-info .user-details .email-assigned .user-name,
+.feedback-faq .answer-info .user-details .user-email {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.details-faq .answer-info .user-details .email-assigned .user-name img,
+.details-faq .answer-info .user-details .user-email img,
+.feedback-faq .answer-info .user-details .email-assigned .user-name img,
+.feedback-faq .answer-info .user-details .user-email img {
+    width: 100%;
+    max-width: 12px;
+}
+
+.details-faq .answer-info .user-details .email-assigned .user-name span,
+.details-faq .answer-info .user-details .user-email span,
+.feedback-faq .answer-info .user-details .email-assigned .user-name span,
+.feedback-faq .answer-info .user-details .user-email span {
+    color: #444A4A;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+
+.details-faq .answer-info .user-details .email-assigned .assigned-on .assigned-on-title,
+.feedback-faq .answer-info .user-details .email-assigned .assigned-on .assigned-on-title {
+    color: rgba(68, 74, 74, 1);
+    font-family: 'Gilroy-Medium';
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.details-faq .answer-info .user-details .email-assigned .assigned-on .assigned-on-date,
+.feedback-faq .answer-info .user-details .email-assigned .assigned-on .assigned-on-date {
+    color: rgba(68, 74, 74, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}

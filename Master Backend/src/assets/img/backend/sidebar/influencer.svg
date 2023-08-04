@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Person@3x</title>
+    <defs>
+        <path d="M12.3268049,17.8824873 C15.3951235,17.8824873 17.8824873,15.3951235 17.8824873,12.3268049 C17.8824873,9.25848615 15.3951235,6.77112239 12.3268049,6.77112239 C9.25848615,6.77112239 6.77112239,9.25848615 6.77112239,12.3268049 C6.77112239,15.3951235 9.25848615,17.8824873 12.3268049,17.8824873 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11.1113649" height="11.1113649" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M12,20.4969261 C16.6927227,20.4969261 20.4969261,16.6927227 20.4969261,12 C20.4969261,7.30727729 16.6927227,3.50307388 12,3.50307388 C7.30727729,3.50307388 3.50307388,7.30727729 3.50307388,12 C3.50307388,16.6927227 7.30727729,20.4969261 12,20.4969261 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.9938522" height="16.9938522" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Booking-management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mgmt-property" transform="translate(-14, -378)" stroke="#0E7ECA">
+            <g id="Group-20" transform="translate(0, 378)">
+                <g id="Person" transform="translate(14, 0)">
+                    <use id="Oval" mask="url(#mask-2)" stroke-width="1.6" stroke-linejoin="bevel" stroke-dasharray="25.38822048779865" transform="translate(12.3268, 12.3268) rotate(-48) translate(-12.3268, -12.3268)" xlink:href="#path-1"></use>
+                    <use id="Oval" mask="url(#mask-4)" stroke-width="1.6" stroke-dasharray="39.45329817357132" transform="translate(12, 12) rotate(-48) translate(-12, -12)" xlink:href="#path-3"></use>
+                    <path d="M12.3754339,14.9898727 C13.8193485,14.9898727 14.9898727,13.8193485 14.9898727,12.3754339 C14.9898727,10.9315192 13.8193485,9.76099505 12.3754339,9.76099505 C10.9315192,9.76099505 9.76099505,10.9315192 9.76099505,12.3754339 C9.76099505,13.8193485 10.9315192,14.9898727 12.3754339,14.9898727 Z" id="Path" stroke-width="0.8" fill-rule="nonzero"></path>
+                    <path d="M16.2970921,21.5259697 C16.6580707,21.5259697 16.9507018,21.2333386 16.9507018,20.87236 C16.9507018,18.3455093 14.9022845,16.2970921 12.3754339,16.2970921 C9.84858319,16.2970921 7.80016594,18.3455093 7.80016594,20.87236 C7.80016594,21.2333386 8.09279697,21.5259697 8.45377564,21.5259697 L16.2970921,21.5259697 Z" id="Path" stroke-width="0.8" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

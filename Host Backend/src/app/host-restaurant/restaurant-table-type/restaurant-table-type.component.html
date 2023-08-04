@@ -1,0 +1,223 @@
+<main>
+    <app-steps [width]="50" [active]="2"></app-steps>
+    <form>
+        <div class="property-table-type">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Tell us about the tables you have</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="addTableBtn" data-bs-toggle="modal" data-bs-target="#addTableModal">
+                            <img src="assets/img/host-property/plus-white.svg" alt="Plus Icon"><span>Add Table</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="property-table-data">
+
+                            <div class="property-table-list">
+                                <div class="heading">
+                                    <div class="room-type">
+                                        <span>Table Name</span>
+                                        <h6>Standard dining table</h6>
+                                    </div>
+
+                                    <div class="action-btn">
+                                        <a href="#" class="edit">Edit</a>
+                                        <span class="separator"></span>
+                                        <a href="#" class="delete">Delete</a>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div class="table-thumnail">
+                                        <img src="assets/img/host-restaurant/table-type1.png" alt="Table">
+                                    </div>
+                                    <div class="table-details">
+                                        <div class="table-features">
+                                            <div class="table-detail-list">
+                                                <span class="title">No of Guests</span>
+                                                <span class="content">2</span>
+                                            </div>
+
+                                            <div class="table-detail-list">
+                                                <span class="title">Price per person</span>
+                                                <span class="content">200$</span>
+                                            </div>
+
+                                            <div class="table-detail-list">
+                                                <span class="title">No of tables available</span>
+                                                <span class="content">3</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="property-table-list">
+                                <div class="heading">
+                                    <div class="room-type">
+                                        <span>Table Name</span>
+                                        <h6>Family dining</h6>
+                                    </div>
+
+                                    <div class="action-btn">
+                                        <a href="#" class="edit">Edit</a>
+                                        <span class="separator"></span>
+                                        <a href="#" class="delete">Delete</a>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div class="table-thumnail">
+                                        <img src="assets/img/host-restaurant/table-type2.png" alt="Table">
+                                    </div>
+                                    <div class="table-details">
+                                        <div class="table-features">
+                                            <div class="table-detail-list">
+                                                <span class="title">No of Guests</span>
+                                                <span class="content">15</span>
+                                            </div>
+
+                                            <div class="table-detail-list">
+                                                <span class="title">Price per person</span>
+                                                <span class="content">200$</span>
+                                            </div>
+
+                                            <div class="table-detail-list">
+                                                <span class="title">No of tables available</span>
+                                                <span class="content">3</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button (click)="goBack()" class="goback-btn">
+                    Back
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="save-next-btn" (click)="moveNext()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- Add Policies Modal -->
+
+    <div class="modal fade modal-xl" id="addTableModal" tabindex="-1" aria-labelledby="addTableModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add details about the table</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" [formGroup]="addTableForm">
+                        <div class="col-md-12">
+                            <div class="form-field">
+                                <label class="form-label">What do you name your Table as?</label>
+                                <input type="text" class="form-control" id="tableName" name="tableName"
+                                    formControlName="tableName">
+                                <span class="tips">Example: Standard dining table, Family dining, Normal table etc</span>
+                            </div>
+                        </div>                      
+
+                        <div class="col-md-12">
+                            <div class="form-field">
+                                <label class="form-label">How many guests can be seated?</label>
+                                <ng-select [items]="guestCapacity" bindLabel="name" bindValue="value" autocomplete="off"
+                                    (change)="itemSelected($event)" [clearable]="false" [searchable]="false"
+                                    placeholder="Select" formControlName="guestCapacity">
+                                </ng-select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">Tell us the price of this table per person</label>
+
+                                <div class="price">
+                                    <button type="button" (click)="updatePrice(-1)"><img src="assets/img/minus.svg"
+                                            alt="minus"></button>
+                                    <div class="form-field">
+                                        <input type="number" id="price-input" value="{{price}}" name="price" min="0"
+                                            step="1" class="form-control" placeholder="Price"
+                                            formControlName="pricePerNight" (change)="onPriceChange()">
+                                    </div>
+                                    <button type="button" (click)="updatePrice(1)"><img src="assets/img/plus.svg"
+                                            alt="plus"></button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">How many tables of this type are available?</label>
+                                
+                                <input type="number" class="form-control" id="tableAvailable" name="tableAvailable"
+                                formControlName="tableAvailable">
+                            </div>
+                        </div>
+                   
+                        <div class="col-md-12">
+                            <div class="form-field">
+                                <label class="form-label">Add Images of this room</label>
+                                <ngx-dropzone (change)="onSelect($event)"
+                                    accept="video/mp4,video/x-m4v,video/*, image/*">
+                                    <ngx-dropzone-label>
+                                        Choose File
+                                    </ngx-dropzone-label>
+                                </ngx-dropzone>
+
+                                <div class="uploaded-image-list">
+                                    <div class="uploaded-image" *ngFor="let f of files">
+                                        <app-preview-image [file]="f"></app-preview-image>
+                                        <div class="remove-uploaded">
+                                            <a href="javascript:void(0)" class="remove" (click)="onRemove(f)">
+                                                <img src="assets/img/remove.svg" alt="remove">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="tips" *ngIf="files.length == 0">You can add this later</span>
+                            </div>
+                        </div>
+
+                        <button type="button" [disabled]="addTableForm.invalid" (click)="getTableFormDetails()"
+                            class="btn btn-secondary save" data-bs-dismiss="modal">Save Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,95 @@
+<app-menus [isfixed]="false"></app-menus>
+<main>
+    <div class="listing-page">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-sec">
+                        <h2>Your Listings</h2>
+                        <button [routerLink]="['/host-property/personal-information']">Add New</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="listing-item">
+                        <div class="property-img">
+                            <a [routerLink]="['/host-property/edit-listing']"><img src="assets/img/dashboard/property-img.svg" alt="Listing Image"></a>
+                        </div>
+                        <div class="listing-details">
+
+                            <div class="title">
+                                <h5><a [routerLink]="['/host-property/edit-listing']">Property name Display</a></h5>
+                            </div>
+                            <div class="brief-info">
+                                <p>Property description</p>
+                            </div>
+                            <div class="listing-action">
+                                <a [routerLink]="['/host-property/edit-listing']" class="edit">Edit</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="listing-item">
+                        <div class="property-img">
+                            <a [routerLink]="['/host-property/edit-listing']"><img src="assets/img/dashboard/property-img.svg" alt="Listing Image"></a>
+                        </div>
+                        <div class="listing-details">
+
+                            <div class="title">
+                                <h5><a [routerLink]="['/host-property/edit-listing']">Property name Display</a></h5>
+                                <span class="status">In progress</span>
+                            </div>
+                            <div class="brief-info">
+                                <p>Add few more details before you can submit</p>
+                            </div>
+                            <div class="listing-action">
+                                <a [routerLink]="['/host-property/edit-listing']" class="edit">Continue</a>
+                                <a href="#" class="delete">Delete</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="listing-item">
+                        <div class="property-img">
+                            <a [routerLink]="['/host-property/edit-listing']"><img src="assets/img/dashboard/restaurant-img.svg" alt="Listing Image"></a>
+                        </div>
+                        <div class="listing-details">
+
+                            <div class="title">
+                                <h5><a [routerLink]="['/host-property/edit-listing']">Restaurant name Display</a></h5>
+                            </div>
+                            <div class="brief-info">
+                                <p>Property description</p>
+                            </div>
+                            <div class="listing-action">
+                                <a [routerLink]="['/host-property/edit-listing']" class="edit">Edit</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Listing -->
+
+                <div class="col-md-12">
+                    <div class="no-listing-item">
+                        <p>No Listings found</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>

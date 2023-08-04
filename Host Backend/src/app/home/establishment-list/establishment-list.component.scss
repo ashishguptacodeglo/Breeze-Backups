@@ -1,0 +1,158 @@
+.listing-page {
+    margin: 74px 0;
+}
+
+.listing-page .heading-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.listing-page .heading-sec h2 {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 34px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 64px;
+    margin: 0;
+}
+
+.listing-page .heading-sec button {
+    border-radius: 10px;
+    background-color: rgba(14, 126, 202, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    border: none;
+    width: 216px;
+    height: 60px;
+}
+
+.listing-page .listing-item {
+    display: flex;
+    gap: 70px;
+    border-radius: 9px;
+    border: 1px solid rgba(209, 209, 209, 1);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.091083);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 36px 30px 36px 50px;
+    margin-bottom: 25px;
+}
+
+.listing-page .listing-item .property-img {
+    width: 120px;
+}
+
+.listing-page .listing-item .listing-details {
+    width: 100%;
+}
+
+.listing-page .listing-item .property-img img {
+    width: auto;
+    height: 120px;
+}
+
+.listing-page .listing-item .listing-details .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.listing-page .listing-item .listing-details .title .status {
+    border-radius: 13px;
+    background-color: rgb(247 181 0 / 27%);
+    padding: 10px 13px;
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: "Gilroy-Bold";
+    font-size: 19px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    position: absolute;
+    right: 0px;
+    top: -16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.listing-page .listing-item .listing-details .title h5 {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 26px;
+    margin: 0;
+}
+
+.listing-page .listing-item .brief-info p {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+.listing-page .listing-item .listing-details .listing-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listing-page .listing-item .listing-details .listing-action a {
+    font-family: "Gilroy-Medium";
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 32px;
+    text-decoration: underline !important;
+}
+
+.listing-page .listing-item .listing-details .listing-action a.edit {
+    color: #0e7eca !important;
+}
+
+.listing-page .listing-item .listing-details .listing-action a.delete {
+    color: #E02020 !important;
+}
+
+.listing-page .no-listing-item {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listing-page .no-listing-item p {
+    color: rgba(20, 34, 34, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 38px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 64px;
+}

@@ -1,0 +1,49 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+
+		<section class="establishment-info">
+			<div class="tasks-details">
+
+				<div class="task-details-card">
+					<div class="card-header">
+						<div class="task-id">
+							#1234
+						</div>
+						<div class="change-status {{status}}">
+							<ng-select [items]="statusList" (change)="onChange($event)" [(ngModel)]="status"
+								bindLabel="name" placeholder="{{status}}" bindLabel="name" bindValue="value"
+								autocomplete="off" [searchable]="false" [clearable]="false">
+							</ng-select>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="task-info" *ngFor="let sinfo of info;let i = index">
+							<div class="title">{{sinfo.label}}</div>
+							<div class="value">{{sinfo.value}}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tasks">
+					<h5 class="heading">Tasks</h5>
+					<ul class="task-list">
+						<li class="single-task" *ngFor="let t of TaskList;let i = index">
+							<span class="task-number">{{i+1}}</span>. <span class="task-name">{{t}}</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="notes">
+					<h5 class="heading">Notes</h5>
+					<textarea readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla massa scelerisque mauris euismod congue. Ssit amet, consectetur adipiscing elit. Sed fringilla massa scelerisque mauris euismod congue.</textarea>
+				</div>
+
+
+			</div>
+
+		</section>
+	</div>
+</div>

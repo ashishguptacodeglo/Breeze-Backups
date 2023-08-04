@@ -1,0 +1,129 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="establishment-info">
+			
+			<div class="support-list-container">
+   <div class="table-header-buttons">
+     
+      <div class="workers-filter">
+         <span>Sort by</span>
+         <div class="filter-dropdown">
+            <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off" [searchable]="false"
+               [clearable]="false" placeholder="Select">
+            </ng-select>
+         </div>
+      </div>
+   </div>
+
+   <div class="no-result" *ngIf="!fetched">
+      <p>There are no task list.</p>
+   </div>
+
+   <div class="task-list" *ngIf="fetched">
+      <div *ngIf="ticketlist.length > 0">
+         <table datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+               <tr>
+                  <th>Ticket ID</th>
+                  <th>Issue</th>
+                  <th>Open Date & Time</th>
+                  <th>Raised By</th>
+                  <th>Status</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let ticket of ticketlist;let i=index">
+                  <td><a routerLink="/establishment-info/support/1234" class="view-details">ASF10{{i+1}}</a> </td>
+                  <td>Lorem ipsum dolor .</td>
+                  <td>Today, 12:20</td>
+                  <td>Lettie Watkins</td>
+                  <td><span class="status-btn {{ticket.status}}">{{ticket.status}}</span></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="no-result" *ngIf="ticketlist.length == 0">
+         <p>There are no task list.</p>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade modal-lg" id="add-task-modal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Add Task</h5>
+            <p class="modal-subtitle">Your feedback is important to us. Could you please share the reason for
+               deactivating your account so we can continue to improve our platform?
+            </p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="step-1" [ngClass]="addSteps == 'next' ? 'hidden-field' : '' ">
+                  <div class="form-field">
+                     <label>Selected Department</label>
+                     <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                     [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+                  <div class="form-field">
+                     <label>Selected Worker</label>
+                     <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                     [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+                  <div class="form-field">
+                     <label>Assigned Task</label>
+                     <div class="task-list">
+                        <div class="single-task" *ngFor="let t of taskList;let i=index">
+                           <input type="radio" id="task{{i}}"  name="taskName"  value="{{i}}">
+                           <label for="task{{i}}">{{t.value}}</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <div class="date-and-time-picker">
+                        <div class="date-picker">
+                           <label>Date</label>
+                           <input type="date" name="comming-date">
+                        </div>
+                        <div class="time-picker">
+                           <label>Time</label>
+                           <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker"
+                           bindValue="value" autocomplete="off" [clearable]="false" [searchable]="false"
+                           placeholder="Select" >
+                           </ng-select>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label>Room Number</label>
+                     <input type="text"   name="room-number" >
+                  </div>
+               </div>
+               <div class="step-2" [ngClass]="addSteps == 'form' ? 'hidden-field' : '' ">
+                  <div class="form-field">
+                     <label>Do you want to add any comments?</label>
+                     <textarea name="" class="form-control" placeholder="Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices."></textarea>
+                  </div>
+               </div>
+               <div class="action-btn">
+                  <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn delete" *ngIf="addSteps == 'next'" (click)="submitTheForm()">Next</button>
+                  <button type="button" class="btn delete" *ngIf="addSteps == 'form'"  (click)="showNext()" >Next</button>
+               </div>
+
+
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+		</section>
+	</div>
+</div>

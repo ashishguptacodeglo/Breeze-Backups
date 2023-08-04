@@ -1,0 +1,30 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data establishment-form">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="module-data">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('scheduled')"
+						[class]="{'active': page=='scheduled'}">
+						Scheduled
+					</span>
+					<span class="links" (click)="tabChange('live')" [class]="{'active': page=='live'}">
+						Live
+					</span>
+				
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'scheduled'">
+					<app-scheduled-notifications></app-scheduled-notifications>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'live'">
+					<app-live-notifications></app-live-notifications>
+				</ng-template>
+
+			</div>
+		</section>
+	</div>
+</div>

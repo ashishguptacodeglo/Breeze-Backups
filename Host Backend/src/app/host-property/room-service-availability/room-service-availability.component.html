@@ -1,0 +1,41 @@
+<main>
+    <app-steps [width]="50" [active]="2"></app-steps>
+    <form [formGroup]="roomAvailabilityForm">
+        <div class="room-service-availability">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Is room service available?</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="availabilityDropdown">
+                            <ng-select [items]="availability" bindLabel="name" bindValue="value" autocomplete="off"
+                                (change)="itemSelected($event)" [clearable]="false" [searchable]="false"
+                                placeholder="Select" formControlName="availability">
+                            </ng-select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="savestep-section">
+            <div class="left-btn">
+               <button class="goback-btn" (click)="goBack()">
+                  Back
+               </button>
+            </div>
+            <div class="right-btn">
+               <button class="save-next-btn" [disabled]="roomAvailabilityForm.invalid" (click)="getRoomAvailabilityInfo()">
+                  Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+               </button>
+            </div>
+         </div>
+    </form>
+</main>

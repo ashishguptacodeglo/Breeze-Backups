@@ -1,0 +1,198 @@
+<main>
+
+    <app-steps [width]="50" [active]="2"></app-steps>
+    <form [formGroup]="restInformationForm">
+        <div class="rest-basic-information">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Provide some basic information about your Restaurant.</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="rest-basic-data">
+
+                            <div class="information-list">
+                                <div class="left-sec">
+                                    <label class="form-label d-block">Type of establishment</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+
+                                <div class="right-sec">
+                                    <div class="optionSelection">
+
+                                        <div class="form-check form-check-inline"
+                                            *ngFor="let establishmentType of establishmentTypeArray; let i = index;">
+                                            <input class="form-check-input" type="checkbox" id="establishmentType-{{i}}"
+                                                (change)="onChangeFunction('establishmentType', $event)"
+                                                [value]="establishmentType" name="establishmentType" />
+                                            <label class="form-check-label"
+                                                for="establishmentType-{{i}}">{{establishmentType}}</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="information-list">
+                                <div class="left-sec">
+                                    <label class="form-label d-block">What kind of cuisines does your restaurant
+                                        offer?</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+
+                                <div class="right-sec">
+
+                                    <div class="optionSelection">
+
+                                        <div class="form-check form-check-inline"
+                                            *ngFor="let cuisinesOffer of cuisinesOfferArray; let i = index;">
+                                            <input class="form-check-input" type="checkbox" id="cuisinesOffer-{{i}}"
+                                                (change)="onChangeFunction('cuisinesOffer', $event)"
+                                                [value]="cuisinesOffer" name="cuisinesOffer" />
+                                            <label class="form-check-label"
+                                                for="cuisinesOffer-{{i}}">{{cuisinesOffer}}</label>
+                                        </div>
+                                      
+                                    </div>
+
+                                    <div class="addBtn" data-bs-toggle="modal" data-bs-target="#addCuisinesModal">
+                                        <img src="assets/img/host-property/plus-white.svg"
+                                            alt="Plus Icon"><span>Others</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="information-list">
+                                <div class="left-sec">
+                                    <label class="form-label d-block">What meals does your Restaurent offer? </label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+
+                                <div class="right-sec">
+
+                                    <div class="optionSelection">
+
+                                        <div class="form-check form-check-inline"
+                                            *ngFor="let mealsOffer of mealsOfferArray; let i = index;">
+                                            <input class="form-check-input" type="checkbox" id="mealsOffer-{{i}}"
+                                                (change)="onChangeFunction('mealsOffer', $event)"
+                                                [value]="mealsOffer" name="mealsOffer" />
+                                            <label class="form-check-label"
+                                                for="mealsOffer-{{i}}">{{mealsOffer}}</label>
+                                        </div>
+                                      
+                                    </div>
+                                   
+                                    <div class="addBtn" data-bs-toggle="modal" data-bs-target="#addMealsModal">
+                                        <img src="assets/img/host-property/plus-white.svg"
+                                            alt="Plus Icon"><span>Add</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="information-list">
+                                <div class="left-sec">
+                                    <label class="form-label d-block">Are pets/ service animals allowed?</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+
+                                <div class="right-sec">
+                                    <div class="optionSelection">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="animalPermission"
+                                                value="Yes" id="animalPermissionYes" formControlName="animalPermission">
+                                            <label class="form-check-label" for="animalPermissionYes">Yes</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="animalPermission"
+                                                value="No" id="animalPermissionNo" formControlName="animalPermission">
+                                            <label class="form-check-label" for="animalPermissionNo">No</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button (click)="goBack()" class="goback-btn">
+                    Back
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="save-next-btn" (click)="getrestInformation()" [disabled]="restInformationForm.invalid">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- Add Cuisines Modal -->
+
+    <div class="modal fade" id="addCuisinesModal" tabindex="-1" aria-labelledby="addCuisinesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCuisinesModalLabel">Tell us what cuisines do you serve</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="addCuisinesForm">
+                        <div class="form-field">
+                            <input type="text" class="form-control" placeholder="Add Cuisine*"
+                                formControlName="addCuisines">
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            [disabled]="addCuisinesForm.invalid" (click)="addNewCuisines()">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Meals Modal -->
+
+    <div class="modal fade" id="addMealsModal" tabindex="-1" aria-labelledby="addMealsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addMealsModalLabel">Tell us what meals do you offer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="addMealsForm">
+                        <div class="form-field">
+                            <input type="text" class="form-control" placeholder="Add Meal*" formControlName="addMeal">
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            [disabled]="addMealsForm.invalid" (click)="addNewMeal()">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

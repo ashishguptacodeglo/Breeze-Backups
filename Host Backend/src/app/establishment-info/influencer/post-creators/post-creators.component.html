@@ -1,0 +1,401 @@
+<div class="acreators">
+   <div class="no-result" *ngIf="!fetched">
+      <p>There are no requests from the guest.</p>
+   </div>
+   <div class="creators-list" *ngIf="fetched">
+      <div class="list-row" *ngIf="creatorList.length > 0">
+         <div class="row">
+            <div class="creators-list-header">
+               <div class="creators-count">
+                  <span class="count">234</span>
+                  <span class="title">Creators</span>
+               </div>
+               <div class="creator-filters">
+                  <form class="example" action="#">
+                     <input type="text" placeholder="Search profiles" name="search2">
+                     <button type="submit"><img src="assets/img/host-backend/search-icon.svg" alt="Search"></button>
+                  </form>
+                  <div class="price-filter">
+                     <div class="filter-dropdown">
+                        <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false" placeholder="Lowest Price">
+                        </ng-select>
+                     </div>
+                  </div>
+                  <div class="location-filter">
+                     <div class="filter-dropdown">
+                        <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false" placeholder="Sort by location">
+                        </ng-select>
+                     </div>
+                  </div>
+                  <div class="follower-filter">
+                     <div class="filter-dropdown">
+                        <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false" placeholder="Number of followers ">
+                        </ng-select>
+                     </div>
+                  </div>
+               </div>
+               <div class="my-wishlist">
+                  <button type="button">
+                     <img src="assets/img/host-backend/wishlist-empty.svg" alt="wishlist">
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="creator-main-parent">
+            <div class="row">
+               <div class="col-md-6" *ngFor="let creator of creatorList;let i=index">
+                  <div class="single-creator">
+                     <div class="creator-header">
+                        <div class="influencer-info">
+                           <div class="user-info">
+                              <img src="{{creator.image}}" class="rounded-circle">
+                              <div class="user-details">
+                                 <span class="user-name">
+                                    Grace Mitchell
+                                 </span>
+                                 <span class="user-follower-count">
+                                    15k Followers
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="wishlist-icon">
+                              <img src="assets/img/host-backend/wishlist-empty.svg" alt="wishlist">
+                           </div>
+                           <div class="invite-button">
+                              <a href="javascript:void(0);" data-bs-toggle="modal"
+                                 data-bs-target="#invite-influencer">Invite</a>
+                           </div>
+                        </div>
+                        <div class="reward-price">
+                           $40
+                        </div>
+                     </div>
+                     <div class="creator-body">
+                        <div class="post-images">
+                           <div class="post-image" *ngFor="let image of creator.postsImages;let i=index">
+                              <img src="{{image}}" alt="post Image">
+                           </div>
+                        </div>
+                        <div class="buttons">
+                           <a [routerLink]="['/establishment-info/messages']"
+                              [queryParams]="{tab:'influencer-messages',id:i}" class="chat-icon">
+                              <img src="assets/img/host-backend/chat-icon.svg" alt="chat">
+                           </a>
+                           <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#influencer-profile"
+                              class="view-profile">
+                              View Profile
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="no-result" *ngIf="creatorList.length == 0">
+         <p>There are no requests from the guest</p>
+      </div>
+   </div>
+   <div class="no-result" *ngIf="creatorList.length == 0">
+      <p>There are no requests from the guest</p>
+   </div>
+</div>
+<div class="modal fade modal-lg" id="invite-influencer" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Invite Influencer</h5>
+            <button type="button" class="btn-close" (click)="ResetModal()" data-bs-dismiss="modal"
+               aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form [formGroup]="addtaskForm">
+               <div class="property-invite-modal" *ngIf="estType == 'property' ">
+                  <div class="basic-fields" *ngIf="offerName == ''">
+                     <div class="form-field">
+                        <label>Select the Room</label>
+                        <ng-select [items]="roomList" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false" placeholder="Select Room">
+                        </ng-select>
+                     </div>
+                     <div class="form-field">
+                        <label>Select offer</label>
+                        <ng-select [items]="offerList" (change)="OfferTypeChange($event)" bindLabel="name"
+                           bindValue="value" autocomplete="off" [searchable]="false" [clearable]="false"
+                           placeholder="Select Room">
+                        </ng-select>
+                     </div>
+                  </div>
+                  <div class="offer-discount" *ngIf="offerName != '' && offerName == '1'">
+                     <div class="two-fields-cotainer">
+                        <div class="single-field">
+                           <div class="form-field">
+                              <label>Actual Price of the room</label>
+                              <input type="text" class="two-text-box" name="room-price-act">
+                           </div>
+                        </div>
+                        <div class="single-field">
+                           <div class="form-field">
+                              <label>Discount Price of the room</label>
+                              <input type="text" class="two-text-box" name="room-price-act">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-field">
+                        <label>Content</label>
+                        <textarea name="" class="form-control"
+                           placeholder="Hi {firstname}, you have offered 30% OFF on all services, kindly make use of it before 1st Aug, 2023"></textarea>
+                     </div>
+                     <div class="select-dateNtime">
+                        <div class="select-date">
+                           <div class="form-field">
+                              <label>Check-in date</label>
+                              <input type="date" name="comming-date">
+                           </div>
+                        </div>
+                        <div class="select-date">
+                           <div class="form-field">
+                              <label>Check-out date</label>
+                              <input type="date" name="comming-date">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="paid-promotion" *ngIf="offerName != '' && offerName == '2' && !isLastStepOfPaid">
+                     <div class="form-field">
+                        <label>What is your payment offer?</label>
+                        <input type="text" class="two-text-box" name="room-price-act">
+                     </div>
+
+                     <div class="form-field">
+                        <label>Write a message</label>
+                        <textarea name="" class="form-control" [(ngModel)]="message"
+                           [ngModelOptions]="{standalone: true}" (input)="countWords()"
+                           placeholder="Write 250 words on why the influencer should visit your property. The details of your agreement will be included in the PDF contract at the next step"></textarea>
+                        <span class="text-length-message">Max {{ maxWords }} words
+                           <ng-container *ngIf="message.length > 0">({{ remainingWords }} remaining)</ng-container>
+                        </span>
+                     </div>
+
+                     <div class="select-dateNtime">
+                        <div class="select-date">
+                           <div class="form-field">
+                              <label>Check-in date</label>
+                              <input type="date" name="comming-date">
+                           </div>
+                        </div>
+                        <div class="select-date">
+                           <div class="form-field">
+                              <label>Check-out date</label>
+                              <input type="date" name="comming-date">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="paid-promotion" *ngIf="offerName == '2' && isLastStepOfPaid">
+                     <div class="form-field">
+                        <label> Please upload a contract document containing the necessary information for collaborating
+                           with the influencer.</label>
+                        <ngx-dropzone accept="image/*" maxFiles="1">
+                           <ngx-dropzone-label>
+                              <div class="upload-icon">
+                                 <img src="assets/img/host-backend/upload-invite.svg">
+                              </div>
+                              <div class="text-fields">
+                                 Upload Document
+                              </div>
+                           </ngx-dropzone-label>
+                        </ngx-dropzone>
+                        <span class="drozone-message">
+                           (File format: “PDF, DOCX”; Size upto 5MB)
+                        </span>
+                     </div>
+                  </div>
+
+                  <div class="free-stay-discount" *ngIf="offerName != '' && offerName == '3'">
+                     <div class="form-field">
+                        <label>Content</label>
+                        <textarea name="" class="form-control" placeholder="Add commets"
+                           placeholder="Hi {firstname}, you have offered 30% OFF on all services, kindly make use of it before 1st Aug, 2023"></textarea>
+                     </div>
+                     <div class="select-dateNtime">
+                        <div class="select-date">
+                           <div class="form-field">
+                              <label>Check-in date</label>
+                              <input type="date" name="comming-date">
+                           </div>
+                        </div>
+                        <div class="select-date">
+                           <div class="form-field">
+                              <label>Check-out date</label>
+                              <input type="date" name="comming-date">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="action-btn">
+                     <button type="button" class="btn cancel" (click)="ResetModal()"
+                        data-bs-dismiss="modal">Cancel</button>
+                     <button type="button" class="btn save" (click)="MoveNext()" *ngIf="offerName == ''">Next</button>
+                     <button type="button" class="btn save" (click)="SubmitTheForm()"
+                        *ngIf="isLastStepOfPaid">Invite</button>
+                     <button type="button" class="btn save" (click)="ShowLastStep()"
+                        *ngIf="offerName == '2' && !isLastStepOfPaid">Next</button>
+                     <button type="button" class="btn save" (click)="SubmitTheForm()"
+                        *ngIf="offerName != '' && offerName != '2'">
+                        Invite
+                     </button>
+                  </div>
+               </div>
+
+               <div class="restaurant-invite-modal" *ngIf="estType == 'restaurant' ">
+                  <div class="form-field">
+                     <label>Select Table</label>
+                     <ng-select [items]="tableList" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select Table">
+                     </ng-select>
+                  </div>
+                  <div class="form-field">
+                     <label>Select offer</label>
+                     <ng-select [items]="offerList" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select Offer">
+                     </ng-select>
+                  </div>
+                  <div class="two-fields-cotainer">
+                     <div class="single-field">
+                        <div class="form-field">
+                           <label>Actual Price of the Table</label>
+                           <input type="text" class="two-text-box" name="room-price-act">
+                        </div>
+                     </div>
+                     <div class="single-field">
+                        <div class="form-field">
+                           <label>Discount Price of the Table</label>
+                           <input type="text" class="two-text-box" name="room-price-act">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label>Content</label>
+                     <textarea name="" class="form-control"
+                        placeholder="Hi {firstname}, you have offered 30% OFF on all services, kindly make use of it before 1st Aug, 2023"></textarea>
+                  </div>
+
+                  <div class="select-dateNtime">
+                     <div class="select-date">
+                        <div class="form-field">
+                           <label>Date</label>
+                           <input type="date" name="comming-date">
+                        </div>
+                     </div>
+                     <div class="select-time">
+                        <div class="form-field">
+                           <label>Time</label>
+                           <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker"
+                              bindValue="value" autocomplete="off" [clearable]="false" [searchable]="false"
+                              placeholder="Select">
+                           </ng-select>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="form-field">
+                     <label>Table number</label>
+                     <input type="text" class="two-text-box" name="table-number">
+                  </div>
+
+                  <div class="action-btn">
+                     <button type="button" class="btn cancel" (click)="ResetModal()"
+                        data-bs-dismiss="modal">Cancel</button>
+                     <button type="button" class="btn save" (click)="SubmitTheForm()"> Invite </button>
+                  </div>
+
+               </div>
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="modal fade" id="influencer-profile" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <div class="influencer-profile-container">
+               <div class="influencer-basic-info">
+                  <img src="assets/img/host-backend/influencer-post.jpg" class="img-fluid profile-img">
+                  <div class="profile-stats-list">
+                     <div class="profile-stat">
+                        <span class="count">13</span>
+                        <span class="stat">Posts</span>
+                     </div>
+                     <div class="profile-stat">
+                        <span class="count">18k</span>
+                        <span class="stat">Followers</span>
+                     </div>
+                     <div class="profile-stat">
+                        <span class="count">12</span>
+                        <span class="stat">Following</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="influencer-name-and-badge">
+                  <h6>Grace Mitchell
+                     <img src="assets/img/host-backend/influencer-badge.svg" alt="badge" class="badge-icon">
+                  </h6>
+               </div>
+               <div class="influencer-short-info">
+                  <p> Lost in Nature's Embrace: A Tranquil Escape at Hights mankulam with Pool in the Enchanting Forest
+                  </p>
+               </div>
+
+               <div class="influencer-social-media">
+                  <div class="social-link">
+                     <img src="assets/img/host-backend/ig.svg">
+                     <a href="https://www.instagram.com/" class="media-link">Devin_Stephen</a>
+                  </div>
+                  <div class="social-link">
+                     <img src="assets/img/host-backend/twitter.svg">
+                     <a href="https://www.instagram.com/" class="media-link">Devin Stephen</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="single-approved-post">
+               <div class="post-image-container">
+                  <div class="post-author-details">
+                     <div class="user-info">
+                        <img src="assets/img/host-backend/influencer-post.jpg" class="rounded-circle profile-img">
+                        <div class="author-details">
+                           <h6>Grace Mitchell
+                              <img src="assets/img/host-backend/influencer-badge.svg" alt="badge" class="badge-icon">
+                           </h6>
+                           <span class="location">London</span>
+                        </div>
+                     </div>
+                     <div class="post-header-actions">
+                        <!-- <img src="assets/img/host-backend/pin.svg" alt="pin" class="pin"> -->
+                     </div>
+                  </div>
+                  <div class="post-image">
+                     <img src="assets/img/host-backend/influencer-post.jpg">
+                  </div>
+               </div>
+               <div class="post-description">
+                  <p><strong>Grace Mitchell</strong> Lost in Nature's Embrace: A Tranquil Escape at Hights mankulam with
+                     Pool in the Enchanting Forest 🌳</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,110 @@
+<main>
+   <app-steps [width]="50" [active]="2"></app-steps>
+
+   <div class="property-timings-section">
+      <div class="container">
+
+         <div class="row">
+            <div class="col-md-12">
+               <div class="common-header">
+                  <h2>Provide some information about the timings</h2>
+                  <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-lg-12 col-md-12">
+
+               <div class="property-timings">
+                  <div class="info-and-contents">
+                     <h4>Operating Hours</h4>
+                     <p>Nam porttitor blandit accumsan. Ut vel dictum sem.</p>
+                  </div>
+
+                  <div class="timings-list">
+
+                     <div class="single-timing" *ngFor="let day of daysInWeek;let i = index;">
+
+                        <div class="day-name-container">
+                           <div class="day-name">
+                              {{day.dayName}}
+                           </div>
+                           <div class="toggle-button">
+                              <label class="switch">
+                                 <input type="checkbox" (change)="fieldsChange($event,i)"
+                                    [checked]="day.status == 'open'">
+                                 <span class="slider round"></span>
+                              </label>
+                           </div>
+                           <div class="toggle-status" *ngIf="day.status == 'closed'">
+                              Closed
+                           </div>
+                           <div class="toggle-status" *ngIf="day.status == 'open'">
+                              Open
+                           </div>
+                        </div>
+
+                        <div class="single-timing-container" *ngIf="day.status == 'open'">
+                           <div class="opening-time-title">
+                              <span>Open Hours</span>
+                           </div>
+                           <div class="open-time">
+                              <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker"
+                                 bindValue="value" autocomplete="off" [clearable]="false" [searchable]="false"
+                                 placeholder="Select" (change)="getSelectedValue($event,'open',i)">
+                              </ng-select>
+                           </div>
+                           <div class="close-time">
+                              <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker"
+                                 bindValue="value" autocomplete="off" [clearable]="false" [searchable]="false"
+                                 placeholder="Select" (change)="getSelectedValue($event,'close',i)">
+                              </ng-select>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div class="extra-checkboxes">
+                     <div class="all-day-services">
+                        <div class="form-check">
+                           <input class="form-check-input"  (change)="checkedValue($event)" type="checkbox"  id="flexCheckDefault">
+                           <label class="form-check-label" for="flexCheckDefault">
+                              Our services are provided 24x7
+                           </label>
+                        </div>
+                     </div>
+                     <div class="apply-to-all">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                           <label class="form-check-label" for="flexCheckDefault">
+                              Copy for all days
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <div class="savestep-section">
+      <div class="left-btn">
+         <button class="goback-btn" (click)="goBack()">
+            Back
+         </button>
+      </div>
+      <div class="right-btn">
+         <!-- <span class="mandatory">* Mandatory fields</span>
+            [disabled]="!submitForm"
+          -->
+         <button type="button" (click)="onSubmit()"  [disabled]="!submitForm" class="save-next-btn">
+            Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+         </button>
+      </div>
+   </div>
+</main>

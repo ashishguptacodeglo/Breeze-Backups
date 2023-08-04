@@ -1,0 +1,87 @@
+<div class="header">
+   <h4 class="module-title"> App user support</h4>
+</div>
+<div class="tickets-list-container">
+   <div class="stats-list">
+      <div class="list-item">
+         <span class="title">Open Tickets</span>
+         <span class="num open">412</span>
+      </div>
+      <div class="list-item">
+         <span class="title">Pending Tickets</span>
+         <span class="num pending">412</span>
+      </div>
+      <div class="list-item">
+         <span class="title">Closed Tickets</span>
+         <span class="num close">412</span>
+      </div>
+      <div class="list-item">
+         <span class="title">Declined</span>
+         <span class="num declined">412</span>
+      </div>
+   </div>
+   <div class="header">
+      <div class="filter-sec">
+         <div class="searchbar">
+         </div>
+         <div class="list-filters">
+			<form class="example" action="#">
+				 <input type="text" placeholder="Search Esatablishment" name="search2">
+				 <button type="submit"><img src="assets/img/host-backend/search-icon.svg" alt="Search"></button>
+			</form>
+
+            <div class="date-filter">
+               <span class="filter-label">Date</span>
+               <div class="filter-datepicker">
+                  <input class="date-range-picker" type="text" ngxDaterangepickerMd [(ngModel)]="selected"
+                  [showCustomRangeLabel]="true" [alwaysShowCalendars]="true" [ranges]="ranges"
+                  [linkedCalendars]="true" [isInvalidDate]="isInvalidDate" [showClearButton]="false"
+                  (change)="choosedDate($event)" placeholder="This month">
+               </div>
+            </div>
+            <div class="sortby">
+               <span class="filter-label">Sort by</span>
+               <div class="filter-dropdown">
+                  <ng-select [items]="estfilters" bindLabel="name" bindValue="value" autocomplete="off"
+                  [searchable]="false" [clearable]="false" placeholder="Select">
+                  </ng-select>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="no-result" *ngIf="!fetched">
+      <p>There are no task list.</p>
+   </div>
+   <div class="tickets-list" *ngIf="fetched">
+      <div *ngIf="ticketlist.length > 0">
+         <table datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+               <tr>
+                  <th>Ticket ID</th>
+                  <th>Property Name</th>
+                  <th>Location</th>
+                  <th>Issue</th>
+                  <th>Raised date</th>
+                  <th>Assignee</th>
+                  <th>Status</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let ticket of ticketlist;let i=index">
+                  <td><a routerLink="../support/1234" class="view-details">ASF10{{i+1}}</a> </td>
+                  <td>Lorem ipsum dolor .</td>
+                  <td>Lorem ipsum dolor .</td>
+                  <td>Lorem ipsum dolor .</td>
+                  <td>Today, 12:20</td>
+                  <td>Lettie Watkins</td>
+                  <td><span class="ticket-status {{ticket.status}}">{{ticket.status}}</span></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="no-result" *ngIf="ticketlist.length == 0">
+         <p>There are no task list.</p>
+      </div>
+   </div>
+</div>

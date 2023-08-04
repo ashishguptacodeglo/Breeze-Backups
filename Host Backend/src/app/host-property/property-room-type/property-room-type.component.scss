@@ -1,0 +1,386 @@
+.property-room-type {
+    padding-bottom: 30px;
+    min-height: 600px;
+}
+
+.addRoomBtn {
+    border-radius: 3px;
+    background-color: rgba(30, 187, 186, 1);
+    max-width: 136px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.addRoomBtn span {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.property-room-data {
+    margin-top: 70px;
+}
+
+.edit {
+    color: rgba(14, 126, 202, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    text-decoration: underline !important;
+}
+
+.delete {
+    color: rgba(224, 32, 32, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    text-decoration: underline !important;
+}
+
+.separator {
+    background: rgba(166, 166, 166, 0.802825);
+    height: 13px;
+    width: 1px;
+    display: inline-block;
+}
+
+.property-room-data .property-room-list {
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.182605);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 55px 30px 40px;
+}
+
+.property-room-data .property-room-list .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.property-room-data .property-room-list .heading .room-type {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.property-room-data .property-room-list .heading .room-type span {
+    color: rgba(143, 143, 143, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.property-room-data .property-room-list .heading .room-type h6 {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+}
+
+.property-room-data .property-room-list .heading .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    justify-content: flex-end;
+}
+
+.property-room-data .property-room-list .content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.property-room-data .property-room-list .content .room-thumnail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.property-room-data .property-room-list .content .room-thumnail img {
+    width: 176px;
+}
+
+.property-room-data .property-room-list .content .room-details {
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.property-room-data .property-room-list .content .room-details .room-features {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    justify-content: flex-start;
+}
+
+.property-room-data .property-room-list .content .room-details .room-features .room-detail-list {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.property-room-data .property-room-list .content .room-details .room-features .room-detail-list .title {
+    color: rgba(143, 143, 143, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.property-room-data .property-room-list .content .room-details .room-features .room-detail-list .content {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+// Add Policies Modal
+
+.form-field .form-label {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.form-field .form-label span {
+    font-weight: 400;
+}
+
+.form-field .form-check-label {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.form-field .form-check-inline {
+    margin-right: 30px;
+}
+
+.form-field .tips {
+    color: rgba(76, 76, 76, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+#addRoomModal.modal {
+    padding-top: 0;
+}
+
+#addRoomModal .modal-dialog .modal-content {
+    margin: 0 auto;
+    max-width: 1064px;
+    padding: 37px 25px;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-body,
+.modal-dialog .modal-content .modal-footer {
+    padding: 0;
+}
+
+.modal-dialog .modal-content .modal-header {
+    border: none;
+    position: relative;
+    display: block;
+}
+
+#addRoomModal .modal-dialog .modal-content .modal-header {
+    margin-bottom: 48px;
+}
+
+.modal-dialog .modal-content .modal-header .btn-close {
+    position: absolute;
+    right: 25px;
+    top: 0px;
+}
+
+
+.modal-dialog .modal-content .modal-header .modal-title {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body form {
+    max-width: 790px;
+    margin: 0 auto;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field input[type=text] {
+    text-align: left;
+}
+
+#addRoomModal .modal-dialog .modal-content .modal-body button.save {
+    border-radius: 5px;
+    opacity: 1;
+    background-color: rgba(14, 126, 202, 1);
+    width: 165px;
+    height: 50px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field .ng-select,
+.modal-dialog .modal-content .modal-body form .form-field .ng-select.ng-select-single .ng-select-container {
+    max-width: 150px;
+}
+
+.bedType {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    max-width: 665px;
+}
+
+// .bedType .bedTypeList {
+//     gap: 5px;
+//     display: flex;
+//     align-items: center;
+// }
+
+.bedType .bedTypeList label {
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+}
+
+.price button {
+    border: none;
+    background: none;
+}
+
+.price .form-field {
+    margin-bottom: 0;
+}
+
+.price .form-field input[type=number] {
+    max-width: 150px;
+    padding: 13px 20px;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body form .form-field #roomsAvailable {
+    max-width: 150px;
+    padding: 13px 20px;
+}
+
+#addRoomModal ngx-dropzone {
+    width: 144px;
+    height: 50px;
+    border: 2px solid RGB(14, 126, 202);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#addRoomModal ngx-dropzone-label {
+    color: RGB(14, 126, 202);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Gilroy-Bold";
+}
+
+.uploaded-image-list {
+    display: flex;
+    gap: 15px;
+}
+
+.remove-uploaded {
+    position: absolute;
+    top: -13px;
+    right: -5px;
+}
+
+.uploaded-image-list .uploaded-image {
+    position: relative;
+    max-width: 93px;
+    width: 100%;
+}
+
+.uploaded-image-list .img-responsive {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.091083);
+    height: 93px !important;
+}
+
+.form-check-input[type=checkbox]
+{
+    background: url('/assets/img/non-checked.svg') 0 0px no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.form-check-input[type=checkbox]:checked
+{
+    background: url('/assets/img/checked.svg') 0 0px no-repeat;
+}

@@ -1,0 +1,443 @@
+.establishment-form {
+	max-width: 100%;
+}
+
+
+.approval-history .title {
+    color: #000000;
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progressbar-wrapper {
+	background: #fff;
+	width: 100%;
+	display: inline-block;
+	border-radius: 10px;
+	border: 1px solid rgba(226, 226, 226, 1);
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	background-color: rgba(255, 255, 255, 1);
+	padding: 25px;
+	margin-bottom: 35px;
+}
+
+.progressbar li {
+	list-style-type: none;
+	width: 20%;
+	float: left;
+	position: relative;
+	color: #373737;
+	font-family: 'Gilroy-Medium';
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 19px;
+}
+
+.progressbar li.active {
+	color: #373737;
+	font-family: "Gilroy-Bold";
+}
+
+.progressbar li:before {
+	width: 54px;
+	height: 54px;
+	content: "";
+	line-height: 54px;
+	border: 2.26px solid #1EBBBA;
+	display: block;
+	text-align: center;
+	margin: 0 auto 15px auto;
+	border-radius: 50%;
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	text-transform: capitalize;
+	color: rgb(0, 0, 0);
+	font-family: 'Gilroy-Medium';
+	font-size: 18px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+}
+
+.progressbar li:after {
+	width: 100%;
+	height: 2px;
+	content: '';
+	position: absolute;
+	background-color: #CBCBCB;
+	top: 30px;
+	left: -50%;
+	z-index: 0;
+}
+
+.progressbar li:first-child:after {
+	content: none;
+}
+
+.progressbar li.active:before {
+	border-color: #1EBBBA;
+	background: #1EBBBA;
+	color: #fff;
+}
+
+.progressbar li.active+li:after {
+	background-color: #1EBBBA;
+}
+
+.progressbar {
+	counter-reset: step;
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+}
+
+.approval-activity-list {
+	margin-bottom: 25px;
+}
+
+.approval-activity-list .headings {
+	display: flex;
+	align-items: center;
+	background-color: rgba(247, 247, 247, 1);
+	padding: 12px;
+}
+
+.approval-activity-list .headings .log-titles.activity-heading {
+	width: 60%;
+	text-align: left;
+	padding-left: 100px;
+}
+
+.approval-activity-list .headings .log-titles {
+	width: 20%;
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 18px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+}
+.approval-activity-list .headings .log-titles.col_2{
+	text-align: left;
+}
+
+.single-date-log {
+	padding: 20px 0;
+	border-bottom: 1px solid #CAD3DB;
+}
+
+.single-date-log:last-child {
+	border-bottom: none;
+}
+
+.single-date-log .log-dates {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.single-date-log .log-dates .date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	background-color: rgba(14, 126, 202, 1);
+	width: 80px;
+	height: 62px;
+	color: #fff;
+}
+
+.single-date-log .log-dates .date .month-name {
+	font-family: "Gilroy-Medium";
+	font-size: 11px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+}
+
+.single-date-log .log-dates .date .date-name {
+	font-family: "Gilroy-Medium";
+	font-size: 25px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+}
+
+.single-date-log .log-dates .timelines {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+}
+
+.single-date-log .log-dates .timelines .activity-date {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 14px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time {
+	display: flex;
+	// justify-content: space-between;
+	align-items: center;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-log {
+	display: flex;
+	gap: 20px;
+	width: calc(60% - 40px);
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-log .time {
+	color: rgba(142, 142, 142, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-log .activity {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-log .activity span {
+	color: rgba(55, 55, 55, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-log .activity button {
+	border-radius: 8px;
+	background-color: rgba(14, 126, 202, 1);
+	width: 165px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	color: rgba(255, 255, 255, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-approved-by .approved-by-user {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-approved-by .approved-by-user img {
+	width: 23px;
+}
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-approved-by .approved-by-user .approver-name {
+	color: rgba(55, 55, 55, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 16px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-approved-by,
+.single-date-log .log-dates .timelines .activity-log-and-time .activity-status {
+	width: 20%;
+	position: relative;
+}
+
+
+::ng-deep {
+
+	.activity-status .ng-select,
+	.activity-status .ng-select.ng-select-single .ng-select-container {
+		border-radius: 15px;
+		text-transform: capitalize;
+		font-family: "Gilroy-Medium";
+		font-size: 14px;
+		font-weight: 500;
+		font-style: normal;
+		letter-spacing: 0px;
+		color: #fff;
+		width: 105px;
+		height: 30px !important;
+		padding-left: 0;
+		min-height: 30px;
+	}
+
+	.activity-status .ng-select-container,
+	.activity-status .ng-select .ng-dropdown-panel {
+		box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+	}
+
+	.activity-status .ng-select.ng-select-single .ng-select-container {
+		padding-left: 5px;
+	}
+
+	.activity-status .ng-select .ng-arrow-wrapper {
+		width: auto;
+		left: -6px;
+		padding-right: 8px;
+	}
+
+	.activity-status .ng-select .ng-arrow-wrapper .ng-arrow {
+		border-color: #fff transparent transparent;
+		border-style: solid;
+		border-width: 5px 5px 2.5px;
+		background: none;
+		height: auto !important;
+		width: auto !important;
+	}
+
+	.activity-status.approved .ng-select,
+	.activity-status.approved .ng-select.ng-select-single .ng-select-container {
+		background-color: #1EBBBA;
+	}
+
+	.activity-status.rejected .ng-select,
+	.activity-status.rejected .ng-select.ng-select-single .ng-select-container {
+		background-color: #E02020;
+	}
+
+
+}
+
+
+::ng-deep {
+
+	.activity-status .ng-select,
+	.activity-status .ng-select.ng-select-single .ng-select-container {
+		border-radius: 15px;
+		text-transform: capitalize;
+		font-family: "Gilroy-Medium";
+		font-size: 14px;
+		font-weight: 500;
+		font-style: normal;
+		letter-spacing: 0px;
+		color: #fff;
+		width: 105px;
+		height: 30px !important;
+		padding-left: 0;
+		min-height: 30px;
+	}
+
+	.activity-status .ng-select-container,
+	.activity-status .ng-select .ng-dropdown-panel {
+		box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+	}
+
+	.activity-status .ng-select.ng-select-single .ng-select-container {
+		padding-left: 5px;
+	}
+
+	.activity-status .ng-select .ng-arrow-wrapper {
+		width: auto;
+		left: -6px;
+		padding-right: 8px;
+	}
+
+	.activity-status .ng-select .ng-arrow-wrapper .ng-arrow {
+		border-color: #fff transparent transparent;
+		border-style: solid;
+		border-width: 5px 5px 2.5px;
+		background: none;
+		height: auto !important;
+		width: auto !important;
+	}
+
+	.status-dropdown {
+
+		.change-status.approved .ng-select,
+		.change-status.approved .ng-select.ng-select-single .ng-select-container {
+			background-color: #1EBBBA;
+		}
+
+		.change-status.rejected .ng-select,
+		.change-status.rejected .ng-select.ng-select-single .ng-select-container {
+			background-color: #E02020;
+		}
+
+		.change-status.closed .ng-select,
+		.change-status.closed .ng-select.ng-select-single .ng-select-container {
+			background-color: #1EBBBA;
+		}
+	}
+
+}
+.activity-status .change-status {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+	padding-left: 40%;
+}
+.action-content {
+    position: absolute;
+    border-radius: 6px;
+    border: 1px solid #D5D5D5;
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+    right: 0;
+	top: 40px;
+    width: 296px;
+    z-index: 2;
+    padding: 20px;
+}
+.action-content textarea.reject-content {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    background: #EBF2F5;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium';
+    font-weight: 600;
+    color: #373737;
+    padding: 10px;
+    outline: none;
+}
+.action-content .send-button{
+	text-align: right;
+}
+.action-content .send-button button {
+    font-family: 'Gilroy-Medium';
+	font-weight: 600;
+	font-size: 16px;
+    color: #ffffff;
+    background: #0E7ECA;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+}

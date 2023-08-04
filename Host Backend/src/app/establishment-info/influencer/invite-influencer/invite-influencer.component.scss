@@ -1,0 +1,70 @@
+.dataTable {
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}
+
+::ng-deep {
+    .dataTables_wrapper table.dataTable.row-border>tbody>tr>td:first-child {
+        padding-left: 30px;
+    }
+}
+
+.no-result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	border-radius: 10px;
+	border: 1px solid #E7E7E7;
+}
+
+.no-result p {
+	color: rgba(147, 147, 149, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 21px;
+}
+
+.influencer-invites-list .status-btn {
+	border-radius: 15px;
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	height: 25px;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-family: 'Gilroy-Medium';
+	font-size: 14px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.influencer-invites-list .status-btn.declined {
+	background-color: #E02020;
+}
+
+.influencer-invites-list .status-btn.pending {
+	background-color: #F7B500;
+}
+
+.influencer-invites-list .status-btn.accepted {
+	background-color: #1EBBBA;
+}
+
+.influencer-invites-list .view-details {
+    color: #007AFF !important;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77.8px" height="77.8px" viewBox="0 0 77.8 77.8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pavo_dashboard@3x</title>
+    <defs>
+        <circle id="path-1" cx="29.9" cy="29.9" r="29.9"></circle>
+        <filter x="-21.7%" y="-20.1%" width="150.2%" height="150.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.764705882   0 0 0 0 0.756862745   0 0 0 0 0.756862745  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-278, -224)">
+            <g id="Group-5" transform="translate(264, 195)">
+                <g id="pavo_dashboard" transform="translate(21, 35)">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#019F98" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Group-2" transform="translate(16, 16)" fill="#FFFFFF" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="0.5">
+                        <g id="Calendar">
+                            <path d="M27,1.5 C27,0.65 26.35,0 25.5,0 L1.5,0 C0.65,0 0,0.65 0,1.5 L0,6.5 C0,6.9 0.15,7.25 0.4,7.5 C0.15,7.75 0,8.1 0,8.5 L0,25.5 C0,26.35 0.65,27 1.5,27 L25.5,27 C26.35,27 27,26.35 27,25.5 L27,8.5 C27,8.1 26.85,7.75 26.6,7.5 C26.85,7.25 27,6.9 27,6.5 L27,1.5 Z M1,1.5 C1,1.2 1.2,1 1.5,1 L25.5,1 C25.8,1 26,1.2 26,1.5 L26,6.5 C26,6.8 25.8,7 25.5,7 L1.5,7 C1.2,7 1,6.8 1,6.5 L1,1.5 Z M26,25.5 C26,25.8 25.8,26 25.5,26 L1.5,26 C1.2,26 1,25.8 1,25.5 L1,8.5 C1,8.2 1.2,8 1.5,8 L25.5,8 C25.8,8 26,8.2 26,8.5 L26,25.5 Z" id="Shape"></path>
+                        </g>
+                        <path d="M20.1160757,12.7913713 C19.9375099,12.6112096 19.6483308,12.6112096 19.469765,12.7913713 L11.5077421,20.8245555 L7.53023497,16.811499 C7.35166919,16.6313373 7.06249012,16.6313373 6.88392434,16.811499 C6.70535855,16.9916607 6.70535855,17.2834244 6.88392434,17.4635861 L11.1844345,21.8025324 C11.2737174,21.8926133 11.3907297,21.9375 11.5077421,21.9375 C11.6247545,21.9375 11.7417669,21.8926133 11.8310498,21.8025324 L20.1160757,13.4434584 C20.2946414,13.2632967 20.2946414,12.971533 20.1160757,12.7913713 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

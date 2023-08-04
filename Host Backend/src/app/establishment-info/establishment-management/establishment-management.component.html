@@ -1,0 +1,12 @@
+
+<app-menus [isfixed]="false"></app-menus>
+
+<div class="page-content">
+	<app-side-bar ></app-side-bar>
+	<div class="page-data establishment-form">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<app-property-info *ngIf="establismentType == 'property'"></app-property-info>
+		<app-restaurant-info *ngIf="establismentType == 'restaurant'"></app-restaurant-info>
+	</div>
+</div>
+

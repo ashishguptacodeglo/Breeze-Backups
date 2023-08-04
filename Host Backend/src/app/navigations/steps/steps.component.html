@@ -1,0 +1,16 @@
+<div class="stepbar-section">
+    <img src="assets/img/breeze_brand_logo.svg" alt="Logo" class="img-fluid">
+    <div class="step-list">
+      <ul>
+
+        <li *ngFor="let menu of menusList;let i = index;"
+        [ngClass]="i+1 <= active ? 'active' : ''"
+        >
+          <span class="num">{{i+1}}</span><p>{{menu}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="progressbar">
+    <span style="width: {{width}}%"></span>
+  </div>

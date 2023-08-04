@@ -1,0 +1,138 @@
+  .bg-image img {
+      width: 100%;
+  }
+  .btn-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      font-family: 'Gilroy-Bold';
+  }
+  .bg-container {
+      width: 100%;
+  }
+  .carousel-item {
+      height: 100vh;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+  .carousel-control-next, .carousel-control-prev {
+      visibility: hidden;
+  }
+  .carousel-caption h2 {
+      line-height: 34px;
+      font-size: 28px;
+      font-weight: 700;
+  }
+  .carousel-caption p {
+      line-height: 30px;
+      font-size: 20px;
+      font-weight: 500;
+  }
+  .toggle-icons {
+      position: absolute;
+      top: 0;
+      right: 2%;
+      top: 50%;
+      text-align: left;
+      transform: translateY(-50%);
+      cursor: pointer;
+  }
+  .login-form .form-floating {
+      position: relative;
+  }
+  .login-form button[disabled] {
+      background-color: #93A5AE;
+      border: none;
+  }
+  .login-form {
+      padding: 100px 202px 0 202px;
+  }
+  .create-new-heading {
+      text-align: center;
+  }
+  .login-heading {
+      text-align: center;
+  }
+  .login-heading {
+      font-weight: 300;
+      color: #182525;
+      font-size: 27px;
+      font-family: 'Gilroy-Bold';
+  }
+  .information {
+      padding: 4rem 114px 0 114px;
+      text-align: left;
+  }
+  .form-warning p, .information, .create-new-heading {
+      font-size: 14px;
+      line-height: 20px;
+      font-family: 'Gilroy-Medium';
+      font-weight: 500;
+  }
+  .carousel-caption {
+      bottom: 0;
+  }
+  @media only screen and (max-device-width: 767px) {
+      .login-form {
+          padding: 3rem 3rem 0 3rem;
+      }
+      .information {
+          padding: 1rem 4rem 0 4rem;
+      }
+      .carousel-caption {
+          bottom: 1.25rem;
+      }
+  }
+  .btn-text {
+      margin-left: 6rem;
+  }
+  .btn-image {
+      padding-left: 4rem;
+  }
+  .btn-login {
+      background: #0E7ECA;
+  }
+  .create-password .carousel-indicators [data-bs-target] {
+      width: 10px;
+  }
+  .create-password .carousel-indicators .active {
+      width: 20px;
+  }
+  .form-group input {
+      height: 50px;
+  }
+  .password-field {
+      position: relative;
+  }
+  .login-form label {
+      color: #019F98;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: "Gilroy-Bold";
+  }
+  .forget-password, .login-errors {
+      text-align: center;
+  }
+  .login-errors {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: "Gilroy-Bold";
+  }
+  .login-errors a {
+      color: #019F98;
+      text-decoration: none;
+  }
+  .forget-password a {
+      color: #019F98;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: "Gilroy-Bold";
+      text-decoration: none;
+  }
+  .api-error {
+      color: #E02020;
+  }
+  

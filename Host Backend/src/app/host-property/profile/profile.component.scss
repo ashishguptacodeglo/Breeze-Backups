@@ -1,0 +1,223 @@
+.user {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px
+}
+.inputBox {
+    position: relative
+}
+.left-side-container {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 74px 0;
+}
+.phone-label {
+    display: block;
+}
+.profile-heading {
+    font-size: 34px;
+    font-family: "Gilroy-Bold";
+    line-height: 64px;
+    color: #000;
+    margin-left: 6rem;
+}
+.form-container {
+    margin: 74px 0;
+    height: 100%;
+}
+.intl-tel-input {
+    width: 100%;
+}
+::ng-deep .profile-phone-code {
+    width: 100%;
+}
+::ng-deep .profile-phone-code .iti__country-list {
+    max-width: 338px;
+}
+::ng-deep .iti--separate-dial-code .iti__selected-flag {
+    background-color: RGB(235, 242, 245) !important;
+}
+.iti__flag {
+    background-image: url('/assets/img/dashboard/flags.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url('/assets/img/dashboard/flags@2x.png');
+    }
+}
+.iti__country-list {
+    max-width: 330px;
+}
+.text-center.upload-photo-link {
+    color: RGB(14, 126, 202);
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "Gilroy-Bold";
+    cursor: pointer;
+}
+
+.banner_wrapper{
+	background-image: url('/assets/img/dashboard/white-bg.svg');
+	background-size: contain;
+}
+
+.navbar.navbar-expand-lg {
+	margin-top: 1%;
+}
+.banner_wrapper .content-container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 140px;
+}
+.banner_wrapper:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 37%;
+    height: 100%;
+    background: url(/assets/img/dashboard/green-bg.svg) no-repeat center center / cover;
+    z-index: -1;
+}
+.banner_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.intl-tel-input {
+    width: 100%;
+}
+.banner_content.left {
+    padding-right: 9%;
+}
+.banner_content.right {
+    padding-left: 10px;
+}
+
+.boarding_form {
+    display: inline-block;
+    background-color: #fff;
+    padding: 45px;
+   margin: 30px 6rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #585F62;
+}
+.banner_content.left {
+	display: none;
+}
+.form-control {
+    display: inline-block;
+    width: 100%;
+    background-color: #EBF2F5;
+    height: 50px;
+    border: 0;
+}
+.form-control:focus {
+    background-color: #EBF2F5;
+    box-shadow: none;
+}
+.form-control-wrap {
+    position: relative;
+    margin: 0 0 25px;
+    text-align: left;
+}
+.wpcf7-not-valid-tip {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    margin: 10px 0 20px;
+}
+.form-control-wrap .form-label {
+    font-size: 14px;
+    color: #93A5AE;
+    line-height: normal;
+    font-weight: bold;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    transition: all ease-in 0.25s;
+    pointer-events: none;
+    --webkit-pointer-events: none;
+    --moz-pointer-events: none;
+}
+.input_checkbox .wpcf7-list-item {
+    margin: 0;
+}
+.form-control-wrap.active .form-label {
+    color: #019F98;
+    font-size: 10px;
+    top: -5px;
+}
+.input_checkbox {
+    display: flex;
+    align-items: flex-start;
+}
+.input_checkbox-label {
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: 'Gilroy-Medium';
+    font-weight: bold;
+}
+.form-control.checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #717171;
+    text-align: center;
+}
+.input_checkbox .head {
+    font-family: 'Gilroy-Bold';
+    font-size: 16px;
+    line-height: normal;
+    display: block;
+    margin-bottom: 5px;
+}
+.wpcf7-list-item {
+    margin: 0;
+}
+.wpcf7-form-control.enroll_button {
+    display: block;
+    width: 100%;
+    background: #93A5AE url(/wp-content/themes/Breeze-child/assets/img/icon-submit.svg) no-repeat 90% 50% / 36px;
+    box-shadow: none;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 18px 10% 18px 0;
+    font-weight: bold;
+    transition: all ease-in 0.25s;
+}
+.wpcf7-form-control.enroll_button:disabled {
+    opacity: 0.5;
+}
+.page_title {
+    font-size: 56px;
+    line-height: 62px;
+    position: relative;
+}
+.page_title:before {
+    content: "";
+    display: inline-block;
+    max-width: 55%;
+    width: 278px;
+    height: 21px;
+    position: absolute;
+    bottom: 0;
+    background-color: #1EBBBA;
+    z-index: -1;
+}
+.banner_wrapper .content_inner p {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    margin: 0 0 25px;
+}
+.banner_wrapper .content_inner {
+    margin: 25px 0 50px;
+}

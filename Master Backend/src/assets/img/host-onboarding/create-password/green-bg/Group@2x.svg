@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="707px" height="838px" viewBox="0 0 707 838" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group@2x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="705" height="836"></rect>
+    </defs>
+    <g id="host-onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="create-password" transform="translate(1.000000, 1.000000)">
+            <g id="Group" transform="translate(352.500000, 418.000000) scale(-1, 1) translate(-352.500000, -418.000000) ">
+                <g id="Oval">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" stroke="#979797" fill="#019F98" xlink:href="#path-1"></use>
+                    <circle fill="#019891" mask="url(#mask-2)" cx="51.5" cy="787.5" r="115.5"></circle>
+                    <rect id="Rectangle" fill="#019891" mask="url(#mask-2)" x="450" y="765" width="326" height="216" rx="108"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#019891" mask="url(#mask-2)" x="620.481481" y="418" width="169.037037" height="112" rx="56"></rect>
+                </g>
+                <rect id="Rectangle-Copy-4" fill="#1EBBBA" opacity="0.200000003" x="82" y="507" width="37" height="37"></rect>
+                <rect id="Rectangle-Copy-5" fill="#1EBBBA" opacity="0.200000003" x="405" y="676" width="37" height="37"></rect>
+                <rect id="Rectangle-Copy-2" fill="#1EBBBA" opacity="0.200000003" x="45" y="34" width="37" height="37"></rect>
+                <rect id="Rectangle-Copy-3" fill="#1EBBBA" opacity="0.200000003" x="554" y="71" width="37" height="37"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

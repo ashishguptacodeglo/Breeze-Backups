@@ -1,0 +1,101 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+   <app-side-bar></app-side-bar>
+   <div class="page-data">
+      <app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+      <section class="establishment-info">
+
+         <div class="workers-list-container">
+
+            <div class="table-header-buttons">
+               <h2>House Keeping</h2>
+               <div class="table-button">
+                  <a data-bs-toggle="modal" data-bs-target="#edit-department-modal" class="add-task-button">Edit</a>
+               </div>
+            </div>
+
+            <div class="no-result" *ngIf="!fetched">
+               <p>There are no workers list.</p>
+            </div>
+
+            <div class="workers-list" *ngIf="fetched">
+               <div *ngIf="workersList.length > 0">
+                  <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                     <thead>
+                        <tr>
+                           <th>S.No</th>
+                           <th>Profile</th>
+                           <th>First name</th>
+                           <th>Last Name</th>
+                           <th>Email</th>
+                           <th>Phone Number</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr *ngFor="let worker of workersList;let i=index">
+                           <td>{{i+1}} </td>
+                           <td><img src="{{worker.image}}" class="profile-img"></td>
+                           <td>Warren</td>
+                           <td>Wilkerson</td>
+                           <td>wilkerson@email.com</td>
+                           <td>+4-(968)705-1370</td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+               </div>
+               <div class="no-result" *ngIf="workersList.length == 0">
+                  <p>There are no workers list.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+
+<div class="modal fade modal-lg" id="edit-department-modal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Edit</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="department-details">
+                  <div class="form-field">
+                     <label>Department</label>
+                     <input type="text" name="department">
+                  </div>
+                  <div class="form-field">
+                     <label>What are the tasks that you will assign to them? </label>
+
+                     <div class="add-task">
+                        <input type="text" [(ngModel)]="newTaskName" name="taskName">
+                        <button (click)="addTask()"><img src="assets/img/host-backend/plus-white.svg" alt="Add Icon">Add
+                           Task</button>
+                     </div>
+
+                     <label class="note">* Click on <strong>Add Task</strong> to add a new task</label>
+
+                     <div class="task-list">
+                        <div *ngIf="tasks.length === 0" class="no-task-message">No tasks added yet</div>
+                        <div class="single-task" *ngFor="let task of tasks; let i = index">
+                           <span>{{ task }}</span>
+                           <button (click)="deleteTask(i)"><img src="assets/img/host-backend/delete.svg"
+                                 alt="Delete"></button>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+               <div class="action-btn">
+                  <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn save" (click)="submitTheForm()">Save</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

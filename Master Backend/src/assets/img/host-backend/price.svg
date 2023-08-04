@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77.8px" height="77.8px" viewBox="0 0 77.8 77.8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pavo_dashboard@3x</title>
+    <defs>
+        <circle id="path-1" cx="29.9" cy="29.9" r="29.9"></circle>
+        <filter x="-21.7%" y="-20.1%" width="150.2%" height="150.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.764705882   0 0 0 0 0.756862745   0 0 0 0 0.756862745  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-564, -224)">
+            <g id="Group-5" transform="translate(550, 195)">
+                <g id="pavo_dashboard" transform="translate(21, 35)">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#0E7ECA" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <text id="$" font-family="Gilroy-Regular" font-size="27" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="22" y="37">$</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,81 @@
+<div class="back-link">
+   <a (click)="ShowUserProfile('list')">
+       <img src="assets/img/host-backend/arrow-back.svg" alt="arrow-back">
+      <span>Return Back</span>
+   </a>
+</div>
+
+
+<div class="profile-details">
+   <div class="profile-details-card">
+      <div class="card-header">
+         <div class="ticket-status">
+            <div class="ticket-id">
+               <span>#ASF134</span> Issue with payment
+            </div>
+            <div class="change-status {{status}}">
+               <ng-select [items]="statusList" (change)="onChange($event)" [(ngModel)]="status" bindLabel="name"
+                  placeholder="{{status}}" bindLabel="name" bindValue="value" autocomplete="off" [searchable]="false"
+                  [clearable]="false">
+               </ng-select>
+            </div>
+         </div>
+         <div class="assigned-to">
+            <div class="title">
+               Assigned to
+            </div>
+            <div class="assigned-to filter-dropdown">
+               <ng-select [items]="assignedList" bindLabel="name" placeholder="Select User" bindLabel="name"
+                  bindValue="value" autocomplete="off" [searchable]="false" [clearable]="false">
+               </ng-select>
+            </div>
+         </div>
+      </div>
+      <div class="card-body">
+         <div class="ticket-desc">
+            <p>Payment</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla massa scelerisque
+               mauris euismod congue.
+            </p>
+         </div>
+         <div class="assigned-on">
+            <div class="title">
+               Assigned on
+            </div>
+            <div class="assigned-date">
+               Sept 9, 2020
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="issue-details">
+      <div class="left-sec">
+         <div class="issue-desc">
+            <h5 class="heading">Issue Description</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla massa scelerisque
+               mauris euismod congue. Ssit amet, consectetur adipiscing elit. Sed fringilla massa
+               scelerisque mauris euismod congue.
+            </p>
+         </div>
+      </div>
+      <div class="right-sec">
+         <div class="user-details">
+            <div class="about-user">
+               <div class="name-type">
+                  <span class="name">Nina Rodriquez</span>
+                  <a href="javascript:void(0)" (click)="ShowUserProfile('profile')" class="view-details">View Profile</a>
+               </div>
+            </div>
+            <div class="user-contact-details">
+               <ul>
+                  <li>
+                     <p>Email</p>
+                     <p>user@email.com</p>
+                  </li>
+
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

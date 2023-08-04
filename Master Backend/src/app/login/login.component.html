@@ -1,0 +1,125 @@
+<section class="create-password">
+   <div class="container-fluid ps-md-0">
+      <div class="row g-0">
+         <div class="d-md-flex col-md-4 col-lg-6 ">
+            <div class="bg-container" style="background-image: url('assets/img/host-property/get-started-bg.svg')">
+               <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="carousel-caption">
+                           <img src="assets/img/host-property/get-started-img.svg" alt="login">
+                           <h2>Mauris non tempor quam, et lacinia sapien..</h2>
+                           <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum
+                              rutrum, neque sem pretium metus.</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="carousel-caption">
+                           <img src="assets/img/host-property/get-started-img.svg" alt="login">
+                           <h2>Mauris non tempor quam, et lacinia sapien..</h2>
+                           <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum
+                              rutrum, neque sem pretium metus.</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="carousel-caption">
+                           <img src="assets/img/host-property/get-started-img.svg" alt="login">
+                           <h2>Mauris non tempor quam, et lacinia sapien..</h2>
+                           <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum
+                              rutrum, neque sem pretium metus.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                     data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                     data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+               <div class="container">
+                  <div class="row">
+
+                     <div class="col-md-12 col-lg-12">
+
+                        <form [formGroup]="emailForm" [hidden]="tabIndex != 0" class="login-form"
+                           (ngSubmit)="sendOtp()">
+                           <h3 class="login-heading">Hello Again!</h3>
+                           <div class="form-group main-parent">
+                              <label for="confirm-password">Enter Email id</label>
+                              <input type="email" formControlName="email" class="form-control" required
+                                 autocomplete="off">
+                              <div *ngIf="(emailForm.get('email')?.touched) && (emailForm.get('email')?.invalid)">
+                                 <p class="error-msg" *ngIf="emailForm.get('email')?.hasError('required')">Email is
+                                    required.</p>
+                                 <p class="error-msg" *ngIf="emailForm.get('email')?.hasError('pattern')">Please Enter
+                                    valid email.</p>
+                              </div>
+                           </div>
+                           <div class="d-grid">
+                              <button class="btn btn-lg  btn-login  mb-2" [disabled]="!emailForm.valid" type="submit">
+                                 <span class="btn-text">Next</span>
+                                 <img class="btn-image" src="assets/img/host-onboarding/create-password/btn-arrow.png">
+                              </button>
+                           </div>
+
+                        </form>
+                        <form [hidden]="tabIndex == 0" class="login-form" (ngSubmit)="otplogin()">
+                           <h3 class="login-heading">Hello Again!</h3>
+                           <div class="form-group main-parent otp-section">
+                              <label for="confirm-password">Enter OTP</label>
+                              <ng-otp-input #ngOtpInput class="text-center" (onInputChange)="onOtpChange($event)"
+                                 [config]="{length:5, allowNumbersOnly: true}" required></ng-otp-input>
+
+                              <!-- <span *ngIf="otpTimer != 0" class="otp default">I didn’t receive a code
+                                 <span class="otp-timing">{{otpTimer}}</span>
+                              </span> -->
+                              <span *ngIf="otpTimer == 0" class="otp receive" (click)="sendOtp()">
+                                 I didn’t receive a code
+                              </span>
+
+                           </div>
+                           <!-- [disabled]="!loginForm.valid" -->
+                           <div class="d-grid">
+                              <button class="btn btn-lg  btn-login  mb-2" type="submit">
+                                 <span class="btn-text">Continue</span>
+                                 <img class="btn-image" src="assets/img/host-onboarding/create-password/btn-arrow.png">
+                              </button>
+                           </div>
+
+                        </form>
+
+                     </div>
+
+                     <div class="col-md-12 col-lg-12">
+                        <div class="information">
+                           Donec facilisis tortor ut augue lacinia, at viverra est semper. Donec facilisis tortor ut
+                           augue
+                           lacinia, at viverra est semper.. Donec facilisis tortor ut augue lacinia, at viverra est
+                           semper..
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

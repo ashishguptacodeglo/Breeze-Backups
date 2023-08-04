@@ -1,0 +1,201 @@
+.man-div {
+    padding: 40px 0;
+}
+.top-head{
+    font-family: 'Gilroy-Medium';
+    font-weight: 600;
+    font-size: 28px;
+    color: #444A4A;
+}
+.man-div .task-detail {
+    display: flex;
+    justify-content: space-between;
+    // gap: 30px;
+}
+.man-div .task-detail>*+*{
+    padding-left: 30px;
+}
+.man-div .task.common {
+    width: 100%;
+}
+.man-div .task-inner .name {
+    font-family: "Gilroy-Bold";
+    font-size: 14px;
+    color: #373737;
+    margin-bottom: 0;
+}
+.man-div .task-inner .stat {
+    color: #0E7ECA;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Gilroy-Bold";
+    margin-bottom: 0;
+}
+.man-div .task-inner .stat-positive {
+    color: #0E7ECA;
+}
+.man-div .task-inner .stat-neg {
+    color: #E02020;
+}
+
+.man-div .task-inner {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 RGBA(230, 230, 230, 0.5);
+    min-height: 127px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.page_reviewtabs .review-wraps .links {
+    color: #4A4A4A;
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+.page_reviewtabs .review-wraps .links.active{
+    color: #0E7ECA;
+    border-color: #0E7ECA;
+}
+.page_reviewtabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-dropdown {
+    display: flex;
+    flex-basis: 25%;
+    align-items: center;
+}
+.filter-dropdown label {
+    width: 75px;
+    margin-right: 20px;
+    font-family: 'Gilroy-Bold';
+    font-size: 16px;
+    color: #373737;
+}
+.page_reviewtabs span.links {
+    margin-right: 33px;
+}
+::ng-deep.ng-select{
+    border-radius: 25px !important;
+}
+.ng-select ::ng-deep .ng-select-container{
+    border-radius: 25px !important;
+}
+.ng-select ::ng-deep .ng-select-container .ng-value-container {
+    padding-left: 18px;
+}
+::ng-deep .ng-dropdown-panel{
+    border-radius: 5px;
+}
+.ng-select ::ng-deep .ng-select-container .ng-value-container .ng-placeholder, ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option, .ng-select ::ng-deep .ng-value{
+    font-family: 'Gilroy-Bold';
+    font-weight: 700;
+    font-size: 16px;
+    color: #444A4A;
+}
+
+
+
+// Review list below
+.single-property-reservation .slice1, .single-property-reservation .slice2, .single-property-reservation .slice3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.single-property-reservation .slice1 .r-low, .single-property-reservation .slice1 .r-high{
+    margin-right: 20px;
+}
+.single-property-reservation .slice2 p{
+    font-weight: 600;
+    color: black;
+}
+.reviews-stats .rating-list {
+    color: #373737;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium' ;
+    font-weight: 500;
+}
+.dropdown a#dropdownMenuLink {
+    color: #444A4A;
+    font-size: 14px;
+    font-weight: 600;
+}
+.btn-secondary {
+    color: #444A4A;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px 0 RGBA(230, 230, 230, 0.5);
+}
+
+.caonew-inner {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #E2E2E2;
+    box-shadow: 0px 4px 8px 0px #e6e6e6;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+ul.cao-ul{
+    margin-bottom: 10px;
+}
+ul.cao-ul li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+ul.cao-ul p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+ul.cao-ulnew li {
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    font-size: 14px;
+    color: #373737;
+    font-weight: 400;
+}
+ul.cao-ulnew {
+    padding: 0;
+}
+ul.cao-ulnew li:after {
+    content: "";
+    background-color: #E2E2E2;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    right: -12px;
+    width: 1px;
+}
+ul.cao-ulnew li:last-child:after{
+    content: none;
+}
+.r-low {
+    color: #C14E48;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.r-high {
+    color: #0E7ECA;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 15px;
+}

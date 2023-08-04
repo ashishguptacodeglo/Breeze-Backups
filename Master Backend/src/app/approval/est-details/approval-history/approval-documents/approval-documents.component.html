@@ -1,0 +1,57 @@
+<!-- <h5 class="title" (click)="ShowHistory()"> 
+    <img src="assets/img/host-backend/arrow-back.svg"  alt="arrow-back"><span>Return</span>
+</h5> -->
+<div class="back-link">
+   <a (click)="ShowHistory()">
+       <img src="assets/img/host-backend/arrow-back.svg" alt="arrow-back">
+      <span>Return</span>
+   </a>
+</div>
+<div class="upload-document">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="document-details">
+               <div class="document-heading">
+                  <span class="name col_1">Document Name</span>
+                  <span class="name col_2">Document</span>
+                  <span class="status col_3">Status</span>
+               </div>
+               <div *ngFor="let document of documents;let i=index" class="document-list">
+               <div class="document-name">
+                  <h6>Document {{ document.name }}</h6>
+               </div>
+               <div class="document-name">
+                 {{shortName(document.doc_name,20,true)}}
+                   <a target="_bank" href="assets/documents/sample.pdf">View Document</a>
+               </div>
+               <div class="document-status">
+
+                     <div class="status-dropdown">
+                        <div class="change-status {{document.status}}">
+                           <ng-select [items]="estfilters" (change)="statusChangeNgSelectonChange($event,i)" [(ngModel)]="document.status" bindLabel="name" bindValue="value" autocomplete="off"  [searchable]="false" [clearable]="false" >
+                           </ng-select>
+                            <img *ngIf="document.status == 'rejected'" (click)="OpenActionModal(i,true)" src="assets/img/host-backend/ion-information.svg">
+                        </div>
+                     </div>
+
+
+                <div class="action-content" *ngIf="document.status == 'rejected' && document.ismodalopen == true">
+                  <div class="title">
+                     Tell the host why it is rejected.
+                  </div>
+                  <div class="content-message">
+                     <textarea class="reject-content"></textarea>
+                  </div>
+                  <div class="send-button">
+                     <button type="button" (click)="OpenActionModal(i,false)">Send</button>
+                  </div>
+               </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>

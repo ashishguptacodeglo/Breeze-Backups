@@ -1,0 +1,66 @@
+<div class="header">
+   <h4 class="module-title">Report Establishment</h4>
+   <div class="filter-sec">
+      <div class="searchbar">
+         <form class="example" action="#">
+            <input type="text" placeholder="Search Establishment Name" name="search2">
+         </form>
+      </div>
+      <div class="list-filters">
+         <div class="date-filter">
+            <span class="filter-label">Date</span>
+            <div class="filter-datepicker">
+               <input class="date-range-picker" type="text" ngxDaterangepickerMd [(ngModel)]="selected"
+                  [showCustomRangeLabel]="true" [alwaysShowCalendars]="true" [ranges]="ranges" [linkedCalendars]="true"
+                  [isInvalidDate]="isInvalidDate" [showClearButton]="false" (change)="choosedDate($event)"
+                  placeholder="This month">
+            </div>
+         </div>
+         <div class="sortby">
+            <span class="filter-label">Sort by</span>
+            <div class="filter-dropdown sml">
+               <ng-select [items]="statusFilters" bindLabel="name" bindValue="value" autocomplete="off"
+                  [searchable]="false" [clearable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="est-list-container" *ngIf="fetched">
+   <table datatable [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+         <tr>
+            <th>Ticket ID</th>
+            <th>Establishment name</th>
+            <th>Issue Subject</th>
+            <th>Raised date</th>
+            <th>Reported by</th>
+            <th>Email ID</th>
+            <th>Status</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let post of posts;let i=index">
+            <td>
+               <a href="javascript:void(0)" (click)="ShowDetailsPage()" class="view-details">EST{{i+100}}</a>
+            </td>
+            <td> Nina Stay</td>
+            <td> Lorem ipsum dolor sit amet..</td>
+            <td> Today, 12:20 </td>
+            <td> Katherine Oliver </td>
+            <td>Katherine Oliver@gmail.com</td>
+            <td>
+               <div class="status-dropdown">
+                  <div class="change-status {{post.status}}">
+                     <ng-select [items]="statusFilters" (change)="statusChangeNgSelect($event,i)"
+                        [(ngModel)]="post.status" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false">
+                     </ng-select>
+                  </div>
+               </div>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

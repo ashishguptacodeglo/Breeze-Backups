@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 39@2x</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3" transform="translate(-382.000000, -287.000000)">
+            <g id="Group-12" transform="translate(382.000000, 284.000000)">
+                <g id="Group-39" transform="translate(0.000000, 3.000000)">
+                    <g id="Group-9">
+                        <rect id="Rectangle" x="0" y="0" width="50" height="50"></rect>
+                    </g>
+                    <g id="Group-38" transform="translate(7.777778, 7.777778)" stroke="#000000" stroke-width="1.1">
+                        <line x1="0.41005291" y1="25.8333333" x2="34.0343915" y2="25.8333333" id="Line-33" stroke-linecap="round"></line>
+                        <path d="M27.0798942,0.55 C27.3764185,0.55 27.6448709,0.670190225 27.8391922,0.864511528 C28.0335135,1.05883283 28.1537037,1.32728521 28.1537037,1.62380952 L28.1537037,33.8944444 L10.3912698,33.8944444 L10.3912698,1.62380952 C10.3912698,1.32728521 10.5114601,1.05883283 10.7057814,0.864511528 C10.9001027,0.670190225 11.1685551,0.55 11.4650794,0.55 Z" id="Rectangle" fill="#FFFFFF"></path>
+                        <circle id="Oval" cx="15.5820106" cy="18.8624339" r="1.09021164"></circle>
+                        <rect id="Rectangle" x="1.37010582" y="3.01031746" width="3.82063492" height="6.28095238" rx="0.811904762"></rect>
+                        <line x1="0.41005291" y1="34.0343915" x2="34.0343915" y2="34.0343915" id="Line-33" stroke-linecap="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

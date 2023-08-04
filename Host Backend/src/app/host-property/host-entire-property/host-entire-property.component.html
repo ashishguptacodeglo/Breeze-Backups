@@ -1,0 +1,139 @@
+<main>
+    <app-steps [width]="50" [active]="2"></app-steps>
+    <form [formGroup]="entirePropertyForm">
+        <div class="host-entire-property">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Tell us about your property</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="host-entire-property-data">
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">How many guests can stay at your
+                                        property?</label>
+                                </div>
+                                <div class="right-sec">
+                                    <ng-select [items]="guestCapacity" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select" formControlName="guestCapacity">
+                                    </ng-select>
+                                </div>
+                            </div>
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">How many rooms are
+                                        available?</label>
+                                </div>
+                                <div class="right-sec">
+                                    <ng-select [items]="roomsAvailable" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select" formControlName="roomsAvailable">
+                                    </ng-select>
+                                </div>
+                            </div>
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">Tell us the price of this room
+                                        per night</label>
+                                </div>
+                                <div class="right-sec">
+                                    <div class="price">
+                                        <button type="button" (click)="updatePrice(-1)"><img src="assets/img/minus.svg" alt="minus"></button>
+                                        <div class="form-field">
+                                            <input type="number" id="price-input" value="{{price}}" name="pricePerNight" min="0"
+                                                step="1" class="form-control" placeholder="Price"
+                                                formControlName="pricePerNight" (ngModelChange)="onPriceChange()">
+                                        </div>
+                                        <button type="button" (click)="updatePrice(1)"><img src="assets/img/plus.svg" alt="plus"></button>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">How many private bathrooms do you
+                                        have?</label>
+                                </div>
+                                <div class="right-sec">
+                                    <ng-select [items]="privateBathrooms" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select" formControlName="privateBathrooms">
+                                    </ng-select>
+                                </div>
+                            </div>
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">How many public bathrooms do you
+                                        have?</label>
+                                </div>
+                                <div class="right-sec">
+                                    <ng-select [items]="publicBathrooms" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select" formControlName="publicBathrooms">
+                                    </ng-select>
+                                </div>
+                            </div>
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">How many beds are
+                                        available?</label>
+                                </div>
+                                <div class="right-sec">
+                                    <ng-select [items]="bedsAvailable" bindLabel="name" bindValue="value"
+                                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                                        [searchable]="false" placeholder="Select" formControlName="bedsAvailable">
+                                    </ng-select>
+                                </div>
+                            </div>
+
+                            <div class="property-details">
+                                <div class="left-sec">
+                                    <label for="policyName" class="form-label d-block">What kinds of bed does this
+                                        Property have?</label>
+                                </div>
+                                <div class="right-sec">
+                                    <div class="bedType">
+                                        <div class="bedTypeList form-check form-check-inline" *ngFor="let bedType of bedTypeArray; let i = index;">
+                                            <input type="checkbox" id="bedType-{{i}}" class="form-check-input"
+                                                (change)="bedTypeOnChange($event)" [value]="bedType" name="bedType" />
+                                            <label for="bedType-{{i}}" class="form-check-label">{{bedType}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button class="goback-btn" (click)="goBack()">
+                    Back
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="save-next-btn" [disabled]="entirePropertyForm.invalid" (click)="getEntirePropertyDetails()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</main>

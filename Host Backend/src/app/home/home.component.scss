@@ -1,0 +1,186 @@
+.banner img {
+    width: 100%;
+}
+
+.listing-section {
+    margin: -100px 0 100px;
+}
+
+.listing-section .listing-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    column-gap: 92px;
+    row-gap: 55px;
+}
+
+.listing-section .listing-item {
+    border-radius: 6px;
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.155589);
+    background-color: rgb(255, 255, 255);
+    padding: 16px 20px;
+    max-width: 330px;
+    width: 100%;
+    // max-height: 208px;
+}
+
+.listing-section .listing-item .add-establishment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+    min-height: 174px;
+}
+
+.listing-section .listing-item .add-establishment p {
+    margin-bottom: 0;
+    color: rgba(14, 126, 202, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.listing-section .listing-item .listing-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.listing-section .listing-item .listing-details h5 {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+.listing-section .listing-item .listing-details .establishment-type,
+.listing-section .listing-item .listing-details .establishment-location {
+    font-family: "Gilroy-Medium";
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.listing-section .listing-item .listing-details .establishment-type {
+    color: #6D7278;
+}
+
+.listing-section .listing-item .listing-details .establishment-location {
+    color: #979797;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.listing-section .listing-item .listing-details .establishment-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .rejected-status {
+    height: 30px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .rejected-status.active {
+    visibility: hidden;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .rejected-status .status-info {
+    border-radius: 5px;
+    border: 1px solid rgba(207, 207, 207, 1);
+    box-shadow: 20px 20px 80px rgba(224, 224, 224, 0.796558);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 16px;
+    position: absolute;
+    left: 20px;
+    width: 330px;
+    display: none;
+    transition: all 0.5s;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .rejected-status .status-info p {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 19px;
+    margin-bottom: 15px;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .rejected-status .status-info a {
+    color: rgba(14, 126, 202, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 19px;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .rejected-status:hover .status-info {
+    display: block;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status p {
+    margin-bottom: 0;
+    color: rgba(109, 114, 120, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    top: 10px;
+    border-radius: 10px;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status.active::before {
+    background: #6DD400;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status.declined::before {
+    background: #E02020;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status.snoozed::before {
+    background: #F7B500;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status.inprogress::before {
+    background: #32C5FF;
+}
+
+.listing-section .listing-item .listing-details .establishment-status .current-status.onreview::before {
+    background: #6236FF;
+}

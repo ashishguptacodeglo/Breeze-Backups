@@ -1,0 +1,87 @@
+.img-responsive {
+    width: 100%;
+    border-radius: 10px;
+    height: 176px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.091083);
+}
+
+.gallery-image-list {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.gallery_product {
+    height: 176px;
+    width: 176px;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+ngx-dropzone {
+    max-height: 62px;
+    width: 262px;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    background: #fff;
+    cursor: pointer;
+    color: #979797;
+    border: 2px dashed #979797;
+    border-radius: 10px;
+    font-size: 12px;
+    overflow-x: auto;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.back-link span {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+ngx-dropzone-label {
+    gap: 10px;
+    display: flex;
+    margin: 10px 16px;
+    text-align: left !important;
+}
+
+.title-1 {
+    color: #000000;
+    font-weight: 700;
+}
+
+.like-anchor {
+    color: #0E7ECA;
+    font-weight: 700;
+}
+
+.remove-uploaded {
+    position: absolute;
+    top: -14px;
+    right: -4px;
+}
+
+.removable-icons {
+    position: relative;
+}
+
+.remove-uploaded .remove img {
+    width: 16px;
+}

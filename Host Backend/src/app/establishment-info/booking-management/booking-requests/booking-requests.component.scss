@@ -1,0 +1,154 @@
+
+.property-reservations table.dataTable tbody tr td.border-black
+{
+	border-radius: 10px;
+    border: 1px solid rgb(226, 226, 226) !important;
+}
+
+.property-reservations h2 {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 28px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.property-reservations .no-result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	border-radius: 10px;
+	border: 1px solid #E7E7E7;
+}
+
+.property-reservations .no-result p {
+	color: rgba(147, 147, 149, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 21px;
+}
+
+
+.property-reservations thead {
+	display: none;
+}
+
+.property-reservations .single-property-reservation {
+	display: flex;
+	gap: 70px;
+}
+
+.property-reservations .single-property-reservation .user-info {
+	max-width: 360px;
+	width: 100%;
+	display: flex;
+	gap: 40px;
+}
+
+.property-reservations .single-property-reservation .user-info .user-image {
+	max-width: 84px;
+	width: 100%;
+	display: flex;
+}
+
+.property-reservations .single-property-reservation .user-info .booking-user {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 15px;
+}
+
+.property-reservations .single-property-reservation .user-info .booking-user .username {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 18px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+.property-reservations .single-property-reservation .user-info .booking-user .room-type {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.property-reservations .single-property-reservation .user-info .booking-user .room-type .room-type-heading,
+.property-reservations .single-property-reservation .booking-information .information .title {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 16px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	line-height: 24px;
+}
+
+.property-reservations .single-property-reservation .user-info .booking-user .room-type .user-room-type,
+.property-reservations .single-property-reservation .booking-information .information .date {
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	line-height: 24px;
+}
+
+.property-reservations .single-property-reservation .user-info .user-image img {
+	width: 100%;
+}
+
+.property-reservations .single-property-reservation .booking-information {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.property-reservations .single-property-reservation .info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.property-reservations .single-property-reservation .info .information,
+.property-reservations .single-property-reservation .action-buttons .information {
+	max-width: 140px;
+	width: 100%;
+	text-align: center;
+}
+
+.property-reservations .single-property-reservation .action-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.property-reservations .single-property-reservation .action-buttons .information .time-left
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.property-reservations .single-property-reservation .action-buttons .information .time-left .time
+{
+	color: rgba(224,32,32,1);
+	font-family: "Gilroy-Bold";
+}
+
+.dataTable {
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}

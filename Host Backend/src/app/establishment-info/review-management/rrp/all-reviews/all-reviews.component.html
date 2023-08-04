@@ -1,0 +1,112 @@
+<div class="property-reservations-list" *ngIf="fetched">
+   <div  *ngIf="posts.length > 0">
+       <!-- <div class="will-sec review-wrap">
+        <div class="drop-sec">
+          <div class="dropdown">
+            <span>Sort by</span>
+            <a  class="btn btn-secondary dropdown-toggle"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"  >
+              Recent reviews
+            </a>
+            <div class="dropdown-menu" aria-labelledby="collapseExample" id="collapseExample">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+           
+          </div>
+        </div>
+     </div> -->
+      <table datatable   [dtOptions]="dtOptions" class="row-border hover">
+         <thead>
+            <tr>
+               <th>ID</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let review of posts;let i=index">
+               <td>
+                <div class="single-property-reservation" data-bs-toggle="modal" data-bs-target="#reviewRecovery">
+                  <div class="input-ecdiv">
+                     <div class="slice1">
+                        <h5>{{ review.username }}</h5>
+                        <ul class="cao-ul">
+                           <li><span class="r-low">{{review.averageRating | number :'1.1-1'}}</span>
+                              <span class="r-high">{{review.averageRating | number :'1.1-1'}}</span>
+                           </li>
+                           <li *ngFor="let n of numSequence(review.averageRating); let i = index;">
+                              <img src="/assets/img/star-enable.png" alt="class-1" />
+                           </li>
+                           <li *ngFor="let n of numSequenceDisable(review.averageRating); let i = index;">
+                              <img src="/assets/img/star-disable.png" alt="class-1" />
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="slice2">
+                        <p>{{review.usersFeedBack}}</p>
+                     </div>
+                     <div class="slice3">
+                        <ul class="cao-ulnew">
+                           <li *ngFor="let r of review.ratings">
+                              Cat Name
+                              <span class="r-low">{{r.rating | number :'1.1-1'}}</span>
+                              <span class="r-high">{{r.rating | number :'1.1-1'}}</span>
+                           </li>
+                        </ul>
+                        <h6 (click)="reviewResolveIndividual(review)" style="cursor: pointer;" data-toggle="modal"
+                           data-target="#feedbackModal">Resolve</h6>
+                     </div>
+                  </div>
+               </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+
+
+<div class="modal fade modal-lg" id="reviewRecovery" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Add Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form [formGroup]="addtaskForm">
+               <div class="form-field name">
+                  <label>Name</label>
+                  <textarea name="" class="form-control" placeholder="Jose Fisher"></textarea>
+               </div>
+
+               <div class="select-dateNtime">
+                  <div class="select-date">
+                     <div class="form-field">
+                        <label>Deal/Offer from</label>
+                        <input type="date" name="comming-date">
+                     </div>
+                  </div>
+
+                  <div class="select-date">
+                     <div class="form-field">
+                        <label>Deal/Offer to</label>
+                        <input type="date" name="comming-date">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="form-field">
+                  <label>Notification content</label>
+                  <textarea name="" class="form-control" placeholder="Hi {firstname}, you have offered 30% OFF on all services, kindly make use of it before 31st May, 2020"></textarea>
+               </div>
+
+               <div class="action-btn">
+                  <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn save">Send</button>
+               </div>
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

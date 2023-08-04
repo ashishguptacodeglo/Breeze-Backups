@@ -1,0 +1,222 @@
+.property-timings-section {
+  padding-bottom: 70px;
+}
+
+.property-timings-section .common-header {
+  margin: 50px 0 80px;
+}
+
+
+.property-timings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.property-timings .info-and-contents {
+  max-width: 320px;
+  width: 100%;
+}
+
+.property-timings .timings-list {
+  max-width: 370px;
+  width: 100%;
+}
+
+.property-timings .info-and-contents h4 {
+  color: rgba(24, 37, 37, 1);
+  font-family: "Gilroy-Bold";
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.property-timings .info-and-contents p {
+  color: rgba(24, 37, 37, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.current-location-link img {
+  margin-right: 1%;
+}
+
+button[disabled] {
+  background-color: #93A5AE;
+  border: none;
+}
+
+
+.property-timings .extra-checkboxes {
+  margin-top: 15px;
+  max-width: 258px;
+  width: 100%;
+}
+
+
+.day-name-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 70px;
+}
+
+.single-timing-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.all-day-services {
+  padding-bottom: 54px;
+}
+
+.all-day-services label,
+.apply-to-all label {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.opening-time-title span {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Gilroy-Medium";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.single-timing {
+  padding-bottom: 70px;
+}
+
+.single-timing-container {
+  padding-bottom: 0;
+  padding-top: 30px;
+}
+
+.single-timing-container .open-time,
+.single-timing-container .close-time {
+  width: 122px;
+}
+
+.day-name {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  font-family: 'Gilroy-Bold';
+  width: 75px;
+}
+
+.day-name.break-hours {
+  font-weight: 500;
+}
+
+.open-close-time-picker.ng-select {
+  font-weight: 500;
+}
+
+.ng-select.open-close-time-picker ::ng-deep .ng-select-container {
+  height: 50px;
+  background-color: #fff !important;
+  border: 1px solid RGB(151, 151, 151);
+}
+
+
+.ng-select,
+.ng-select.ng-select-single .ng-select-container {
+  background-color: #fff !important;
+}
+
+
+.toggle-status {
+  color: RGB(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Gilroy-Medium";
+}
+
+.single-timing .switch {
+  position: relative;
+  display: flex;
+  width: 39px;
+  height: 19px;
+}
+
+.single-timing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.single-timing .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(216 216 216 / 43%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.single-timing .slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 0;
+  top: 0px;
+  bottom: 0px;
+  background-color: #1EBBBA;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.single-timing input:checked+.slider {
+  background-color: rgba(30, 187, 186, 0.34);
+}
+
+.single-timing input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.single-timing input:checked+.slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.single-timing .slider.round {
+  border-radius: 9.5px;
+}
+
+.single-timing .slider.round:before {
+  border-radius: 50%;
+}
+
+.add-button {
+  background: #1EBBBA;
+  color: #fff;
+  border: none;
+  width: 95px;
+  height: 41px;
+  border-radius: 7px;
+}

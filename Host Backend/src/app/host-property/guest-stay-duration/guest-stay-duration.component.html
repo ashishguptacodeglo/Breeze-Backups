@@ -1,0 +1,88 @@
+<main>
+    <div class="stepbar-section">
+        <img src="assets/img/breeze_brand_logo.svg" alt="Logo" class="img-fluid">
+        <div class="step-list">
+            <ul>
+                <li class="active">
+                    <span class="num">1</span>
+                    <p>Primary Info</p>
+                </li>
+
+                <li class="active">
+                    <span class="num">2</span>
+                    <p>Basic info</p>
+                </li>
+
+                <li>
+                    <span class="num">3</span>
+                    <p>Location</p>
+                </li>
+
+                <li>
+                    <span class="num">4</span>
+                    <p>Detailed info</p>
+                </li>
+
+                <li>
+                    <span class="num">5</span>
+                    <p>Finish</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+
+    <div class="progressbar">
+        <span style="width: 40%"></span>
+    </div>
+
+    <form [formGroup]="stayDuration">
+
+        <div class="stay-duration">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>How many days a guest can stay at your property?</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group stayDurationDropdown">
+                            <select class="form-select" id="stayDuration" formControlName="stayDuration">
+                                <option value="" selected>Select the number of guests</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button class="goback-btn">
+                    Back
+                </button>
+            </div>
+
+            <div class="right-btn">
+                <button class="save-next-btn" [disabled]="stayDuration.invalid" (click)="getstayDuration()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+</main>

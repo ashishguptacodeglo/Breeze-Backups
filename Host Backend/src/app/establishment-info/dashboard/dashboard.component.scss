@@ -1,0 +1,426 @@
+.dataTable {
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}
+
+::ng-deep {
+	.dashboard-bookings-list {
+		.dataTables_wrapper table.dataTable {
+			margin-bottom: 0;
+		}
+
+		.dataTables_wrapper table.dataTable>thead>tr>th:last-child {
+			width: 5%;
+		}
+	}
+}
+
+
+.dashboard-stats-cards {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-bottom: 25px;
+}
+
+.dashboard-stats-cards .single-stat-data {
+	max-width: 286px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid rgba(226, 226, 226, 1);
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	background-color: rgba(255, 255, 255, 1);
+	min-height: 130px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.dashboard-stats-cards .single-stat-data .stat-data {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.dashboard-stats-cards .single-stat-data .stat-details {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.dashboard-stats-cards .single-stat-data .stat-details .stat-value {
+	color: rgba(74, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 20px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+}
+
+.dashboard-stats-cards .single-stat-data .stat-details .stat-label {
+	color: rgba(105, 105, 105, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	line-height: 23px;
+}
+
+.export-and-datepicker {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 15px;
+	margin-bottom: 50px;
+}
+
+.export-and-datepicker .export-button {
+	color: rgba(30, 187, 186, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 14px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid rgba(30, 187, 186, 1);
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	background-color: rgba(255, 255, 255, 1);
+	width: 150px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.date-range-picker {
+	padding-left: 45px;
+	background: url(/assets/img/calendar.png) no-repeat;
+	background-position: 12px 50%;
+	border-radius: 2px;
+	border: 1px solid rgba(226, 226, 226, 1);
+	box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5);
+	background-color: rgba(255, 255, 255, 1);
+	height: 36px;
+	width: 195px;
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 14px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	outline: none;
+}
+
+.filter-datepicker {
+	position: relative;
+}
+
+::ng-deep {
+	.barchart-section {
+		.apexcharts-text tspan {
+			color: rgba(74, 74, 74, 1);
+			font-family: "Gilroy-Bold";
+			font-size: 16px;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+	}
+
+	.filter-datepicker {
+		ngx-daterangepicker-material {
+			position: relative;
+		}
+	}
+
+	.filter-datepicker {
+		.md-drppicker {
+			top: 50px !important;
+			left: unset !important;
+			right: 0 !important;
+			width: 750px !important;
+			border: 1px solid rgb(226, 226, 226);
+			box-shadow: 0px 4px 8px rgba(230, 230, 230, 0.5) !important;
+		}
+
+		.md-drppicker .ranges {
+			width: 150px;
+		}
+
+		.md-drppicker td {
+			height: 38px;
+			border: none;
+		}
+
+		.md-drppicker {
+			width: 100%;
+			color: rgba(3, 3, 3, 1);
+			font-family: "Gilroy-Medium";
+			font-size: 14px;
+			font-weight: 600;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+			box-shadow: none;
+			padding: 0px;
+			margin-top: 0px;
+		}
+
+		.md-drppicker .calendar {
+			max-width: 290px;
+			width: 100%;
+		}
+
+		.md-drppicker th.month {
+			color: rgba(3, 3, 3, 1);
+			font-family: "Gilroy-Bold";
+			font-size: 14px;
+			font-weight: 700;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+
+
+		.md-drppicker td.active,
+		.md-drppicker td.active:hover {
+			background-color: #56A8A2 !important;
+			color: #fff !important;
+		}
+
+		.md-drppicker td.start-date,
+		.md-drppicker td.end-date,
+		.md-drppicker td.in-range {
+			border-radius: 30px !important;
+		}
+
+		.md-drppicker td.in-range {
+			background-color: rgb(141 216 210 / 20%);
+			color: #000;
+		}
+
+		.md-drppicker th.available.next {
+			left: 6px;
+			position: relative;
+		}
+
+		.md-drppicker .week-days th span {
+			color: rgba(3, 3, 3, 1);
+			font-family: "Gilroy-Bold";
+		}
+
+		.md-drppicker .ranges ul li button.active {
+			background-color: rgb(14, 126, 202);
+			color: #fff;
+		}
+
+		.md-drppicker .btn {
+			border-radius: 5px;
+			background-color: rgb(14, 126, 202);
+			width: 90px;
+			height: 33px;
+			border: none;
+			color: rgb(255, 255, 255);
+			font-family: "Gilroy-Bold";
+			font-size: 14px;
+			text-transform: capitalize;
+			line-height: 18px;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+			box-shadow: none;
+		}
+	}
+
+	.apexcharts-tooltip {
+
+		.tooltip-box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 34px;
+			border-radius: 6px;
+			border-color: rgba(190, 190, 190, 1);
+			background-color: rgba(255, 255, 255, 1);
+			padding: 10px;
+			width: 150px;
+		}
+
+		.tooltip-box .date {
+			color: rgba(55, 55, 55, 1);
+			font-family: "Gilroy-Bold";
+			font-size: 17px;
+			font-weight: 700;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+
+		.tooltip-box .total-booking {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.tooltip-box .total-booking span:first-child {
+			color: rgba(55, 55, 55, 1);
+			font-family: "Gilroy-Bold";
+			font-size: 25px;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+
+		.tooltip-box .total-booking span:last-child {
+			opacity: 1;
+			color: rgba(55, 55, 55, 1);
+			font-family: "Gilroy-Medium";
+			font-size: 15px;
+			font-weight: 600;
+			font-style: normal;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+	}
+}
+
+.barchart-section .barchart-wrapper {
+	border-radius: 4px;
+	border: 1px solid rgba(242, 242, 242, 1);
+	box-shadow: 3px 3px 9px rgba(218, 218, 218, 0.136528);
+	padding: 20px 15px 10px 0;
+}
+
+.barchart-section .barchart-wrapper hr {
+	position: relative;
+	top: -53px;
+	border-color: rgb(185 185 185 / 64%);
+	opacity: 1;
+	margin: 0 10px 0 20px;
+}
+
+.barchart-section,
+.piechart-section {
+	margin-bottom: 25px;
+}
+
+.barchart-section img,
+.piechart-section img {
+	width: 100%;
+}
+
+.piechart-section .heading {
+	color: rgba(55, 55, 55, 1);
+	font-family: "Gilroy-Bold";
+	font-size: 18px;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.piechart-section .piechart-wrapper {
+	border-radius: 4px;
+	border: 1px solid rgba(242, 242, 242, 1);
+	box-shadow: 3px 3px 9px rgba(218, 218, 218, 0.136528);
+	padding: 25px;
+}
+
+.piechart-section .state-list {
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.piechart-section .state-list .chart {
+	max-width: 140px;
+	text-align: center;
+}
+
+.piechart-section .state-list .state-name {
+	color: rgba(74, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 17px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+
+.piechart-section .chart-label {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 40px;
+}
+
+.piechart-section .chart-label span {
+	color: rgba(105, 105, 105, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: left;
+	position: relative;
+}
+
+.piechart-section .chart-label span::before {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	content: "";
+	left: -20px;
+	top: 6px;
+	border-radius: 17px;
+}
+
+.piechart-section .chart-label span:first-child::before {
+	background: #0E7ECA;
+}
+
+.piechart-section .chart-label span:last-child::before {
+	background: #019F98;
+}
+
+.bookings-list .status {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	opacity: 1;
+	color: rgba(68, 74, 74, 1);
+	font-family: "Gilroy-Medium";
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	line-height: 23px;
+	text-transform: capitalize;
+}
+
+.bookings-list .status .dot {
+	height: 8px;
+	width: 8px;
+	display: block;
+	border-radius: 10px;
+}
+
+.bookings-list .status .dot.booked {
+	background-color: #1EBBBA;
+}
+
+.bookings-list .status .dot.cancelled {
+	background-color: #E02020;
+}
+
+.bookings-list .status .dot.pending {
+	background-color: #F7B500;
+}

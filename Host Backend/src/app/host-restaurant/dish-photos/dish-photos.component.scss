@@ -1,0 +1,87 @@
+.property-amenities{
+	min-height : 69vh;
+}
+
+.img-responsive
+{
+     width: 100%;
+     border-radius: 10px;
+}
+.gallery_product{
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
+    padding-top: calc(var(--bs-gutter-x) * .5);
+}
+.gallery {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.dropzone-container ngx-dropzone {
+    height: 280px;
+    width: 489px
+}
+
+.gallery_product ngx-dropzone {
+    height: 277px;
+    width: 277px;
+}
+.back-link span{
+     font-size: 27px;
+  font-weight: 700;
+}
+.back-link button {
+    background: none;
+    border: none;
+    margin-right: 3%;
+    vertical-align: super;
+    width: 15px;
+}
+
+ngx-dropzone-label {
+    display:block;
+    margin: 10px 16px;
+}
+.title-1 {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 35px;
+      font-size: 18px;
+      font-weight:700;
+      font-family:'Gilroy-Bold';
+}
+.like-anchor {
+    color: #0E7ECA;
+    font-weight: 700;
+    font-size: 16px;
+    font-weight:500;
+      font-family:'Gilroy-Medium';
+}
+.dropzone-element {
+    float: right;
+}
+.remove-uploaded {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.removable-icons{
+    position:relative;
+}
+.remove {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+}
+.upload-icon img {
+	width: 54px;
+	height: 54px;
+	margin-bottom: 33px;
+}
+
+.dropzone-container {
+    display: flex;
+    justify-content: center;
+}

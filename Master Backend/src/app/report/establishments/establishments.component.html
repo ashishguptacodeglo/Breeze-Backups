@@ -1,0 +1,3 @@
+<app-est-list *ngIf="page == 'list'" (BackEvent)="ShowTab($event)"></app-est-list>
+<app-est-details *ngIf="page == 'est-details'" (BackEvent)="ShowTab($event)"></app-est-details>
+<app-report-details *ngIf="page == 'details'" (BackEvent)="ShowTab($event)"></app-report-details>

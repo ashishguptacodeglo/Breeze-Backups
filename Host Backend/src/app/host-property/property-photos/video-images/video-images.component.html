@@ -1,0 +1,58 @@
+<div class="video-image-gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="gallery">
+					<div class="back-link" (click)="SendBack()">
+						<img src="assets/img/host-property/back.svg" alt="Icon">
+						<span>Video/360</span>
+					</div>
+					<div class="dropzone-for-content">
+						<div class="dropzone-element">
+							<ngx-dropzone (change)="onSelect($event)" accept="video/mp4,video/x-m4v,video/*, image/*">
+								<ngx-dropzone-label>
+									<div class="upload-icon">
+										<img src="assets/img/host-property/dropzone-arrow.svg" alt="Icon">
+									</div>
+									<div class="text-fields">
+										<span class="title-1">
+											Drop files or <span class="like-anchor">browse your device</span>
+										</span>
+										<div class="title-2">
+											Images(jpg), Video(mp4)
+										</div>
+									</div>
+								</ngx-dropzone-label>
+							</ngx-dropzone>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="gallery-image-list">
+					<div class="gallery_product" *ngFor="let image of imagesArray;let i = index">
+						<img src="assets/img/host-property/images/Bitmap{{i+1}}.png" class="img-responsive">
+						<div class="remove-uploaded">
+							<a href="javascript:void(0)" class="remove" (click)="onRemove(image)">
+								<img src="assets/img/remove.svg" alt="remove">
+							</a>
+						</div>
+					</div>
+
+					<div class="gallery_product removable-icons" *ngFor="let f of files">
+						<app-preview-image [file]="f"></app-preview-image>
+
+						<div class="remove-uploaded">
+							<a href="javascript:void(0)" class="remove" (click)="onRemove(f)">
+								<img src="assets/img/remove.svg" alt="remove">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

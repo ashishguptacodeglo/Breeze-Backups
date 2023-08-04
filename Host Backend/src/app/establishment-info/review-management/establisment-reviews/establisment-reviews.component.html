@@ -1,0 +1,149 @@
+<div class="reviews-stats">
+   <div class="main-container">
+      <div class="overall-reviews">
+         <div class="rating-heading">
+            Overall Rating
+         </div>
+         <div class="o-rating-wrap">
+            <div class="rating-count">
+               4.9
+            </div>
+            <div class="review-stars">
+               <ul class="star-list">
+                  <li *ngFor="let n of numSequence(5); let i = index;">
+                     <img src="/assets/img/star-enable.png" alt="class-1" />
+                  </li>
+                  <li *ngFor="let n of numSequenceDisable(5); let i = index;">
+                     <img src="/assets/img/star-disable.png" alt="class-1" />
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="total-reviews">
+         <div class="rating-heading">
+            Total Reviews
+         </div>
+         <div class="rating-count">
+            1,456
+         </div>
+      </div>
+   </div>
+   <div class="category-container">
+      <div class="heading">
+         Review Category
+         <!-- (click)="openFormModal()" -->
+         <a href="javascript:void(0)" data-bs-toggle="modal" class="btn" data-bs-target="#categoriesModal">Manage</a>
+      </div>
+      <div class="cat-list">
+         <div class="single-cat" *ngFor="let cat of catList;">
+            <div class="cat-name">
+               {{cat.catname}}
+            </div>
+            <div class="rating-wrap">
+               <div class="rating-count">
+                  {{cat.rating | number :'1.1-1' }}
+               </div>
+               <div class="rating-list">
+                  {{cat.total}} Review
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="property-reservations-list" *ngIf="fetched">
+   <div *ngIf="posts.length > 0">
+      <div class="will-sec review-wrap">
+         <div class="table-title">
+            Overall Reviews
+         </div>
+         <div class="filter-dropdown">
+            <label>Sort by</label>
+            <ng-select [items]="reviewSort" bindLabel="name" placeholder="Recent reviews" bindLabel="name" bindValue="value"
+               autocomplete="off" [searchable]="false" [clearable]="false">
+            </ng-select>
+         </div>
+      </div>
+      <table datatable [dtOptions]="dtOptions" class="row-border hover">
+         <thead>
+            <tr>
+               <th>ID</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let review of posts;let i=index">
+               <td>
+                  <div class="single-property-reservation">
+                     <div class="input-ecdiv">
+                        <div class="slice1">
+                           <h5>{{ review.username }}</h5>
+                           <ul class="cao-ul">
+                              <li><span class="r-low">{{review.averageRating | number :'1.1-1'}}</span>
+                                 <span class="r-high">{{review.averageRating | number :'1.1-1'}}</span>
+                              </li>
+                              <li *ngFor="let n of numSequence(review.averageRating); let i = index;">
+                                 <img src="/assets/img/star-enable.png" alt="class-1" />
+                              </li>
+                              <li *ngFor="let n of numSequenceDisable(review.averageRating); let i = index;">
+                                 <img src="/assets/img/star-disable.png" alt="class-1" />
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="slice2">
+                           <p>{{review.usersFeedBack}}</p>
+                        </div>
+                        <div class="slice3">
+                           <ul class="cao-ulnew">
+                              <li *ngFor="let r of review.ratings">
+                                 Cat Name
+                                 <span class="r-low">{{r.rating | number :'1.1-1'}}</span>
+                                 <span class="r-high">{{r.rating | number :'1.1-1'}}</span>
+                              </li>
+                           </ul>
+                           <h6 (click)="reviewResolveIndividual(review)" style="cursor: pointer;" data-toggle="modal"
+                              data-target="#feedbackModal">Resolve</h6>
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+
+
+<div class="modal fade modal-lg" id="categoriesModal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Manage Category</h5>
+            <p class="modal-subtitle">Any changes made on this will be reflected on the user’s mobile app.</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form [formGroup]="manageCategory">
+               
+
+               <div class="form-field">
+                  <div class="taskType">
+                     <div class="form-check" *ngFor="let taskType of taskTypeArray; let i = index;">
+                        <input type="checkbox" id="taskType-{{i}}" class="form-check-input"
+                           (change)="bedTypeOnChange($event)" [value]="taskType" name="taskType" />
+                        <label for="taskType-{{i}}" class="form-check-label">{{taskType}}</label>
+                     </div>
+                  </div>
+               </div>
+
+               
+
+               
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

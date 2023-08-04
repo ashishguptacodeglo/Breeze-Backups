@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17.7555556px" height="16.2444444px" viewBox="0 0 17.7555556 16.2444444" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 15@3x</title>
+    <g id="Booking-management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mgmt-property" transform="translate(-16.9333, -111.4333)" stroke="#0E7ECA" stroke-width="1.13333333">
+            <g id="Group-14" transform="translate(-2, 68)">
+                <g id="Group-15" transform="translate(19.5, 44)">
+                    <path d="M16.6222222,8.49147981 C16.6222222,3.80176501 12.901211,0 8.31111111,0 C3.72101119,0 0,3.80176501 0,8.49147981" id="Shape" stroke-linecap="round"></path>
+                    <circle id="Oval" cx="8.31111111" cy="12.8444444" r="2.26666667"></circle>
+                    <line x1="8.31111111" y1="3.4" x2="8.31111111" y2="10.5777778" id="Line" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

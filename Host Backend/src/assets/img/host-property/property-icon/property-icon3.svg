@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="45px" viewBox="0 0 50 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 12</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12" transform="translate(2.000000, 0.000000)">
+            <rect id="Rectangle" x="1" y="0" width="45" height="45"></rect>
+            <g id="Group-23" transform="translate(0.000000, 6.000000)" stroke="#000000">
+                <line x1="5.78136273" y1="14.3320113" x2="23.1123946" y2="0.681561941" id="Line-4" fill="#D8D8D8" stroke-linecap="round"></line>
+                <line x1="1.98473406" y1="28.8467489" x2="18.7701591" y2="15.5324911" id="Line-4" fill="#D8D8D8" stroke-linecap="square" transform="translate(10.377447, 22.189620) rotate(-51.682661) translate(-10.377447, -22.189620) "></line>
+                <line x1="26.6868212" y1="28.7290365" x2="43.9583506" y2="15.0306377" id="Line-4" fill="#D8D8D8" stroke-linecap="square" transform="translate(35.322586, 21.879837) rotate(-51.682661) translate(-35.322586, -21.879837) "></line>
+                <line x1="13.9158684" y1="15.0894613" x2="13.9158684" y2="31.430509" id="Line-5" fill="#D8D8D8" stroke-linecap="round"></line>
+                <line x1="32.4688157" y1="15.0894613" x2="32.4688157" y2="31.430509" id="Line-5" fill="#D8D8D8" stroke-linecap="round"></line>
+                <line x1="13.9048452" y1="21.0640592" x2="32.4577925" y2="21.0640592" id="Line-5" fill="#D8D8D8" stroke-linecap="square"></line>
+                <line x1="13.9048452" y1="30.2026545" x2="32.4577925" y2="30.2026545" id="Line-5" fill="#D8D8D8" stroke-linecap="square"></line>
+                <ellipse id="Oval" fill="#FFFFFF" cx="18.9328498" cy="28.2939572" rx="1.44883901" ry="1.43614308"></ellipse>
+                <ellipse id="Oval" fill="#FFFFFF" cx="18.9328498" cy="19.2328075" rx="1.44883901" ry="1.43614308"></ellipse>
+                <path d="M29.6329111,18.1838931 C30.1134623,18.1838931 30.5485197,18.3786749 30.8634394,18.6935945 C31.178359,19.0085142 31.3731408,19.4435716 31.3731408,19.9241228 L31.3731408,20.5915049 L24.4218777,20.5915049 L24.4218777,18.1838931 Z" id="Rectangle"></path>
+                <path d="M29.3990505,27.3224884 C29.8796016,27.3224884 30.314659,27.5172703 30.6295787,27.8321899 C30.9444983,28.1471095 31.1392801,28.582167 31.1392801,29.0627181 L31.1392801,29.7301003 L24.188017,29.7301003 L24.188017,27.3224884 Z" id="Rectangle"></path>
+                <line x1="35.3420743" y1="32.9019777" x2="10.3541509" y2="32.9031928" id="Line-4" fill="#D8D8D8" stroke-linecap="square"></line>
+                <line x1="23.0015871" y1="13.8976301" x2="40.5050001" y2="0" id="Line-4" stroke-linecap="round" transform="translate(31.481321, 7.285069) scale(1, -1) translate(-31.481321, -7.285069) "></line>
+            </g>
+        </g>
+    </g>
+</svg>

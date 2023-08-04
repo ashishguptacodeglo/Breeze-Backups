@@ -1,0 +1,18 @@
+<div class="est-photos">
+	<h5 class="title" (click)="ShowImage()"> <img src="assets/img/host-backend/arrow-back.svg"
+			alt="arrow-back"><span>Establishment Images</span></h5>
+	<div class="category-images">
+		<div class="category-image" *ngFor="let photo of photos" [ngClass]="{'newly-added': photo.newlyAdded}">
+			<div class="image-container">
+				<img src="assets/img/dashboard/restaurant-dish1.svg" class="photos">
+				<div class="rejected-status">
+					<img src="assets/img/ion-information-red.svg" alt="icon">
+					<div class="status-info">
+						<p>This image is newly added by the host. </p>
+						<a href="#!">Click here to approve </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

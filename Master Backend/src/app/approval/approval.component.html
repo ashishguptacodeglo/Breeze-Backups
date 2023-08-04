@@ -1,0 +1,70 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="module-data">
+
+			<div class="header">
+				<h4 class="module-title">Establishment Approval</h4>
+
+				<div class="filter-sec">
+					<div class="searchbar">
+					</div>
+					<div class="list-filters">
+						<div class="date-filter">
+							<span class="filter-label">Date</span>
+							<div class="filter-datepicker">
+								<input class="date-range-picker" type="text" ngxDaterangepickerMd [(ngModel)]="selected"
+									[showCustomRangeLabel]="true" [alwaysShowCalendars]="true" [ranges]="ranges"
+									[linkedCalendars]="true" [isInvalidDate]="isInvalidDate" [showClearButton]="false"
+									(change)="choosedDate($event)" placeholder="This month">
+							</div>
+						</div>
+						<div class="sortby">
+							<span class="filter-label">Sort by</span>
+							<div class="filter-dropdown">
+								<ng-select [items]="estfilters" bindLabel="name" bindValue="value" autocomplete="off"
+									[searchable]="false" [clearable]="false" placeholder="Select">
+								</ng-select>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="est-list-container" *ngIf="fetched">
+				<table datatable [dtOptions]="dtOptions" class="row-border hover">
+					<thead>
+						<tr>
+							<th>Est. ID</th>
+							<th>Establishment name</th>
+							<th>Location</th>
+							<th>Date</th>
+							<th>Contact person</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let post of posts;let i=index">
+							<td>
+								<a routerLink="/approval/1234" class="view-details">EST{{i+100}}</a>
+							</td>
+
+							<td> Loving Earth Cafe</td>
+							<td> Florida </td>
+							<td> 02/11/2023 </td>
+							<td> Helen Bishop </td>
+							<td> <span class="status-btn {{post.status}}">{{post.status}}</span> </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+		</section>
+	</div>
+</div>

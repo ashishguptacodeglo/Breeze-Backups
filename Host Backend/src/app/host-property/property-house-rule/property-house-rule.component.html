@@ -1,0 +1,124 @@
+<main>
+    <app-steps [width]="94" [active]="4"></app-steps>
+    <form [formGroup]="propertyRulesForm">
+        <div class="property-rules">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Tell us about the House rules</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="property-rules-data">
+
+                            <div class="rules-list">
+                                <div class="left-sec">
+                                    <label for="RulesName" class="form-label d-block">Tell us at what time check-in and
+                                        checkout is done</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <div class="checkin-checkout">
+                                        <div class="checkin-time">
+                                            <label class="form-label d-block">Check-in Time</label>
+                                            <ng-select [items]="timeArray" bindLabel="name"
+                                                class="open-close-time-picker" bindValue="value" autocomplete="off"
+                                                [clearable]="false" [searchable]="false" placeholder="Select"
+                                                (change)="getSelectedValue($event)"
+                                                formControlName="CheckinTime">
+                                            </ng-select>
+                                        </div>
+
+                                        <div class="checkout-time">
+                                            <label class="form-label d-block">Check-out Time</label>
+                                            <ng-select [items]="timeArray" bindLabel="name"
+                                                class="open-close-time-picker" bindValue="value" autocomplete="off"
+                                                [clearable]="false" [searchable]="false" placeholder="Select"
+                                                (change)="getSelectedValue($event)"
+                                                formControlName="CheckoutTime">
+                                            </ng-select>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout-rule">
+                                        <label class="form-label d-block mt-4">Do you want to add any rules upon
+                                            checking in or out?</label>
+                                        <textarea class="form-control" formControlName="CheckoutRules"></textarea>
+                                        <span class="tips">Example: Guests are required to show a photo identification
+                                            and credit card upon check-in</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="rules-list">
+                                <div class="left-sec">
+                                    <label for="RulesName" class="form-label d-block">Do you have quite hours?</label>
+                                    <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                                </div>
+                                <div class="right-sec">
+                                    <div class="mb-5">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" value="1" name="quiteHours"
+                                                id="quiteHoursYes" formControlName="quiteHours" (change)="onQuiteHoursChange('1')">
+                                            <label class="form-check-label quiteHours" for="quiteHoursYes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" value="0" name="quiteHours"
+                                                id="quiteHoursNo" formControlName="quiteHours" (change)="onQuiteHoursChange('0')">
+                                            <label class="form-check-label quiteHours" for="quiteHoursNo">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="checkin-checkout quiteHoursTiming" [hidden]="!showQuiteHoursTiming">
+                                        <div class="checkin-time">
+                                            <label class="form-label d-block">From</label>
+                                            <ng-select [items]="timeArray" bindLabel="name"
+                                                class="open-close-time-picker" bindValue="value" autocomplete="off"
+                                                [clearable]="false" [searchable]="false" placeholder="Select"
+                                                (change)="getSelectedValue($event)"
+                                                formControlName="quiteHoursCheckinTime">
+                                            </ng-select>
+                                        </div>
+
+                                        <div class="checkout-time">
+                                            <label class="form-label d-block">To</label>
+                                            <ng-select [items]="timeArray" bindLabel="name"
+                                                class="open-close-time-picker" bindValue="value" autocomplete="off"
+                                                [clearable]="false" [searchable]="false" placeholder="Select"
+                                                (change)="getSelectedValue($event)"
+                                                formControlName="quiteHoursCheckoutTime">
+                                            </ng-select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button class="goback-btn" (click)="goBack()">
+                    Back
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="save-next-btn" [disabled]="propertyRulesForm.invalid" (click)="getPropertyRulesInfo()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+</main>

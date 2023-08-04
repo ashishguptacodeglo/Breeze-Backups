@@ -1,0 +1,40 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="establishment-info">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('requests')" [class]="{'active': page=='requests'}">
+						Requests
+					</span>
+					<span class="links" (click)="tabChange('upcoming')" [class]="{'active': page=='upcoming'}">
+						Upcoming
+					</span>
+					<span class="links" (click)="tabChange('curretly-hosting')"
+						[class]="{'active': page=='curretly-hosting'}">
+						Curretly Hosting
+					</span>
+					<span class="links" (click)="tabChange('declined')" [class]="{'active': page=='declined'}">
+						Declined
+					</span>
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'requests'">
+					<app-booking-requests></app-booking-requests>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'upcoming'">
+					<app-upcoming-bookings></app-upcoming-bookings>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'curretly-hosting'">
+					<app-currently-hosting></app-currently-hosting>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'declined'">
+					<app-declined></app-declined>
+				</ng-template>
+			</div>
+		</section>
+	</div>
+</div>

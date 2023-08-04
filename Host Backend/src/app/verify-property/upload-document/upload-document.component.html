@@ -1,0 +1,78 @@
+
+<app-menus [isfixed]="false"></app-menus>
+
+<form>
+    <div class="upload-document">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="common-header">
+                        <h2>Upload documents for verification</h2>
+                        <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer
+                            et elit eget elit facilisis tristique. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="document-details">
+                        <div class="document-heading">
+                            <span class="name">Document Name</span>
+                            <span class="status">Status</span>
+                        </div>
+
+                        <div *ngFor="let document of documents;let i=index" class="document-list"
+                            [ngClass]="{'errorborder': document.exceedSize}">
+                            <div class="document-name">
+                                <h6>Document {{ i+1 }}</h6>
+                                <span class="format">(File format: "PDF, DOCX"; Size upto {{faxFileSize}}MB)</span>
+                                <div class="error-msg" *ngIf="document.exceedSize">
+                                    <span>Document size should not exceed {{faxFileSize}}MB</span>
+                                </div>
+                                <div class="error-msg" *ngIf="document.verFailed">
+                                    <span>Your document verification failed. Please upload again for
+                                        verification.</span>
+                                    <img src="assets/img/host-backend/ion-information.svg" alt="Icon">
+                                    <div class="status-info">
+                                        <p>In hac habitasse platea dictumst.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="document-file">
+                                <div class="file-field">
+                                    <input (change)="getFileDetails($event,i)"  type="file" name="uploadfile" id="file{{i}}" style="display:none;"/>
+                                    <label class="file-label" for="file{{i}}">Choose File</label>
+                                </div>
+                                <div class="file-name">
+                                    {{document.fileName}}
+                                </div>
+
+                            </div>
+                            <div class="document-status">
+                                <p class="msg pending">Verification pending</p>
+                            </div>
+                        </div>
+
+                        <button type="button" (click)="generateDiv()" class="addDocumentBtn">
+                            <img src="assets/img/host-backend/plus-white.svg" alt="Plus Icon">
+                            Add Document
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="savestep-section">
+        <div class="left-btn">
+            <button class="goback-btn">
+                Back
+            </button>
+        </div>
+        <div class="right-btn">
+            <button type="button" class="save-next-btn">
+                Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+            </button>
+        </div>
+    </div>
+</form>

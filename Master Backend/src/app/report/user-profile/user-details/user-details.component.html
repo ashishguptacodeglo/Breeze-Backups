@@ -1,0 +1,89 @@
+<div class="userdetails-section">
+
+   <div class="back-link">
+      <a (click)="ShowUserProfile('details')">
+         <img src="assets/img/host-backend/arrow-back.svg" alt="arrow-back">
+         <span>Return Back</span>
+      </a>
+   </div>
+
+   <div class="influencer-profile-container">
+      <div class="influencer-basic-info">
+         <img src="assets/img/host-backend/influencer-post.jpg" class="img-fluid profile-img">
+         <div class="profile-stats-list">
+            <div class="stats">
+               <div class="profile-stat">
+                  <span class="count">13</span>
+                  <span class="stat">Posts</span>
+               </div>
+               <div class="profile-stat">
+                  <span class="count">18k</span>
+                  <span class="stat">Followers</span>
+               </div>
+               <div class="profile-stat">
+                  <span class="count">12</span>
+                  <span class="stat">Following</span>
+               </div>
+            </div>
+            <div class="influencer-short-info">
+               <p> Lost in Nature's Embrace: A Tranquil Escape at Hights mankulam with Pool in the Enchanting Forest
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="influencer-name-and-badge">
+         <h6>Nina Rodriquez
+            <img src="assets/img/host-backend/influencer-badge.svg" alt="badge" class="badge-icon">
+         </h6>
+         <button class="secondaryBtn">Message</button>
+      </div>
+
+      <div class="influencer-social-media">
+         <div class="social-link">
+            <img src="assets/img/host-backend/ig.svg">
+            <a href="https://www.instagram.com/" class="media-link">Nina Rodriquez</a>
+         </div>
+         <div class="social-link">
+            <img src="assets/img/host-backend/ig.svg">
+            <a href="https://www.instagram.com/" class="media-link">Nina Rodriquez</a>
+         </div>
+         <div class="social-link">
+            <img src="assets/img/host-backend/ig.svg">
+            <a href="https://www.instagram.com/" class="media-link">Nina Rodriquez here</a>
+         </div>
+         <div class="social-link">
+            <img src="assets/img/host-backend/twitter.svg">
+            <a href="https://www.instagram.com/" class="media-link">Nina Rodriquez</a>
+         </div>
+      </div>
+   </div>
+   <div class="approve-post-list">
+      <div class="single-approved-post" *ngFor="let post of posts">
+         <div class="post-image-container">
+            <div class="post-author-details">
+               <div class="user-info">
+                  <img src="assets/img/host-backend/influencer-post.jpg" class="rounded-circle profile-img">
+                  <div class="author-details">
+                     <h6>Grace Mitchell
+                        <img src="assets/img/host-backend/influencer-badge.svg" alt="badge" class="badge-icon">
+                     </h6>
+                     <span class="location">London</span>
+                  </div>
+               </div>
+               <div class="post-header-actions">
+                  <!-- <img src="assets/img/host-backend/pin.svg" alt="pin" class="pin"> -->
+               </div>
+            </div>
+            <div class="post-image">
+               <img src="assets/img/host-backend/influencer-post.jpg">
+            </div>
+         </div>
+         <div class="post-description">
+            <p><strong>Grace Mitchell</strong> Lost in Nature's Embrace: A Tranquil Escape at Hights mankulam with
+               Pool in the Enchanting Forest 🌳
+            </p>
+         </div>
+      </div>
+   </div>
+
+</div>

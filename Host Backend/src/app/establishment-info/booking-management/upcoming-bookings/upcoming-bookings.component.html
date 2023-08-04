@@ -1,0 +1,28 @@
+<div class="property-reservations">
+<h2>Your Reservations</h2>
+<div class="property-reservations-list" *ngIf="fetched">
+   <table datatable   [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+         <tr>
+            <th>Guest’s name</th>
+            <th>No of guests</th>
+            <th>Date</th>
+            <th>Booked date</th>
+            <th>Nights</th>
+            <th>Price</th>
+            <th>Type</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let post of posts;let i=index">
+            <td> data -- {{i}} </td>
+            <td> data -- {{i}} </td>
+            <td> data -- {{i}} </td>
+            <td> data -- {{i}} </td>
+            <td> data -- {{i}} </td>
+            <td> data -- {{i}} </td>
+            <td> data -- {{i}} </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

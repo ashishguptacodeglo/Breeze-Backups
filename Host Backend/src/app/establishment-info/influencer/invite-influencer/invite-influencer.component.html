@@ -1,0 +1,37 @@
+<div class="influencer-invites">
+   <div class="no-result" *ngIf="!fetched">
+      <p>There are no invitation sent.</p>
+   </div>
+   <div class="influencer-invites-list" *ngIf="fetched">
+      <div *ngIf="inviteList.length > 0">
+         <table datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+               <tr>
+                  <th>S.No</th>
+                  <th>Name</th>
+                  <th>Followers</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                  <th>Profile</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let invite of inviteList; let i=index">
+                  <td>{{i+1}}</td>
+                  <td>Warren</td>
+                  <td>15k</td>
+                  <td>Alaska</td>
+                  <td><span class="status-btn {{invite.status}}">{{invite.status}}</span></td>
+                  <td><a routerLink="/establishment-info/influencer/invites/INV{{i}}" class="view-details" href="#">View Invite</a></td>
+               </tr>
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="no-result" *ngIf="inviteList.length == 0">
+         <p>There are no invitation sent.</p>
+      </div>
+   </div>
+</div>
+
+<!-- <app-invite-details></app-invite-details> -->

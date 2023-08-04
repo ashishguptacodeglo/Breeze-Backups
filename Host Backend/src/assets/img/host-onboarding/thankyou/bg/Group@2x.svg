@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1442px" height="854px" viewBox="0 0 1442 854" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group@2x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="852"></rect>
+    </defs>
+    <g id="host-onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="thank-you" transform="translate(1.000000, 1.000000)">
+            <g id="Group" transform="translate(720.000000, 426.000000) scale(-1, 1) translate(-720.000000, -426.000000) ">
+                <g id="Oval">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" stroke="#979797" fill="#019F98" xlink:href="#path-1"></use>
+                    <rect id="Rectangle" fill="#019891" mask="url(#mask-2)" x="1185" y="757" width="326" height="216" rx="108"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#019891" mask="url(#mask-2)" x="1355.48148" y="216" width="169.037037" height="112" rx="56"></rect>
+                    <circle fill="#019891" mask="url(#mask-2)" cx="42.5" cy="779.5" r="115.5"></circle>
+                    <circle id="Oval-Copy" fill="#019891" mask="url(#mask-2)" cx="126.5" cy="-78.5" r="115.5"></circle>
+                    <rect id="Rectangle-Copy-7" fill="#019891" mask="url(#mask-2)" x="671.481481" y="-79" width="169.037037" height="112" rx="56"></rect>
+                </g>
+                <rect id="Rectangle-Copy-4" fill="#1EBBBA" opacity="0.200000003" x="145" y="499" width="37" height="37"></rect>
+                <rect id="Rectangle-Copy-5" fill="#1EBBBA" opacity="0.200000003" x="1034" y="668" width="37" height="37"></rect>
+                <rect id="Rectangle-Copy-2" fill="#1EBBBA" opacity="0.200000003" x="464" y="26" width="37" height="37"></rect>
+                <rect id="Rectangle-Copy-3" fill="#1EBBBA" opacity="0.200000003" x="1213" y="63" width="37" height="37"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

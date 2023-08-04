@@ -1,0 +1,142 @@
+<div class="messaging {{expanded}}">
+   <div class="inbox_msg">
+      <div class="inbox_people">
+         <div class="inbox_chat scroll">
+
+
+            <div class="chat_list" *ngFor="let user of usersList;let i = index"
+               [ngClass]="user.active ? 'active_chat' : ''" (click)="OpenMessageBox(i)">
+               <div class="chat_people">
+                  <div class="chat_img">
+                     <img src="{{user.image}}" alt="{{user.userName}}">
+                  </div>
+                  <div class="chat_ib">
+                     <h5>
+                        <span class="name"> {{user.userName}} </span>
+                        <span class="badge"><img src="assets/img/host-backend/influencer-badge.svg" alt="badge"></span>
+                        <span class="dot"></span>
+                        <span class="chat_date">{{user.time}}</span>
+                     </h5>
+                     <p>{{user.latestMessage}}</p>
+                  </div>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+      <div class="mesgs">
+         <div class="message-area">
+            <div class="msg_history">
+               <span class="last-conversation-day">June 05, 2023</span>
+
+               <div class="incoming_msg">
+                  <div class="incoming_msg_img">
+                     <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+                  </div>
+                  <div class="received_msg">
+                     <div class="received_withd_msg">
+                        <p>Test which is a new approach to have all
+                           solutions
+                        </p>
+                        <span class="time_date"> 11:01 AM</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="outgoing_msg">
+                  <div class="sent_msg">
+                     <p>Test which is a new approach to have all
+                        solutions
+                     </p>
+                     <span class="time_date"> 11:01 AM</span>
+                  </div>
+                  <div class="outgoing_msg_img">
+                     <img src="assets/img/host-backend/profile.png" alt="sunil">
+                  </div>
+               </div>
+
+               <div class="incoming_msg">
+                  <div class="incoming_msg_img">
+                     <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+                  </div>
+                  <div class="received_msg">
+                     <div class="received_withd_msg">
+                        <p>Test, which is a new approach to have</p>
+                        <span class="time_date"> 11:01 AM</span>
+                     </div>
+                  </div>
+               </div>
+
+               <span class="last-conversation-day">June 11, 2023</span>
+
+               <div class="incoming_msg">
+                  <div class="incoming_msg_img">
+                     <img src="https://user.ptetutorials.com/images/user-profile.png" alt="sunil">
+                  </div>
+                  <div class="received_msg">
+                     <div class="received_withd_msg">
+                        <p>We work directly with our designers and suppliers,
+                           and sell direct to you, which means quality, exclusive
+                           products, at a price anyone can afford.
+                        </p>
+                        <span class="time_date"> 11:01 AM</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="incoming_msg">
+                  <div class="incoming_msg_img">
+                     <img src="https://user.ptetutorials.com/images/user-profile.png" alt="sunil">
+                  </div>
+                  <div class="received_msg">
+                     <div class="received_with_img">
+                        <span class="img">
+                           <img src="assets/img/host-backend/send-img.png" alt="Image">
+                        </span>
+
+                        <span class="time_date"> 11:01 AM</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="outgoing_msg">
+                  <div class="sent_msg sent_with_img">
+                     <span class="img">
+                        <img src="assets/img/host-backend/send-img.png" alt="Image">
+                     </span>
+                     <span class="time_date">11:05 AM</span>
+                  </div>
+
+                  <div class="outgoing_msg_img">
+                     <img src="assets/img/host-backend/profile.png" alt="sunil">
+                  </div>
+               </div>
+
+               <span class="last-conversation-day">Yesterday</span>
+
+               <div class="outgoing_msg">
+                  <div class="sent_msg">
+                     <p>We work directly with our designers and suppliers, and sell direct to you, which means quality,
+                        exclusive products, at a price anyone can afford. </p>
+                     <span class="time_date">11:01 AM</span>
+                  </div>
+                  <div class="outgoing_msg_img">
+                     <img src="assets/img/host-backend/profile.png" alt="sunil">
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <div class="type_msg">
+            <div class="input_msg_write">
+               <input type="text" class="write_msg" placeholder="Type a message" />
+               <button class="msg_send_btn" type="button">
+                  <img src="assets/img/host-backend/send-icon.svg" alt="Send">
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

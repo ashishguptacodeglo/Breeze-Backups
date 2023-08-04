@@ -1,0 +1,325 @@
+<main>
+   
+    <app-steps [width]="50" [active]="2"></app-steps>
+
+    <form>
+        <div class="property-room-type">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="common-header">
+                            <h2>Tell us about the type of rooms</h2>
+                            <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="addRoomBtn" data-bs-toggle="modal" data-bs-target="#addRoomModal">
+                            <img src="assets/img/host-property/plus-white.svg" alt="Plus Icon"><span>Add Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="property-room-data">
+
+                            <div class="property-room-list">
+                                <div class="heading">
+                                    <div class="room-type">
+                                        <span>Room Name</span>
+                                        <h6>Family room</h6>
+                                    </div>
+
+                                    <div class="action-btn">
+                                        <a href="#" class="edit">Edit</a>
+                                        <span class="separator"></span>
+                                        <a href="#" class="delete">Delete</a>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div class="room-thumnail">
+                                        <img src="assets/img/host-property/room-type1.png" alt="Room">
+                                    </div>
+                                    <div class="room-details">
+
+                                        <div class="room-features">
+                                            <div class="room-detail-list">
+                                                <span class="title">No of Beds</span>
+                                                <span class="content">1</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">No of Guests</span>
+                                                <span class="content">2</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Price per Night</span>
+                                                <span class="content">200$</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">No of rooms</span>
+                                                <span class="content">3</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Is it a shared room?</span>
+                                                <span class="content">No</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Private Bathroom</span>
+                                                <span class="content">Yes</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Type of bed</span>
+                                                <span class="content">Double Bed</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="property-room-list">
+                                <div class="heading">
+                                    <div class="room-type">
+                                        <span>Room Name</span>
+                                        <h6>Shared Room</h6>
+                                    </div>
+                                    <div class="action-btn">
+                                        <a href="#" class="edit">Edit</a>
+                                        <span class="separator"></span>
+                                        <a href="#" class="delete">Delete</a>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div class="room-thumnail">
+                                        <img src="assets/img/host-property/room-type2.png" alt="Room">
+                                    </div>
+                                    <div class="room-details">
+                                        <div class="room-features">
+                                            <div class="room-detail-list">
+                                                <span class="title">No of Beds</span>
+                                                <span class="content">1</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">No of Guests</span>
+                                                <span class="content">2</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Price per Night</span>
+                                                <span class="content">200$</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">No of rooms</span>
+                                                <span class="content">3</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Is it a shared room?</span>
+                                                <span class="content">Yes</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Private Bathroom</span>
+                                                <span class="content">No</span>
+                                            </div>
+
+                                            <div class="room-detail-list">
+                                                <span class="title">Type of bed</span>
+                                                <span class="content">Bunk bed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="savestep-section">
+            <div class="left-btn">
+                <button class="goback-btn" (click)="goBack()">
+                    Back
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="save-next-btn" (click)="moveNext()">
+                    Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- Add Policies Modal -->
+
+    <div class="modal fade modal-xl" id="addRoomModal" tabindex="-1" aria-labelledby="addRoomModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add details about the room</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row" [formGroup]="addRoomForm">
+                        <div class="col-md-12">
+                            <div class="form-field">
+                                <label class="form-label">What do you name your room as?</label>
+                                <input type="text" class="form-control" id="roomName" name="roomName"
+                                    formControlName="roomName">
+                                <span class="tips">Example: Standard room, Deluxe room, Suite etc</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">Is this room Shared?</label>
+
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="Yes" name="roomShared"
+                                            id="roomSharedYes" formControlName="roomShared">
+                                        <label class="form-check-label" for="roomSharedYes">Yes </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="No" name="roomShared"
+                                            id="roomSharedNo" formControlName="roomShared">
+                                        <label class="form-check-label" for="roomSharedNo"> No ( It’s Private Room )
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">Does this room have private Bathroom?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="Yes" name="privateBathroom"
+                                            id="privateBathroomYes" formControlName="privateBathroom">
+                                        <label class="form-check-label" for="privateBathroomYes"> Yes </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="No" name="privateBathroom"
+                                            id="privateBathroomNo" formControlName="privateBathroom">
+                                        <label class="form-check-label" for="privateBathroomNo"> No (shared bathroom
+                                            Available) </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">How many guests can stay at your room?</label>
+                                <ng-select [items]="guestCapacity" bindLabel="name" bindValue="value" autocomplete="off"
+                                    (change)="itemSelected($event)" [clearable]="false" [searchable]="false"
+                                    placeholder="Select" formControlName="guestCapacity">
+                                </ng-select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">How many beds are available?</label>
+                                <ng-select [items]="bedsAvailable" bindLabel="name" bindValue="value" autocomplete="off"
+                                    (change)="itemSelected($event)" [clearable]="false" [searchable]="false"
+                                    placeholder="Select" formControlName="bedsAvailable">
+                                </ng-select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">Tell us the price of this room per night<span>(in $-CAD)</span></label>
+
+                                <div class="price">
+                                    <button type="button" (click)="updatePrice(-1)"><img src="assets/img/minus.svg"
+                                            alt="minus"></button>
+                                    <div class="form-field">
+                                        <input type="number" id="price-input" value="{{price}}" name="price" min="0"
+                                            step="1" class="form-control" placeholder="Price"
+                                            formControlName="pricePerNight" (change)="onPriceChange()">
+                                    </div>
+                                    <button type="button" (click)="updatePrice(1)"><img src="assets/img/plus.svg"
+                                            alt="plus"></button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-field">
+                                <label class="form-label">How many rooms of this type are available?</label>                               
+                                <input type="number" class="form-control" id="roomsAvailable" name="roomsAvailable"
+                                formControlName="roomsAvailable">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-field">
+                                <label class="form-label" style="margin-bottom: 30px;">What kind of bed does this room
+                                    have?</label>
+                                <div class="bedType">
+                                    <div class="form-check form-check-inline" *ngFor="let bedType of bedTypeArray; let i = index;">
+                                        <input type="checkbox" id="bedType-{{i}}" class="form-check-input"
+                                            (change)="bedTypeOnChange($event)" [value]="bedType" name="bedType" />
+                                        <label for="bedType-{{i}}" class="form-check-label">{{bedType}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <div class="form-field">
+
+                                <label class="form-label">Add Images of this room</label>
+                                <ngx-dropzone (change)="onSelect($event)"
+                                    accept="video/mp4,video/x-m4v,video/*, image/*">
+                                    <ngx-dropzone-label>
+                                        Choose File
+                                    </ngx-dropzone-label>
+                                </ngx-dropzone>
+
+                                <div class="uploaded-image-list">
+                                    <div class="uploaded-image" *ngFor="let f of files">
+                                        <app-preview-image [file]="f"></app-preview-image>
+                                        <div class="remove-uploaded">
+                                            <a href="javascript:void(0)" class="remove" (click)="onRemove(f)">
+                                                <img src="assets/img/remove.svg" alt="remove">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="tips" *ngIf="files.length == 0">You can add this later</span>
+
+                            </div>
+                        </div>
+
+
+
+                        <button type="button" [disabled]="addRoomForm.invalid" (click)="getRRoomFormDetails()"
+                            class="btn btn-secondary save" data-bs-dismiss="modal">Save Room</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,133 @@
+.property-rules {
+    padding-bottom: 20px;
+}
+
+.property-rules-data {
+    margin-top: 30px;
+}
+
+.property-rules-data .rules-list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.property-rules-data .rules-list .left-sec {
+    max-width: 372px;
+    width: 100%;
+}
+
+.property-rules-data .rules-list .left-sec label {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.property-rules-data .rules-list .left-sec span {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.property-rules-data .rules-list .right-sec {
+    max-width: 688px;
+    width: 100%;
+}
+
+.property-rules-data .rules-list .right-sec .checkin-checkout {
+    display: flex;
+    gap: 50px;
+}
+
+.property-rules-data .rules-list .right-sec .checkin-checkout .checkin-time,
+.property-rules-data .rules-list .right-sec .checkin-checkout .checkout-time {
+    max-width: 125px;
+    width: 100%;
+}
+
+.property-rules-data .rules-list .right-sec label {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.property-rules-data .rules-list .right-sec label.quiteHours {
+    cursor: pointer;
+}
+
+.property-rules-data .rules-list .right-sec textarea {
+    height: 78px;
+    max-width: 453px;
+    border-radius: 3px;
+    opacity: 1;
+    background-color: rgba(235, 242, 245, 1);
+    border: none;
+    padding: 20px;
+    resize: none;
+    opacity: 1;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 24px;
+    /* overflow: hidden; */
+}
+
+.tips {
+    color: rgba(137, 137, 137, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.property-rules-data .rules-list .right-sec input[type=number] {
+    max-width: 453px;
+}
+
+.property-rules-data .rules-list .right-sec .ng-select,
+.property-rules-data .rules-list .right-sec .ng-select.ng-select-single .ng-select-container {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1) !important;
+    height: 50px !important;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    box-shadow: none;
+}
+
+.property-rules-data .remove button {
+    border: none;
+    background: none;
+    color: rgba(14, 126, 202, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-decoration: underline;
+}

@@ -1,0 +1,448 @@
+   <div class="edit-listing-page">
+      <div class="edit-property-details">
+         <div class="property-basic-info">
+            <div class="property-name">
+               <h2>The Loja by the water - a safe workation place</h2>
+            </div>
+            <div class="property-location">
+               <div class="sub-heading">
+                  <h5>Location</h5>
+               </div>
+               <div class="address update-notification">
+                  <input type="text" value="Honda, Tolima, Colombia" id="address" name="address" readonly>
+                  <div class="rejected-status">
+                     <img src="assets/img/ion-information-red.svg" alt="icon">
+                     <div class="status-info">
+                        <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. </p>
+
+                        <div class="status-dropdown">
+                           <div class="change-status {{stepsStatus.location}}">
+                              <ng-select [items]="actionsList" (change)="statusChangeNgSelect($event,'location')" [(ngModel)]="stepsStatus.location" bindLabel="name" bindValue="value" autocomplete="off"  [searchable]="false" [clearable]="false" >
+                              </ng-select>
+                           </div>
+                        </div>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="property-brief-info">
+               <div class="sub-heading">
+                  <h5>Description</h5>
+               </div>
+               <textarea
+                  [readonly]="disbale.desc">The Hights mankulam with pool on the water’s edge was a trading post. Canoas (boats) exchanged salt and tiles for farm produce…</textarea>
+            </div>
+         </div>
+         <hr>
+         <div class="property-kitchen-services">
+            <div class="heading">
+               <h2>Kitchen and room service</h2>
+            </div>
+            <div class="service-hrs">
+               <span class="operating-hrs">
+                  Operating Hours
+               </span>
+               <span class="open-hrs">Open 24 hrs</span>
+            </div>
+         </div>
+         <hr>
+         <div class="property-contact-info">
+            <div class="contact-details">
+               <div class="heading">
+                  <h2>Contact info</h2>
+               </div>
+               <div class="contact-num">
+                  <div class="sub-heading">
+                     <h5>Mobile Number</h5>
+                  </div>
+                  <div class="verify-phone" [ngClass]="disbale.contact  ? 'disabled' : ''">
+                     <div class="intl-tel-input">
+                        <input type="text" class="form-control" class="{{isInvalid ? 'text-danger': ''}}"
+                           (focus)="onFocus()" (blur)="onBlur()" [ngModelOptions]="{standalone: true}"
+                           (keypress)="onInputKeyPress($event)" [(ngModel)]="phoneNumber"
+                           (ngModelChange)="onPhoneNumberChange()" #telInput [readonly]="disbale.contact" />
+                     </div>
+                     <div class="verified-message"><img src="assets/img/host-backend/verified.svg"
+                           alt="Verified"><span>Verified</span></div>
+                  </div>
+               </div>
+               <div class="contact-email">
+                  <div class="sub-heading">
+                     <h5>Email</h5>
+                  </div>
+                  <div class="verify-email">
+                     <input type="email" value="john@doe.com" [readonly]="disbale.contact">
+                     <div class="verified-message"><img src="assets/img/host-backend/verified.svg"
+                           alt="Verified"><span>Verified</span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-room-info">
+            <div class="heading">
+               <h2>Rooms info</h2>
+            </div>
+            <div class="room-type">
+               <div class="room-details">
+                  <span class="room-name">1. Family room</span>
+                  <span class="room-brief-details">
+                     <span class="about-room">
+                        <span class="title">No of Beds</span>
+                        <span class="content">1</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of guests</span>
+                        <span class="content">2</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Price per night</span>
+                        <span class="content">200$</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of Rooms </span>
+                        <span class="content">3</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Shared room </span>
+                        <span class="content">No</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Private bathroom </span>
+                        <span class="content">No</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Types of bed</span>
+                        <span class="content">Double Bed, floor mattress</span>
+                     </span>
+                  </span>
+               </div>
+            </div>
+            <hr>
+            <div class="room-type">
+               <div class="room-details">
+                  <span class="room-name">2. Suite</span>
+                  <span class="room-brief-details">
+                     <span class="about-room">
+                        <span class="title">No of Beds</span>
+                        <span class="content">4</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of guests</span>
+                        <span class="content">4</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Price per night</span>
+                        <span class="content">400$</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">No of Rooms </span>
+                        <span class="content">3</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Shared room </span>
+                        <span class="content">No</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Private bathroom </span>
+                        <span class="content">Yes</span>
+                     </span>
+                     <span class="about-room">
+                        <span class="title">Types of bed</span>
+                        <span class="content">Double Bed, floor mattress</span>
+                     </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-amenities">
+            <div class="heading">
+               <h2>Amenities</h2>
+            </div>
+            <div class="amenities-list">
+               <span>Wake-up Call</span>
+               <span>Valet Parking</span>
+               <span>Cribs/Infant Beds</span>
+               <span>Spa</span>
+               <span>Fitness Center/Gym</span>
+            </div>
+         </div>
+         <hr>
+         <div class="property-allowed-guests" [ngClass]="disbale.guesttype  ? 'disabled' : ''">
+            <div class="heading">
+               <h2>Type of guests allowed </h2>
+            </div>
+
+            <div class="type-of-guests-fields">
+               <div class="single-guest-field">
+                  <label>Are bachelors/unmarried couples allowed? </label>
+                  <div class="formField update-notification">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                     <div class="rejected-status">
+                        <img src="assets/img/ion-information-red.svg" alt="icon">
+                        <div class="status-info">
+                           <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. </p>
+                           <a href="">Declined</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="single-guest-field">
+                  <label> Are guests below the age of 18 allowed? </label>
+                  <div class="formField">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+               <div class="single-guest-field">
+                  <label> Are kids allowed?</label>
+                  <div class="formField">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+               <div class="single-guest-field">
+                  <label> Are pets allowed?</label>
+                  <div class="formField">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Media</h2>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item"><span
+                        class="media-name">Video 360</span></li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item"><span
+                        class="media-name">Exterior</span></li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+         <div class="property-media">
+            <div class="heading">
+               <h2>Posts by guests</h2>
+            </div>
+            <div class="media">
+               <ul class="media-list">
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish1.svg" alt="Menu Item">
+                     <span class="pin"><img src="assets/img/host-backend/pin.svg" alt="pin"></span>
+                  </li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish2.svg" alt="Menu Item">
+                     <span class="pin"><img src="assets/img/host-backend/pin.svg" alt="pin"></span>
+                  </li>
+                  <li class="overlay"><img src="assets/img/dashboard/restaurant-dish3.svg" alt="Menu Item">
+                     <span class="pin"><img src="assets/img/host-backend/pin.svg" alt="pin"></span>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <hr>
+
+         <div class="safety-and-hygiene" [ngClass]="disbale.safety  ? 'disabled' : ''">
+            <div class="heading">
+               <h2>Safety & Hygiene</h2>
+            </div>
+            <div class="type-of-guests-fields">
+               <div class="single-guest-field">
+                  <label>How often is the room cleaned/serviced while occupied?</label>
+                  <div class="formField">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+               <div class="single-guest-field">
+                  <label> How often is the room cleaned/serviced while occupied?</label>
+                  <div class="formField">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+               <div class="single-guest-field">
+                  <label> How often is the room cleaned/serviced when it is not booked by users</label>
+                  <div class="formField">
+                     <ng-select [items]="maritalStatus" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+               </div>
+               <div class="single-guest-field safetyMeasures">
+                  <label>Safety measures </label>
+                  <div class="form-field">
+                     <div class="form-check form-check-inline"
+                        *ngFor="let safetyMeasures of safetyMeasuresArray; let i = index;">
+                        <input type="checkbox" id="safetyMeasures-{{i}}" class="form-check-input"
+                           (change)="safetyMeasuresOnChange($event)" [value]="safetyMeasures"
+                           name="safetyMeasures" />
+                        <label for="safetyMeasures-{{i}}" class="form-check-label">{{safetyMeasures}}</label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+
+         <div class="house-rules" [ngClass]="disbale.houserule  ? 'disabled' : ''">
+            <div class="heading">
+               <h2>House rules</h2>
+            </div>
+            <div class="info-list">
+               <label class="title">Tell us at what time check-in and checkout is done</label>
+               <div class="timings">
+                  <div class="checkin-checkout">
+                     <div class="checkin-time">
+                        <label class="form-label d-block">Check-in Time</label>
+                        <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker" bindValue="value"
+                           autocomplete="off" [clearable]="false" [searchable]="false" placeholder="Select"
+                           (change)="getSelectedValue($event)">
+                        </ng-select>
+                     </div>
+                     <div class="checkout-time">
+                        <label class="form-label d-block">Check-out Time</label>
+                        <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker" bindValue="value"
+                           autocomplete="off" [clearable]="false" [searchable]="false" placeholder="Select"
+                           (change)="getSelectedValue($event)">
+                        </ng-select>
+                     </div>
+                  </div>
+               </div>
+               <div class="checkout-rule">
+                  <label class="form-label d-block title">Do you want to add any rules upon checking in or out?</label>
+                  <textarea class="form-control"
+                     [readonly]="disbale.houserule">Guests are required to show a photo identification and credit card upon check-in</textarea>
+               </div>
+               <div class="quite-hours">
+                  <label class="title">Quite hours</label>
+                  <div class="selectOptions">
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="1" name="quiteHours" id="quiteHoursYes"
+                           (change)="onQuiteHoursChange('1')">
+                        <label class="form-check-label quiteHours" for="quiteHoursYes">
+                           Yes
+                        </label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="0" name="quiteHours" id="quiteHoursNo"
+                           (change)="onQuiteHoursChange('0')">
+                        <label class="form-check-label quiteHours" for="quiteHoursNo">
+                           No
+                        </label>
+                     </div>
+                  </div>
+                  <div class="checkin-checkout quiteHoursTiming" [hidden]="!showQuiteHoursTiming">
+                     <div class="checkin-time">
+                        <label class="form-label d-block">From</label>
+                        <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker" bindValue="value"
+                           autocomplete="off" [clearable]="false" [searchable]="false" placeholder="Select"
+                           (change)="getSelectedValue($event)">
+                        </ng-select>
+                     </div>
+                     <div class="checkout-time">
+                        <label class="form-label d-block">To</label>
+                        <ng-select [items]="timeArray" bindLabel="name" class="open-close-time-picker" bindValue="value"
+                           autocomplete="off" [clearable]="false" [searchable]="false" placeholder="Select"
+                           (change)="getSelectedValue($event)">
+                        </ng-select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <hr>
+         <div class="nearby-attractions">
+            <div class="heading">
+               <h2>Cool Attractions nearby</h2>
+            </div>
+
+            <div class="attractions-list">
+               <div class="nearest-attraction" *ngFor="let attraction of nearByLocations">
+                  <div class="attraction-basic-info">
+                     <div class="map-icon">
+                        <img src="assets/img/location.svg" alt="Icon">
+                     </div>
+                     <div class="attraction-details">
+                        <div class="attraction-title">
+                           {{attraction.name}}
+                        </div>
+                        <div class="attraction-distance">
+                           {{attraction.distance}}
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="attraction-images">
+                     <div class="attraction-image" *ngFor="let image of attraction.images">
+                        <img src="{{image}}">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <hr>
+         <div class="property-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+            <div class="heading">
+               <h2>Policies</h2>
+            </div>
+            <div class="policy-list">
+               <div class="policy-details">
+                  <span class="policy-title">1. Cancelation Policy</span>
+                  <textarea class="policy-content"
+                     [readonly]="disbale.policies"> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</textarea>
+               </div>
+            </div>
+            <div class="policy-list">
+               <div class="policy-details">
+                  <span class="policy-title">2. Important Information</span>
+                  <textarea class="policy-content"
+                     [readonly]="disbale.policies"> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</textarea>
+               </div>
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">How many days prior can guests book the property?</label>
+               <ng-select [items]="priorBookingDays" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">Maximum number of days a guest can book the property?</label>
+               <input type="number" class="form-control" value="30" id="maxDayBooking" [readonly]="disbale.policies">
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">Free cancellation</label>
+               <ng-select [items]="freeCancellation" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+            <div class="extra-policies" [ngClass]="disbale.policies  ? 'disabled' : ''">
+               <label class="policy-title">Check-in method</label>
+               <ng-select [items]="checkInMethod" bindLabel="name" bindValue="value" autocomplete="off"
+                  [clearable]="false" [searchable]="false" placeholder="Select">
+               </ng-select>
+            </div>
+            <div class="extra-policies">
+               <label class="policy-title">Average price <span>(in $-CAD)</span></label>
+               <input type="number" value="236" class="form-control" id="averagePrice" [readonly]="disbale.policies">
+            </div>
+         </div>
+
+      </div>
+
+   </div>

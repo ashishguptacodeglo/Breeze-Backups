@@ -1,0 +1,30 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+	<app-side-bar></app-side-bar>
+	<div class="page-data establishment-form">
+		<app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+		<section class="module-data">
+			<div class="page_tabs">
+				<div class="wraps">
+					<span class="links" (click)="tabChange('basic-details')"
+						[class]="{'active': page=='basic-details'}">
+						Basic Details
+					</span>
+					<span class="links" (click)="tabChange('photos')" [class]="{'active': page=='photos'}">
+						Photos
+					</span>
+				
+				</div>
+			</div>
+			<div class="tab-content" [ngSwitch]="page">
+				<ng-template [ngSwitchCase]="'basic-details'">
+					<app-basic-details></app-basic-details>
+				</ng-template>
+				<ng-template [ngSwitchCase]="'photos'">
+					<app-est-photos></app-est-photos>
+				</ng-template>
+
+			</div>
+		</section>
+	</div>
+</div>

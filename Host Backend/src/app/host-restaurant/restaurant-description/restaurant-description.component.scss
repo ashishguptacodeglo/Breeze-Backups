@@ -1,0 +1,22 @@
+.full-width-text-area {
+	background-color: rgb(235, 242, 245);
+	padding: 15px 23px;
+	opacity: 1;
+	color: rgb(147, 165, 174);
+	border: none;
+	width: 100%;
+	resize: none;
+}
+
+.host-property-location{
+	min-height : 69vh;
+}
+
+.property-location-form {
+	max-width: 790px;
+	margin-left: 15rem;
+}
+ button[disabled] {
+    background-color: #93A5AE;
+    border: none;
+}

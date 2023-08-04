@@ -1,0 +1,74 @@
+.breadcrump .breadcrump_wrap {
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.breadcrump_wrap .source {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 14px;
+    font-size: 14px;
+}
+
+.breadcrump_wrap .source:after {
+    content: "/";
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+    line-height: 14px;
+    top: 0px;
+    position: relative;
+}
+
+.breadcrump_wrap .source:last-child:after {
+    display: none;
+}
+
+.breadcrump_wrap .source {
+    font-weight: 500;
+    color: #8E8E93;
+}
+
+.breadcrump_wrap .source.parent {
+    font-weight: 600;
+    color: #373737;
+}
+
+.breadcrump_wrap .source.parent a {
+    color: #373737;
+    text-decoration: none;
+}
+
+/*Other compnent CSS*/
+
+::ng-deep section.tickets .breadcrump {
+    padding: 20px 0 25px !important;
+}
+
+/*Other compnent CSS*/
+
+.back-link {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.back-link a {
+    color: rgba(60, 124, 255, 1) !important;
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-link a img {
+    width: 20px;
+}

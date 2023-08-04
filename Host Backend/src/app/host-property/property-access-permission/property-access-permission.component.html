@@ -1,0 +1,88 @@
+<main>
+
+   <app-steps [width]="94" [active]="4"></app-steps>
+   <form [formGroup]="propertyAccessForm">
+      <div class="property-access-permission">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="common-header">
+                     <h2>Tell us who are allowed in your property</h2>
+                     <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row property-access-Details">
+               <div class="col-md-12 mb-4">
+                  <label class="form-label d-block">Are bachelors/unmarried couples allowed?</label>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="1" name="maritalStatus" id="maritalStatusYes"
+                        formControlName="maritalStatus">
+                     <label class="form-check-label" for="maritalStatusYes">
+                        Yes
+                     </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="0" name="maritalStatus" id="maritalStatusNo"
+                        formControlName="maritalStatus">
+                     <label class="form-check-label" for="maritalStatusNo">
+                        No
+                     </label>
+                  </div>
+               </div>
+               <div class="col-md-12 mb-4">
+                  <label class="form-label d-block">Are guests below the age of 18 allowed?</label>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="1" name="adultStatus" id="adultStatusYes"
+                        formControlName="adultStatus">
+                     <label class="form-check-label" for="adultStatusYes">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="0" name="adultStatus" id="adultStatusNo"
+                        formControlName="adultStatus">
+                     <label class="form-check-label" for="adultStatusNo">No</label>
+                  </div>
+               </div>
+               <div class="col-md-12 mb-4">
+                  <label class="form-label d-block">Are kids allowed?</label>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="1" name="kidsPermission" id="kidsPermissionYes"
+                        formControlName="kidsPermission">
+                     <label class="form-check-label" for="kidsPermissionYes">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="0" name="kidsPermission" id="kidsPermissionNo"
+                        formControlName="kidsPermission">
+                     <label class="form-check-label" for="kidsPermissionNo">No</label>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <label class="form-label d-block">Are pets allowed?</label>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="1" name="petsPermission" id="petsPermissionYes"
+                        formControlName="petsPermission">
+                     <label class="form-check-label" for="petsPermissionYes">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" value="0" name="petsPermission" id="petsPermissionNo"
+                        formControlName="petsPermission">
+                     <label class="form-check-label" for="petsPermissionNo">No</label>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="savestep-section">
+         <div class="left-btn">
+            <button class="goback-btn" (click)="goBack()">
+               Back
+            </button>
+         </div>
+         <div class="right-btn">
+            <button class="save-next-btn" [disabled]="propertyAccessForm.invalid" (click)="getPropertyAccessInfo()">
+               Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+            </button>
+         </div>
+      </div>
+   </form>
+</main>

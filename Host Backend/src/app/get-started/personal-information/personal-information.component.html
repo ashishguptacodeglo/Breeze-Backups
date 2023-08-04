@@ -1,0 +1,64 @@
+<main>
+	<app-steps [width]="24" [active]="1"></app-steps>
+   <form [formGroup]="personalinfo">
+      <div class="personal-information">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="common-header">
+                     <h2>Personal Info</h2>
+                     <p>Please provide us some basic personal information</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-12 col-md-12">
+                  <div class="personal-info-data">
+                     <div class="form-field">
+                        <label for="ufname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="ufname" placeholder="First Name*" formControlName="ufname">
+                     </div>
+                     <div class="form-field">
+                        <label for="ulname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="ulname" placeholder="Last Name*" formControlName="ulname">
+                     </div>
+                     <div class="form-field">
+                        <label for="uemail" class="form-label">Email ID</label>
+                        <input type="email" class="form-control" id="uemail" placeholder="Email*" formControlName="uemail">
+                     </div>
+                     <div class="form-field">
+                        <label for="uphone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="uphone" placeholder="Phone Number*" formControlName="uphone">
+                     </div>                    
+                     <div class="form-field">
+                        <label for="uhosting" class="form-label">What are you hosting?<br>
+                        <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                        </label>                               
+                        <ng-select [items]="hostingDropdown" bindLabel="name" bindValue="value"
+                        autocomplete="off" (change)="itemSelected($event)" [clearable]="false"
+                        [searchable]="false" placeholder="Select"  id="uhosting" formControlName="hosting">
+                        </ng-select>
+                     </div>
+                     <div class="form-field">
+                        <label for="propertyName" class="form-label">What is your Establishment’s name?<br>
+                        <span>Cras quis nulla commodo, aliquam lectus sed,.</span>
+                        </label>
+                        <input type="text" class="form-control" id="propertyName" placeholder="Property name*" formControlName="propertyName">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="savestep-section">
+         <div class="left-btn">
+         </div>
+         <div class="right-btn">
+            <span class="mandatory">* Mandatory fields</span>
+            <button class="save-next-btn" [disabled]="personalinfo.invalid" (click)="submitPersonalForm()">
+            Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+            </button>
+         </div>
+      </div>
+   </form>
+</main>

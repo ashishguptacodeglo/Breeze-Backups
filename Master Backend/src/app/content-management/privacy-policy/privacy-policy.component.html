@@ -1,0 +1,61 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+   <app-side-bar></app-side-bar>
+   <div class="page-data">
+      <app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+      <section class="module-data">
+
+         <div class="header">
+            <h4 class="module-title">Privacy Policy</h4>
+            <div class="optn-wrap">
+               <button type="button" *ngIf="step == 1" class="add-button" data-bs-toggle="modal"
+                  data-bs-target="#addPoliciesModal">Add</button>
+               <button type="button" *ngIf="step == 2" class="edit-button" data-bs-toggle="modal"
+                  data-bs-target="#addPoliciesModal">Edit</button>
+            </div>
+         </div>
+         <div class="content-area">
+            <div class="empty-policy" *ngIf="step == 1">
+               <p>No content is created as of now. Please add a Description by using
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#addPoliciesModal">Add</a> option.
+               </p>
+            </div>
+            <div class="filled-policy" *ngIf="step == 2">
+               {{policyHtml}}
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+
+
+<div class="modal fade modal-lg" id="addPoliciesModal" tabindex="-1" aria-labelledby="addPoliciesModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <div class="title-wrap">
+               <h5 class="modal-title" id="addPoliciesModalLabel">Privacy Policy</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form [formGroup]="addPolicyForm">
+
+               <div class="form-field">
+                  <label for="policyName" class="form-label">Privacy Policy</label>
+                  <div class="editor">
+                     <ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
+                     </ngx-editor-menu>
+                     <ngx-editor [editor]="editor" formControlName="policyContent">
+                     </ngx-editor>
+                  </div>
+               </div>
+               <button type="button" data-bs-dismiss="modal" class="btn btn-secondary"
+                  [disabled]="addPolicyForm.invalid" (click)="getPolicyInfo()">Create</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

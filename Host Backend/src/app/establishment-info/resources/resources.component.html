@@ -1,0 +1,173 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+   <app-side-bar></app-side-bar>
+   <div class="page-data">
+      <app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+      <section class="establishment-info">
+
+         <div class="workers-list-container">
+
+            <div class="table-header-buttons">
+               <form class="example" action="#">
+                  <input type="text" placeholder="Search profiles" name="search2">
+                  <button type="submit"><img src="assets/img/host-backend/search-icon.svg" alt="Search"></button>
+               </form>
+               <div class="filter-section">
+                  <div class="table-button">
+                     <button data-bs-toggle="modal" data-bs-target="#add-worker-modal" class="add-task-button">Add
+                        Users</button>
+                  </div>
+                  <div class="workers-filter">
+                     <span>Sort by</span>
+                     <div class="filter-dropdown">
+                        <ng-select [items]="filter" bindLabel="name" bindValue="value" autocomplete="off"
+                           [searchable]="false" [clearable]="false" placeholder="Select">
+                        </ng-select>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+            <div class="no-result" *ngIf="!fetched">
+               <p>There are no workers list.</p>
+            </div>
+
+            <div class="workers-list" *ngIf="fetched">
+               <div *ngIf="workersList.length > 0">
+                  <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                     <thead>
+                        <tr>
+                           <th class="text-center">S.No</th>
+                           <th>Profile</th>
+                           <th>First name</th>
+                           <th>Last Name</th>
+                           <th>Contact info</th>
+                           <th>Department</th>
+                           <th class="last-th">Action</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr *ngFor="let worker of workersList;let i=index">
+                           <td class="text-center">{{i+1}} </td>
+                           <td><img src="{{worker.image}}" class="profile-img"></td>
+                           <td>Warren</td>
+                           <td>Wilkerson</td>
+                           <td class="contact-info">
+                              <span>wilkerson@email.com</span>
+                              <span>+4-(968)705-1370</span>
+                           </td>
+                           <td>{{worker.status}} </td>
+                           <td class="last-td">
+                              <div class="action">
+                                 <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#add-worker-modal" (click)="LoadData()">
+                                    <img src="assets/img/host-backend/edit.svg" alt="Edit">
+                                 </a>
+                                 <a   href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#deleteTeamModal" (click)="LoadData()" >
+                                    <img src="assets/img/host-backend/delete.svg" alt="Delete"></a>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+               </div>
+               <div class="no-result" *ngIf="workersList.length == 0">
+                  <p>There are no workers list.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>
+
+
+<div class="modal fade modal-lg" id="add-worker-modal" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">{{headerMessage}}</h5>
+            <button type="button" class="btn-close" (click)="modalClose()" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form>
+               <div class="upload-profile-img" *ngIf="files.length == 0 && userImage === ''">
+                  <div class="form-field">
+                     <ngx-dropzone (change)="onSelect($event)" accept="image/*" maxFiles="1">
+                        <ngx-dropzone-label>
+                           <div class="text-fields">
+                              Upload Profile photo
+                           </div>
+                        </ngx-dropzone-label>
+                     </ngx-dropzone>
+                  </div>
+               </div>
+               <div class="team-profile" *ngIf="files.length > 0 && userImage === ''">
+                  <div *ngFor="let f of files">
+                     <app-user-image-preview [file]="f" (BackEvent)="setBack($event)"></app-user-image-preview>
+                  </div>
+               </div>
+                <div class="team-profile" *ngIf="userImage != ''">
+                  <img src="{{userImage}}" class = "rounded-circle"  alt="profile">
+                  <button type="button" (click)="openFilePicker()">Upload new image</button>
+               </div>
+
+
+               <div class="team-details">
+                  <div class="form-field">
+                     <label>First Name</label>
+                     <input type="text" name="first-name" value="Warren">
+                  </div>
+                  <div class="form-field">
+                     <label>Last Name</label>
+                     <input type="text" name="last-name" value="Wilkerson">
+                  </div>
+                  <div class="form-field">
+                     <label>Email ID</label>
+                     <input type="email" name="email" value="wilkerson@gowhere.com">
+                  </div>
+                  <div class="form-field">
+                     <label>Designation</label>
+                     <ng-select [items]="SelectedDepartments" bindLabel="name" bindValue="value" autocomplete="off"
+                        [searchable]="false" [clearable]="false" placeholder="Select">
+                     </ng-select>
+                  </div>
+                  <div class="form-field">
+                     <label>Phone number</label>
+                     <input type="text" name="phone-number" value="+4-(968)705-1370">
+                  </div>
+               </div>
+
+               <div class="action-btn">
+                  <button type="button" class="btn cancel" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn save">Save</button>
+               </div>
+
+
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+ <div class="modal fade " id="deleteTeamModal" tabindex="-1" aria-labelledby="removePoliciesModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="removePoliciesModalLabel">Are you sure?</h5>
+            </div>
+            <div class="modal-body">
+               <form>
+                  <p>Do you want to remove that team Member?</p>
+                  <div class="confirm-btn">
+                     <button type="button" class="noBtn" data-bs-dismiss="modal">No</button>
+                     <button type="button" class="yesBtn" (click)="RemoveMember();" >Yes</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>

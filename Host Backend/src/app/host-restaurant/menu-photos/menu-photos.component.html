@@ -1,0 +1,86 @@
+<main>
+   <app-steps [width]="90" [active]="4"></app-steps>
+   <div class="property-amenities">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="common-header">
+                  <h2>Add photos of the menu of your restaurant</h2>
+                  <p>Cras quis nulla commodo, aliquam lectus sed,.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="property-amenities-data">
+                  <div class="row" *ngIf="dropzoneType == 'single'">
+                     <div class="dropzone-container">
+                        <div class="dropzone-for-content col-lg-6 col-md-6 col-xs-12">
+                           <div class="dropzone-element">
+                              <ngx-dropzone (change)="onSelect($event)" accept="video/mp4,video/x-m4v,video/*, image/*">
+                                 <ngx-dropzone-label>
+                                    <div class="upload-icon">
+                                       <img src="assets/img/host-restaurant/dropzone-photo.png" alt="Icon">
+                                    </div>
+                                    <div class="text-fields">
+                                       <div class="title-1">
+                                          Drag & drop images 
+                                       </div>
+                                       <div class="like-anchor" >
+                                          browse your device
+                                       </div>
+                                    </div>
+                                 </ngx-dropzone-label>
+                              </ngx-dropzone>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row" *ngIf="dropzoneType == 'list'">
+                     <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                          <ngx-dropzone (change)="onSelect($event)" accept="video/mp4,video/x-m4v,video/*, image/*">
+                                 <ngx-dropzone-label>
+                                    <div class="upload-icon">
+                                       <img src="assets/img/host-restaurant/dropzone-photo.png" alt="Icon">
+                                    </div>
+                                    <div class="text-fields">
+                                       <div class="title-1">
+                                          Drag & drop images 
+                                       </div>
+                                       <div class="like-anchor" >
+                                          browse your device
+                                       </div>
+                                    </div>
+                                 </ngx-dropzone-label>
+                              </ngx-dropzone>
+                     </div>
+
+                     
+
+                     <div class="gallery_product  col-lg-3 col-md-3 col-sm-3 col-xs-6 removable-icons"  *ngFor="let f of files">
+                        <app-preview-image [file]="f"></app-preview-image>
+                        <div class="remove-uploaded">
+                           <button type="button" class="remove" (click)="onRemove(f)">
+                           &times;
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="savestep-section">
+      <div class="left-btn">
+         <button (click)="goBack()" class="goback-btn">
+            Back
+         </button>
+      </div>
+      <div class="right-btn">
+         <button class="save-next-btn" (click)="moveNext()">
+         Save & Continue <span><img src="assets/img/host-property/next-icon.svg" alt="Icon"></span>
+         </button>
+      </div>
+   </div>
+</main>

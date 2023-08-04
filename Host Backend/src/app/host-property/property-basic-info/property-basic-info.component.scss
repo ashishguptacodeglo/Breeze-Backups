@@ -1,0 +1,29 @@
+.property-basic-info .form-select {
+    width: 20%;
+}
+.property-basic-info .form-label {
+    width: 80%;
+}
+.property-basic-info .form-field {
+    display: flex;
+}
+.property-basic-info .form-field label {
+    font-weight: unset;
+}
+.property-basic-info hr {
+    padding-bottom: 4%;
+    margin-top: 5%;
+}
+.property-basic-info {
+   margin: 0 auto;
+   max-width: 77%;
+}
+.current-location-link img {
+    margin-right: 1%;
+}
+
+ button[disabled] {
+    background-color: #93A5AE;
+    border: none;
+}
+

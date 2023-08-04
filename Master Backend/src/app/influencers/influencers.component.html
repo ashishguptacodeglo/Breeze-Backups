@@ -1,0 +1,50 @@
+<app-menus [isfixed]="false"></app-menus>
+<div class="page-content">
+   <app-side-bar></app-side-bar>
+   <div class="page-data">
+      <app-breadcrumb [breadCrumb]="breadCrumb"></app-breadcrumb>
+      <section class="module-data">
+         <div class="support-list-container">
+            <div class="faq-list-container">
+               <div class="header">
+                  <h4 class="module-title"> Influencers</h4>
+               </div>
+               <div class="no-result" *ngIf="!fetched">
+                  <p>There are no task list.</p>
+               </div>
+               <div class="task-list" *ngIf="fetched">
+                  <div *ngIf="influencersList.length > 0">
+                     <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                        <thead>
+                           <tr>
+                              <th>S.No</th>
+                              <th>User Name</th>
+                              <th>Email</th>
+                              <th>Contact No.</th>
+                              <th>City</th>
+                              <th>Amount</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr *ngFor="let user of influencersList;let i=index">
+                              <td>{{i+1}} </td>
+                              <td class="name">{{user.firstName}} {{user.lastName}} <img
+                                    src="assets/img/host-backend/influencer-badge.svg" alt="badge" class="badge-icon">
+                              </td>
+                              <td>{{user.email}}</td>
+                              <td>{{user.phone}}</td>
+                              <td>{{user.address.city}}</td>
+                              <td>$40</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="no-result" *ngIf="influencersList.length == 0">
+                     <p>There are no task list.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>

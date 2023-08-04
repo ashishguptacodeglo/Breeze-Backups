@@ -1,0 +1,117 @@
+.host-entire-property {
+    margin-bottom: 70px;
+}
+
+.host-entire-property .property-details {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+
+.host-entire-property-data .property-details .left-sec {
+    max-width: 450px;
+    width: 100%;
+}
+
+.host-entire-property-data .property-details .left-sec label {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+}
+
+.host-entire-property-data .property-details .left-sec span {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.host-entire-property-data .property-details .right-sec {
+    max-width: 700px;
+    width: 100%;
+}
+
+.host-entire-property-data .property-details .right-sec .ng-select,
+.host-entire-property-data .property-details .right-sec .ng-select.ng-select-single .ng-select-container {
+    border-radius: 3px;
+    background-color: rgba(235, 242, 245, 1) !important;
+    max-width: 150px;
+    height: 50px !important;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    border: none;
+    box-shadow: none;
+}
+
+.host-entire-property-data .property-details .right-sec .price {
+    display: flex;
+    align-items: center;
+    left: -40px;
+    position: relative;
+    gap: 15px;
+}
+
+.host-entire-property-data .property-details .right-sec .price button {
+    border: none;
+    background: none;
+}
+
+.host-entire-property-data .property-details .right-sec .price .form-field {
+    margin-bottom: 0;
+}
+
+
+.host-entire-property-data .property-details .right-sec .price .form-field input[type=number] {
+    max-width: 150px;
+    padding: 13px 20px;
+}
+
+
+.host-entire-property-data .property-details .right-sec .bedType {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 20px;
+}
+
+.host-entire-property-data .property-details .right-sec .bedType .bedTypeList label {
+    margin: 0;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.host-entire-property .property-details:last-child {
+    align-items: flex-start;
+}
+
+.form-check-input[type=checkbox]
+{
+    background: url('/assets/img/non-checked.svg') 0 0px no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.form-check-input[type=checkbox]:checked
+{
+    background: url('/assets/img/checked.svg') 0 0px no-repeat;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 14</title>
+    <g id="Host-Property" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-14">
+            <rect id="Rectangle" x="0" y="0" width="45" height="45"></rect>
+            <g id="Group-34" transform="translate(6.000000, 4.000000)" stroke="#142222">
+                <path d="M19.0535002,13.5741067 C19.2434862,13.5741067 19.4154862,13.6511137 19.5399897,13.7756172 C19.6644932,13.9001207 19.7415002,14.0721207 19.7415002,14.2621067 L19.7415002,22.0825479 L13.6381966,22.0825479 L13.6381966,14.2621067 C13.6381966,14.0721207 13.7152036,13.9001207 13.8397071,13.7756172 C13.9642107,13.6511137 14.1362107,13.5741067 14.3261966,13.5741067 Z" id="Rectangle"></path>
+                <g id="Group-31" stroke-linecap="round">
+                    <line x1="1.89129918" y1="10.1027188" x2="17.2817904" y2="0.594277575" id="Line-6"></line>
+                    <line x1="0.613484219" y1="18.9462141" x2="12.0766049" y2="11.1941973" id="Line-6" transform="translate(6.345045, 15.070206) rotate(124.068803) translate(-6.345045, -15.070206) "></line>
+                    <line x1="21.9233951" y1="18.9462141" x2="33.3865158" y2="11.1941973" id="Line-6" transform="translate(27.654955, 15.070206) rotate(124.068803) translate(-27.654955, -15.070206) "></line>
+                    <line x1="17.2817904" y1="10.1027188" x2="32.6722816" y2="0.594277575" id="Line-6" transform="translate(24.977036, 5.348498) scale(-1, 1) translate(-24.977036, -5.348498) "></line>
+                </g>
+                <line x1="25.6430164" y1="35.2275661" x2="7.7366805" y2="8.74897444" id="Line-6" stroke-linecap="round" transform="translate(16.689848, 21.988270) rotate(124.068803) translate(-16.689848, -21.988270) "></line>
+                <line x1="6.62683494" y1="29.1196012" x2="13.7301386" y2="22.678319" id="Line-6" stroke-linecap="round" transform="translate(9.675773, 25.898960) scale(1, -1) translate(-9.675773, -25.898960) "></line>
+                <line x1="20.8334422" y1="29.1196012" x2="27.9367459" y2="22.678319" id="Line-6" stroke-linecap="round" transform="translate(23.882380, 25.898960) scale(-1, -1) translate(-23.882380, -25.898960) "></line>
+                <line x1="9.0079145" y1="32.9533083" x2="18.582506" y2="24.1978814" id="Line-6" stroke-linecap="round" transform="translate(13.795210, 28.575595) scale(1, -1) rotate(131.866427) translate(-13.795210, -28.575595) "></line>
+                <line x1="14.9273342" y1="32.9533083" x2="24.5019257" y2="24.1978814" id="Line-6" stroke-linecap="round" transform="translate(19.714630, 28.575595) scale(1, -1) rotate(131.866427) translate(-19.714630, -28.575595) "></line>
+                <ellipse id="Oval" fill="#D8D8D8" cx="16.6898484" cy="8.31988605" rx="1" ry="1"></ellipse>
+                <line x1="13.7301386" y1="31.4967115" x2="19.6495583" y2="31.4967115" id="Line-7" stroke-linecap="square"></line>
+                <line x1="14.9140225" y1="26.7424909" x2="19.6495583" y2="26.7424909" id="Line-7" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>

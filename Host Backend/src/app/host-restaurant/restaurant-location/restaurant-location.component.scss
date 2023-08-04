@@ -1,0 +1,38 @@
+.property-location-form {
+    max-width: 969px;
+    display: flex;
+    gap: 99px;
+    row-gap: 0;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.host-propert-location .form-field {
+    width: 100%;
+    max-width: 435px;
+}
+.form-field.i-am-full-width {
+    max-width: 100% !important;
+}
+agm-map {
+    height: 300px;
+}
+.goback-btn {
+    color: rgb(24, 37, 37) !important;
+}
+.save-next-btn, .goback-btn {
+    text-decoration: none;
+}
+.current-location-link {
+   color: #182525;
+   font-size: 14px;
+   font-weight: 400;
+   font-family: "Gilroy-Bold";
+}
+.current-location-link img {
+    margin-right: 1%;
+}
+
+ button[disabled] {
+    background-color: #93A5AE;
+    border: none;
+}

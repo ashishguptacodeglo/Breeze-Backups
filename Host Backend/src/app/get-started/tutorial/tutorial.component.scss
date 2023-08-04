@@ -1,0 +1,177 @@
+/* Get started Page CSS */
+
+.get-started {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.get-started .right-section {
+    min-height: 836px;
+    background: url(/assets/img/host-property/get-started-bg.svg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    flex-basis: 50%;
+}
+
+.get-started .right-section .about-get-started {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.get-started .right-section .about-get-started h3 {
+    max-width: 348px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 34px;
+    margin: 0 auto;
+}
+
+.get-started .right-section .about-get-started p {
+    max-width: 600px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+.get-started .left-section {
+    flex-basis: 50%;
+}
+
+.get-started .left-section .brief-info {
+    display: flex;
+    flex-direction: column;
+    gap: 93px;
+    max-width: 516px;
+    margin: 0 auto;
+}
+
+.get-started .left-section .brief-info h3 {
+    color: rgba(24, 37, 37, 1);
+    font-size: 34px;
+    line-height: 61px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.get-started .left-section .brief-info p {
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Medium";
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.save-next-btn {
+    cursor: pointer;
+}
+
+.progressbar-wrapper {
+    background: #fff;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 33%;
+    float: left;
+    position: relative;
+    color: rgba(24, 37, 37, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.progressbar li:before {
+    width: 60px;
+    height: 60px;
+    content: "";
+    line-height: 60px;
+    border: 2.26px solid #1EBBBA;
+    display: block;
+    text-align: center;
+    margin: 0 auto 22px auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Gilroy-Bold";
+    font-size: 22px;
+    font-style: normal;
+    letter-spacing: 0px;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #CBCBCB;
+    top: 30px;
+    left: -50%;
+    z-index: 0;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+// .progressbar li.active {
+//     color: #1EBBBA;
+//     font-weight: bold;
+// }
+
+.progressbar li.active:before {
+    border-color: #1EBBBA;
+    background: #1EBBBA;
+    color: #fff;
+}
+
+.progressbar li.active+li:after {
+    background-color: #1EBBBA;
+}
+
+.progressbar {
+    counter-reset: step;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+}
+
+.save-next-btn
+{
+    margin: 70px auto 0;
+}

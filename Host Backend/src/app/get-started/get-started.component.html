@@ -1,0 +1,9 @@
+<div *ngIf="step==1">
+	<app-landing-page (BackEvent)="setStep($event)"></app-landing-page>
+</div>
+<div *ngIf="step==2">
+	<app-tutorial (BackEvent)="setStep($event)"></app-tutorial>
+</div>
+<div *ngIf="step==3">
+	<app-personal-information ></app-personal-information>
+</div>
